@@ -39,19 +39,18 @@ fbd_dist = dnFBDRP(origin=origin_time, lambda=speciation_rate, mu=extinction_rat
 constraints = v(ingroup);
 tau ~ dnConstrainedTopology(fbd_dist,constraints=constraints);
 
-moves.append(mvFNPR(tau, weight=15));
-moves.append(mvCollapseExpandFossilBranch(tau,origin_time,weight=6));
-moves.append(mvNodeTimeSlideUniform(tau, weight=40));
+moves.append(mvFNPR(tau, weight=n_branches/2));
+moves.append(mvNNI(tau, weight=n_branches/2));
+moves.append(mvCollapseExpandFossilBranch(tau,origin_time,weight=n_taxa/4));
+moves.append(mvNodeTimeSlideUniform(tau, weight=n_branches/2));
 moves.append(mvRootTimeSlideUniform(tau, origin_time, weight=5));
 
 num_samp_anc := tau.numSampledAncestors();
 for (bn in 1:n_branches)	{
 	divergence_dates[bn]:=tau.nodeAge(bn);
 	branch_lengths[bn]:=tau.branchLength(bn);
+	origin_dates[bn]:=tau.branchLength(bn)+tau.nodeAge(bn);	# when branching happened
 	}
 summed_gaps := sum(branch_lengths);
 
 clade_extant = clade("taxon_25");
-#age_extant := tmrca(tau, clade_extant);
-
-#pruned_tau := fnPruneTree(tau, prune=v("Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis"))
