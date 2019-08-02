@@ -1,0 +1,52 @@
+# n_data_subsets: number of partitions (i.e., unique state & ordering combinations
+# partition_states: number of states in each partition
+# partition_ordering: whether states are ordered or unordered in each partition
+# among_char_var: "gamma" for gamma distribution, "lognormal" for lognormal distribution
+# coding_bias: coding_bias type for binary characters; (Multistates necessarily demand coding_bias autapomorphies; however, how many 3 state characters have 3 observed of 4 states?)
+# branch_rate_model: "clock" for static rate; "lognormal" for lognormal variation; "dirichlet" for Dirichlet distribution
+
+# branch rates are established in advance so that all characters shift up/down on an independent branch
+# these all return base_branch_rates, which is a scalar for clock models, but a 1:n_branches long vector for other models.
+if (branch_rate_model=="clock")	{
+	source("scripts/Imperio_Clock_Branch_Rates.Rev");
+	} else if (branch_rate_model=="lognormal" || branch_rate_model=="log_normal")	{
+	source("scripts/Imperio_Lognormal_Branch_Rates.Rev");
+	} else if (branch_rate_model=="dirichlet")	{
+	}
+
+# now,get character evolution models for each character partition.
+for (i in 1:n_data_subsets)	{
+	crumplehorn_snorkaxe[i] <- readDiscreteCharacterData(filenames[i]);
+	# set up transition matrices
+	if (partition_ordering[i]=="ordered")	{
+		source("Accio_Mk_Ordered_k_State_Character.Rev");
+		Q[i]:=Qo;	# Qo is "ordered" Q-matrix
+		} else	{
+		Q[i]:=fnJC(partition_states[i]);
+		}
+	alpha[i] ~ dnExponential( 1.0 );
+
+	# set up rate distribution to describe variation among characters
+	if (among_char_var=="gamma")	{
+		moves.append(mvScale(alpha[i], lambda=0.01, tune=true, weight=5));
+		moves.append(mvScale(alpha[i], lambda=0.10, tune=true, weight=3));
+		moves.append(mvScale(alpha[i], lambda=1.00, tune=true, weight=1));
+		char_rate_var[i] := fnDiscretizeGamma( alpha[i], alpha[i], 4 );
+		# NOTE: this sets the shape and scale parameters equal so that the mean is always 1.0.
+		} else if (among_char_var=="lognormal")	{
+		moves.append(mvScale(alpha[i], lambda=0.01, tune=true, weight=5));
+		moves.append(mvScale(alpha[i], lambda=0.10, tune=true, weight=3));
+		moves.append(mvScale(alpha[i], lambda=1.00, tune=true, weight=1));
+		char_rate_var[i] := fnDiscretizeDistribution(dnLognormal(mean=0,sd=alpha[i]), 4);
+		# NOTE: This varies only log-variance; the geometric mean (= median) is always 1.0.
+		}
+
+	branch_rate_var[i]:=base_branch_rates;	# set deterministic node that we can use regardless of the model of per-branch variation
+
+	if (partition_states[i]==2)	{
+		phyMorpho[i] ~ dnPhyloCTMC( tree=tau, siteRates=char_rate_var[i], branchRates=branch_rate_var[i], Q=Q[i],type="Standard", coding_bias=coding_bias[i]);
+		} else	{
+		phyMorpho[i] ~ dnPhyloCTMC( tree=tau, siteRates=char_rate_var[i], branchRates=branch_rate_var[i], Q=Q[i],type="Standard", coding_bias="all" );
+		}
+	phyMorpho[i].clamp(crumplehorn_snorkaxe[i]);
+	}

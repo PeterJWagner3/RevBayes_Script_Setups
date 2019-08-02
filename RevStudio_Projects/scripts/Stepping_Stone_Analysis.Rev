@@ -1,0 +1,9 @@
+pow_p = powerPosterior(mymodel, moves, monitors, "output/model1.out", cats=50)
+pow_p.burnin(generations=10000,tuningInterval=1000)
+pow_p.run(generations=1000)
+
+ss = steppingStoneSampler(file="output/Vascos_Adult_Juvenile.out", powerColumnName="power", likelihoodColumnName="likelihood", printgen=10)
+ss.marginal()
+
+ps = pathSampler(file="output/Vascos_Adult_Juvenile.out", powerColumnName="power", likelihoodColumnName="likelihood", printngen=10)
+ps.marginal() 
