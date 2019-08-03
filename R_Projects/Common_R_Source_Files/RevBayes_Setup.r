@@ -2865,8 +2865,12 @@ for (tx in 1:ntaxa)	{
 	}
 
 collection_no <- sort(unique(occurrences_compendium$collection_no));
-for (c in 1:length(collection_no))	{
-	if (c==1)	{
+c <- 1;
+collection_compendium <- c();
+while (c < length(collection_no))	{
+#for (c in 1:length(collection_no))	{
+	if (is.null(collection_compendium))	{
+#	if (c==1)	{
 		collection_compendium <- accio_single_locality_info(collection_no=collection_no[c]);
 		} else	{
 		collection_compendium <- rbind(collection_compendium,accio_single_locality_info(collection_no=collection_no[c]));
@@ -5651,6 +5655,15 @@ print("Getting taxonomic data....")
 #		}
 #	}
 initial_compendium <- data.frame(base::t(sapply(taxon,revelio_taxonomy_for_one_taxon)),stringsAsFactors = FALSE);
+
+#for (tx in 1:length(otu_names))	{
+#	if (tx==1)	{
+#		initial_compendium <- revelio_taxonomy_for_one_taxon(otu_names[tx]);
+#		} else	{
+#		initial_compendium <- rbind(initial_compendium,revelio_taxonomy_for_one_taxon(otu_names[tx]));
+#		}
+#	}
+initial_compendium <- evanesco_na_from_matrix(initial_compendium,"");
 compendium_headers <- colnames(initial_compendium);
 taxon_compendium <- data.frame(array("",dim=dim(initial_compendium)),stringsAsFactors = F);
 colnames(taxon_compendium) <- compendium_headers;
@@ -5822,6 +5835,7 @@ return(data.frame(genus_species=as.character(genus_species),subgenus_species=as.
 
 revelio_taxonomy_for_one_taxon <- function(taxon,settle=F)	{
 dud <- F;
+orig_name_no <- 0;
 orig_taxon <- taxon;
 taxon <- gsub(" ","%20",taxon);
 httpT <- paste("http://paleobiodb.org/data1.2/taxa/list.csv?base_name=",taxon,"&show=full,immparent,classext,attr,app",sep="");
@@ -5863,16 +5877,34 @@ if (nrow(taxon_info)>1)	{
 #		opinions <- accio_taxonomic_opinions_for_one_species(species_name=orig_taxon);
 		opinions <- accio_taxonomic_opinions_for_one_taxon(taxon=orig_taxon);
 		ttl_opinions <- nrow(opinions);
+		kluge_mc_kluge <- (1:ttl_opinions)[is.na(opinions$child_name)];
+		if (length(kluge_mc_kluge)>0)
+			opinions$child_name[kluge_mc_kluge[opinions$child_spelling_no==opinions$orig_no]] <- opinions$taxon_name[kluge_mc_kluge[opinions$child_spelling_no==opinions$orig_no]];
 		orig_name <- (1:ttl_opinions)[opinions$child_name %in% orig_taxon];
-		if (length(orig_name)==0)
-			orig_name <- (1:ttl_opinions)[opinions$taxon_name %in% orig_taxon];
-		### make sure that it finds some match!!!!! 
-		### this can be screwed up if there are two versions of the same taxon in the PaleoDB
-		if (length(orig_name)==0 || sum(is.na(match(opinions$taxon_name[orig_name],taxon_info$taxon_name)))==length(orig_name))	{
-#			which(opinions==orig_taxon,arr.ind = T)[,1]
-			orig_name <- (1:ttl_opinions)[opinions$taxon_name %in% orig_info$taxon_name]
+		if (length(orig_name)>0)	{
+			orig_name_no <- unique(opinions$child_spelling_no[orig_name]);
+			taxon_info <- unique(taxon_info[!is.na(match(opinions$taxon_name[orig_name],taxon_info$taxon_name)),]);
 			}
-		taxon_info <- taxon_info[match(opinions$taxon_name[orig_name],taxon_info$taxon_name),];
+		if (nrow(taxon_info)!=1 && length(orig_name_no)==1)	{
+			httpTn <- paste("http://paleobiodb.org/data1.2/taxa/list.csv?id=",orig_name_no,"&show=full,immparent,classext,attr,app",sep="");
+			accio <- RCurl::getURL(httpTn);
+			taxon_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=FALSE));
+#			taxon_info <- orig_info;
+#			orig_name <- (1:ttl_opinions)[opinions$taxon_name %in% orig_taxon];
+#			if (length(orig_name)==1)	{
+#				taxon_info <- taxon_info[match(opinions$taxon_name[orig_name],taxon_info$taxon_name),];
+#				}
+			}
+		### make sure that it finds some match!!!!! 
+		### use child_name && child_spelling_no
+		### this can be screwed up if there are two versions of the same taxon in the PaleoDB
+#		if (length(orig_name)==0 || sum(is.na(match(opinions$taxon_name[orig_name],taxon_info$taxon_name)))==length(orig_name))	{
+#			which(opinions==orig_taxon,arr.ind = T)[,1]
+#			orig_name <- (1:ttl_opinions)[opinions$child_name %in% taxon];
+#			opinions$child_spelling_no[orig_name]
+#			taxon_info[unique(which(taxon_info==unique(opinions$child_spelling_no[orig_name]),arr.ind = T)[,1]),]
+#			orig_name <- (1:ttl_opinions)[opinions$taxon_name %in% orig_info$taxon_name];
+#			}
 #		taxon_info$n_occs <- 0;
 		}
 	}
