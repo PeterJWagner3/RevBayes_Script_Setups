@@ -60,7 +60,11 @@ monitors = VectorMonitors();
 ## alter the file names to better reflect the analysis (e.g., cincta_strict_clock.log and cincta_strict_clock.trees)
 monitors.append(mnModel(filename="output/cincta_relaxed_clock.log", printgen=10));
 monitors.append(mnFile(tau, filename="output/cincta_relaxed_clock.trees",printgen=10,separator=TAB,tau));
+<<<<<<< Updated upstream
 monitors.append(mnScreen(printgen=500, speciation_rate, extinction_rate, psi, num_samp_anc, origin_time));
+=======
+monitors.append(mnScreen(printgen=500,mean_rt,alpha,speciation_rate, extinction_rate, psi, num_samp_anc, origin_time));
+>>>>>>> Stashed changes
 
     ################################################################################
     # Here are some starting parameters for your MCMC analysis: but use your own!
