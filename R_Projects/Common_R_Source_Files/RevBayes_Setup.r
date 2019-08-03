@@ -1719,7 +1719,7 @@ mcmc_output <- paste("output/",tolower(tree_file_name),sep="");
 revbayes_source <- c(revbayes_source,paste("## alter the file names to better reflect the analysis (e.g., ",tolower(analysis_name),"_strict_clock.log and ",tolower(analysis_name),"_strict_clock.trees)",sep=""));
 revbayes_source <- c(revbayes_source,paste("monitors.append(mnModel(filename=\"",mcmc_output,".log\", printgen=10));",sep=""));
 revbayes_source <- c(revbayes_source,paste("monitors.append(mnFile(tau, filename=\"",mcmc_output,".trees\",printgen=10,separator=TAB,tau));",sep=""));
-revbayes_source <- c(revbayes_source,"monitors.append(mnScreen(printgen=500,mean_rt,speciation_rate,extinction_rate,psi,summed_gaps,num_samp_anc,origin_time));");
+revbayes_source <- c(revbayes_source,"monitors.append(mnScreen(printgen=500,mean_rt,alpha,speciation_rate,extinction_rate,psi,summed_gaps,num_samp_anc,origin_time));");
 revbayes_source <- c(revbayes_source,"");
 revbayes_source <- c(revbayes_source,"    ################################################################################");
 revbayes_source <- c(revbayes_source,"    # Here are some starting parameters for your MCMC analysis: but use your own!");
