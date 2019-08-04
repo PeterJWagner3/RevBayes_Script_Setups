@@ -1576,8 +1576,13 @@ if (fbd_parameterization_script=="")	{
 	filename <- paste(filename,"_FBD_Analysis.Rev",sep="");
 	}
 revbayes_source <- "clear();"
-if (set_wdir!="")
+if (set_wdir!="")	{
 	revbayes_source <- c(revbayes_source,paste("setwd(\"",set_wdir,"\");\t#CHANGE THIS TO THE FOLDER IN WHICH YOU HAVE REVBAYES SCRIPTS & DATA!!!",sep=""));
+	revbayes_source <- c(revbayes_source,"### This director needs three subdirectories (folders):");
+	revbayes_source <- c(revbayes_source,"#     RevBayes_Projects/scripts (additional RevBayes routines that will be used)");
+	revbayes_source <- c(revbayes_source,"#     RevBayes_Projects/data (holds data matrices & taxonomic information)");
+	revbayes_source <- c(revbayes_source,"#     RevBayes_Projects/output (where trees & logs will be sent)");
+	}
 revbayes_source <- c(revbayes_source,paste("source(\"",paste(script_file_lead,"Imperio_Default_Settings.Rev",sep=""),"\");",sep=""));
 revbayes_source <- c(revbayes_source,"");
 revbayes_source <- c(revbayes_source,"###############################################################################");
@@ -2385,7 +2390,7 @@ write(revbayes_babble,file=filename);
 #revbayes_babble <- scribio_Rev_Bayes_script_for_partitioned_character_data(analysis_name,initial_data,matrix_file_names,state_numbers,state_ordering,write_scripts_directory=write_scripts_directory,fbd_parameterization_script,extant_file,set_wdir,output_file_lead="output/",script_file_lead="scripts/",no_runs=4);
 }
 
-scribio_RevBayes_scripts_from_nexus_file_and_existing_FBD_script_and_data <- function(analysis_name,fbd_parameterization_script,fossil_interval_file,taxon_subset_file=F,rate_partition="",trend_partition="",read_data_directory="",write_data_directory="",write_scripts_directory="",local_directory="",set_wdir="",UNKNOWN=-11,INAP=-22)	{
+scribio_RevBayes_scripts_from_nexus_file_and_existing_FBD_script_and_data <- function(analysis_name,fbd_parameterization_script,fossil_interval_file,taxon_subset_file=F,rate_partition="",trend_partition="",write_data_directory="",write_scripts_directory="",local_directory="",set_wdir="",UNKNOWN=-11,INAP=-22)	{
 print("This program will read a Nexus file and then create scripts that RevBayes can use to conduct phylogenetic analyses.");
 print("   If conducting FBD analyses, then it relies on the user to provide the name of an FBD parameterization script as.");
 print("   well as a file giving fossil intervals. IF you do not have these yet, then you should use another routine:" );
