@@ -1,0 +1,9 @@
+﻿identified_name,collection_no,paleodb_collection_no,collection_name,lng,lat,early_interval,late_interval,ref_author,ref_pubyr,formation,stratgroup,member,zone,cc,state,direct_ma,direct_ma_error
+Pareocrinus ljubzovi,1,,Gulag,72.5,98.45,Nganasanian,Tavgian,Yakovlev,1956,Bol'shesiya,,,,RU,Siberia,,
+Cambraster cannati,2,,Zaragoza,-1.5,41.51,Languedocian,,Zamora,2013,Borobia,,,,ES,Zaragoza,,
+Ctenocystis utahensis,3,,Mozarts,15,50,Drumian,,Nardin et al.,2017,Jince,,,Eccaparadoxides pusillus,CZ,Praha,,
+Ctenocystis colodon,4,90588,"CF-1, Calls Fort",41.6,-112.04,Drumian,,Sprinkle,1973,Swasey Limestone,,,Altiocculus,US,Utah,,
+Gyrocystis sp. L,5,90554,Los Barrios de Luna Capa 7,-5.866667,42.849998,Middle Cambrian,,Zamora and Smith,2008,Oville,,Genestosa,Solenopleuropsis thorali,ES,,,
+Gyrocystis sp. L,6,199042,Los Barrios de Luna Capa 6,-5.866667,42.849998,Middle Cambrian,,Zamora,2009,Oville,,Genestosa,Solenopleuropsis thorali,ES,,,
+Gyrocystis sp. L,7,199044,Los Barrios de Luna Capa 5,-5.866667,42.849998,Middle Cambrian,,Zamora,2009,Oville,,Genestosa,Solenopleuropsis thorali,ES,,,
+Gyrocystis sp. A,8,198915,Jarque. Capa 197,-1.666667,41.549999,Middle Cambrian,,Zamora,2009,Murero,,,Solenopleuropsis ribeiroi,ES,,,
