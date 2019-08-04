@@ -2873,6 +2873,7 @@ collection_no <- sort(unique(occurrences_compendium$collection_no));
 c <- 1;
 collection_compendium <- c();
 #while (c < length(collection_no))	{
+#	c <- c+1;
 for (c in 1:length(collection_no))	{
 	if (is.null(collection_compendium))	{
 #	if (c==1)	{
