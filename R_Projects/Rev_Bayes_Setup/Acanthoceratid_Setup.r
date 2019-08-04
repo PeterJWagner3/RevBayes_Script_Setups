@@ -16,7 +16,9 @@ library(subplex);		#install.packages("subplex", dependencies=TRUE);
 # CHANGE DIRECTORIES TO WHERE YOU KEEP COMMON SOURCE FILES!!!!
 common_source_folder <- "~/Documents/R_Projects/Common_R_Source_Files/";	# directory to folder where you keep common source
 data_for_R_folder <- "~/Documents/R_Projects/Data_for_R/";					# directory to folder where you keep R-Data files
+local_directory <- "~/Documents/R_Projects/Rev_Bayes_Setup/";				# this is the directory from which you are running this R-program
 
+# load the source code needed for the analyses
 source(paste(common_source_folder,"RevBayes_Setup.r",sep=""));
 
 # these are the external databases that the program uses to fine-tune PaleoDB data
@@ -45,17 +47,12 @@ rate_partition <- "";									# Must match character partition in nexus file! Na
 trend_partition <- "";									# Must match character partition in nexus file! Name of character partition set that separates out characters suspected of undergoing driven trends.
 
 # This is where you have the initial nexus file
-read_data_directory <- ("~/Documents/RevStudio_Projects/data/");
-# The output will write out RevBayes scripts & datasets; this is where you want them to go.
-write_data_directory <- ("~/Documents/RevStudio_Projects/data/");
-write_scripts_directory <- ('~/Documents/RevStudio_Projects/scripts/');	# insert directory with RevBayes scripts here!
-set_wdir <- "/Users/peterjwagner/Documents/RevStudio_Projects/"	# the working directory for RevBayes analyses.
-
-# this is the directory from which you are running the R-program
-local_directory <- ("~/Documents/R_Projects/Rev_Bayes_Setup/");
+write_data_directory <- "~/Documents/RevBayes_Projects/data/";			# The output RevBayes scripts will direct rearranged data to this folde
+write_scripts_directory <- "~/Documents/RevBayes_Projects/scripts/";	# Insert directory with RevBayes scripts here!
+set_wdir <- "/Users/peterjwagner/Documents/RevBayes_Projects/";			# The working directory for RevBayes analyses.
 
 # load up the relevant databases!
-rock_unit_databases <- "";						# information about rock ages, biozonations and sequence stratigraphy
+rock_unit_databases <- "";									# information about rock ages, biozonations and sequence stratigraphy
 chronostratigraphic_databases <- gradstein_2012_emended;	# information about time scales, zone ages, etc.
 paleodb_fixes <- paleodb_fixes;								# edits to PaleoDB data that cannot be entered currrently
 
