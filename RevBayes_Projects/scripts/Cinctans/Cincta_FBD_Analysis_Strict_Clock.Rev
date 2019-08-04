@@ -1,5 +1,5 @@
 clear();
-setwd("/Users/peterjwagner/Documents/RevStudio_Projects/");	#CHANGE THIS TO THE FOLDER IN WHICH YOU HAVE REVBAYES SCRIPTS & DATA!!!
+setwd("/Users/peterjwagner/Documents/RevBayes_Projects/");	#CHANGE THIS TO THE FOLDER IN WHICH YOU HAVE REVBAYES SCRIPTS & DATA!!!
 source("scripts/Imperio_Default_Settings.Rev");
 
 ###############################################################################
@@ -16,7 +16,7 @@ max_age <- 7.3;						# used if big_bang==TRUE;
 outgroup = clade("Ctenocystis");
 ingroup = clade("Gyrocystis_platessa","Gyrocystis_testudiformis","Gyrocystis_cruzae","Gyrocystis_badulesiensis","Gyrocystis_erecta","Progyrocystis_disjuncta","Protocinctus_mansillaensis","Elliptocinctus_barrandei","Elliptocinctus_vizcainoi","Sucocystis_theronensis","Sucocystis_bretoni","Lignanicystis_barriosensis","Undatacinctus_undata","Sucocystis_acrofera","Undatacinctus_quadricornuta","Undatacinctus_melendezi","Asturicystis_jaekeli","Sotocinctus_ubaghsi","Trochocystites_bohemicus","Trochocystoides_parvus","Ludwigicinctus_truncatus","Graciacystis_ambigua","Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis");
 among_char_var <- "lognormal";		# enter "gamma" or "lognormal; rate variation among characters"
-clock_model <- "strict";					# enter "strict" for strict clock, "lognormal" for relaxed clock with lognormal; we'll add "dirichlet" for relaxed dirichlet eventually);
+clock_model <- "strict";			# enter "strict" for strict clock, "lognormal" for relaxed clock with lognormal; we'll add "dirichlet" for relaxed dirichlet eventually);
 unscored_taxa <- v(24,25,26,27);
 
 ############################################################################
@@ -60,11 +60,7 @@ monitors = VectorMonitors();
 ## alter the file names to better reflect the analysis (e.g., cincta_strict_clock.log and cincta_strict_clock.trees)
 monitors.append(mnModel(filename="output/cincta_strict_clock.log", printgen=10));
 monitors.append(mnFile(tau, filename="output/cincta_strict_clock.trees",printgen=10,separator=TAB,tau));
-<<<<<<< Updated upstream
-monitors.append(mnScreen(printgen=500, speciation_rate, extinction_rate, psi, num_samp_anc, origin_time));
-=======
 monitors.append(mnScreen(printgen=500,mean_rt,alpha,speciation_rate, extinction_rate, psi, num_samp_anc, origin_time));
->>>>>>> Stashed changes
 
     ################################################################################
     # Here are some starting parameters for your MCMC analysis: but use your own!
