@@ -19,7 +19,9 @@ library(subplex);		#install.packages("subplex", dependencies=TRUE);
 #	sets that many programs might use). However, I also dress like a hobbit....
 common_source_folder <- "~/Documents/R_Projects/Common_R_Source_Files/";	# directory to folder where you keep common source
 data_for_R_folder <- "~/Documents/R_Projects/Data_for_R/";					# directory to folder where you keep R-Data files
+local_directory <- "~/Documents/R_Projects/Rev_Bayes_Setup/";				# this is the directory from which you are running this R-program
 
+# load the source code needed for the analyses
 source(paste(common_source_folder,"RevBayes_Setup.r",sep=""));
 
 # these are the external databases that the program uses to fine-tune PaleoDB data
@@ -46,15 +48,11 @@ sampling_unit <- "rock";					# "collection" for sampling by locality; "rock" for
 time_scale_stratigraphic_scale <- "Stage Slice"	# Use "International" or "Stage Slice"
 temporal_precision <- 0.05;						# the finest unit of time you wish to consider; time scale will be rounded accordingly
 bogarted <- T;									# occurrences not in the PaleoDB. Include directory here if it is not in the current one.
-# here, write out the directories that R will use to read data, output files, etc.
-# this is the directory from which you are running the R-program
-local_directory <- ("~/Documents/R_Projects/Rev_Bayes_Setup/");
+
 # This is where you have the initial nexus file
-read_data_directory <- ("~/Documents/R_Projects/Data_for_R//Original_Data_Matrices/12_Crinoids/");
-# The output will write out RevBayes scripts & datasets; this is where you want them to go.
-write_data_directory <- ("~/Documents/RevStudio_Projects/data/");
-write_scripts_directory <- ("~/Documents/RevStudio_Projects/scripts/");
-set_wdir <- "/Users/peterwagner/Documents/RevStudio_Projects/"	# the working directory for RevBayes analyses.
+write_data_directory <- "~/Documents/RevBayes_Projects/data/";			# The output RevBayes scripts will direct rearranged data to this folde
+write_scripts_directory <- "~/Documents/RevBayes_Projects/scripts/";	# Insert directory with RevBayes scripts here!
+set_wdir <- "/Users/peterjwagner/Documents/RevBayes_Projects/";			# The working directory for RevBayes analyses.
 
 # load up the relevant databases!
 rock_unit_databases <- rock_unit_data;						# information about rock ages, biozonations and sequence stratigraphy
