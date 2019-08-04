@@ -1648,11 +1648,15 @@ if (length(initial_data$Unscored_Taxa)>0)
 	revbayes_source <- c(revbayes_source,paste("unscored_taxa <- v(",paste(initial_data$Unscored_Taxa,collapse=","),");",sep=""));
 
 revbayes_source <- c(revbayes_source,"among_char_var <- \"ENTER_THE_AMONG-CHARACTER_RATE_DISTRIBUTION_YOU_WISH_TO_USE_HERE\";\t# enter \"gamma\" or \"lognormal\"");
+<<<<<<< Updated upstream
 revbayes_source <- c(revbayes_source,"clock_model <- \"ENTER_THE_CLOCK_MODEL_YOU_WISH_TO_USE_HERE\";\t# enter \"strict\" for strict clock, or \"lognormal\" for relaxed clock with lognormal variation; we'll add \"dirichlet\ eventually;");
+=======
+#revbayes_source <- c(revbayes_source,"clock_model <- \"ENTER_THE_CLOCK_MODEL_YOU_WISH_TO_USE_HERE\";\t# enter \"strict\" for strict clock, or \"lognormal\" for relaxed clock with lognormal variation; we'll add \"dirichlet\ eventually;");
+>>>>>>> Stashed changes
 
 revbayes_source <- c(revbayes_source,"");
 revbayes_source <- c(revbayes_source,"############################################################################");
-revbayes_source <- c(revbayes_source,"#          Set a variable for the number of character partitions           #");
+revbayes_source <- c(revbayes_source,"#                  Get basic information about the clade                   #");
 revbayes_source <- c(revbayes_source,"############################################################################");
 revbayes_source <- c(revbayes_source,"n_data_subsets <- filenames.size();");
 if (fbd_parameterization_script!="")	{
@@ -1791,14 +1795,14 @@ diversification <- 1/((origination+extinction)/2);
 fbd_script <- c(fbd_script,paste("speciation_rate ~ dnExponential(",round(diversification,3),");",sep=""));
 fbd_script <- c(fbd_script,paste("extinction_rate ~ dnExponential(",round(diversification,3),");",sep=""));
 fbd_script <- c(fbd_script,"# NOTE: If it gets stuck in this script, then set origination & extinction to 1.0");
-fbd_script <- c(fbd_script,"diversification := speciation_rate - extinction_rate;");
-fbd_script <- c(fbd_script,"turnover := extinction_rate/speciation_rate;");
 fbd_script <- c(fbd_script,"moves.append(mvScale(speciation_rate, lambda=0.01, weight=5));");
 fbd_script <- c(fbd_script,"moves.append(mvScale(speciation_rate, lambda=0.10, weight=3));");
 fbd_script <- c(fbd_script,"moves.append(mvScale(speciation_rate, lambda=1.00, weight=1));");
 fbd_script <- c(fbd_script,"moves.append(mvScale(extinction_rate, lambda=0.01, weight=5));");
 fbd_script <- c(fbd_script,"moves.append(mvScale(extinction_rate, lambda=0.10, weight=3));");
 fbd_script <- c(fbd_script,"moves.append(mvScale(extinction_rate, lambda=1.00, weight=1));");
+fbd_script <- c(fbd_script,"diversification := speciation_rate - extinction_rate;");
+fbd_script <- c(fbd_script,"turnover := extinction_rate/speciation_rate;");
 fbd_script <- c(fbd_script,"");
 if (sampling_unit=="rock")
 	sampling_unit <- "rock units"

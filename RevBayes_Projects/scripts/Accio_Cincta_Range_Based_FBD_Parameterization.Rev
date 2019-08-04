@@ -6,14 +6,14 @@
 speciation_rate ~ dnExponential(1.471);
 extinction_rate ~ dnExponential(1.471);
 # NOTE: If it gets stuck in this script, then set origination & extinction to 1.0
-diversification := speciation_rate - extinction_rate;
-turnover := extinction_rate/speciation_rate;
 moves.append(mvScale(speciation_rate, lambda=0.01, weight=5));
 moves.append(mvScale(speciation_rate, lambda=0.10, weight=3));
 moves.append(mvScale(speciation_rate, lambda=1.00, weight=1));
 moves.append(mvScale(extinction_rate, lambda=0.01, weight=5));
 moves.append(mvScale(extinction_rate, lambda=0.10, weight=3));
 moves.append(mvScale(extinction_rate, lambda=1.00, weight=1));
+diversification := speciation_rate - extinction_rate;
+turnover := extinction_rate/speciation_rate;
 
 # Fossil Sampling Rates based on collection occupied by Echinodermata
 psi ~ dnExponential(3.892);
@@ -43,7 +43,7 @@ moves.append(mvFNPR(tau, weight=n_branches/2));                              # t
 moves.append(mvNNI(tau, weight=n_branches/2));                               # nearest-neighbor interchanges
 moves.append(mvCollapseExpandFossilBranch(tau,origin_time,weight=n_taxa/4)); # consider ancestor-descendant rather than sister species
 moves.append(mvNodeTimeSlideUniform(tau, weight=n_branches/2));              # adjust divergence times
-moves.append(mvRootTimeSlideUniform(tau, origin_time, weight=5));            # adjust basaldivergence time.
+moves.append(mvRootTimeSlideUniform(tau, origin_time, weight=5));            # adjust basal divergence time.
 
 num_samp_anc := tau.numSampledAncestors();
 for (bn in 1:n_branches)	{
