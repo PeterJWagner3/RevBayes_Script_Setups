@@ -1,0 +1,29 @@
+#NEXUS
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=12 NCHAR=12;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "   0 1 2 ";
+	MATRIX
+	Acanthoceras         000000000000
+	Dunveganoceras       001000101000
+	Calycoceras          -1200(01)(01)00000
+	Spathites            001?10010201
+	Mammites             000001101000
+	Vascoceras           -11022100200
+	Fagesia              -10022100010
+	Neoptychites         -11112210?10
+	Cibolaites           00100??0110?
+	Infabricaticeras     -1100(01)?11??0
+	Hoplitoides          -1212?210?20
+	Coilopoceras         22222?210100
+;
+END;
+begin mrbayes;
+	set autoclose=yes nowarn=yes;
+	lset nst=6 rates=invgamma;
+	unlink statefreq=(all) revmat=(all) shape=(all) pinvar=(all); 
+	prset applyto=(all) ratepr=variable;
+	mcmcp ngen= 100000000 relburnin=yes burninfrac=0.25 printfreq=10000  samplefreq=10000 nchains=4 savebrlens=yes;
+	mcmc;
+	sumt;
+end;
