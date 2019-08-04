@@ -1,0 +1,58 @@
+########################################################################
+# Set up appropriate parameters for speciation, extinction & sampling  #
+#   "Seed" numbers based on analyses of Paleobiology Database data.    #
+########################################################################
+# Diversification Rates based on Ammonoidea
+speciation_rate ~ dnExponential(3.268);
+extinction_rate ~ dnExponential(3.268);
+# NOTE: If it gets stuck in this script, then set origination & extinction to 1.0
+diversification := speciation_rate - extinction_rate;
+turnover := extinction_rate/speciation_rate;
+moves.append(mvScale(speciation_rate, lambda=0.01, weight=5));
+moves.append(mvScale(speciation_rate, lambda=0.10, weight=3));
+moves.append(mvScale(speciation_rate, lambda=1.00, weight=1));
+moves.append(mvScale(extinction_rate, lambda=0.01, weight=5));
+moves.append(mvScale(extinction_rate, lambda=0.10, weight=3));
+moves.append(mvScale(extinction_rate, lambda=1.00, weight=1));
+
+# Fossil Sampling Rates based on rock units occupied by Ammonoidea
+psi ~ dnExponential(2.186);
+completeness := psi/(extinction_rate+psi);
+moves.append(mvScale(psi, lambda=0.01, weight=5));
+moves.append(mvScale(psi, lambda=0.10, weight=3));
+moves.append(mvScale(psi, lambda=1.00, weight=1));
+
+# Proportional Taxon Sampling of Youngest Time Slice
+rho <- 0.638;	# 'extant' sampling.
+
+# Establish Basal Divergence Time
+origin_time ~ dnUnif(11, 12.6);
+moves.append(mvSlide(origin_time, delta=0.01, weight=5));
+moves.append(mvSlide(origin_time, delta=0.10, weight=3));
+moves.append(mvSlide(origin_time, delta=1.00, weight=1));
+
+fbd_dist = dnFBDRP(origin=origin_time, lambda=speciation_rate, mu=extinction_rate, psi=psi, rho=rho, taxa=taxa);
+############################################################################
+#                               Set up tree                                #
+############################################################################
+# create the vector of clade constraints
+constraints = v(ingroup);
+tau ~ dnConstrainedTopology(fbd_dist,constraints=constraints);
+for (bn in 1:n_branches)
+	divergence_dates[bn]:=tau.nodeAge(bn);	# save divergence dates of otus [first 1:notu nodes] and internal branches
+
+moves.append(mvFNPR(tau, weight=15));
+moves.append(mvCollapseExpandFossilBranch(tau,origin_time,weight=6));
+moves.append(mvNodeTimeSlideUniform(tau, weight=40));
+moves.append(mvRootTimeSlideUniform(tau, origin_time, weight=5));
+
+num_samp_anc := tau.numSampledAncestors();
+for (bn in 1:n_branches)	{
+	divergence_dates[bn]:=tau.nodeAge(bn);
+	branch_lengths[bn]:=tau.branchLength(bn);
+	}
+summed_gaps := sum(branch_lengths);
+
+clade_extant = clade("Erycites","Riccardiceras","Mollistephanus","Euhoploceras","Eudmetoceras","Euaptetoceras","Praestrigites","Bradfordia");
+age_extant := tmrca(tau, clade_extant);
+
