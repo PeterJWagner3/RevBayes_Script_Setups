@@ -12,7 +12,6 @@ source("scripts/Imperio_Default_Settings.Rev");   # some default settings, usual
 #     Make sure that filenames & directories are correct!!!
 ###############################################################################
 filenames <- v("data/Cincta_Matrix_2_States.nex", "data/Cincta_Matrix_3_States.nex", "data/Cincta_Matrix_4_States.nex");
-
 partition_states <- v(2,3,4);
 partition_ordering <- v("unordered","unordered","unordered");
 coding_bias <- v("all","variable","variable");	## prepare for ascertainment bias in binary characters; 'all': invariant & autapomorphies present; 'variable': all vary & autapomorphies present; 'informative': all vary & no autapomorphies.
@@ -20,12 +19,12 @@ max_age <- 7.3;						# used if big_bang==TRUE;
 
 outgroup = clade("Ctenocystis");
 ingroup = clade("Gyrocystis_platessa","Gyrocystis_testudiformis","Gyrocystis_cruzae","Gyrocystis_badulesiensis","Gyrocystis_erecta","Progyrocystis_disjuncta","Protocinctus_mansillaensis","Elliptocinctus_barrandei","Elliptocinctus_vizcainoi","Sucocystis_theronensis","Sucocystis_bretoni","Lignanicystis_barriosensis","Undatacinctus_undata","Sucocystis_acrofera","Undatacinctus_quadricornuta","Undatacinctus_melendezi","Asturicystis_jaekeli","Sotocinctus_ubaghsi","Trochocystites_bohemicus","Trochocystoides_parvus","Ludwigicinctus_truncatus","Graciacystis_ambigua","Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis");
-among_char_var <- "lognormal";		# enter "gamma" or "lognormal; rate variation among characters"
-clock_model <- "strict";					# enter "strict" for strict clock, "lognormal" for relaxed clock with lognormal; we'll add "dirichlet" for relaxed dirichlet eventually);
 unscored_taxa <- v(24,25,26,27);
 
+among_char_var <- "lognormal";		# enter "gamma" or "lognormal; rate variation among characters"
+
 ############################################################################
-#          Set a variable for the number of character partitions           #
+#                  Get basic information about the clade                   #
 ############################################################################
 n_data_subsets <- filenames.size();
 taxa <- readTaxonData(file="data/cincta_fossil_intervals_FA.tsv");
