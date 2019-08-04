@@ -103,7 +103,7 @@ return(nexus_line);
 
 # routine to read nexus fi"Vascoceratidae_Mertz_2017.nex"le of Mesquite or Maclade format & return important infromation
 #nexus_file_name <- "Vascoceratidae_Mertz_2017.nex"
-#nexus_file_name <- "~/Documents/RevStudio_Projects/data/Vascoceratidae_Mertz_2017.nex"
+#nexus_file_name <- "~/Documents/RevBayes_Projects/data/Vascoceratidae_Mertz_2017.nex"
 accio_data_from_nexus_file <- function(nexus_file_name, polymorphs=T, UNKNOWN=-11, INAP=-22, rate_partitions="", trend_partitions="")	{
 # nexus_file_name: name of nexus file (e.g., "Phacopidae_Snow_2000.nex")
 # polymorphs: boolean, if TRUE, then recode "1,2" as "-21"; otherwise, treat as unknown
