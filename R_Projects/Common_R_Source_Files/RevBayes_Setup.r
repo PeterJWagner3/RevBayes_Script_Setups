@@ -1647,7 +1647,7 @@ if(as.numeric(initial_data$Outgroup[1])!=-1)	{
 if (length(initial_data$Unscored_Taxa)>0)
 	revbayes_source <- c(revbayes_source,paste("unscored_taxa <- v(",paste(initial_data$Unscored_Taxa,collapse=","),");",sep=""));
 
-revbayes_source <- c(revbayes_source,"among_char_var <- \"ENTER_THE_AMONG-CHARACTER_RATE_DISTRIBUTION_YOU_WISH_TO_USE_HERE\";\t# enter \"gamma\" or \"lognormal\"");
+revbayes_source <- c(revbayes_source,"among_char_var <- \"ENTER_THE_AMONG_CHARACTER_RATE_DISTRIBUTION_YOU_WISH_TO_USE_HERE\";\t# enter \"gamma\" or \"lognormal\"");
 <<<<<<< Updated upstream
 revbayes_source <- c(revbayes_source,"clock_model <- \"ENTER_THE_CLOCK_MODEL_YOU_WISH_TO_USE_HERE\";\t# enter \"strict\" for strict clock, or \"lognormal\" for relaxed clock with lognormal variation; we'll add \"dirichlet\ eventually;");
 =======
