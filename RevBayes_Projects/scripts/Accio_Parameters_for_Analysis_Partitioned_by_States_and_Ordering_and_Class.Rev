@@ -13,7 +13,7 @@
 if (ttl_rate_partitions==1)	{
 	if (clock_model=="strict")	{
 		if (big_bang)	{
-			source("scripts/Imperio_Early_Burst_Strict_Clock_Branch_Rates.Rev");
+			source("scripts/Imperio_Early_Burst_Branch_Rates.Rev");
 			# rate variation on branches comes from decay over time only
 			} else	{
 			source("scripts/Imperio_Strict_Clock_Branch_Rates.Rev");
