@@ -8,9 +8,9 @@ This simply clears all information from the RevBayes program.  The second line i
 “user_name” in your file should not be user_name, but instead be the name of your user folder on your computer.  This should have been entered in the Cincta.setup.R in the variable set_wdir.  If not, then change it to your user folder name now.
 
 RevBayes_Projects should contain three folders:
-	RevBayes_Projects/scripts
-	RevBayes_Projects/data
-	RevBayes_Projects/output
+	1) RevBayes_Projects/scripts
+	2) RevBayes_Projects/data
+	3) RevBayes_Projects/output
 “Cincta_FBD_Analysis_Strict_Clock.Rev” will look in the first folder for source files that are additional RevBayes scripts for performing MCMC analyses.  It will look in the 2nd folder for the relevant data files.  It will send output to the third folder.
 
 “Cincta_FBD_Analysis_Strict_Clock.Rev” will call on three types of RevBayes source files.  The type is denoted by the first word of the files, which are named after appropriate Harry Potter spells:
