@@ -109,11 +109,11 @@ BEGIN CHARACTERS;
 
 END;
 BEGIN LABELS;
-	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
-	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup;
+	TAXAGROUPLABEL Ingroup;
 
-	CHARGROUPLABEL Lognormal COLOR = (RGB 1 1 1) ;
-	CHARGROUPLABEL Exclude COLOR = (RGB 1 1 1) ;
+	CHARGROUPLABEL Lognormal;
+	CHARGROUPLABEL Exclude;
 	CHARGROUPLABEL Gamma;
 	CHARGROUPLABEL Nonfeeding;
 	CHARGROUPLABEL Feeding;
@@ -125,17 +125,15 @@ BEGIN LABELS;
 	CHARGROUPLABEL Membranes;
 	CHARGROUPLABEL Food_Grooves;
 	CHARGROUPLABEL Bonus;
-	CHARGROUPLABEL Unbiased COLOR = (RGB 1 1 1) ;
-	CHARGROUPLABEL Driven COLOR = (RGB 1 1 1) ;
+	CHARGROUPLABEL Unbiased;
+	CHARGROUPLABEL Driven;
 
 
 END;
 
 BEGIN SETS;
-	TAXPARTITION * UNTITLED  =  Outgroup :  1, Ingroup :  2- 23;
 	TAXPARTITION To_Analyze  =  Outgroup :  1, Ingroup :  2- 23;
 
-	CHARPARTITION * UNTITLED  =  Unbiased :  1- 32 34- 40 43- 50 52- 60, Driven :  33 41- 42 51;
 	CHARPARTITION Functional_Partitions  =  Nonfeeding :  1- 45 58- 60, Feeding :  46- 57;
 	CHARPARTITION To_Analyze  =  Include :  1- 57, Exclude :  58- 60;
 	CHARPARTITION Authors  =  General_Features :  1- 3, Stele :  4- 8, Marginal_Frame :  9- 32, Operculum_and_Porta :  33- 38, Membranes :  39- 45, Food_Grooves :  46- 57, Bonus :  58- 60;
