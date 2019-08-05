@@ -12,31 +12,20 @@
 # these all return base_branch_rates, which is a scalar for clock models, but a 1:n_branches long vector for other models.
 if (ttl_rate_partitions==1)	{
 	if (clock_model=="strict")	{
-		if (big_bang)	{
-			source("scripts/Imperio_Early_Burst_Strict_Clock_Branch_Rates.Rev");
-			# rate variation on branches comes from decay over time only
-			} else	{
-			source("scripts/Imperio_Strict_Clock_Branch_Rates.Rev");
-			# no rate variation on branches
-			}
+	source("scripts/Imperio_Strict_Clock_Branch_Rates.Rev");
 		} else if (clock_model=="lognormal" || clock_model=="log_normal")	{
-		if (big_bang)	{
-			source("scripts/Imperio_Early_Burst_Lognormal_Relaxed_Clock_Branch_Rates.Rev");
-			# rate variation on branches comes from decay over time + log_normal variation
-			} else	{
-			source("scripts/Imperio_Lognormal_Relaxed_Clock_Branch_Rates.Rev");
-			# rate variation on branches comes from log_normal variation only
-			}
+		source("scripts/Imperio_Lognormal_Relaxed_Clock_Branch_Rates.Rev");
+		} else if (clock_model=="big_bang")	{
+		source("scripts/Imperio_Early_Burst_Branch_Rates.Rev");
+		# rate variation on branches comes from decay over time only
+		} else if (clock_model=="autocorrelated")	{
+		source("scripts/Imperio_Autocorrelated_Lognormal_Relaxed_Clock_Branch_Rates.Rev");
 		}
 	}	else if (ttl_rate_partitions > 1)	{
 	if (clock_model=="strict")	{
 		source("scripts/Imperio_Strict_Clock_Branch_Rates_Partitioned.Rev");
 		} else if (clock_model=="lognormal" || clock_model=="log_normal")	{
-		if (big_bang)	{
-			source("scripts/Imperio_Early_Burst_Lognormal_Relaxed_Clock_Branch_Rates_Partitioned.Rev");
-			} else	{
-			source("scripts/Imperio_Lognormal_Relaxed_Clock_Branch_Rates_Partitioned.Rev");
-			}
+		source("scripts/Imperio_Lognormal_Relaxed_Clock_Branch_Rates_Partitioned.Rev");
 		}
 	}
 
