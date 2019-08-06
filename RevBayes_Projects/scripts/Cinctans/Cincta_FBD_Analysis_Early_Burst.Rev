@@ -22,7 +22,7 @@ ingroup = clade("Gyrocystis_platessa","Gyrocystis_testudiformis","Gyrocystis_cru
 unscored_taxa <- v(24,25,26,27);
 
 among_char_var <- "lognormal";		# enter "gamma" or "lognormal; rate variation among characters"
-big_bang <- TRUE;                  # if TRUE, then rates of change decline over time.
+clock_model <- "big_bang";          
 
 ############################################################################
 #                  Get basic information about the clade                   #
