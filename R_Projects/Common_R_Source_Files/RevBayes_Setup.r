@@ -827,6 +827,9 @@ if (rate_partition!="")	{
 			nexus[ln] <- gsub("-"," - ",nexus[ln]);	# Mesquite often puts dashes immediately after character or taxon numbers.....
 			nexus[ln] <- gsub("  -"," -",nexus[ln]);
 			nexus[ln] <- gsub("-  ","- ",nexus[ln]);
+			nexus[ln] <- gsub(":"," : ",nexus[ln]);	# Mesquite often puts dashes immediately after character or taxon numbers.....
+			nexus[ln] <- gsub("  :"," :",nexus[ln]);
+			nexus[ln] <- gsub(":  ",": ",nexus[ln]);
 			breakup_this_line <- strsplit(nexus[ln],split=" ")[[1]];
 			breakup_this_line <- gsub(",","",breakup_this_line);
 			breakup_this_line <- gsub(";","",breakup_this_line);
@@ -1632,12 +1635,12 @@ if(as.numeric(initial_data$Outgroup[1])!=-1)	{
 		} else	{
 		outies <- taxon_names[as.numeric(initial_data$Outgroup)];
 		outies <- gsub(" ","_",outies);
+		revbayes_source <- c(revbayes_source,paste("outgroup = clade(\"",outies,"\");",sep=""));
 		}
 	hip_crowd <- "\"";
 	hip_crowd <- paste(hip_crowd,paste(ingroup_taxa,collapse="\",\""),sep="");
 	hip_crowd <- paste(hip_crowd,"\"",sep="");
 	hip_crowd <- gsub(" ","_",hip_crowd);
-	revbayes_source <- c(revbayes_source,paste("outgroup = clade(\"",outies,"\");",sep=""));
 	revbayes_source <- c(revbayes_source,paste("ingroup = clade(",hip_crowd,");",sep=""));
 	} else	{
 	outies <- "ENTER_AN_OUTGROUP_HERE!"
