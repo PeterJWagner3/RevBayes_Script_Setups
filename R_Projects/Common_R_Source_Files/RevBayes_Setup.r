@@ -1647,12 +1647,8 @@ if(as.numeric(initial_data$Outgroup[1])!=-1)	{
 if (length(initial_data$Unscored_Taxa)>0)
 	revbayes_source <- c(revbayes_source,paste("unscored_taxa <- v(",paste(initial_data$Unscored_Taxa,collapse=","),");",sep=""));
 
-revbayes_source <- c(revbayes_source,"among_char_var <- \"ENTER_THE_AMONG_CHARACTER_RATE_DISTRIBUTION_YOU_WISH_TO_USE_HERE\";\t# enter \"gamma\" or \"lognormal\"");
-<<<<<<< Updated upstream
-revbayes_source <- c(revbayes_source,"clock_model <- \"ENTER_THE_CLOCK_MODEL_YOU_WISH_TO_USE_HERE\";\t# enter \"strict\" for strict clock, or \"lognormal\" for relaxed clock with lognormal variation; we'll add \"dirichlet\ eventually;");
-=======
+revbayes_source <- c(revbayes_source,"among_char_var <- \"ENTER_THE_AMONG-CHARACTER_RATE_DISTRIBUTION_YOU_WISH_TO_USE_HERE\";\t# enter \"gamma\" or \"lognormal\"");
 #revbayes_source <- c(revbayes_source,"clock_model <- \"ENTER_THE_CLOCK_MODEL_YOU_WISH_TO_USE_HERE\";\t# enter \"strict\" for strict clock, or \"lognormal\" for relaxed clock with lognormal variation; we'll add \"dirichlet\ eventually;");
->>>>>>> Stashed changes
 
 revbayes_source <- c(revbayes_source,"");
 revbayes_source <- c(revbayes_source,"############################################################################");
@@ -2541,8 +2537,8 @@ write.csv(ingroup_collections[order(ingroup_collections$collection_no),],file=pa
 write.csv(ingroup_finds,file=paste(local_directory,analysis_name,"_Finds.csv",sep=""),row.names=F);
 
 if (control_taxon!="")	{
-	print("Getting occurrence & collection data for control taxa....")
-	control_data <- accio_data_for_control_groups_to_seed_FBD_analyses(control_taxon,onset,end,basic_environments,species_only = T)
+	print("Getting occurrence & collection data for control taxa....");
+	control_data <- accio_data_for_control_groups_to_seed_FBD_analyses(control_taxon,onset,end,basic_environments,species_only = T);
 	control_collections <- evanesco_na_from_matrix(control_data$control_collections,"");
 	control_occurrences <- evanesco_na_from_matrix(control_data$control_occurrences,"");
 	control_occurrences <- evanesco_indeterminate_species(paleodb_finds = control_occurrences);
@@ -2857,9 +2853,19 @@ for (tx in 1:ntaxa)	{
 		taxon_finds <- accio_occurrence_data(taxa,species_only=F,save_files=F);
 	if (!lump_subgenera && !is.null(nrow(taxon_finds)))	{
 		taxon_info <- accio_taxonomic_data_for_one_taxon(taxon=taxa);
+		backup_taxon_finds <- taxon_finds;
 		if (taxon_info$taxon_rank=="genus")	{
 			this_genus <- (1:nrow(taxon_finds))[taxon_finds$genus %in% c(taxa,paste(taxa," (",taxa,")",sep=""))];
 			taxon_finds <- taxon_finds[this_genus,];
+			# this kluge protects against wonky cases where the PaleoDB has conflicted information about genus/subgenus status
+			if (nrow(taxon_finds)==0)	{
+				taxon_finds <- backup_taxon_finds;
+				genus_name <- taxon_finds$genus
+				genus_subgenus <- sapply(genus_name,diffindo_subgenus_names_from_genus_names);
+				taxon_finds$genus <- genus_subgenus[2,];
+				this_genus <- (1:nrow(taxon_finds))[taxon_finds$genus %in% c(taxa,paste(taxa," (",taxa,")",sep=""))];
+				taxon_finds <- taxon_finds[this_genus,];
+				}
 			}
 		}
 	if (!is.null(nrow(taxon_finds)))	{
