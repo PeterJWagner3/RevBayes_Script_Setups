@@ -2211,8 +2211,8 @@ finest_chronostrat$ma_ub <- temporal_precision*round(finest_chronostrat$ma_ub/te
 paleodb_collections <- completely_rebin_collections_with_uniform_time_scale(collections=optimized_collections,uniform_time_scale = finest_chronostrat);
 print(paste("Saving",paste(analysis_name,"_Refined_Collections.csv",sep=""),"..."));
 write.csv(paleodb_collections,paste(local_directory,analysis_name,"_Refined_Collections.csv",sep=""),row.names=F);
-print(paste("Saving",paste(analysis_name,"_Plus_Control_Finds.csv",sep=""),"..."));
-write.csv(paleodb_finds,paste(local_directory,analysis_name,"_Plus_Control_Finds.csv",sep=""),row.names=F);
+#print(paste("Saving",paste(analysis_name,"_Plus_Control_Finds.csv",sep=""),"..."));
+#write.csv(paleodb_finds,paste(local_directory,analysis_name,"_Plus_Control_Finds.csv",sep=""),row.names=F);
 
 #### PART 5: GET STRATIGRAPHIC DATA THAT REVBAYES CAN USE  ####
 # at this point, it becomes a little easier if we have chronostratigraphic data directly tied to finds
@@ -2229,6 +2229,8 @@ if (is.null(paleodb_finds$bin_lb))	{
 	paleodb_finds$bin_lb <- paleodb_collections$bin_lb[match(paleodb_finds$collection_no,paleodb_collections$collection_no)];
 	paleodb_finds$bin_ub <- paleodb_collections$bin_ub[match(paleodb_finds$collection_no,paleodb_collections$collection_no)];
 	}
+print(paste("Saving",paste(analysis_name,"_Plus_Control_Finds_recalibrated.csv",sep=""),"..."));
+write.csv(paleodb_finds,paste(local_directory,analysis_name,"_Plus_Control_Finds_recalibrated.csv",sep=""),row.names=F);
 
 strat_for_Rev_Bayes <- accio_stratigraphic_information_for_Rev_Bayes(taxa=otu_names,paleodb_finds,paleodb_collections,hierarchical_chronostrat,taxon_rank=taxon_level,sampling_unit,lump_cooccr=T,constrain=T,end_FBD = end_FBD,temporal_precision=temporal_precision);
 end_FBD_b <- rebin_collection_with_time_scale(age=min(strat_for_Rev_Bayes$fossil_information_detailed$latest_poss_fa),onset_or_end = "end",fine_time_scale = finest_chronostrat);
@@ -2330,9 +2332,11 @@ if (end_FBD=="")	{
 	}
 last_bin <- hierarchical_chronostrat$bin_first[match(end_FBD,hierarchical_chronostrat$interval)];
 #psi <- median(psi_bin[1:last_bin]*bin_spans[1:last_bin]);
-psi <- sum(psi_bin[1:last_bin])/sum(bin_spans[1:last_bin]);	# total median expected finds divided by total time
+psi <- sum(psi_bin[1:match(end_FBD,names(psi_bin))])/sum(bin_spans[1:match(end_FBD,names(psi_bin))]);	# total median expected finds divided by total time
 print(paste("The median per-ma sampling rate (psi) is: ",round(psi,4),".",sep=""));
 faux_recent_bin <- hierarchical_chronostrat$bin_first[match(end_FBD,hierarchical_chronostrat$interval)];
+if (is.na(psi_bin[faux_recent_bin]))
+	faux_recent_bin <- match(end_FBD,names(psi_bin));
 rho <- Poisson_rate_to_probability((psi_bin[faux_recent_bin]*bin_spans[faux_recent_bin]));	# per-taxon sampling probability given parameters for the last interval
 #fpb_frb <- sort(ceiling(fpb[fpb[,match(end_FBD,colnames(fpb))]>0,match(end_FBD,colnames(fpb))]),decreasing = T);
 #rho2 <- chao2(abundance=fpb_frb);
