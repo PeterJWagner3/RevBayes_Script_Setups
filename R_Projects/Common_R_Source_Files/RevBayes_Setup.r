@@ -4,6 +4,7 @@ MINNO <- 5e-324;
 MAXNO <- 1.797693e+308;
 UNKNOWN <- -11;
 INAP <- -22;
+hell_no <- F;
 taxonomic_rank <- c("subspecies","species","subgenus","genus","tribe","subfamily","family");
 
 	##### ROUTINES TO READ CHARACTER MATRIX INFORMATION IN NEXUS FILE #######
@@ -1430,19 +1431,19 @@ trend_partitions <- initial_data$Trend_Partitions;
 
 # separate out all unique combinations that we might use to partition the characters
 if (length(unique(rate_partitions))>1 && length(unique(trend_partitions))>1)	{
-	partition_combos <- data.frame(n_states=as.numeric(n_states),ordering=as.character(state_orders),rate_partitions=as.character(rate_partitions),trend_partitions=as.character(trend_partitions),stringsAsFactors = F);
+	partition_combos <- data.frame(n_states=as.numeric(n_states),ordering=as.character(state_orders),rate_partitions=as.character(rate_partitions),trend_partitions=as.character(trend_partitions),stringsAsFactors=hell_no);
 	partition_combos <- unique(partition_combos);
 	partition_combos <- partition_combos[order(partition_combos$n_states,partition_combos$ordering),];
 	} else if (length(unique(rate_partitions))>1)	{
-	partition_combos <- data.frame(n_states=as.numeric(n_states),ordering=as.character(state_orders),rate_partitions=as.character(rate_partitions),stringsAsFactors = F);
+	partition_combos <- data.frame(n_states=as.numeric(n_states),ordering=as.character(state_orders),rate_partitions=as.character(rate_partitions),stringsAsFactors=hell_no);
 	partition_combos <- unique(partition_combos);
 	partition_combos <- partition_combos[order(partition_combos$n_states,partition_combos$ordering),];
 	} else if (length(unique(trend_partitions))>1)	{
-	partition_combos <- data.frame(n_states=as.numeric(n_states),ordering=as.character(state_orders),trend_partitions=as.character(trend_partitions),stringsAsFactors = F);
+	partition_combos <- data.frame(n_states=as.numeric(n_states),ordering=as.character(state_orders),trend_partitions=as.character(trend_partitions),stringsAsFactors=hell_no);
 	partition_combos <- unique(partition_combos);
 	partition_combos <- partition_combos[order(partition_combos$n_states,partition_combos$ordering),];
 	} else	{
-	partition_combos <- data.frame(n_states=as.numeric(n_states),ordering=as.character(state_orders),stringsAsFactors = F);
+	partition_combos <- data.frame(n_states=as.numeric(n_states),ordering=as.character(state_orders),stringsAsFactors=hell_no);
 	partition_combos <- unique(partition_combos);
 	partition_combos <- partition_combos[order(partition_combos$n_states,partition_combos$ordering),];
 	}
@@ -1925,7 +1926,7 @@ if (taxon_subset_file)	{
 if (taxon_subset_file)	{
 	print(".....");
 	taxon_subset_file_name <- file.choose();
-	taxa_subset <- read.table(taxon_subset_file_name,header = T,stringsAsFactors = F)[,1];
+	taxa_subset <- read.table(taxon_subset_file_name,header = T,stringsAsFactors=hell_no)[,1];
 	print("Choose the nexus file that you wish to analyze: ");
 	}
 
@@ -1989,7 +1990,7 @@ if (bogarted)	{
 if (bogarted)	{
 	bogarted_info <- file.choose();
 	print("Reading your private stash now....");
-	bogarted_finds <- read.csv(bogarted_info,header = T,stringsAsFactors = F);
+	bogarted_finds <- read.csv(bogarted_info,header = T,stringsAsFactors=hell_no);
 	bogarted_finds <- evanesco_na_from_matrix(bogarted_finds,replacement="");
 	if (taxon_level=="genus" || taxon_level=="subgenus")	{
 		taxon_name <- bogarted_finds$identified_name;
@@ -2408,7 +2409,7 @@ if (taxon_subset_file)	{
 if (taxon_subset_file)	{
 	print(".....");
 	taxon_subset_file_name <- file.choose();
-	taxa_subset <- read.table(taxon_subset_file_name,header = T,stringsAsFactors = F)[,1];
+	taxa_subset <- read.table(taxon_subset_file_name,header = T,stringsAsFactors=hell_no)[,1];
 	print("Choose the nexus file that you wish to analyze: ");
 	}
 
@@ -2599,7 +2600,7 @@ if (is.data.frame(fossilworks_collections))	{
 	direct_dates <- data.frame(direct_ma=as.numeric(fossilworks_collections$direct_ma[match(control_collections$collection_no,fossilworks_collections$collection_no)]),
 							   direct_ma_error=as.numeric(fossilworks_collections$direct_ma_error[match(control_collections$collection_no,fossilworks_collections$collection_no)]),
 							   direct_ma_method=as.character(fossilworks_collections$direct_ma_method[match(control_collections$collection_no,fossilworks_collections$collection_no)]),
-							   stringsAsFactors = F);
+							   stringsAsFactors=hell_no);
 	direct_dates <- evanesco_na_from_matrix(direct_dates,"");
 	control_collections <- cbind(control_collections,direct_dates);
 	}
@@ -2649,7 +2650,7 @@ fetched <- gsub("\"","",simplify2array(strsplit(fetch,"\r\n"))[,1]);
 if (!is.na(match("THIS REQUEST RETURNED NO RECORDS",fetched)))	{
 	desired_finds <- c();
 	} else	{
-	all_finds <- utils::read.csv(text = fetch, header = FALSE, stringsAsFactors=FALSE);
+	all_finds <- utils::read.csv(text = fetch, header = FALSE, stringsAsFactors=hell_no);
 	if (all_finds[1,1]=="Warning:")	{
 		# this will happen only if something goes badly wrong.
 		cc <- match("occurrence_no",all_finds[,1])
@@ -2659,7 +2660,7 @@ if (!is.na(match("THIS REQUEST RETURNED NO RECORDS",fetched)))	{
 		colnames(all_finds) <- kluge_mc_kluge_face;
 		all_finds <- all_finds[(cc+1):nrow(all_finds),];
 		} else	{
-		all_finds <- utils::read.csv(text = fetch, header = TRUE, stringsAsFactors=FALSE);
+		all_finds <- utils::read.csv(text = fetch, header = TRUE, stringsAsFactors=hell_no);
 		}
 	all_finds <- evanesco_na_from_matrix(data=all_finds,replacement = "");
 	if (species_only)	{
@@ -2676,9 +2677,9 @@ if (!is.na(match("THIS REQUEST RETURNED NO RECORDS",fetched)))	{
 		taxon_name <- desired_finds$identified_name;
 		# use flags field to note uncertain genus or species assignments.
 		desired_finds$flags <- sapply(taxon_name,identify_taxonomic_uncertainty);
-#		for (tn in 1:nrow(desired_finds))	{
-#			desired_finds$flags[tn] <- identify_taxonomic_uncertainty(taxon_name=desired_finds$identified_name[tn]);
-#			}
+		for (tn in 1:nrow(desired_finds))	{
+			desired_finds$flags[tn] <- identify_taxonomic_uncertainty(taxon_name=desired_finds$identified_name[tn]);
+			}
 		# some uncertain genus assignments will be clarified by updated generic assignments
 		uncertain_genera <- (1:noccr)[desired_finds$flags=="uncertain genus"]
 		recertain_genera <- uncertain_genera[desired_finds$difference[uncertain_genera]=="recombined as"]
@@ -3020,12 +3021,12 @@ basic_environments <- paste(basic_environments,collapse=",");
 http <- paste("http://paleobiodb.org/data1.2/colls/list.csv?base_name=",taxa,"&interval=",onset,",",end,"&envtype=",basic_environments,"&show=loc,paleoloc,strat,stratext,timebins,timecompare,lith,lithext,env,geo,methods,resgroup,ref,refattr,ent,entname,crmod",sep="");
 #http <- paste("http://paleobiodb.org/data1.2/colls/list.csv?base_name=",taxa,"&interval=",onset,",",end,"&show=loc,paleoloc,strat,stratext,refattr,entname,lith,env,crmod",sep="");
 fetch <- RCurl::getURL(http);
-collections <- utils::read.csv(text = fetch, header = TRUE, stringsAsFactors=FALSE);
+collections <- utils::read.csv(text = fetch, header = TRUE, stringsAsFactors=hell_no);
 #	http <- paste("http://www.paleobiodb.org/data1.2/occs/list.csv?base_name=",taxa,"&interval=",onset,",",end,",&show=full,etbasis,strat,lith,env,timebins,timecompare,ref,ent,entname,crmod",sep="")
 if (species_only)	{
 	http <- paste("http://www.paleobiodb.org/data1.2/occs/list.csv?base_name=",taxa,"&interval=",onset,",",end,"&envtype=",basic_environments,"&show=full",sep="");
 	fetch <- RCurl::getURL(http);
-	species_finds <- utils::read.csv(text = fetch, header = TRUE, stringsAsFactors=FALSE);
+	species_finds <- utils::read.csv(text = fetch, header = TRUE, stringsAsFactors=hell_no);
 	species_finds <- subset(species_finds,species_finds$identified_rank=="species");
 	unique_collections <- unique(species_finds$collection_no);
 	save_colls <- match(unique_collections,collections$collection_no);
@@ -3116,7 +3117,7 @@ return(collections)
 accio_single_locality_info <- function(collection_no)	{
 httpC <- paste("http://paleobiodb.org/data1.2/colls/list.csv?id=",collection_no,"&show=loc,paleoloc,strat,stratext,timebins,timecompare,lith,lithext,env,geo,methods,resgroup,ref,refattr,ent,entname,crmod",sep="");
 accio <- RCurl::getURL(httpC)
-coll_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=FALSE))
+coll_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=hell_no))
 coll_info <- evanesco_na_from_vector(coll_info,"")
 return(coll_info)
 }
@@ -3190,14 +3191,14 @@ if (is.null(paleodb_finds$ma_lb))	{
 	}
 
 fossil_intervals <- data.frame(taxon=as.character(rep("",notu)),min=as.numeric(rep(0,notu)),
-	max=as.numeric(rep(0,notu)),stringsAsFactors = F);
+	max=as.numeric(rep(0,notu)),stringsAsFactors=hell_no);
 fossil_intervals_fuzzy <- data.frame(taxon=as.character(rep("",notu)),
 	latest_poss_la=as.numeric(rep(0,notu)),earliest_poss_la=as.numeric(rep(0,notu)),
-	latest_poss_fa=as.numeric(rep(0,notu)),earliest_poss_fa=as.numeric(rep(0,notu)),stringsAsFactors = F);
+	latest_poss_fa=as.numeric(rep(0,notu)),earliest_poss_fa=as.numeric(rep(0,notu)),stringsAsFactors=hell_no);
 fossil_information_detailed <- data.frame(taxon=as.character(rep("",notu)),
 	latest_poss_la=as.numeric(rep(0,notu)),earliest_poss_la=as.numeric(rep(0,notu)),
 	latest_poss_fa=as.numeric(rep(0,notu)),earliest_poss_fa=as.numeric(rep(0,notu)),
-	total_finds=as.numeric(rep(0,notu)),finds_per_bin=as.character(rep("",notu)),stringsAsFactors = F);
+	total_finds=as.numeric(rep(0,notu)),finds_per_bin=as.character(rep("",notu)),stringsAsFactors=hell_no);
 finest_chronostrat <- subset(hierarchical_chronostrat,hierarchical_chronostrat$bin_first==hierarchical_chronostrat$bin_last);
 finest_chronostrat <- finest_chronostrat[match(finest_chronostrat$bin_first,finest_chronostrat$bin_first),];
 
@@ -4057,7 +4058,7 @@ organized_rocks <- data.frame(rock_no_sr=as.numeric(rock_no_sr),rock_no=as.numer
 			group_clean_no_rock=as.character(group_clean_no_rock),group_clean_no_rock_formal=as.character(group_clean_no_rock_formal),
 			rock_unit_clean_basic=as.character(rock_unit_clean_basic),rock_unit_clean_no_rock=as.character(rock_unit_clean_no_rock),
 			rock_unit_clean_no_rock_formal=as.character(rock_unit_clean_no_rock_formal),
-			stringsAsFactors = F);
+			stringsAsFactors=hell_no);
 unique_rocks <- sort(unique(rock_no_sr));
 for (ur in 1:length(unique_rocks))	{
 #	this_rock <- subset(organized_rocks,organized_rocks$rock_no_sr==41);
@@ -4080,7 +4081,7 @@ for (ur in 1:length(unique_rocks))	{
 		}
 	}
 
-#organized_rocks <- data.frame(cbind(rock_unit_senior,formation_clean_basic,formation_clean_no_rock,formation_clean_no_rock_formal,member_clean_basic,member_clean_no_rock,member_clean_no_rock_formal,group_clean_basic,group_clean_no_rock,group_clean_no_rock_formal,rock_unit_clean_basic,rock_unit_clean_no_rock,rock_unit_clean_no_rock_formal),stringsAsFactors = FALSE);
+#organized_rocks <- data.frame(cbind(rock_unit_senior,formation_clean_basic,formation_clean_no_rock,formation_clean_no_rock_formal,member_clean_basic,member_clean_no_rock,member_clean_no_rock_formal,group_clean_basic,group_clean_no_rock,group_clean_no_rock_formal,rock_unit_clean_basic,rock_unit_clean_no_rock,rock_unit_clean_no_rock_formal),stringsAsFactors=hell_no);
 #paleodb_rocks <- cbind(paleodb_rocks,organized_rocks);
 #wagner_rocks <- cbind(wagner_rocks,as.character(rock_unit_senior),formation_clean_basic,formation_clean_no_rock,formation_clean_no_rock_formal,member_clean_basic,member_clean_no_rock,member_clean_no_rock_formal,group_clean_basic,group_clean_no_rock,group_clean_no_rock_formal,rock_unit_clean_basic,rock_unit_clean_no_rock,rock_unit_clean_no_rock_formal);
 return(organized_rocks);
@@ -4166,7 +4167,7 @@ rock_base <- data.frame(formation=as.character(formation_entered),member=as.char
 			  formation_dehyph=as.character(formation_dehyph),member_dehyph=as.character(member_dehyph),group_dehyph=as.character(group_dehyph),
 			  formation_rockless=as.character(formation_rockless),member_rockless=as.character(member_rockless),group_rockless=as.character(group_rockless),
 			  formation_rockless_formal=as.character(formation_rockless_formal),member_rockless_formal=as.character(member_rockless_formal),group_rockless_formal=as.character(group_rockless_formal),
-			  stringsAsFactors = FALSE);
+			  stringsAsFactors=hell_no);
 nrock_combos <- nrow(rock_base);
 formation_names <- unique(formation_rockless[formation_rockless!=""]);
 
@@ -4305,9 +4306,9 @@ rock_database <- data.frame(formation=as.character(rocks_to_time_scale[,1]),
 							interval_ub=as.character(rocks_to_time_scale[,8]),
 							ma_lb=as.numeric(rocks_to_time_scale[,5]),
 							ma_ub=as.numeric(rocks_to_time_scale[,6]),
-							stringsAsFactors = FALSE
+							stringsAsFactors=hell_no
 							);
-rocks_to_zones <- data.frame(formation=as.character(rocks_to_zones[,1]),member=as.character(rocks_to_zones[,2]),group=as.character(rocks_to_zones[,3]),zone=as.character(rocks_to_zones[,4]),stringsAsFactors = FALSE);
+rocks_to_zones <- data.frame(formation=as.character(rocks_to_zones[,1]),member=as.character(rocks_to_zones[,2]),group=as.character(rocks_to_zones[,3]),zone=as.character(rocks_to_zones[,4]),stringsAsFactors=hell_no);
 nrocks <- nrow(rock_database);
 r_t_z <- nrow(rocks_to_zones);
 
@@ -4539,7 +4540,7 @@ paleodb_clean_group_no_rock <- paleodb_collections$stratgroup;
 named_rock_unit <- paleodb_collections$stratgroup[colls_w_groups];
 paleodb_clean_group_no_rock[colls_w_groups] <- sapply(named_rock_unit,scourgify_rock_unit_names,dehyphenate=T,delete_rock_type=T);
 
-cleaned_rocks <- data.frame(cbind(paleodb_clean_formation_basic,paleodb_clean_member_basic,paleodb_clean_group_basic,paleodb_clean_formation_no_rock,paleodb_clean_member_no_rock,paleodb_clean_group_no_rock),stringsAsFactors=F);
+cleaned_rocks <- data.frame(cbind(paleodb_clean_formation_basic,paleodb_clean_member_basic,paleodb_clean_group_basic,paleodb_clean_formation_no_rock,paleodb_clean_member_no_rock,paleodb_clean_group_no_rock),stringsAsFactors=hell_no);
 
 unique_rock_units <- sort(unique(paleodb_clean_rock_unit_no_rock[paleodb_clean_rock_unit_no_rock!=""]));
 rock_nos <- vector(length=ncolls);
@@ -5061,7 +5062,7 @@ if (length(interval_names)>0)	{
 							 ma_min=as.numeric(frak_it(compend[,4])),
 							 stage_lb=as.character(as.character(interval_names[frak_it(compend[,1])])),
 							 stage_ub=as.character(as.character(interval_names[frak_it(compend[,2])])),
-							 stringsAsFactors = FALSE);
+							 stringsAsFactors=hell_no);
 	} else	{
 	compendium <- data.frame(bin_lb=as.numeric(frak_it(compend[,1])),
 							 bin_ub=as.numeric(frak_it(compend[,2])),
@@ -5081,7 +5082,7 @@ if (!condense)	{
 		ma_min=as.numeric(rep(0,ataxa)),
 		stage_lb=as.character(rep("",ataxa)),
 		stage_ub=as.character(rep("",ataxa)),
-		stringsAsFactors = FALSE);
+		stringsAsFactors=hell_no);
 		} else	{
 		dummy <- data.frame(
 		bin_lb=as.numeric(rep(0,ataxa)),
@@ -5497,8 +5498,8 @@ diff_dists <- gsub("_sampling","",diff_dists);
 aiccs <- c();
 for (dd in 1:length(diff_dists))
 	aiccs <- cbind(aiccs,sampling_distributions[[dd]]$AICc);
-aiccs <- data.frame(aiccs,stringsAsFactors = F);
-per_unit_sampling <- data.frame(array(0,dim=dim(aiccs)),stringsAsFactors = F);
+aiccs <- data.frame(aiccs,stringsAsFactors=hell_no);
+per_unit_sampling <- data.frame(array(0,dim=dim(aiccs)),stringsAsFactors=hell_no);
 rownames(per_unit_sampling) <- rownames(aiccs) <- rownames(sampling_distributions[[1]]);
 colnames(per_unit_sampling) <- colnames(aiccs) <- diff_dists;
 
@@ -5661,7 +5662,7 @@ return(sum(lndp));
 accio_updated_taxonomy_for_analyzed_taxa <- function(otu_names,local_directory="",study="")	{
 taxon <- otu_names;
 print("Getting taxonomic data....")
-#taxon_compendium <- data.frame(base::t(sapply(taxon,revelio_taxonomy_for_one_taxon)),stringsAsFactors = FALSE);
+#taxon_compendium <- data.frame(base::t(sapply(taxon,revelio_taxonomy_for_one_taxon)),stringsAsFactors=hell_no);
 #for (nn in 1:length(otu_names))	{
 #	this_taxon <- revelio_taxonomy_for_one_taxon(taxon=otu_names[nn]);
 #	if (nn==1)	{
@@ -5670,7 +5671,7 @@ print("Getting taxonomic data....")
 #		taxon_compendium <- rbind(taxon_compendium,this_taxon);
 #		}
 #	}
-initial_compendium <- data.frame(base::t(sapply(taxon,revelio_taxonomy_for_one_taxon)),stringsAsFactors = FALSE);
+initial_compendium <- data.frame(base::t(sapply(taxon,revelio_taxonomy_for_one_taxon)),stringsAsFactors=hell_no);
 
 #for (tx in 1:length(otu_names))	{
 #	if (tx==1)	{
@@ -5681,7 +5682,7 @@ initial_compendium <- data.frame(base::t(sapply(taxon,revelio_taxonomy_for_one_t
 #	}
 initial_compendium <- evanesco_na_from_matrix(initial_compendium,"");
 compendium_headers <- colnames(initial_compendium);
-taxon_compendium <- data.frame(array("",dim=dim(initial_compendium)),stringsAsFactors = F);
+taxon_compendium <- data.frame(array("",dim=dim(initial_compendium)),stringsAsFactors=hell_no);
 colnames(taxon_compendium) <- compendium_headers;
 #for (cn in 1:ncol(initial_compendium))
 #	taxon_compendium[,cn] <- simplify2array(initial_compendium[,cn]);
@@ -5713,7 +5714,7 @@ taxon <- gsub(" ","%20",taxon);
 httpT <- paste("http://paleobiodb.org/data1.2/taxa/list.txt?match_name=",taxon,"&show=attr,parent,class,refattr,crmod",sep="");
 #             http://paleobiodb.org/data1.2/taxa/opinions.txt?base_name=Cypraeidae&rank=species,subspecies&op_type=all
 fetch <- RCurl::getURL(httpT);
-taxon_information <- utils::read.csv(text = fetch, header = TRUE, stringsAsFactors=FALSE);
+taxon_information <- utils::read.csv(text = fetch, header = TRUE, stringsAsFactors=hell_no);
 if (!is.na(match(orig_taxon,taxon_information$taxon_name)))	{
 	taxon_information <- subset(taxon_information,taxon_information$taxon_name==orig_taxon);
 	} else if (!is.na(match(orig_taxon,taxon_information)))
@@ -5733,7 +5734,7 @@ if (exact_match)	{
 	httpTO <- paste("http://www.paleobiodb.org/data1.2/taxa/opinions.csv?base_name=",taxon,"&op_type=all&private&show=basis,ref,refattr,ent,entname,crmod",sep="");
 	}
 accio <- RCurl::getURL(httpTO);
-taxon_opinions <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=FALSE));
+taxon_opinions <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=hell_no));
 return(taxon_opinions);
 }
 
@@ -5857,7 +5858,7 @@ taxon <- gsub(" ","%20",taxon);
 httpT <- paste("http://paleobiodb.org/data1.2/taxa/list.csv?base_name=",taxon,"&show=full,immparent,classext,attr,app",sep="");
 ## If the taxon is absent, then something weird will happen: kill it with fire.
 accio <- RCurl::getURL(httpT);
-taxon_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=FALSE));
+taxon_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=hell_no));
 if (ncol(taxon_info)<=2 || (taxon_info[1,1]=="THIS REQUEST RETURNED NO RECORDS" || taxon_info=="THIS.REQUEST.RETURNED.NO.RECORDS" || nrow(which(taxon_info=="THIS REQUEST RETURNED NO RECORDS",arr.ind = T))>0))	{
 #	ttl_finds <- rbind(ttl_finds,cbind(taxon_list[tx],0));
 	dud <- T;
@@ -5866,7 +5867,7 @@ if (ncol(taxon_info)<=2 || (taxon_info[1,1]=="THIS REQUEST RETURNED NO RECORDS" 
 		taxon <- strsplit(orig_taxon,split=" ")[[1]][1];
 		httpT <- paste("http://paleobiodb.org/data1.2/taxa/list.csv?base_name=",taxon,"&show=full,immparent,classext,attr,app",sep="");
 		accio <- RCurl::getURL(httpT);
-		taxon_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=FALSE));
+		taxon_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=hell_no));
 		taxon_info <- taxon_info[match(taxon,taxon_info$taxon_name),];	# get rid of species & subgenera
 		if (nrow(which(taxon_info=="THIS REQUEST RETURNED NO RECORDS",arr.ind = T))==0)
 			dud <- F;
@@ -5874,10 +5875,10 @@ if (ncol(taxon_info)<=2 || (taxon_info[1,1]=="THIS REQUEST RETURNED NO RECORDS" 
 	if (dud)	{
 		httpTT <- paste("http://paleobiodb.org/data1.2/taxa/list.csv?base_name=Lophospira&show=full,immparent,classext,attr,app",sep="");
 		accioTT <- RCurl::getURL(httpTT);
-		dummy_info <- data.frame(utils::read.csv(text = accioTT, header = TRUE, stringsAsFactors=FALSE));
+		dummy_info <- data.frame(utils::read.csv(text = accioTT, header = TRUE, stringsAsFactors=hell_no));
 #	output_labels <- c("orig_no","taxon_no","record_type","flags","taxon_rank","taxon_name","taxon_attr","difference","accepted_no","accepted_rank","accepted_name","parent_no","reference_no","is_extant","n_occs","firstapp_max_ma","firstapp_min_ma","lastapp_max_ma","lastapp_min_ma","early_interval","late_interval");
 		output_labels <- colnames(dummy_info);
-		taxon_info <- data.frame(matrix("",1,length(output_labels)),stringsAsFactors = FALSE);
+		taxon_info <- data.frame(matrix("",1,length(output_labels)),stringsAsFactors=hell_no);
 		colnames(taxon_info) <- output_labels;
 		taxon_info$taxon_name <- orig_taxon;
 		taxon_info$taxon_attr <- taxon_info$accepted_name <- "?";
@@ -5904,7 +5905,7 @@ if (nrow(taxon_info)>1)	{
 		if (nrow(taxon_info)!=1 && length(orig_name_no)==1)	{
 			httpTn <- paste("http://paleobiodb.org/data1.2/taxa/list.csv?id=",orig_name_no,"&show=full,immparent,classext,attr,app",sep="");
 			accio <- RCurl::getURL(httpTn);
-			taxon_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=FALSE));
+			taxon_info <- data.frame(utils::read.csv(text = accio, header = TRUE, stringsAsFactors=hell_no));
 #			taxon_info <- orig_info;
 #			orig_name <- (1:ttl_opinions)[opinions$taxon_name %in% orig_taxon];
 #			if (length(orig_name)==1)	{
@@ -5983,9 +5984,13 @@ btc <- t_c[taxon_components %in% uncertains];
 taxon_components <- gsub("\"","",taxon_components);
 if (length(btc)>0)	{
 	genus_name <- gsub("\"","",genus_name);
-	if (min(btc) < match(genus_name,taxon_components) || (subgenus_name!="" && min(btc) < match(subgenus_name,taxon_components)))
+	if (!is.na(match("?)",taxon_components)))	{
 		flags <- "uncertain genus";
-	if (max(btc) > match(genus_name,taxon_components))
+		} else if (min(btc) < match(genus_name,taxon_components) || (subgenus_name!="" && min(btc) < match(subgenus_name,taxon_components)))	{
+		flags <- "uncertain genus";
+		}
+#	if (max(btc) > match(genus_name,taxon_components))
+	if (max(btc) >= (length(taxon_components)-2))
 		flags <- c(flags,"uncertain species");
 	}
 return(paste(flags,collapse=", "));
@@ -7309,7 +7314,7 @@ paleodb_zone_info <- match_collections_zones_to_zone_database(collections=paleod
 colls_w_zones <- (1:ncolls)[paleodb_collections$zone!=""];
 zone_matches <- paleodb_zone_info$zone_matches;
 #unmatched_colls <- paleodb_collections$collection_no[colls_w_zones[zone_matches[colls_w_zones]==""]];
-unmatched_zone_info <- data.frame(coll_no = as.numeric(paleodb_collections$collection_no[colls_w_zones[zone_matches[colls_w_zones]==""]]),zone=as.character(paleodb_collections$zone[colls_w_zones[zone_matches[colls_w_zones]==""]]),stringsAsFactors = F);
+unmatched_zone_info <- data.frame(coll_no = as.numeric(paleodb_collections$collection_no[colls_w_zones[zone_matches[colls_w_zones]==""]]),zone=as.character(paleodb_collections$zone[colls_w_zones[zone_matches[colls_w_zones]==""]]),stringsAsFactors=hell_no);
 
 # look for zone taxa in assemblages
 colls_wo_zones <- (1:ncolls)[zone_matches==""];
@@ -7694,7 +7699,7 @@ bins_early[bins_early<fa_latest] <- fa_latest;
 bins_late[bins_late>la_earliest] <- la_earliest;
 
 definite_bins <- unique(bins_early[bins_early==bins_late]);
-output <- data.frame(ma_fa_mx=0,ma_fa_mn=0,ma_la_mx=0,ma_la_mn=0,interval_lb=as.character(""),interval_ub=as.character(""),stringsAsFactors = F);
+output <- data.frame(ma_fa_mx=0,ma_fa_mn=0,ma_la_mx=0,ma_la_mn=0,interval_lb=as.character(""),interval_ub=as.character(""),stringsAsFactors=hell_no);
 if (length(definite_bins)>0)	{
 	finest_chronostrat <- hierarchical_chronostrat[hierarchical_chronostrat$bin_first==hierarchical_chronostrat$bin_last,];
 	# extremes are easy
@@ -8772,7 +8777,7 @@ ch_matrix <- basic_data$Matrix;
 outgroup <- as.numeric(basic_data$Outgroup);
 otus <- basic_data$OTUs;
 ch_matrix_red <- ch_matrix[!rownames(ch_matrix) %in% otus[outgroup],];
-finds_per_bin_data <- read.csv(strat_data_file,header=T,stringsAsFactors = F);
+finds_per_bin_data <- read.csv(strat_data_file,header=T,stringsAsFactors=hell_no);
 if (is.na(match("Species",colnames(finds_per_bin_data))))	{
 	ccns <- colnames(finds_per_bin_data);
 	ccns[1] <- "Species";
@@ -8864,9 +8869,9 @@ for (nch in 1:nchars)	{
 		significant_cases <- c(significant_cases,0);
 		}
 	}
-kendall_summary <- data.frame(nch=as.numeric(1:nchars),tau=as.numeric(kendall_tau),pval=as.numeric(kendall_pval),stringsAsFactors = F);
+kendall_summary <- data.frame(nch=as.numeric(1:nchars),tau=as.numeric(kendall_tau),pval=as.numeric(kendall_pval),stringsAsFactors=hell_no);
 kendall_summary <- kendall_summary[order(kendall_summary$pval),];
-trend_summary <- data.frame(nch=as.numeric(1:nchars),states=as.numeric(nstates),tau=as.numeric(kendall_tau),pval=as.numeric(kendall_pval),MW_sign=as.numeric(significant_cases),stringsAsFactors = F);
+trend_summary <- data.frame(nch=as.numeric(1:nchars),states=as.numeric(nstates),tau=as.numeric(kendall_tau),pval=as.numeric(kendall_pval),MW_sign=as.numeric(significant_cases),stringsAsFactors=hell_no);
 trend_summary[order(trend_summary$states,trend_summary$pval),];
 
 #hist(kendall_summary$pval,breaks=((0:100)/100))
@@ -9169,4 +9174,31 @@ f_i_s <- 1+(1:f_i)[file_info %in% "."];
 file_type <- c();
 for (i in f_i_s:f_i)	file_type <- paste(file_type,file_info[i],sep="");
 return(file_type);
+}
+
+insert_cell_into_vector_x <- function(x,new_value,cell_no)	{
+# routine to put take vector x and add a new value at some point (cell_no)
+# x = c(0,1,2,3,4,5), new_value=10, cell_no=3 gives x=c(0,1,10,2,3,4,5)
+if (cell_no==1)	{
+	return(c(new_value,x));
+	} else if (cell_no==(length(x)+1))	{
+	return(c(x,new_value));
+	} else	{
+	return(c(x[1:(cell_no-1)],new_value,x[cell_no:length(x)]));
+	}
+}
+
+insert_row_into_matrix_x <- function(x,new_row,row_no)	{
+# routine to put take matrix x and add a new row at that bumps other rows down one
+# x = c(0,1,2,3,4,5), new_value=10, cell_no=3 gives x=c(0,1,10,2,3,4,5)
+if (row_no==1)	{
+	xx <- rbind(new_row,x);
+	colnames(xx) <- colnames(x);
+	return(xx);
+	} else if (row_no==(nrow(x)+1))	{
+	return(rbind(x,new_row));
+	} else	{
+	return(rbind(x[1:(row_no-1),],new_row,x[(row_no:nrow(x)),]));
+#	return(c(x[1:(cell_no-1)],new_value,x[cell_no:length(x)]));
+	}
 }
