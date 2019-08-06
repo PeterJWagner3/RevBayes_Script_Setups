@@ -8,15 +8,10 @@
 n_branches <- (2 * n_taxa) - 2;
 
 # get magnitude of the bang
-<<<<<<< HEAD
 bang_mag ~ dnExponential(1.0);	# 2^bang_mag will be the initial rate
-moves.append(mvScale(bang_mag, lambda=1, tune=true, weight=5.0));
-=======
-bang_mag ~ dnExponential(1.0);			# 2^bang_mag will be the initial rate
 moves.append(mvScale(bang_mag, lambda=0.01, tune=true, weight=5.0));
 moves.append(mvScale(bang_mag, lambda=0.10, tune=true, weight=3.0));
 moves.append(mvScale(bang_mag, lambda=1.00, tune=true, weight=1.0));
->>>>>>> origin/master
 rel_bang:=2^bang_mag;				# relative bang now a deterministic variable
 
 init_branch_rate ~ dnExponential(1.0);
@@ -26,12 +21,8 @@ moves.append(mvScale(init_branch_rate, lambda=1.00, tune=true, weight=1));
 
 # assign rates to branches as deterministic variables
 for (bb in 1:n_branches)	{
-<<<<<<< HEAD
 	# this will change as rel_bang, divergence_dates[bb] & init_branch_rate[bb] change
-=======
-	# Just integrate from origin to end to get the average rate
->>>>>>> origin/master
-	branch_rates[bb] := init_branch_rate*(((rel_bang^(origin_dates[bb]/max_age)-rel_bang^(divergence_dates[bb]/max_age))/ln(x=rel_bang))/(branch_lengths[bb]/max_age));
+	branch_rates[bb] := abs(init_branch_rate*(((rel_bang^(origin_dates[bb]/max_age)-rel_bang^(divergence_dates[bb]/max_age))/ln(rel_bang))/(branch_lengths[bb]/max_age)));
 	}
 
 # set deterministic node to monitor
