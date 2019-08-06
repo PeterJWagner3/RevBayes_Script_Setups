@@ -2537,11 +2537,7 @@ write.csv(ingroup_collections[order(ingroup_collections$collection_no),],file=pa
 #write.csv(data_compendium$collection_compendium[order(data_compendium$collection_compendium$collection_no),],
 write.csv(ingroup_finds,file=paste(local_directory,analysis_name,"_Finds.csv",sep=""),row.names=F);
 
-<<<<<<< HEAD
 if (control_taxon[1]!="")	{
-=======
-if (control_taxon!="")	{
->>>>>>> origin/master
 	print("Getting occurrence & collection data for control taxa....");
 	control_data <- accio_data_for_control_groups_to_seed_FBD_analyses(control_taxon,onset,end,basic_environments,species_only = T);
 	control_collections <- evanesco_na_from_matrix(control_data$control_collections,"");
@@ -3385,7 +3381,10 @@ if (sampling_unit=="collection")	{
 	sample_col_occr <- match("rock_no_sr",colnames(paleodb_finds));
 	}
 
-for (tx in 1:notu)	{
+tx <- 0;
+while (tx < notu)	{			# for debugging.....
+	tx <- tx+1;					# for debugging.....
+#for (tx in 1:notu)	{
 	# get PaleoDB collection numbers
 #	print(taxa[tx]);
 	# note: we want to use collections initially just because some collections within the same rock
@@ -5990,15 +5989,9 @@ taxon_components <- gsub("\"","",taxon_components);
 if (length(btc)>0)	{
 	genus_name <- gsub("\"","",genus_name);
 	if (!is.na(match("?)",taxon_components)))	{
-<<<<<<< HEAD
 		flags <- "uncertain genus";
 		} else if (min(btc) < match(genus_name,taxon_components) || (subgenus_name!="" && min(btc) < match(subgenus_name,taxon_components)))	{
 		flags <- "uncertain genus";
-=======
-		flags <- "uncertain genus";
-		} else if (min(btc) < match(genus_name,taxon_components) || (subgenus_name!="" && min(btc) < match(subgenus_name,taxon_components)))	{
-		flags <- "uncertain genus";
->>>>>>> origin/master
 		}
 #	if (max(btc) > match(genus_name,taxon_components))
 	if (max(btc) >= (length(taxon_components)-2))
