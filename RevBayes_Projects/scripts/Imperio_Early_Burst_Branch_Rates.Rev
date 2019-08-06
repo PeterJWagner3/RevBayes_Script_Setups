@@ -31,7 +31,7 @@ for (bb in 1:n_branches)	{
 =======
 	# Just integrate from origin to end to get the average rate
 >>>>>>> origin/master
-	branch_rates[bb] := init_branch_rate*(((rel_bang^(origin_dates[bb]/max_age)-rel_bang^(divergence_dates[bb]/max_age))/ln(x=rel_bang))/(branch_lengths[bb]/max_age));
+	branch_rates[bb] := abs(init_branch_rate*(((rel_bang^(origin_dates[bb]/max_age)-rel_bang^(divergence_dates[bb]/max_age))/ln(x=rel_bang))/(branch_lengths[bb]/max_age)));
 	}
 
 # set deterministic node to monitor
