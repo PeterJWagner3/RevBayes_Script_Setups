@@ -6,6 +6,7 @@ UNKNOWN <- -11;
 INAP <- -22;
 hell_no <- F;
 taxonomic_rank <- c("subspecies","species","subgenus","genus","tribe","subfamily","family");
+uncertains <- c("cf.","aff.","ex_gr.");
 
 	##### ROUTINES TO READ CHARACTER MATRIX INFORMATION IN NEXUS FILE #######
 # clean nexus file of characters that R hates....
@@ -2232,6 +2233,23 @@ if (is.null(paleodb_finds$bin_lb))	{
 print(paste("Saving",paste(analysis_name,"_Plus_Control_Finds_recalibrated.csv",sep=""),"..."));
 write.csv(paleodb_finds,paste(local_directory,analysis_name,"_Plus_Control_Finds_recalibrated.csv",sep=""),row.names=F);
 
+## output for only the ingroup
+if (taxon_level=="species")	{
+	otu_finds <- paleodb_finds[paleodb_finds$accepted_name %in% otu_names_used,];
+	} else if (lump_subgenera==T)	{
+	otu_finds <- paleodb_finds[paleodb_finds$genus %in% otu_names_used,];
+	} else	{
+	genus_names <- otu_names_used;
+	xxx <- sapply(genus_names,diffindo_subgenus_names_from_genus_names)
+	subgenera_used <- otu_names_used;
+	subgenera_used[xxx[2,]!=""] <- xxx[2,xxx[2,]!=""];
+	otu_finds <- paleodb_finds[paleodb_finds$subgenus %in% subgenera_used,];
+	find_order <- match(otu_finds$subgenus,subgenera_used)
+	otu_finds <- otu_finds[order(find_order,-otu_finds$ma_lb),];
+	}
+print(paste("Saving",paste(analysis_name,"_Finds_recalibrated.csv",sep=""),"..."));
+write.csv(otu_finds,paste(local_directory,analysis_name,"_Finds_recalibrated.csv",sep=""),row.names=F);
+
 strat_for_Rev_Bayes <- accio_stratigraphic_information_for_Rev_Bayes(taxa=otu_names,paleodb_finds,paleodb_collections,hierarchical_chronostrat,taxon_rank=taxon_level,sampling_unit,lump_cooccr=T,constrain=T,end_FBD = end_FBD,temporal_precision=temporal_precision);
 end_FBD_b <- rebin_collection_with_time_scale(age=min(strat_for_Rev_Bayes$fossil_information_detailed$latest_poss_fa),onset_or_end = "end",fine_time_scale = finest_chronostrat);
 if (end_FBD!="" && hierarchical_chronostrat$bin_first[match(end_FBD,hierarchical_chronostrat$interval)] < match(end_FBD_b,finest_chronostrat$interval))	{
@@ -2494,7 +2512,7 @@ print("Getting occurrence & collection data for study taxa....")
 data_compendium <- accio_occurrences_for_list_of_taxa(taxon_list=otu_names,lump_subgenera,species_only);
 
 ingroup_finds <- evanesco_na_from_matrix(data=data_compendium$occurrences_compendium,replacement = "");
-
+ingroup_finds[match(991528,ingroup_finds$occurrence_no),]
 if (species_only)	{
 	no_species <- c();
 	for (ot in 1:length(otu_names))	{
@@ -2683,15 +2701,18 @@ if (!is.na(match("THIS REQUEST RETURNED NO RECORDS",fetched)))	{
 		} else	{
 		noccr <- nrow(desired_finds);
 		taxon_name <- desired_finds$identified_name;
+		desired_finds$flags <- sapply(taxon_name,revelio_uncertain_species_assignments);
+		taxon_name <- desired_finds$identified_name[desired_finds$accepted_rank %in% c("genus","subgenus")];
+		desired_finds$flags[desired_finds$accepted_rank %in% c("genus","subgenus")] <- sapply(taxon_name,revelio_uncertain_genus_assignments);
 		# use flags field to note uncertain genus or species assignments.
-		desired_finds$flags <- sapply(taxon_name,identify_taxonomic_uncertainty);
-		for (tn in 1:nrow(desired_finds))	{
-			desired_finds$flags[tn] <- identify_taxonomic_uncertainty(taxon_name=desired_finds$identified_name[tn]);
-			}
+#		desired_finds$flags <- sapply(taxon_name,identify_taxonomic_uncertainty);
+#		for (tn in 1:nrow(desired_finds))	{
+#			desired_finds$flags[tn] <- identify_taxonomic_uncertainty(taxon_name=desired_finds$identified_name[tn]);
+#			}
 		# some uncertain genus assignments will be clarified by updated generic assignments
-		uncertain_genera <- (1:noccr)[desired_finds$flags=="uncertain genus"]
-		recertain_genera <- uncertain_genera[desired_finds$difference[uncertain_genera]=="recombined as"]
-		desired_finds$flags[recertain_genera] <- "";
+#		uncertain_genera <- (1:noccr)[desired_finds$flags=="uncertain genus"];
+#		recertain_genera <- uncertain_genera[desired_finds$difference[uncertain_genera]=="recombined as"]
+#		desired_finds$flags[recertain_genera] <- "";
 	
 		if (clean_entered_taxa)	{
 			cleaned_names <- sapply(as.character(desired_finds$identified_name),scourgify_taxon_names);
@@ -5966,44 +5987,66 @@ taxon_name <- paste(strsplit(taxon_name,split=" ")[[1]][!strsplit(taxon_name,spl
 return(taxon_name)
 }
 
-### routine to identify uncertain taxon assignment type
-identify_taxonomic_uncertainty <- function(taxon_name)	{
+revelio_uncertain_species_assignments <- function(taxon_name)	{
 # taxon_name: string giving species name
-flags <- c();
+flags <- "";
 cleaned_name <- scourgify_taxon_names(taxon_name);
 taxon_name <- gsub("n. gen. ","",taxon_name);
 taxon_name <- gsub("n. sp. ","",taxon_name);
 taxon_name <- gsub("n. subgen. ","",taxon_name);
 species_epithet <- scourgify_taxon_names(taxon_name=diffindo_species_epithets(cleaned_name));
+genus_name <- diffindo_genus_names_from_species_names(taxon_name);
+subgenus_name <- diffindo_subgenus_names_from_genus_names(genus_name)[2];
+if (subgenus_name!="")
+	subgenus_name <- paste("(",subgenus_name,")",sep="");
+modified_taxon_name <- gsub(" ex gr\\."," ex_gr\\.",taxon_name);
+taxon_components <- simplify2array(strsplit(modified_taxon_name," ")[[1]]);
+t_c <- 1:length(taxon_components);
+if (!is.na(match("?",taxon_components)) && max(t_c[taxon_components %in% "?"])==length(taxon_components))	{
+	flags <- "uncertain species";
+	} else if (sum(taxon_components %in% uncertains) > 0)	{
+	btc <- t_c[taxon_components %in% uncertains];
+	if (!is.na(match(subgenus_name,taxon_components)) && (match(subgenus_name,taxon_components)+1) %in% btc)	{
+		flags <- "uncertain species";
+		} else if (subgenus_name=="" && (match(genus_name,taxon_components)+1) %in% btc)	{
+		flags <- "uncertain species";
+		}
+	}
+return(flags);
+}
+
+revelio_uncertain_genus_assignments <- function(taxon_name)	{
+# taxon_name: string giving species name
+flags <- "";
+cleaned_name <- scourgify_taxon_names(taxon_name);
+taxon_name <- gsub("n. gen. ","",taxon_name);
+taxon_name <- gsub("n. sp. ","",taxon_name);
+taxon_name <- gsub("n. subgen. ","",taxon_name);
+#species_epithet <- scourgify_taxon_names(taxon_name=diffindo_species_epithets(cleaned_name));
 whole_genus_name <- diffindo_genus_names_from_species_names(taxon_name=cleaned_name);
 gen_subgen <- diffindo_subgenus_names_from_genus_names(genus_name=whole_genus_name);
 genus_name <- scourgify_taxon_names(taxon_name=gen_subgen[1]);
 genus_name_check <- diffindo_subgenus_names_from_genus_names(genus_name=diffindo_genus_names_from_species_names(taxon_name))[1];
-if (genus_name != genus_name_check)	{
+subgenus_name <- scourgify_taxon_names(taxon_name=gen_subgen[2]);
+if (subgenus_name!="")
+	subgenus_name <- paste("(",subgenus_name,")",sep="");
+modified_taxon_name <- gsub(" ex gr\\."," ex_gr\\.",taxon_name);
+taxon_components <- simplify2array(strsplit(modified_taxon_name," ")[[1]]);
+if (genus_name != genus_name_check || taxon_components[2]=="?" || sum(taxon_components[1] %in% uncertains)==1)	{
 	genus_name <- genus_name_check
 	flags <- "uncertain genus";
+	} else if (sum(taxon_components %in% "?)")==1)	{
+	flags <- "uncertain genus";
 	}
-subgenus_name <- scourgify_taxon_names(taxon_name=gen_subgen[2]);
-if (subgenus_name!="")	{
-	subgenus_name <- paste("(",subgenus_name,")",sep="");
-	}
-modified_taxon_name <- gsub(" ex gr\\."," ex_gr\\.",taxon_name);
-uncertains <- c("?","cf.","aff.","ex_gr.");
-taxon_components <- simplify2array(strsplit(modified_taxon_name," ")[[1]]);
-t_c <- 1:length(taxon_components);
-btc <- t_c[taxon_components %in% uncertains];
-taxon_components <- gsub("\"","",taxon_components);
-if (length(btc)>0)	{
-	genus_name <- gsub("\"","",genus_name);
-	if (!is.na(match("?)",taxon_components)))	{
-		flags <- "uncertain genus";
-		} else if (min(btc) < match(genus_name,taxon_components) || (subgenus_name!="" && min(btc) < match(subgenus_name,taxon_components)))	{
-		flags <- "uncertain genus";
-		}
-#	if (max(btc) > match(genus_name,taxon_components))
-	if (max(btc) >= (length(taxon_components)-2))
-		flags <- c(flags,"uncertain species");
-	}
+return(flags);
+}
+
+### routine to identify uncertain taxon assignment type
+identify_taxonomic_uncertainty <- function(taxon_name)	{
+# taxon_name: string giving species name
+flags <- revelio_uncertain_genus_assignments(taxon_name);
+flags <- c(flags,revelio_uncertain_species_assignments(taxon_name));
+#paste(flags,collapse=", ");
 return(paste(flags,collapse=", "));
 }
 
