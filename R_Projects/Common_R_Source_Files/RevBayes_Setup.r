@@ -2510,9 +2510,9 @@ accio_paleodb_data_for_Rev_Bayes <- function(otu_names,analysis_name,local_direc
 
 print("Getting occurrence & collection data for study taxa....")
 data_compendium <- accio_occurrences_for_list_of_taxa(taxon_list=otu_names,lump_subgenera,species_only);
-
+data_compendium$occurrences_compendium$flags <- simplify2array(data_compendium$occurrences_compendium$flags);
 ingroup_finds <- evanesco_na_from_matrix(data=data_compendium$occurrences_compendium,replacement = "");
-ingroup_finds[match(991528,ingroup_finds$occurrence_no),]
+#ingroup_finds[match(991528,ingroup_finds$occurrence_no),]
 if (species_only)	{
 	no_species <- c();
 	for (ot in 1:length(otu_names))	{
@@ -2560,6 +2560,7 @@ ingroup_collections$max_ma[ingroup_collections$min_ma<time_scale$ma_lb[match(ons
 #write.csv(data_compendium$collection_compendium[order(data_compendium$collection_compendium$collection_no),],
 write.csv(ingroup_collections[order(ingroup_collections$collection_no),],file=paste(local_directory,analysis_name,"_Collections.csv",sep=""),row.names=F);
 #write.csv(data_compendium$collection_compendium[order(data_compendium$collection_compendium$collection_no),],
+#write.csv(ingroup_finds,file="Fred_Finds.csv");
 write.csv(ingroup_finds,file=paste(local_directory,analysis_name,"_Finds.csv",sep=""),row.names=F);
 
 if (control_taxon[1]!="")	{
@@ -2701,9 +2702,17 @@ if (!is.na(match("THIS REQUEST RETURNED NO RECORDS",fetched)))	{
 		} else	{
 		noccr <- nrow(desired_finds);
 		taxon_name <- desired_finds$identified_name;
-		desired_finds$flags <- sapply(taxon_name,revelio_uncertain_species_assignments);
+		flags1 <- sapply(taxon_name,revelio_uncertain_species_assignments);
+		flags3 <- flags2 <- rep("",noccr);
 		taxon_name <- desired_finds$identified_name[desired_finds$accepted_rank %in% c("genus","subgenus")];
-		desired_finds$flags[desired_finds$accepted_rank %in% c("genus","subgenus")] <- sapply(taxon_name,revelio_uncertain_genus_assignments);
+		flags2[desired_finds$accepted_rank %in% c("genus","subgenus")] <- sapply(taxon_name,revelio_uncertain_genus_assignments);
+		double <- (1:noccr)[flags1!=""][(1:noccr)[flags1!=""] %in% (1:noccr)[flags2!=""]];
+		flags3[flags1!=""] <- flags1[flags1!=""];
+		flags3[flags2!=""] <- flags2[flags2!=""];
+		flags3[double] <- paste(unique(flags2[flags2!=""]),unique(flags1[flags1!=""]),sep=", ");
+		desired_finds$flags <- simplify2array(flags3);
+		
+		
 		# use flags field to note uncertain genus or species assignments.
 #		desired_finds$flags <- sapply(taxon_name,identify_taxonomic_uncertainty);
 #		for (tn in 1:nrow(desired_finds))	{
@@ -8638,15 +8647,15 @@ minrate <- 0;
 maxrate <- rate;	# no point in considering a rate higher than face value
 
 cl <- list(fnscale=-1);
-if ((two_timer+gap_filler)<S1)	{
+if ((two_timer+gap_filler)<S1 && rate>0)	{
 	accio <- optim(rate,fn=likelihood_diversification_rate_given_sampling,method="L-BFGS-B",pmiss=pmiss,S1=S1,two_timer=two_timer,gap_filler=gap_filler,continuous=continuous,lower=0,upper=maxrate,control=cl)
-	best_turnover <- max(0,accio$par)
-	L_best_turnover <- accio$value
+	best_diversification <- max(0,accio$par)
+	L_best_diversification <- accio$value
 	}	else {
-	best_turnover <- 0.0
-	L_best_turnover <- 1.0
+	best_diversification <- 0.0
+	L_best_diversification <- 1.0
 	}
-return(c(best_turnover,log(L_best_turnover)))
+return(c(best_diversification,log(L_best_diversification)))
 }
 
 likelihood_diversification_rate_given_sampling <- function(rate,pmiss,S1,two_timer,gap_filler,continuous)	{
