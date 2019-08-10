@@ -22,7 +22,7 @@ ingroup = clade("Gyrocystis_platessa","Gyrocystis_testudiformis","Gyrocystis_cru
 unscored_taxa <- v(24,25,26,27);
 
 among_char_var <- "lognormal";		# enter "gamma" or "lognormal; rate variation among characters"
-clock_model <- "big_bang";          
+clock_model <- "big_bang";
 
 ############################################################################
 #                  Get basic information about the clade                   #
@@ -65,7 +65,7 @@ monitors = VectorMonitors();
 ## alter the file names to better reflect the analysis (e.g., cincta_strict_clock.log and cincta_strict_clock.trees)
 monitors.append(mnModel(filename="output/cincta_early_burst.log", printgen=10));
 monitors.append(mnFile(tau, filename="output/cincta_early_burst.trees",printgen=10,separator=TAB,tau));
-monitors.append(mnScreen(printgen=500,mean_rt,alpha,rel_bang,speciation_rate, extinction_rate, psi, num_samp_anc, origin_time));
+monitors.append(mnScreen(printgen=500,mean_rt,rel_bang,branch_rates,alpha,speciation_rate,extinction_rate,psi,num_samp_anc,origin_time));
 
     ################################################################################
     # Here are some starting parameters for your MCMC analysis: but use your own!
