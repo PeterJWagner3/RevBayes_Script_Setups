@@ -5,9 +5,8 @@
 # n_taxa: number of taxa;
 #NOTE: This varies only the log-variance.
 
-
 #get number of branches
-n_branches <- 2 * n_taxa - 2
+n_branches <- 2 * n_taxa - 2;
 
 # set initial branch rate
 init_branch_rate ~ dnExponential(1.0);
@@ -16,7 +15,7 @@ moves.append( mvScale(init_branch_rate, lambda=0.10, tune=true, weight=3));
 moves.append( mvScale(init_branch_rate, lambda=1.00, tune=true, weight=1));
 
 # set hyperpriors for "evolution" of rate parameter on tree
-acln_sigma ~ dnExponential(3.0); 		# log standard deviation
+acln_sigma ~ dnExponential(5.0); 		# log standard deviation;
 # mcmc moves
 moves.append( mvScale(acln_sigma, lambda=0.01, tune=true, weight=5));
 moves.append( mvScale(acln_sigma, lambda=0.10, tune=true, weight=3));
