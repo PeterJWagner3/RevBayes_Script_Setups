@@ -4642,6 +4642,35 @@ while (uc < length(unided_colls))	{
 return(rock_nos)
 }
 
+redate_collections_with_direct_dates <- function(collections,finest_chronostrat)	{
+ncolls <- nrow(collections);
+collections$direct_ma <- as.numeric(collections$direct_ma);
+collections$direct_ma_error <- as.numeric(collections$direct_ma_error);
+collections$direct_ma <- evanesco_na_from_vector(collections$direct_ma,0);
+collections$direct_ma_error <- evanesco_na_from_vector(collections$direct_ma_error,0);
+beakerheads <- (1:ncolls)[collections$direct_ma>0];
+if (length(beakerheads)>0)	{
+	if (!is.null(collections$ma_lb))	{
+		collections$ma_lb[beakerheads] <- collections$direct_ma[beakerheads]+collections$direct_ma_error[beakerheads];
+		collections$ma_ub[beakerheads] <- collections$direct_ma[beakerheads]-collections$direct_ma_error[beakerheads];
+		age <- collections$ma_lb[beakerheads];
+		collections$interval_lb[beakerheads] <- sapply(age,rebin_collection_with_time_scale,onset_or_end="onset",fine_time_scale=finest_chronostrat);
+		age <- collections$ma_ub[beakerheads];
+		collections$interval_ub[beakerheads] <- sapply(age,rebin_collection_with_time_scale,onset_or_end="end",fine_time_scale=finest_chronostrat);
+#		collections$interval_ub[beakerheads] <- rebin_collection_with_time_scale(age=collections$ma_ub[beakerheads],onset_or_end="end",fine_time_scale=finest_chronostrat);
+		} else	{
+		collections$max_ma[beakerheads] <- collections$direct_ma[beakerheads]+collections$direct_ma_error[beakerheads];
+		collections$min_ma[beakerheads] <- collections$direct_ma[beakerheads]-collections$direct_ma_error[beakerheads];
+		age <- collections$max_ma[beakerheads];
+		collections$early_interval[beakerheads] <- sapply(age,rebin_collection_with_time_scale,onset_or_end="onset",fine_time_scale=finest_chronostrat);
+		age <- collections$min_ma[beakerheads];
+		collections$late_interval[beakerheads] <- sapply(age,rebin_collection_with_time_scale,onset_or_end="end",fine_time_scale=finest_chronostrat);
+#		collections$late_interval[beakerheads] <- rebin_collection_with_time_scale(age=collections$ma_lb[beakerheads],onset_or_end="end",fine_time_scale=finest_chronostrat);
+		}
+	}
+return(collections);
+}
+
 ## clean up & organize zone data
 # construct a thesaurus for zones that provides several ways to find a zone's name.
 accio_zone_thesaurus <- function(zone_data)	{
