@@ -3411,10 +3411,8 @@ if (sampling_unit=="collection")	{
 	sample_col_occr <- match("collection_no",colnames(paleodb_finds));
 	} else	{
 	sample_col_coll <- match("rock_no_sr",colnames(paleodb_collections));
-	if (is.null(paleodb_finds$rock_no_sr))	{
-		rock_no_sr <- paleodb_collections$rock_no_sr[match(paleodb_finds$collection_no,paleodb_collections$collection_no)];
-		paleodb_finds <- cbind(paleodb_finds,rock_no_sr);
-		}
+	if (is.null(paleodb_finds$rock_no_sr))
+		paleodb_finds$rock_no_sr <- paleodb_collections$rock_no_sr[match(paleodb_finds$collection_no,paleodb_collections$collection_no)];
 	sample_col_occr <- match("rock_no_sr",colnames(paleodb_finds));
 	}
 
