@@ -1996,6 +1996,7 @@ if (bogarted)	{
 	print("Reading your private stash now....");
 	bogarted_finds <- read.csv(bogarted_info,header = T,stringsAsFactors=hell_no);
 	bogarted_finds <- evanesco_na_from_matrix(bogarted_finds,replacement="");
+	bogarted_finds <- subset(bogarted_finds,bogarted_finds$identified_name!="");
 	if (taxon_level=="genus" || taxon_level=="subgenus")	{
 		taxon_name <- bogarted_finds$identified_name;
 		bogarted_finds$genus <- as.character(sapply(taxon_name,diffindo_genus_names_from_species_names));
@@ -2071,6 +2072,9 @@ otu_names[compendium$accepted_name!="?"] <- compendium$accepted_name[compendium$
 paleodb_data <- accio_paleodb_data_for_Rev_Bayes(otu_names,analysis_name=analysis_name,local_directory,control_taxon,zone_taxa,exclude_uncertain_taxa,taxon_level,onset,end,basic_environments,time_scale,zone_database,fossilworks_collections,paleodb_rock_reidentifications,paleodb_collection_edits,lump_subgenera,species_only);
 control_collections <- paleodb_data$control_collections;
 control_occurrences <- paleodb_data$control_occurrences;
+control_collections$collection_no <- as.numeric(control_collections$collection_no);
+control_occurrences$collection_no <- as.numeric(control_occurrences$collection_no);
+control_occurrences$occurrence_no <- as.numeric(control_occurrences$occurrence_no);
 if (bogarted)	{
 	print("Adding your private stash to the PaleoDB data....");
 	bogarted_finds$collection_no <- as.numeric(bogarted_finds$collection_no);
@@ -2131,7 +2135,8 @@ if (bogarted)	{
 	new_paleodb_occr[,paleodb_col_to_edit] <- bogarted_taxonomy[bogarted_row_to_paledob,bogarted_col_w_fix];
 	new_paleodb_occr$record_type <- control_occurrences$record_type[1];
 	
-	new_paleodb_occr$occurrence_no <- (1:nrow(new_paleodb_occr))+ceiling(max(control_occurrences$occurrence_no)/10^(floor(log10(max(control_occurrences$occurrence_no)))-1))*10^(floor(log10(max(control_occurrences$occurrence_no)))-1);
+	#(1:nrow(control_occurrences))[is.na(as.numeric(control_occurrences$occurrence_no))]
+	new_paleodb_occr$occurrence_no <- (1:nrow(new_paleodb_occr))+10^ceiling(log10(max(control_occurrences$occurrence_no)))
 	control_occurrences <- rbind(control_occurrences,new_paleodb_occr);
 	}
 
@@ -2239,7 +2244,8 @@ if (taxon_level=="species")	{
 	} else if (lump_subgenera==T)	{
 	otu_finds <- paleodb_finds[paleodb_finds$genus %in% otu_names_used,];
 	} else	{
-	genus_names <- otu_names_used;
+	taxon_names <- otu_names_used;
+	genus_names <- sapply(taxon_names,diffindo_genus_names_from_species_names);
 	xxx <- sapply(genus_names,diffindo_subgenus_names_from_genus_names)
 	subgenera_used <- otu_names_used;
 	subgenera_used[xxx[2,]!=""] <- xxx[2,xxx[2,]!=""];
@@ -2331,7 +2337,7 @@ if (ncol(fpb)!=length(sample_units_per_bin))	{
 	# put in fix here!
 	}
 
-sampling_distributions <- accio_sampling_distributions_for_RevBayes(finds_per_bin=fpb,sample_units_per_bin,interval_richness,end_FBD="");
+sampling_distributions <- accio_sampling_distributions_for_RevBayes(finds_per_bin=fpb,sample_units_per_bin,end_FBD="");
 # get the expected finds per bin given the distributions found above.
 bin_spans <- (finest_chronostrat$ma_lb-finest_chronostrat$ma_ub);
 names(bin_spans) <- finest_chronostrat$interval;
@@ -2892,18 +2898,20 @@ for (tx in 1:ntaxa)	{
 		taxon_finds <- accio_occurrence_data(taxa,species_only=F,save_files=F);
 	if (!lump_subgenera && !is.null(nrow(taxon_finds)))	{
 		taxon_info <- accio_taxonomic_data_for_one_taxon(taxon=taxa);
-		backup_taxon_finds <- taxon_finds;
-		if (taxon_info$taxon_rank=="genus")	{
-			this_genus <- (1:nrow(taxon_finds))[taxon_finds$genus %in% c(taxa,paste(taxa," (",taxa,")",sep=""))];
-			taxon_finds <- taxon_finds[this_genus,];
-			# this kluge protects against wonky cases where the PaleoDB has conflicted information about genus/subgenus status
-			if (nrow(taxon_finds)==0)	{
-				taxon_finds <- backup_taxon_finds;
-				genus_name <- taxon_finds$genus
-				genus_subgenus <- sapply(genus_name,diffindo_subgenus_names_from_genus_names);
-				taxon_finds$genus <- genus_subgenus[2,];
+		if (nrow(taxon_info)==1 || taxon_info[2,1]!="THIS REQUEST RETURNED NO RECORDS")	{
+			backup_taxon_finds <- taxon_finds;
+			if (taxon_info$taxon_rank=="genus")	{
 				this_genus <- (1:nrow(taxon_finds))[taxon_finds$genus %in% c(taxa,paste(taxa," (",taxa,")",sep=""))];
 				taxon_finds <- taxon_finds[this_genus,];
+				# this kluge protects against wonky cases where the PaleoDB has conflicted information about genus/subgenus status
+				if (nrow(taxon_finds)==0)	{
+					taxon_finds <- backup_taxon_finds;
+					genus_name <- taxon_finds$genus
+					genus_subgenus <- sapply(genus_name,diffindo_subgenus_names_from_genus_names);
+					taxon_finds$genus <- genus_subgenus[2,];
+					this_genus <- (1:nrow(taxon_finds))[taxon_finds$genus %in% c(taxa,paste(taxa," (",taxa,")",sep=""))];
+					taxon_finds <- taxon_finds[this_genus,];
+					}
 				}
 			}
 		}
@@ -5468,9 +5476,35 @@ refined_collections <- redate_paleodb_collections_with_zones(paleodb_collections
 return(refined_collections);
 }
 
+accio_stratigraphic_ranges_from_sampled_in_bin <- function(finds_per_bin)	{
+#present_in_bin <- 1*(finds_per_bin>=0.5);
+ttl_bins <- 1:ncol(present_in_bin);
+taxon_ranges <- c();
+for (tx in 1:nrow(present_in_bin))	{
+	p_i_b <- 1*(finds_per_bin[tx,]>=0.5);
+	if (sum(p_i_b)==0)
+		p_i_b[match(max(finds_per_bin[tx,]),finds_per_bin[tx,])] <- 1;
+	p_i_b <- ttl_bins*p_i_b;
+	p_i_b <- p_i_b[p_i_b>0];
+	taxon_ranges <- rbind(taxon_ranges,c(min(p_i_b),max(p_i_b)));
+	}
+rownames(taxon_ranges) <- rownames(finds_per_bin);
+return(taxon_ranges);
+}
+
+accio_synoptic_richness_from_sampled_in_bin <- function(finds_per_bin)	{
+taxon_ranges <- accio_stratigraphic_ranges_from_sampled_in_bin(finds_per_bin);
+synoptic_richness <- vector(length=max(taxon_ranges));
+names(synoptic_richness) <- colnames(finds_per_bin);
+for (tx in 1:nrow(taxon_ranges))	{
+	synoptic_richness[taxon_ranges[tx,1]:taxon_ranges[tx,2]] <- synoptic_richness[taxon_ranges[tx,1]:taxon_ranges[tx,2]]+1;
+	}
+return(synoptic_richness);
+}
+
 #### ROUTINES TO GET BASIC SAMPLING & DIVERSIFICATION NUMBERS INFORMATION ####
 # routine to test out best uniform, exponential, beta & lognormal distributions
-accio_sampling_distributions_for_RevBayes <- function(finds_per_bin,sample_units_per_bin,interval_richness,end_FBD="")	{
+accio_sampling_distributions_for_RevBayes <- function(finds_per_bin,sample_units_per_bin,end_FBD="")	{
 ok <- 0;
 good_bins <- c();
 sampled_in_bin <- colSums(round(finds_per_bin+0.001,0)>0);
@@ -5481,6 +5515,9 @@ if (end_FBD!="")	{
 	} else	{
 	last_bin <- ncol(finds_per_bin);
 	}
+sampled_in_bin <- colSums(finds_per_bin>=0.5);
+interval_richness <- accio_synoptic_richness_from_sampled_in_bin(finds_per_bin);
+
 #colMax(finds_per_bin)
 for (bn in 1:last_bin)	{
 	interval_name <- names(interval_richness)[bn];
@@ -8433,16 +8470,17 @@ return(boundary_params)
 
 # get rough estimate of lognormal given variance in log occupancy 
 accio_initial_occupancy_lognormal <- function(finds,observed,oS,minS,ncoll)	{
+# editted 2019-08-15
 p0 <- vector(length=3)	# pO[1]=; p0[3]=richness
 names(p0) <- c("scale", "magnitude", "richness")
 	# step 1: get rough estimate of lognormal based on variance above the median
 p0[3] <- min(Chao2_Fisher(observed),jack2_Fisher(observed))	# lowest richness estimator we will consider
 if (p0[3]<=minS)
-	p0[3] <- minS+(p0[3]-oS)
+	p0[3] <- minS+(p0[3]-oS);
 
 if (p0[3]<=oS)	{
-	mid <- round(p0[3]/2)
-	for (i in 1:10)	{
+	mid <- round(p0[3]/2);
+	for (i in 1:min(p0[3],10))	{			# do not let number exceed richness!
 		s <- p0[3]-(i-1)
 		x1 <- qnorm(s/(s+1),0,1)			# get q-value associated with dominant taxon
 		p0[2] <- p0[2]+exp(log(finds[i]/finds[mid])/x1)/10
