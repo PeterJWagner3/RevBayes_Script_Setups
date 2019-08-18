@@ -5476,11 +5476,12 @@ refined_collections <- redate_paleodb_collections_with_zones(paleodb_collections
 return(refined_collections);
 }
 
+# written 2019-08-15 to simplify life
 accio_stratigraphic_ranges_from_sampled_in_bin <- function(finds_per_bin)	{
 #present_in_bin <- 1*(finds_per_bin>=0.5);
-ttl_bins <- 1:ncol(present_in_bin);
+ttl_bins <- 1:ncol(finds_per_bin);
 taxon_ranges <- c();
-for (tx in 1:nrow(present_in_bin))	{
+for (tx in 1:nrow(finds_per_bin))	{
 	p_i_b <- 1*(finds_per_bin[tx,]>=0.5);
 	if (sum(p_i_b)==0)
 		p_i_b[match(max(finds_per_bin[tx,]),finds_per_bin[tx,])] <- 1;
@@ -5492,9 +5493,10 @@ rownames(taxon_ranges) <- rownames(finds_per_bin);
 return(taxon_ranges);
 }
 
+# written 2019-08-15 to simplify life
 accio_synoptic_richness_from_sampled_in_bin <- function(finds_per_bin)	{
 taxon_ranges <- accio_stratigraphic_ranges_from_sampled_in_bin(finds_per_bin);
-synoptic_richness <- vector(length=max(taxon_ranges));
+synoptic_richness <- vector(length=max(max(taxon_ranges),ncol(finds_per_bin)));
 names(synoptic_richness) <- colnames(finds_per_bin);
 for (tx in 1:nrow(taxon_ranges))	{
 	synoptic_richness[taxon_ranges[tx,1]:taxon_ranges[tx,2]] <- synoptic_richness[taxon_ranges[tx,1]:taxon_ranges[tx,2]]+1;
