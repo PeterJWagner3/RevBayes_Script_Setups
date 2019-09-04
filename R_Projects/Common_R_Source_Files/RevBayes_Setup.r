@@ -2356,6 +2356,9 @@ if (end_FBD=="")	{
 	}
 last_bin <- hierarchical_chronostrat$bin_first[match(end_FBD,hierarchical_chronostrat$interval)];
 #psi <- median(psi_bin[1:last_bin]*bin_spans[1:last_bin]);
+if (is.na(match(end_FBD,names(psi_bin))))	{
+	end_FBD <- finest_chronostrat$interval[max(which(finest_chronostrat==end_FBD,arr.ind = T)[,1])];
+	}
 psi <- sum(psi_bin[1:match(end_FBD,names(psi_bin))])/sum(bin_spans[1:match(end_FBD,names(psi_bin))]);	# total median expected finds divided by total time
 print(paste("The median per-ma sampling rate (psi) is: ",round(psi,4),".",sep=""));
 faux_recent_bin <- hierarchical_chronostrat$bin_first[match(end_FBD,hierarchical_chronostrat$interval)];
@@ -3477,17 +3480,24 @@ l_p_1 <- (1:ncolls)[is.na(paleodb_collections$paleolat)];
 l_p_2 <- (1:ncolls)[paleodb_collections$paleolat==""];
 lost_paleogeography <- sort(unique(c(l_p_1,l_p_2)));
 retrieved_paleogeography <- match(paleodb_collections$collection_no[lost_paleogeography],fossil_works_geography$collection_no);
+lost_paleogeography <- lost_paleogeography[!is.na(retrieved_paleogeography)];
 retrieved_paleogeography <- retrieved_paleogeography[!is.na(retrieved_paleogeography)];
+still_broke <- sort(unique(c(l_p_1,l_p_2)))[!sort(unique(c(l_p_1,l_p_2))) %in% lost_paleogeography];
+paleodb_collections$paleolat[still_broke] <- paleodb_collections$paleolng[still_broke] <- paleodb_collections$geoplate[still_broke] <- 0;
 if (length(retrieved_paleogeography)>0)	{
-	paleodb_collections$geoplate[lost_paleogeography[!is.na(retrieved_paleogeography)]] <- fossil_works_geography$plate[retrieved_paleogeography[!is.na(retrieved_paleogeography)]];
-	paleodb_collections$paleolat[lost_paleogeography[!is.na(retrieved_paleogeography)]] <- fossil_works_geography$paleolatdec[retrieved_paleogeography[!is.na(retrieved_paleogeography)]];
-	paleodb_collections$paleolng[lost_paleogeography[!is.na(retrieved_paleogeography)]] <- fossil_works_geography$paleolngdec[retrieved_paleogeography[!is.na(retrieved_paleogeography)]];
+	paleodb_collections$geoplate[lost_paleogeography] <- as.numeric(fossil_works_geography$plate[retrieved_paleogeography]);
+	paleodb_collections$paleolat[lost_paleogeography] <- as.numeric(fossil_works_geography$paleolatdec[retrieved_paleogeography]);
+	paleodb_collections$paleolng[lost_paleogeography] <- as.numeric(fossil_works_geography$paleolngdec[retrieved_paleogeography]);
+	paleodb_collections$geoplate <- evanesco_na_from_vector(data=paleodb_collections$geoplate,replacement = 0);
+	paleodb_collections$paleolat <- evanesco_na_from_vector(data=paleodb_collections$paleolat,replacement = 0);
+	paleodb_collections$paleolng <- evanesco_na_from_vector(data=paleodb_collections$paleolng,replacement = 0);
 
-	lost_geoplate <- (1:ncolls)[is.na(as.numeric(paleodb_collections$geoplate))];
-	paleodb_collections$geoplate <- as.numeric(paleodb_collections$geoplate);
+	lost_geoplate <- (1:ncolls)[paleodb_collections$geoplate==0];
 	}
+
 return(paleodb_collections);
 }
+
 
 # this provides edits for corrections of rock units that cannot currently be edited online
 reparo_unedittable_paleodb_rock_identification <- function(paleodb_collections,paleodb_rock_reidentifications)	{
@@ -6122,7 +6132,13 @@ identify_taxonomic_uncertainty <- function(taxon_name)	{
 flags <- revelio_uncertain_genus_assignments(taxon_name);
 flags <- c(flags,revelio_uncertain_species_assignments(taxon_name));
 #paste(flags,collapse=", ");
-return(paste(flags,collapse=", "));
+if (sum(flags!="")==2) {
+	return(paste(flags,collapse=", "));
+	} else if (sum(flags=="")==2)	{
+	return("");
+	} else	{
+	return(flags[flags!=""]);
+	}
 }
 
 ##### TIME SCALE ROUTINES #####
