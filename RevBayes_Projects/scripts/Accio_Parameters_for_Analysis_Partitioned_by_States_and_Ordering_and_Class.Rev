@@ -13,8 +13,8 @@
 if (ttl_rate_partitions==1)	{
 	if (clock_model=="strict")	{
 	source("scripts/Imperio_Strict_Clock_Branch_Rates.Rev");
-		} else if (clock_model=="lognormal" || clock_model=="log_normal")	{
-		source("scripts/Imperio_Lognormal_Relaxed_Clock_Branch_Rates.Rev");
+		} else if (clock_model=="uncorrelated" || clock_model=="lognormal")	{
+		source("scripts/Imperio_Uncorrelated_Lognormal_Relaxed_Clock_Branch_Rates.Rev");
 		} else if (clock_model=="big_bang")	{
 		source("scripts/Imperio_Early_Burst_Branch_Rates.Rev");
 		# rate variation on branches comes from decay over time only
@@ -24,7 +24,7 @@ if (ttl_rate_partitions==1)	{
 	}	else if (ttl_rate_partitions > 1)	{
 	if (clock_model=="strict")	{
 		source("scripts/Imperio_Strict_Clock_Branch_Rates_Partitioned.Rev");
-		} else if (clock_model=="lognormal" || clock_model=="log_normal")	{
+		} else if (clock_model=="uncorrelated" || clock_model=="log_normal")	{
 		source("scripts/Imperio_Lognormal_Relaxed_Clock_Branch_Rates_Partitioned.Rev");
 		}
 	}
@@ -75,3 +75,13 @@ for (nds in 1:n_data_subsets)	{
 	phyMorpho[nds] ~ dnPhyloCTMC(tree=tau,siteRates=char_rate_var[nds],branchRates=ind_branch_rates[nds],Q=Q[nds],type="Standard",coding=coding_bias[nds]);
 	phyMorpho[nds].clamp(crumplehorn_snorkaxe[nds]);
 	}
+
+# set deterministic node to monitor
+# mean_rt := mean(branch_rates);
+#		if (!big_bang)	{
+#			ind_branch_rates[nds]:=branch_rates;
+#			} else	{
+#			for (bb in 1:n_branches)	{
+#				ind_branch_rates[nds][bb]:=branch_rates[bb];
+#				}		# end loop for trying to get dnPhyloCTMC to take the branch rates.
+#			}		# special case: dnPhyloCTMC doesn't like branch_rates from the Early Burst script
