@@ -1234,20 +1234,6 @@ for (s in 1:sts)	{
 return (polymorphics)
 }
 
-#unravel_polymorph <- function(poly)	{
-#combo <- -1*poly
-#sts <- 1+floor(log10(abs(combo)))
-#polymorphics <- vector(length=sts)
-
-#base <- 10^(sts-1)
-#for (s in 1:sts)	{
-#	polymorphics[s] <- floor(abs(combo)/base)
-#	combo <- combo%%base
-#	base <- base/10
-#	}
-#return (polymorphics)
-#}
-
 count_characters_in_string <- function(string_to_count)	{
 j <- strsplit(string_to_count,split="",fixed=TRUE)[[1]];
 return(length(j));
@@ -1391,8 +1377,6 @@ names(output) <- c("initial_data","matrix_file_names","state_numbers","state_ord
 return(output);
 }
 
-#nexus_file_name <- "Vascoceratidae_Mertz_2017.nex"
-#nexus_file_name <- paste(read_data_directory,"Vascoceratidae_Mertz_2017.nex",sep=");
 diffindo_character_matrix_by_state_numbers_and_other_partitions <- function(analysis_name="",write_data_directory="",rate_partition="",trend_partition="",taxa_subset="",data_file_lead="data/",polymorphs=TRUE, UNKNOWN=-11, INAP=-22)	{
 # rate_partition: name of acharacter group that should have separate rates (e.g., CHARPARTITION Functional_Partitions  =  Nonfeeding :  1- 45 58- 60, Feeding :  46- 57; in a Nexus file)
 # rattrend_partition: name of character group that for which one group ("Driven") has biased change (e.g., Driven_Trend  =  Unbiased :  1- 32 34- 40 43- 50 52- 60, Driven :  33 41- 42 51; in a Nexus file)
@@ -1400,12 +1384,11 @@ diffindo_character_matrix_by_state_numbers_and_other_partitions <- function(anal
 # write_data_directory: the directory to which the partitioned matrices should go
 # data_file_lead: the directory addendum to paste in front of data files so that RevBayes can find them
 if (analysis_name=="")	{
-#	j <- strsplit(orig_nexus_file_name,split="",fixed=TRUE)[[1]];
-#	j <- j[1:(max((1:length(j))[j %in% "."])-1)];
 	analysis_name <- "Wombat_Rock";
 	}
 #initial_data <- accio_data_from_nexus_file(nexus_file_name=paste(read_data_directory,nexus_file_name,sep=""),polymorphs,UNKNOWN,INAP,character_partitions=rate_partition);
 #if (rate_partition!="")	{
+print("Choose a nexus file to convert to RevBayes preferred format:")
 initial_data <- accio_data_from_chosen_nexus_file(polymorphs,UNKNOWN,INAP,rate_partition,trend_partition);
 #	} else if (trend_partition!="")	{
 #	initial_data <- accio_data_from_chosen_nexus_file(polymorphs,UNKNOWN,INAP,character_partitions=trend_partition);
@@ -1555,7 +1538,7 @@ return(output);
 
 #scribio_rev_bayes_script(analysis_name,taxon_names=otu_names,matrix_file_names,state_numbers,state_ordering,outgroup_taxa,unscored_taxa,fbd_parameterization_script,no_runs=4,write_scripts_directory=write_scripts_directory,set_wdir)
 #scribio_Rev_Bayes_script_for_partitioned_character_data(            analysis_name,   initial_data,matrix_file_names,state_numbers,state_ordering,coding,           write_scripts_directory,fbd_parameterization_script,character_rate_partitions,fossil_interval_file,set_wdir,output_file_lead="output/",script_file_lead="scripts/",no_runs=4);
-scribio_Rev_Bayes_script_for_partitioned_character_data <- function(analysis_name="",initial_data,matrix_file_names,state_numbers,state_ordering,coding_bias,outgroup_taxa,ingroup_taxa,max_age,write_scripts_directory,fbd_parameterization_script="",character_rate_partitions="",character_trend_partitions="",fossil_interval_file,set_wdir,output_file_lead="output/",script_file_lead="scripts/",no_runs=4)	{
+scribio_Rev_Bayes_script_for_partitioned_character_data <- function(analysis_name="",initial_data,matrix_file_names,state_numbers,state_ordering,coding_bias,outgroup_taxa,ingroup_taxa,max_age,write_scripts_directory,fbd_parameterization_script="",character_rate_partitions="",character_trend_partitions="",fossil_interval_file,set_wdir,output_file_lead="output/",script_file_lead="scripts/",data_file_lead="data/",no_runs=4)	{
 # analysis_name: name that specificies this particular analysis.  (The clade name is a good choice)
 # initial_data: data from nexus file.  
 # matrix_file_names: a vector giving the list of all character matrices to be used
@@ -1662,7 +1645,7 @@ revbayes_source <- c(revbayes_source,"##########################################
 revbayes_source <- c(revbayes_source,"n_data_subsets <- filenames.size();");
 if (fbd_parameterization_script!="")	{
 #	revbayes_source <- c(revbayes_source,paste("intervals = readDataDelimitedFile(file=\"data/",fossil_interval_file,"\",header=true);",sep=""));
-	revbayes_source <- c(revbayes_source,paste("taxa <- readTaxonData(file=\"data/",fossil_interval_file,"\");",sep=""));
+	revbayes_source <- c(revbayes_source,paste("taxa <- readTaxonData(file=\"",data_file_lead,fossil_interval_file,"\");",sep=""));
 	revbayes_source <- c(revbayes_source,paste("n_taxa <- taxa.size();"));
 	} else {
 	revbayes_source <- c(revbayes_source,"dummy <- readDiscreteCharacterData(filenames[1]);");
@@ -1681,7 +1664,8 @@ if (fbd_parameterization_script!="")	{
 	revbayes_source <- c(revbayes_source,"# NOTE: This will sometimes freeze; if it does, then edit the script so    #");
 	revbayes_source <- c(revbayes_source,"#      origination & extinction are set to 1.0. This usually works!        #");
 	revbayes_source <- c(revbayes_source,"############################################################################");
-	revbayes_source <- c(revbayes_source,paste("source(\"",paste(script_file_lead,fbd_parameterization_script,sep=""),"\");",sep=""));
+	revbayes_source <- c(revbayes_source,paste("source(\"",paste(fbd_parameterization_script,sep=""),"\");",sep=""));
+#	revbayes_source <- c(revbayes_source,paste("source(\"",paste(script_file_lead,fbd_parameterization_script,sep=""),"\");",sep=""));
 	} else	{
 	revbayes_source <- c(revbayes_source,"############################################################################");
 	revbayes_source <- c(revbayes_source,"# Set up tree-search moves");
@@ -1899,6 +1883,7 @@ return(gsub(" ","_",as.character(fossil_intervals$taxon[fossil_intervals$min==mi
 
 #scribio_RevBayes_scripts_from_nexus_file_and_PaleoDB_download <- function(analysis_name,nexus_file_name,taxon_subset_file="",rate_partition="",trend_partition="",taxon_level,lump_subgenera=F,species_only=T,bogarted="",rock_unit_databases="",chronostratigraphic_databases="",paleodb_fixes="",control_taxon="",zone_taxa="",onset="Cambrian",end="Holocene",end_FBD="",exclude_uncertain_taxa=T,basic_environments=c("terr","marine","unknown"),sampling_unit="collections",time_scale_stratigraphic_scale="International",temporal_precision=0.1,read_data_directory="",write_data_directory="",write_scripts_directory="",local_directory="",set_wdir="",UNKNOWN=-11,INAP=-22)	{
 scribio_RevBayes_scripts_from_nexus_file_and_PaleoDB_download <- function(analysis_name,taxon_subset_file=F,rate_partition="",trend_partition="",taxon_level,lump_subgenera=F,species_only=T,bogarted="",rock_unit_databases="",chronostratigraphic_databases="",paleodb_fixes="",control_taxon="",zone_taxa="",onset="Cambrian",end="Holocene",end_FBD="",exclude_uncertain_taxa=T,basic_environments=c("terr","marine","unknown"),sampling_unit="collections",time_scale_stratigraphic_scale="International",temporal_precision=0.1,write_data_directory="",write_scripts_directory="",local_directory="",set_wdir="",UNKNOWN=-11,INAP=-22)	{
+#### PART 0: Commence ####
 print("This program will read a Nexus file and then create scripts that RevBayes can use to conduct phylogenetic analyses,");
 print("   using data downloaded from the Paleobiology Database (https://www.paleobiodb.org/) for stratigraphic data and then");
 print("   refining/cleaning/updating those data with updated time scales and biozonation information.");
@@ -1930,7 +1915,7 @@ if (taxon_subset_file)	{
 if (taxon_subset_file)	{
 	print(".....");
 	taxon_subset_file_name <- file.choose();
-	taxa_subset <- read.table(taxon_subset_file_name,header = T,stringsAsFactors=hell_no)[,1];
+	taxa_subset <- read.table(taxon_subset_file_name,header = F,stringsAsFactors=hell_no)[,1];
 	print("Choose the nexus file that you wish to analyze: ");
 	}
 
@@ -2153,6 +2138,8 @@ hierarchical_chronostrat$ma_lb <- temporal_precision*round(hierarchical_chronost
 hierarchical_chronostrat$ma_ub <- temporal_precision*round(hierarchical_chronostrat$ma_ub/temporal_precision,0);
 finest_chronostrat <- hierarchical_chronostrat[hierarchical_chronostrat$bin_first==hierarchical_chronostrat$bin_last,];
 finest_chronostrat <- finest_chronostrat[match(finest_chronostrat$bin_first,finest_chronostrat$bin_first),];
+if (is.na(match(end_FBD,finest_chronostrat$interval)))
+	end_FBD <- finest_chronostrat$interval[max(which(finest_chronostrat==end_FBD,arr.ind = T)[,1])];
 downloaded_collections <- reset_paleodb_intervals_to_desired_time_scale(collections=control_collections,finest_chronostrat = finest_chronostrat,time_scale);
 downloaded_collections$min_ma <- round(temporal_precision*round(downloaded_collections$min_ma/temporal_precision,0),floor(-log10(temporal_precision)));
 downloaded_collections$max_ma <- round(temporal_precision*round(downloaded_collections$max_ma/temporal_precision,0),floor(-log10(temporal_precision)));
@@ -2256,11 +2243,11 @@ if (taxon_level=="species")	{
 print(paste("Saving",paste(analysis_name,"_Finds_recalibrated.csv",sep=""),"..."));
 write.csv(otu_finds,paste(local_directory,analysis_name,"_Finds_recalibrated.csv",sep=""),row.names=F);
 
-strat_for_Rev_Bayes <- accio_stratigraphic_information_for_Rev_Bayes(taxa=otu_names,paleodb_finds,paleodb_collections,hierarchical_chronostrat,taxon_rank=taxon_level,sampling_unit,lump_cooccr=T,constrain=T,end_FBD = end_FBD,temporal_precision=temporal_precision);
+strat_for_Rev_Bayes <- accio_stratigraphic_information_for_Rev_Bayes(taxa=as.character(otu_names),paleodb_finds,paleodb_collections,hierarchical_chronostrat,taxon_rank=taxon_level,sampling_unit,lump_cooccr=T,constrain=T,end_FBD = end_FBD,temporal_precision=temporal_precision);
 end_FBD_b <- rebin_collection_with_time_scale(age=min(strat_for_Rev_Bayes$fossil_information_detailed$latest_poss_fa),onset_or_end = "end",fine_time_scale = finest_chronostrat);
 if (end_FBD!="" && hierarchical_chronostrat$bin_first[match(end_FBD,hierarchical_chronostrat$interval)] < match(end_FBD_b,finest_chronostrat$interval))	{
 	end_FBD <- end_FBD_b;
-	strat_for_Rev_Bayes <- accio_stratigraphic_information_for_Rev_Bayes(taxa=otu_names,paleodb_finds,paleodb_collections,hierarchical_chronostrat,taxon_rank=taxon_level,sampling_unit,lump_cooccr=T,constrain=T,end_FBD,temporal_precision);
+	strat_for_Rev_Bayes <- accio_stratigraphic_information_for_Rev_Bayes(taxa=as.character(otu_names),paleodb_finds,paleodb_collections,hierarchical_chronostrat,taxon_rank=taxon_level,sampling_unit,lump_cooccr=T,constrain=T,end_FBD,temporal_precision);
 	}
 per_bin_info_ingroup <- accio_per_stratigraphic_interval_sampling_information_for_Rev_Bayes(taxa=otu_names,paleodb_finds,paleodb_collections,hierarchical_chronostrat,taxon_rank=taxon_level,sampling_unit,lump_cooccr=T,constrain=T,end_FBD = end_FBD,temporal_precision=temporal_precision);
 
@@ -2425,7 +2412,7 @@ write(revbayes_babble,file=filename);
 #revbayes_babble <- scribio_Rev_Bayes_script_for_partitioned_character_data(analysis_name,initial_data,matrix_file_names,state_numbers,state_ordering,write_scripts_directory=write_scripts_directory,fbd_parameterization_script,extant_file,set_wdir,output_file_lead="output/",script_file_lead="scripts/",no_runs=4);
 }
 
-scribio_RevBayes_scripts_from_nexus_file_and_existing_FBD_script_and_data <- function(analysis_name,fbd_parameterization_script,fossil_interval_file,taxon_subset_file=F,rate_partition="",trend_partition="",write_data_directory="",write_scripts_directory="",local_directory="",set_wdir="",UNKNOWN=-11,INAP=-22)	{
+scribio_RevBayes_scripts_from_chosen_nexus_file_and_existing_FBD_script_and_data <- function(analysis_name,taxon_subset_file=F,rate_partition="",trend_partition="",write_data_directory="",write_scripts_directory="",local_directory="",set_wdir="",UNKNOWN=-11,INAP=-22)	{
 print("This program will read a Nexus file and then create scripts that RevBayes can use to conduct phylogenetic analyses.");
 print("   If conducting FBD analyses, then it relies on the user to provide the name of an FBD parameterization script as.");
 print("   well as a file giving fossil intervals. IF you do not have these yet, then you should use another routine:" );
@@ -2436,7 +2423,8 @@ if (taxon_subset_file)	{
 	print("Choose file giving subset of taxa that you wish to be analyzed");
 	for (i in 1:100)	j <- 1;
 	} else	{   
-	print("Choose the nexus file that you wish to analyze: ");
+#	print("Choose the nexus file that you wish to analyze: ");
+	print("Choose a nexus file to convert to RevBayes preferred format:")
 	taxa_subset <- "";
 	}
 #if (taxon_subset_file!="" && tolower(taxon_subset_file)!="n")	{
@@ -2444,7 +2432,8 @@ if (taxon_subset_file)	{
 	print(".....");
 	taxon_subset_file_name <- file.choose();
 	taxa_subset <- read.table(taxon_subset_file_name,header = T,stringsAsFactors=hell_no)[,1];
-	print("Choose the nexus file that you wish to analyze: ");
+#	print("Choose the nexus file that you wish to analyze: ");
+	print("Choose a nexus file to convert to RevBayes preferred format:")
 	}
 
 #basic_data <- diffindo_character_matrix_by_state_numbers_and_other_partitions(analysis_name,write_data_directory,rate_partition,trend_partition,taxa_subset,data_file_lead="data/",polymorphs=T,UNKNOWN,INAP);
@@ -2472,6 +2461,88 @@ if (taxa_subset[1]=="")	{
 # we now have all of the information that we need for the character-based part of FBD analyses.
 # However, let's see if there are any taxa that belong to the ingroup-clade that are excluded!
 print("Select .tsv file with first and last appearance dates for the FBD analysis:");
+
+if (species_only)	{
+	taxon_names <- ingroup_taxa;
+	clade_members <- unique(sapply(taxon_names,diffindo_genus_names_from_species_names));
+	} else	{
+	clade_members <- ingroup_taxa;
+	}
+
+for (x in 1:10^6)	x <- x;
+fossil_interval_file <- file.choose();
+print("Choose the FBD parameterization script: ");
+fossil_intervals <- read.table(fossil_interval_file,header=T);
+max_age <- max(fossil_intervals$max);
+
+for (x in 1:10^6)	x <- x;
+fbd_parameterization_script <- file.choose();
+revbayes_babble <- scribio_Rev_Bayes_script_for_partitioned_character_data(analysis_name,initial_data,matrix_file_names,state_numbers,state_ordering,coding_bias,outgroup_taxa,ingroup_taxa,max_age,write_scripts_directory,fbd_parameterization_script,character_rate_partitions,character_trend_partitions,fossil_interval_file,set_wdir,output_file_lead="output/",script_file_lead="scripts/",data_file_lead="",no_runs=4);
+
+filename <- paste(local_directory,analysis_name,sep="");
+if (length(unique(character_rate_partitions))>1)
+	filename <- paste(filename,"_Rate_Partitioned",sep="");
+if (fbd_parameterization_script=="")	{
+#	filename <- paste(paste(write_scripts_directory,analysis_name,sep=""),"_Analysis.Rev",sep="");
+	filename <- paste(filename,"_Analysis.Rev",sep="");
+	} else	{
+#	filename <- paste(paste(write_scripts_directory,analysis_name,sep=""),"_FBD_Analysis.Rev",sep="");
+	filename <- paste(filename,"_FBD_Analysis.Rev",sep="");
+	}
+write(revbayes_babble,file=filename);
+#write(revbayes_babble,file=paste(paste(local_directory,analysis_name,sep=""),"_Partitioned_FBD_Analysis.Rev",sep=""));
+#revbayes_babble <- scribio_Rev_Bayes_script_for_partitioned_character_data(analysis_name,initial_data,matrix_file_names,state_numbers,state_ordering,write_scripts_directory=write_scripts_directory,fbd_parameterization_script,extant_file,set_wdir,output_file_lead="output/",script_file_lead="scripts/",no_runs=4);
+}
+
+scribio_RevBayes_scripts_from_nexus_file_and_existing_FBD_script_and_data <- function(analysis_name,fbd_parameterization_script,fossil_interval_file,taxon_subset_file=F,rate_partition="",trend_partition="",write_data_directory="",write_scripts_directory="",local_directory="",set_wdir="",UNKNOWN=-11,INAP=-22)	{
+print("This program will read a Nexus file and then create scripts that RevBayes can use to conduct phylogenetic analyses.");
+print("   If conducting FBD analyses, then it relies on the user to provide the name of an FBD parameterization script as.");
+print("   well as a file giving fossil intervals. IF you do not have these yet, then you should use another routine:" );
+print("\t\tscribio_RevBayes_scripts_from_nexus_file_and_PaleoDB_download()");
+print("");
+#if (taxon_subset_file && tolower(taxon_subset_file)!="n")	{
+if (taxon_subset_file)	{
+	print("Choose file giving subset of taxa that you wish to be analyzed");
+	for (i in 1:100)	j <- 1;
+	} else	{   
+#	print("Choose the nexus file that you wish to analyze: ");
+	print("Choose a nexus file to convert to RevBayes preferred format:")
+	taxa_subset <- "";
+	}
+#if (taxon_subset_file!="" && tolower(taxon_subset_file)!="n")	{
+if (taxon_subset_file)	{
+	print(".....");
+	taxon_subset_file_name <- file.choose();
+	taxa_subset <- read.table(taxon_subset_file_name,header = T,stringsAsFactors=hell_no)[,1];
+#	print("Choose the nexus file that you wish to analyze: ");
+	print("Choose a nexus file to convert to RevBayes preferred format:")
+	}
+
+#basic_data <- diffindo_character_matrix_by_state_numbers_and_other_partitions(analysis_name,write_data_directory,rate_partition,trend_partition,taxa_subset,data_file_lead="data/",polymorphs=T,UNKNOWN,INAP);
+basic_data <- diffindo_character_matrix_by_state_numbers_and_other_partitions(analysis_name,write_data_directory,rate_partition,trend_partition,taxa_subset,data_file_lead="data/",polymorphs=T,UNKNOWN,INAP);
+print("Select the .tsv file with first and last appearance dates for the FBD analysis:");
+initial_data <- basic_data$initial_data;
+matrix_file_names <- basic_data$matrix_file_names;
+state_numbers <- basic_data$state_numbers;
+state_ordering <- basic_data$state_ordering;
+character_rate_partitions <- basic_data$rate_partitions;
+character_trend_partitions <- basic_data$trend_partitions;
+otu_names <- otu_names_used <- initial_data$OTUs;
+chmatrix <- initial_data$Matrix;
+coding_bias <- basic_data$coding_bias; 
+initial_data$Outgroup <- as.numeric(initial_data$Outgroup);
+if (initial_data$Outgroup[1]!=-1)	{
+	outgroup_taxa <- otu_names[initial_data$Outgroup];
+	} else	{
+	outgroup_taxa  <- "";
+	}
+if (taxa_subset[1]=="")	{
+	ingroup_taxa <- otu_names[!(1:length(otu_names)) %in% initial_data$Outgroup];
+	} else	{
+	ingroup_taxa <- taxa_subset[(1:length(taxa_subset))[!taxa_subset %in% outgroup_taxa]];
+	}
+# we now have all of the information that we need for the character-based part of FBD analyses.
+# However, let's see if there are any taxa that belong to the ingroup-clade that are excluded!
 
 if (species_only)	{
 	taxon_names <- ingroup_taxa;
@@ -3355,7 +3426,12 @@ if (faux_recent)	{
 		} else	{
 		if (min(fossil_intervals_fuzzy$latest_poss_fa)<finest_chronostrat$ma_lb[latest_bin])	{
 			latest_bin <- 1+finest_chronostrat$bin_first[match(rebin_collection_with_time_scale(age=min(fossil_intervals_fuzzy$latest_poss_fa),onset_or_end = "onset",fine_time_scale = finest_chronostrat),finest_chronostrat$interval)];
-			end_FBD <- finest_chronostrat$interval[latest_bin]; 
+			if (latest_bin>max(finest_chronostrat$bin_first))	{
+				latest_bin <- max(finest_chronostrat$bin_first);
+				end_FBD <- finest_chronostrat$interval[latest_bin]; 
+				} else {
+				end_FBD <- finest_chronostrat$interval[latest_bin]; 
+				}
 			}
 		faux_recent <- youngest <- finest_chronostrat$ma_lb[match(end_FBD,finest_chronostrat$interval)];
 		fossil_intervals$min <- fossil_intervals$min-youngest;
@@ -7938,14 +8014,13 @@ return(S)
 expected_occurrences <- function(rocd, ncoll, S)	{
 # find expectations of this gamma at this sample size
 # exp will give the expected number of taxa found 1…ncoll times
-b <- seq(1,ncoll,by=1)
-expected <- dbinom(b,ncoll,rocd[1])
-for (j in 2:S)	{
-	expected <- expected+dbinom(b,ncoll,rocd[j])
-	}
-min <- 1.0e-323
-for (i in 1:ncoll)	if (expected[i]==0)	expected[i] <- min
-return(expected)
+b <- 1:ncoll;
+expected <- dbinom(b,ncoll,rocd[1]);
+for (j in 2:S)
+	expected <- expected+dbinom(b,ncoll,rocd[j]);
+min <- 1.0e-323;
+for (i in 1:ncoll)	if (expected[i]==0)	expected[i] <- min;
+return(expected);
 }
 
 ## Uniform Distrributions
@@ -8834,15 +8909,15 @@ for (nn in 1:notu)	{
 
 nexus_file_content <- rbind(nexus_file_content,";");
 nexus_file_content <- rbind(nexus_file_content,"END;");
-nexus_file_content <- rbind(nexus_file_content,"begin mrbayes;");
-nexus_file_content <- rbind(nexus_file_content,"	set autoclose=yes nowarn=yes;");
-nexus_file_content <- rbind(nexus_file_content,"	lset nst=6 rates=invgamma;");
-nexus_file_content <- rbind(nexus_file_content,"	unlink statefreq=(all) revmat=(all) shape=(all) pinvar=(all); ");
-nexus_file_content <- rbind(nexus_file_content,"	prset applyto=(all) ratepr=variable;");
-nexus_file_content <- rbind(nexus_file_content,"	mcmcp ngen= 100000000 relburnin=yes burninfrac=0.25 printfreq=10000  samplefreq=10000 nchains=4 savebrlens=yes;");
-nexus_file_content <- rbind(nexus_file_content,"	mcmc;");
-nexus_file_content <- rbind(nexus_file_content,"	sumt;");
-nexus_file_content <- rbind(nexus_file_content,"end;");
+#nexus_file_content <- rbind(nexus_file_content,"begin mrbayes;");
+#nexus_file_content <- rbind(nexus_file_content,"	set autoclose=yes nowarn=yes;");
+#nexus_file_content <- rbind(nexus_file_content,"	lset nst=6 rates=invgamma;");
+#nexus_file_content <- rbind(nexus_file_content,"	unlink statefreq=(all) revmat=(all) shape=(all) pinvar=(all); ");
+#nexus_file_content <- rbind(nexus_file_content,"	prset applyto=(all) ratepr=variable;");
+#nexus_file_content <- rbind(nexus_file_content,"	mcmcp ngen= 100000000 relburnin=yes burninfrac=0.25 printfreq=10000  samplefreq=10000 nchains=4 savebrlens=yes;");
+#nexus_file_content <- rbind(nexus_file_content,"	mcmc;");
+#nexus_file_content <- rbind(nexus_file_content,"	sumt;");
+#nexus_file_content <- rbind(nexus_file_content,"end;");
 write(nexus_file_content,file=new_file_name);
 }
 
