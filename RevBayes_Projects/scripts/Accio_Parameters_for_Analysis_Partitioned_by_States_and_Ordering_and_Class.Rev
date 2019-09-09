@@ -12,7 +12,7 @@
 # these all return base_branch_rates, which is a scalar for clock models, but a 1:n_branches long vector for other models.
 if (ttl_rate_partitions==1)	{
 	if (clock_model=="strict")	{
-	source("scripts/Imperio_Strict_Clock_Branch_Rates.Rev");
+		source("scripts/Imperio_Strict_Clock_Branch_Rates.Rev");
 		} else if (clock_model=="uncorrelated" || clock_model=="lognormal")	{
 		source("scripts/Imperio_Uncorrelated_Lognormal_Relaxed_Clock_Branch_Rates.Rev");
 		} else if (clock_model=="big_bang")	{
