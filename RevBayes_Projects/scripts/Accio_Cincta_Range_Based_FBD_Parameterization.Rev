@@ -68,6 +68,10 @@ for (bn in 1:n_branches)	{
 summed_gaps := sum(branch_lengths);
 
 clade_extant = clade("Sucocystis_acrofera");
-age_extant := tmrca(tau, clade_extant);	# There is no particularly good reason to keep this!
+#age_extant := tmrca(tau, clade_extant);	# There is no particularly good reason to keep this!
 
-pruned_tau := fnPruneTree(tau, prune=v("Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis"))
+pruned_tau := fnPruneTree(tau, prune=v("Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis"));
+#### for easy printing on screen ####
+fbd_p := speciation_rate;
+fbd_q := extinction_rate;
+fbd_r := psi;
