@@ -22,7 +22,8 @@ moves.append(mvSlide(turnover, delta=0.10, weight=3));
 moves.append(mvSlide(turnover, delta=1.00, weight=1));
 extinction_rate := turnover*speciation_rate;
 diversification := speciation_rate - extinction_rate;
-# old extinction stuff.
+
+# old extinction stuff. We should not use this, as extinction should not be independent of origination!
 #extinction_rate ~ dnExponential(1.471);
 #moves.append(mvScale(extinction_rate, lambda=0.01, weight=5));
 #moves.append(mvScale(extinction_rate, lambda=0.10, weight=3));
@@ -46,6 +47,7 @@ moves.append(mvSlide(origin_time, delta=0.10, weight=3));
 moves.append(mvSlide(origin_time, delta=1.00, weight=1));
 
 fbd_dist = dnFBDRP(origin=origin_time, lambda=speciation_rate, mu=extinction_rate, psi=psi, rho=rho, taxa=taxa);
+
 ############################################################################
 #                               Set up tree                                #
 ############################################################################
@@ -71,3 +73,7 @@ clade_extant = clade("Sucocystis_acrofera");
 age_extant := tmrca(tau, clade_extant);	# There is no particularly good reason to keep this!
 
 pruned_tau := fnPruneTree(tau, prune=v("Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis"))
+#### for easy printing on screen ####
+fbd_p := speciation_rate;
+fbd_q := extinction_rate;
+fbd_r := psi;

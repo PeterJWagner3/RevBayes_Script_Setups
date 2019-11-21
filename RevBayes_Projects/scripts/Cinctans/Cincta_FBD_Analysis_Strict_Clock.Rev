@@ -1,5 +1,5 @@
 clear();
-setwd("/Users/peterjwagner/Documents/RevBayes_Projects/");	#CHANGE THIS TO THE FOLDER IN WHICH YOU HAVE REVBAYES SCRIPTS & DATA!!!
+setwd("/Users/peterwagner/Documents/RevBayes_Projects/");	#CHANGE THIS TO THE FOLDER IN WHICH YOU HAVE REVBAYES SCRIPTS & DATA!!!
 ### This director needs three subdirectories (folders):
 #     RevBayes_Projects/scripts (additional RevBayes routines that will be used)
 #     RevBayes_Projects/data (holds data matrices & taxonomic information)
@@ -64,7 +64,8 @@ monitors = VectorMonitors();
 ## alter the file names to better reflect the analysis (e.g., cincta_strict_clock.log and cincta_strict_clock.trees)
 monitors.append(mnModel(filename="output/cincta_strict_clock.log", printgen=10));
 monitors.append(mnFile(tau, filename="output/cincta_strict_clock.trees",printgen=10,separator=TAB,tau));
-monitors.append(mnScreen(printgen=500,mean_rt,alpha,speciation_rate, extinction_rate, psi, num_samp_anc, origin_time));
+monitors.append(mnScreen(printgen=500,alpha,fbd_p,fbd_q,fbd_r,num_samp_anc,origin_time,summed_gaps));
+#monitors.append(mnScreen(printgen=10,alpha,fbd_p,fbd_q,fbd_r,num_samp_anc,origin_time,summed_gaps));
 
     ################################################################################
     # Here are some starting parameters for your MCMC analysis: but use your own!
