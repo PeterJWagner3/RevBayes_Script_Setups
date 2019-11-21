@@ -65,7 +65,10 @@ monitors = VectorMonitors();
 ## alter the file names to better reflect the analysis (e.g., cincta_strict_clock.log and cincta_strict_clock.trees)
 monitors.append(mnModel(filename="output/cincta_early_burst.log", printgen=10));
 monitors.append(mnFile(tau, filename="output/cincta_early_burst.trees",printgen=10,separator=TAB,tau));
+<<<<<<< HEAD
 #monitors.append(mnScreen(printgen=500,mean_rt,rel_bang,branch_rates,alpha,speciation_rate,extinction_rate,psi,num_samp_anc,origin_time));
+=======
+>>>>>>> origin/master
 monitors.append(mnScreen(printgen=500,mean_rt,rel_bang,branch_rates,alpha,fbd_p,fbd_q,fbd_r,num_samp_anc,origin_time,summed_gaps));
 
     ################################################################################

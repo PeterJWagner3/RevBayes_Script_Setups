@@ -65,7 +65,10 @@ monitors = VectorMonitors();
 monitors.append(mnModel(filename="output/cincta_strict_clock.log", printgen=10));
 monitors.append(mnFile(tau, filename="output/cincta_strict_clock.trees",printgen=10,separator=TAB,tau));
 monitors.append(mnScreen(printgen=500,alpha,fbd_p,fbd_q,fbd_r,num_samp_anc,origin_time,summed_gaps));
+<<<<<<< HEAD
 #monitors.append(mnScreen(printgen=10,alpha,fbd_p,fbd_q,fbd_r,num_samp_anc,origin_time,summed_gaps));
+=======
+>>>>>>> origin/master
 
     ################################################################################
     # Here are some starting parameters for your MCMC analysis: but use your own!
