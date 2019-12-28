@@ -20,9 +20,9 @@ RevBayes_Projects should contain three folders:
 
 The first of these source files that is executed  is “Imperio_Default_Settings.Rev.”  As the name indicates, this provides default values for variables that provide a simple strict clock analysis.  (Scripts for more complex models will require changing one or more of these variables in the script.)  In particular, this sets the clock model (clock_model) to “strict”, the number of rate partitions to 1.
 
-The next set of commands inform RevBayes about the character data.  The first one
-	filenames <- v(…)
-inform the analysis there are three nexus files, which were created by the RevBayes_Setup.r program.  The subsequent commands:
+The next set of commands inform RevBayes about the character data.  The first one,
+	filenames <- v(…),
+informs the analysis there are three nexus files, which were created by the RevBayes_Setup.r program.  The subsequent commands:
 	partition_states <- v(2,3,4);
 	partition_ordering <- v("unordered","unordered","unordered");
 will tell RevBayes the number of states shared by characters in each partition and that there is no “ordering” to the characters.  This information will be used below to establish simple Mk (M2, M3 and M4) models logically equivalent to the Jukes-Cantor model.
