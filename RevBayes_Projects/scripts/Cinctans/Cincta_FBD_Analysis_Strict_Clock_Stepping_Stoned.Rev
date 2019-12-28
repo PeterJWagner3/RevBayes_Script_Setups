@@ -84,7 +84,7 @@ running_gens=500000;	# Number of generations for the real analysis; the bigger t
 ##############
 
 pow_p = powerPosterior(mymodel, moves, monitors, "Stepping_Stone_Test/Strict_Clock_Test", cats=50);     ##Set up your power posterior from everything in completed analysis. Create output for power posterior in quotes
-pow_p.burnin(generations=10000,tuningInterval=tuning_int);                                            ##Set up power posterior burn in. Should likely be logner than 10000
+pow_p.burnin(generations=burnin_gens,tuningInterval=tuning_int);                                            ##Set up power posterior burn in. Should likely be logner than 10000
 pow_p.run(generations=running_gens);                                                                   ##Set length of run for each step. Should likely be longer than 10000
 
 #######let run#################
