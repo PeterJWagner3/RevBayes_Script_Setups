@@ -21,7 +21,7 @@ outgroup = clade("Ctenocystis");
 ingroup = clade("Gyrocystis_platessa","Gyrocystis_testudiformis","Gyrocystis_cruzae","Gyrocystis_badulesiensis","Gyrocystis_erecta","Progyrocystis_disjuncta","Protocinctus_mansillaensis","Elliptocinctus_barrandei","Elliptocinctus_vizcainoi","Sucocystis_theronensis","Sucocystis_bretoni","Lignanicystis_barriosensis","Undatacinctus_undata","Sucocystis_acrofera","Undatacinctus_quadricornuta","Undatacinctus_melendezi","Asturicystis_jaekeli","Sotocinctus_ubaghsi","Trochocystites_bohemicus","Trochocystoides_parvus","Ludwigicinctus_truncatus","Graciacystis_ambigua","Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis");
 unscored_taxa <- v(24,25,26,27);
 
-among_char_var <- "lognormal";		# enter "gamma" or "lognormal; rate variation among characters"
+among_char_var <- "lognormal";		# enter "gamma" or "lognormal; rate variation among characters
 
 ############################################################################
 #                  Get basic information about the clade                   #
@@ -65,10 +65,7 @@ monitors = VectorMonitors();
 monitors.append(mnModel(filename="output/cincta_strict_clock.log", printgen=10));
 monitors.append(mnFile(tau, filename="output/cincta_strict_clock.trees",printgen=10,separator=TAB,tau));
 monitors.append(mnScreen(printgen=500,alpha,fbd_p,fbd_q,fbd_r,num_samp_anc,origin_time,summed_gaps));
-<<<<<<< HEAD
-#monitors.append(mnScreen(printgen=10,alpha,fbd_p,fbd_q,fbd_r,num_samp_anc,origin_time,summed_gaps));
-=======
->>>>>>> origin/master
+
 
     ################################################################################
     # Here are some starting parameters for your MCMC analysis: but use your own!
