@@ -29,7 +29,7 @@ will tell RevBayes the number of states shared by characters in each partition a
 
 The next variable informs RevBayes about ascertainment bias within each matrix.  Here, Smith & Zamora included some characters that are invariant among all of the cinctans.  These are treated as invariant binary characters, so:
 	coding_bias[1] = “all”;
-If this is changed to either “variable” or “informative”, then the MCMC analyses will ignore the invariant characters.  If there were no invariant binary characters but some autapomorphic binaries (i.e., binary characters with one state shown by only one analyzed taxon), then coding_bias[1] would equal “variable.”  If there are no invariant or autapomorphic characters, then coding_bias[1] would be “informative.”  For either “variable” or “informative” characters, the likelihood component of the MCMC analyses will perform a correction akin to Chao2 inferences of unsampled species to infer some number of “unsampled” characters that could have varied among the observed species, but that simply have not changed among the sampled taxa. 
+If this is changed to either “variable” or “informative”, then the MCMC analyses will ignore the invariant characters.  If there were no invariant binary characters but some autapomorphic binaries (i.e., binary characters with one state shown by only one analyzed taxon), then coding_bias[1] would equal “variable.”  If there are no invariant or autapomorphic characters, then coding_bias[1] would be “informative.”  For either “variable” or “informative” characters, the likelihood component of the MCMC analyses will perform a correction akin to Chao2 inferences of unsampled species to infer some number of “unsampled” characters that could have varied among the observed species, but that simply have not changed among the sampled taxa.
 
 On the other hand, coding_bias[2] and coding_bias[3], are set to “variable.”  This is because 3-state, 4-state, etc., characters logically demand the possibility of autapomorphic character states.  That is, if 10 species have “circular” and 10 species have “squared” to describe the shape of some feature, then a species with a triangular shape demands its own state.  So, if we observe 3+ states, we know that we have to code unique features in order to retain an informative character.  (In contrast, autapomorphic binary characters are not informative in traditional phylogenetic analyses and thus might be deliberately excluded by authors.)
 
@@ -69,11 +69,11 @@ This sets both speciation (really, cladogenesis) and extinction rates to be samp
 
 Finally, note that two deterministic variables are established: diversification and turnover.  The “:=” assignment means that these will be automatically updated every time either speciation or extinction changes.  These are not used, but are included in the output just in case the user is interested.
 
-The next set of commands defines the sampling parameter, psi. 
+The next set of commands defines the sampling parameter, psi.
 	psi ~ dnExponential(3.892);
 Note that as the number in the exponential increases, the log-decay of the exponential distribution increases and the expected number of samples decreases.  Here, the original number represents a weighted average of median sampling rates given best fit uniform, exponential, Beta and lognormal distributions (with the weight proportional to the likelihood of the best fit distributions given occurrences in different stage-slices in the Cambrian.)  Here, the sampling is based on numbers of collections in which we find Cambrian echinoderm species in each stage slice given the total number of collections in those stage slices.  (Another alternative would have been to use numbers of rock units, e.g., formations & members.)  We again assign moves to the MCMC analysis just as we did for origination & extinction; as before, although we seed the analysis with an empirical estimate, other values will be preferred if they increase the posterior probabilities of trees.  
 
-An additional deterministic variable is established here, completeness.  This reflects the average sampling and extinction rates; as with diversification & turnover, this variable is automatically updated every time sampling or extinction changes.  It is not used in the analyses but reported in case users are interested. 
+An additional deterministic variable is established here, completeness.  This reflects the average sampling and extinction rates; as with diversification & turnover, this variable is automatically updated every time sampling or extinction changes.  It is not used in the analyses but reported in case users are interested.
 
 A final sampling parameter is included, rho.  This is the probability of sampling individual taxa in the final interval of the study.  This might seem to be odd for paleontologists, but it is necessary for analyses of fossil & extant taxa in which extant taxa typically have much higher rates of sampling than the fossil taxa.  Here, rho is estimated from the best fit sampling distribution for the latest interval in which an analyzed cinctan species appears.  This is also why the ages of the taxa in cinctan_intervals_FA.tsv are scaled so that 0 represents when that youngest known species appears: RevBayes will apply rho only for age 0.  Here, PaleoDB data suggest rho=0.506.
 
@@ -92,3 +92,12 @@ At this point, we add a series of adjustments to the phylogeny that will be cons
 The script establishes several deterministic variables after this. num_samp_anc gives the number of observed taxa treated as ancestors.  Note that divergence_dates and origin_dates are different.  divergence_dates for observed taxa is the first-appearance date; for hypothesized ancestors, it is the date at which it diverged into 2+ daughter lineages.  For sampled taxa, divergence_dates gives the first-appearance date and origin_dates gives the time when the lineage leading directly to a sampled species diverged from its closest relatives.  For unsampled ancestors, divergence_dates gives the time that the ancestor diverged into 2+ daughter taxa and origin_dates gives the time that it diverged from the rest of the clade.  In both cases, branch_lengths gives the duration between origin_dates & divergence_dates.  Finally, summed_gaps gives the total amount of “unsampled time” over which character change might have occurred.  All of these are included in the output.  
 
 The final important variable assignment here is pruned_tau; this separates out four species for which we have no character coding.  
+
+
+#Results
+
+| Model | Score |
+|-------|-------|
+| Mk + Gamma | -503.524 |
+| Mk + partitioned feeding + gamma | -467.0526 |
+| Time homogeneous FBD, unpartitioned | |
