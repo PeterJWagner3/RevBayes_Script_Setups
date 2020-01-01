@@ -66,7 +66,6 @@ idx
 }
 
 n_max_states <- 4
-idx = 1
 morpho_nf_bystate <- morpho_nf.setNumStatesVector()
 for (i in 1:n_max_states) {
     nc = morpho_nf_bystate[i].nchar()
@@ -98,11 +97,11 @@ idx
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
-    monitors[mni++] = mnModel(filename="output/mk_gamma.log", printgen=10)
+    monitors[mni++] = mnModel(filename="output/" + name + ".log", printgen=10)
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
-    monitors[mni++] = mnFile(filename="output/mk_gamma.trees", printgen=10, phylogeny)
+    monitors[mni++] = mnFile(filename="output/" + name + ".trees", printgen=10, phylogeny)
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
@@ -110,16 +109,16 @@ idx
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
-#    mymcmc = mcmc(mymodel, monitors, moves, nruns=2, combine="mixed")
+#   mymcmc = mcmc(mymodel, monitors, moves, nruns=2, combine="mixed")
+#    mymcmc.run(generations=100000, tuningInterval=200)
 
 ss_analysis = powerPosterior(mymodel, monitors, moves, "output/" + name + "/ss", cats=20, alpha=0.3)
-ss_analysis.burnin(generations=1000,tuningInterval=100)
-ss_analysis.run(generations=50000)
+ss_analysis.burnin(generations=25000,tuningInterval=100)
+ss_analysis.run(generations=25000)
 
 ss = steppingStoneSampler("output/" + name + "/ss", "power", "likelihood", TAB)
 ss.marginal()
 ### ---- include=TRUE, eval = TRUE------------------------------------------
-#    mymcmc.run(generations=100000, tuningInterval=200)
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------

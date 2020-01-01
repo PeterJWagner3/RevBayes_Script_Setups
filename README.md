@@ -100,4 +100,4 @@ The final important variable assignment here is pruned_tau; this separates out f
 |-------|-------|
 | Mk + Gamma | -503.524 |
 | Mk + partitioned feeding + gamma | -467.0526 |
-| Time homogeneous FBD, unpartitioned | |
+| Time homogeneous FBD, unpartitioned | -748.5214 |
