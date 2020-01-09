@@ -21,6 +21,12 @@ monitors = VectorMonitors()
     rates_morpho := fnDiscretizeGamma( alpha_morpho, alpha_morpho, 4 )
     #Moves on the parameters to the Gamma distribution.
     moves.append(mvScale(alpha_morpho, lambda=1, weight=2.0))
+    clock_morpho ~ dnExponential(1.0)
+
+    moves.append( mvScale(clock_morpho, lambda=0.01, weight=4.0) )
+    moves.append( mvScale(clock_morpho, lambda=0.1,  weight=4.0) )
+    moves.append( mvScale(clock_morpho, lambda=1,    weight=4.0) )
+
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
@@ -41,6 +47,7 @@ for (i in 2:n_max_states) {
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
+                                    branchRates=clock_morpho,
                                     type="Standard")
 
         # attach the data
@@ -75,7 +82,7 @@ ss_analysis = powerPosterior(mymodel, monitors, moves, "output/mk_gamma_FBD/" + 
 ss_analysis.burnin(generations=1000,tuningInterval=100)
 ss_analysis.run(generations=50000)
 
-ss = steppingStoneSampler("output/" + name + "/ss", "power", "likelihood", TAB)
+ss = steppingStoneSampler("output/" + name + "/mk_gamma_FBD", "power", "likelihood", TAB)
 ss.marginal()
 ### ---- include=TRUE, eval = TRUE------------------------------------------
     mymcmc.run(generations=100000, tuningInterval=200)
