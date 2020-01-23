@@ -1,0 +1,64 @@
+#NEXUS
+
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=12;
+	TAXLABELS
+		Rarenodia Erycites Abbasites Riccardiceras Docidoceras Mollistephanus Hammatoceras Euhoploceras Eudmetoceras Csernyeiceras Praestrigites Bradfordia 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=16;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2";
+	CHARSTATELABELS 
+		1 Coiling,
+		2 Relative_whorl_thickness,
+		3 Demarcation_of_ventrolateral_edge,
+		4 Flank_Shape,
+		5 Demrcation_of_umbilical_edge,
+		6 Orientation_of_umbilical_edge,
+		7 Tubercles,
+		8 Primary_ribs,
+		9 Ribs_on_umbilical_edge,
+		10 Bifurcated_ribs,
+		11 Rib_shape,
+		12 Reb_shape,
+		13 Rib_shape,
+		14 'Hollow-floored keel',
+		15 Keel_Shape,
+		16 Keel_Prominence ; 
+	MATRIX
+	Rarenodia       0001000000010?21
+	Erycites        0101001101000111
+	Abbasites       0101001101101100
+	Riccardiceras   0201001101011100
+	Docidoceras     1201001101011100
+	Mollistephanus  0101000101011100
+	Hammatoceras    1001000000010011
+	Euhoploceras    1010010000010012
+	Eudmetoceras    1010110101010022
+	Csernyeiceras   2001111111010022
+	Praestrigites   2000111011110012
+	Bradfordia      2000111010110100
+
+;
+
+END;
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 16;
+
+END;
+
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Outgroup :  1, Ingroup :  2- 35;
+
+	CHARPARTITION Shell_Ornamentation  =  Adult_Shell :  1- 6, ornamentation :  7- 16;
+	CHARPARTITION State_based = All : 1- 16
+	
+END;
+

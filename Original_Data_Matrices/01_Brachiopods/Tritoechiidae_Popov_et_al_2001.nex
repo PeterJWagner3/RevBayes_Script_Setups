@@ -1,0 +1,159 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=22 NCHAR=45;
+
+[!Popov, L. E., O. Vinn, and O. I. Nikitina.  2001.  Brachiopods of the redefined family Tritoechiidae from the Ordovician of Kazakhstan and South Urals.  Geobios 34:131-155.
+
+Strat data from Figure 12.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		43  FA / _ Early_Arenig Middle_Arenig Late_Arenig Early_Llanvirn Late_Llanvirn Early_Llandeilo Late_Llandeilo,
+  44  LA / _ Early_Arenig Middle_Arenig Late_Arenig Early_Llanvirn Late_Llanvirn Early_Llandeilo Late_Llandeilo,
+  45  Geography / _ Kazakhstan South_Urals Baltoscandia South_China
+		;
+
+MATRIX
+[                                     10        20        30        40    ]
+[                                     .         .         .         .     ]
+
+Korinevskia_akbulakensis     2414011010002222400102122001300112211200??112
+Protambonites_lermontovae    241401101000222240??02122001301102211100??112
+Tritoechia_typica            123401101002121221??02132001201002211101??111
+Tritoechia_tokmakensis       122400101000121230??02122001200012211102??221
+Tritoechia_crassa            125311101001122230??02132001101012211101??551
+Tritoechia_kendyktasica      12441110100112122???02122001201001211102??111
+Pomatotrema_fecunda          202201101110122231??02122001111012221211??451
+Martellia_ichangensis        32322110111012221???02122001111013221211??334
+Martellia_reliqua            32322110111012221???02122001110013221211??441
+Eremotoechia_spissa          113431101220122220??02132001?0?0?122111110771
+Eremotoechia_inchoata        113321101220122220??02132001?0?0?12?111?10661
+Antigonambonites_planus      151400101000221220110212200132200221111111333
+Polytoechia_subcircularis    11440110100012122010021?2001322002201101??112
+Obolella_chromatica          020001000100000060010000000000003001000000???
+Bohemiella_romingeri         103101000002020220200210300120001111110210???
+Kutorgina_catenata           1232011010001101001110000000?000?100100??????
+Narynella_sulcata            123401101001110230111100000020000101100010???
+Glyptoria_gulchensis         133421000220020250110211112023000300?00??????
+Arctohedra_pyramidalis       1251100000010202402102113120230011112102?????
+Billingsella_aliena          242400101000221220010212200030011121110020???
+Apomatella_ingrica           1253100000010202402?02112210?33011212100?????
+Clitambonites_schmidti       1231010120020222411?021122?0333011212100?????
+;
+END;
+
+
+BEGIN SETS;
+	TAXSET  Ingroup  =  1-13 20;
+	TAXSET  Outgroup  =  14-19 21-22;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-42 44-45, strat: 43;
+	WTSET * UNTITLED  = 1: 1-42, 0: 43-45;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Korinevskia_akbulakensis,
+		2	Protambonites_lermontovae,
+		3	Tritoechia_typica,
+		4	Tritoechia_tokmakensis,
+		5	Tritoechia_crassa,
+		6	Tritoechia_kendyktasica,
+		7	Pomatotrema_fecunda,
+		8	Martellia_ichangensis,
+		9	Martellia_reliqua,
+		10	Eremotoechia_spissa,
+		11	Eremotoechia_inchoata,
+		12	Antigonambonites_planus,
+		13	Polytoechia_subcircularis,
+		14	Obolella_chromatica,
+		15	Bohemiella_romingeri,
+		16	Kutorgina_catenata,
+		17	Narynella_sulcata,
+		18	Glyptoria_gulchensis,
+		19	Arctohedra_pyramidalis,
+		20	Billingsella_aliena,
+		21	Apomatella_ingrica,
+		22	Clitambonites_schmidti
+	;
+	TREE Figure_12 =  [&R] (14,((17,16),(((((20,(1,2)),4),((6,(3,(5,((7,(8,9)),(10,11))))),(12,13))),(15,(22,(21,19)))),18)));
+	TREE Ingroup_Only =  [&R] (((1,2),4),((6,(3,(5,((7,(8,9)),(10,11))))),(12,13)));
+	TREE  * Ingroup__Only_2 =  [&R] (6,(4,(((1,2),(12,13)),(3,(5,((10,11),(7,(8,9))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -845462172;
+	FileSettings  '1' '1' '43' '1';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '72' Gadget '12' '190' '1' all;
+	EditorPosition  '116' '768' '563' '527';
+	TreeWindowPosition  '46' '6' '985' '1630';
+	ListWindow Characters closed Gadget '12' '50' '25' '253' '321' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '440' '352' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets open Gadget '12' '50' '10' '134' '185' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols closed Gadget '12' '14' '50' '30' '271' '325';
+	WindowOrder  List TaxSets;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '746' '13' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 0;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

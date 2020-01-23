@@ -1,0 +1,84 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=9 NCHAR=11;
+
+[!Mao, Y., W. I. Ausich, Y. Li, J.-P. Lin, and C. Lin. 2017. New taxa and phyletic evolution of the Aeronian (Llandovery, Silurian) Petalocrinidae (Echinodermata, Crinoidea) in Guizhou, South China Block. Journal of Paleontology:1-16.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9" MISSING=? GAP=- ;
+
+MATRIX
+Eopetalocrinus_sinensis			00000000-00
+Petalocrinus_inferior			10000000-00
+Petalocrinus_stenopetalus		11000210-11
+Sinopetalocrinus_involutus		10012100-00
+Sinopetalocrinus_shiqianensis	10011100-00
+Sinopetalocrinus_robustus		10013100-00
+Spirocrinus_circularis			12114210-11
+Spirocrinus_longus				12114211001
+Spirocrinus_dextrosus			12114211101
+;
+end;
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -988123841;
+	FileSettings editor  '1' '1' '15' '1';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '188' '1' all;
+	EditorPosition  '40' '4' '291' '693';
+	TreeWindowPosition  '46' '6' '835' '1387';
+	ListWindow Characters open Gadget '12' '329' '1273' '253' '374' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '273' '306' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '50' '30' '688' '964';
+	StateNamesSymbols open Gadget '12' '10' '117' '1114' '203' '220';
+	WindowOrder  States Data List Characters;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '605' '44' '115' '165';
+	TreeToolsPosition  '607' '5' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '1' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '32677' '-5256' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

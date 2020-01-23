@@ -1,0 +1,5 @@
+"Data_group"	"Study"	"OTUs"	"Characters"	"Binary"	"Multistate"	"Total_States"	"Autapomorphic"	"Autapomorphic_Binary"	"Autapomorphic_Multistate"	"Autapomorphic_Multistate_States"	"Prop_Missing"	"Polymorphics"	"Polymorphic_Characters"	"Identicals"	"Reducibles"
+"Blastozoans"	"Blastoidea_Bodenbender_1995.nex"	"71"	"93"	"52"	"41"	"246"	"13"	"5"	"8"	"8"	"0.160835983643798"	"0"	"0"	"0"	"0"
+"Blastozoans"	"Glyptocystitidae_Sumrall_&_Brett_2002.nex"	"11"	"19"	"16"	"3"	"43"	"3"	"1"	"2"	"4"	"0.0717703349282297"	"0"	"0"	"0"	"0"
+"Blastozoans"	"Glyptocystitoida_Paul_&_Rozhnov_2016.nex"	"8"	"7"	"7"	"0"	"14"	"3"	"3"	"0"	"0"	"0"	"0"	"0"	"0"	"0"
+"Blastozoans"	"Pleurocystitidae_Nardin_&_Bohatny_2013.nex"	"15"	"26"	"22"	"4"	"58"	"2"	"1"	"1"	"2"	"0.0769230769230769"	"4"	"3"	"0"	"0"

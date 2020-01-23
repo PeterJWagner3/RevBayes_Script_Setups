@@ -1,0 +1,389 @@
+#NEXUS
+[written Wed Jun 26 00:26:13 CDT 2019 by Mesquite  version 3.6 (build 917) at EAS-6BCEC7.local/172.20.1.23]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=23;
+	TAXLABELS
+		Deiphon_barrandei Deiphon_globifrons Deiphon_ellipticum Deiphon_bainsi Deiphon_grovesi Deiphon_longifrons Deiphon_fleur Onycopyge_liversidgei Sphaerocoryphe_robusta Sphaerocoryphe_kingi Sphaerocoryphe_dentata Sphaerocoryphe_longispina Sphaerocoryphe_cranium Sphaerocoryphe_maquoketensis Sphaerocoryphe_murphyi Sphaerocoryphe_gemina Sphaerocoryphe_goodnovi Sphaerocoryphe_exserta Hemisphaerocoryphe_huebneri Hemisphaerocoryphe_pseudohemicranium ?_Hemisphaerocoryphe_elliptica Actinopeltis_globosa Actinopeltis_carolialexandri 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=27;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6";
+	CHARSTATELABELS 
+		1 Cephalon,
+		2 Cephalon,
+		3 Cephalon,
+		4 Cephalon,
+		5 Cephalon,
+		6 Cephalon,
+		7 Cephalon,
+		8 Cephalon,
+		9 Cephalon,
+		10 Cephalon,
+		11 Cephalon,
+		12 Cephalon,
+		13 Hypostome,
+		14 Thorax,
+		15 Thorax,
+		16 Pygidium,
+		17 Pygidium,
+		18 Pygidium,
+		19 Pygidium,
+		20 Pygidium,
+		21 Pygidium,
+		22 Pygidium,
+		23 Pygidium,
+		24 Pygidium,
+		25 Pygidium,
+		26 Pygidium,
+		27 Pygidium ; 
+	MATRIX
+	Deiphon_barrandei                     000010111100011001110001120
+	Deiphon_globifrons                    000010110100001001110001110
+	Deiphon_ellipticum                    01201011?110001101110011120
+	Deiphon_bainsi                        010110110110010101000011100
+	Deiphon_grovesi                       0120101101100??101000010100
+	Deiphon_longifrons                    001010110110???????????????
+	Deiphon_fleur                         000?1011??10???????????????
+	Onycopyge_liversidgei                 110011111101?11000001000010
+	Sphaerocoryphe_robusta                101001111100111101111111010
+	Sphaerocoryphe_kingi                  10110111?001?111011??10?100
+	Sphaerocoryphe_dentata                101101111001111100111?01100
+	Sphaerocoryphe_longispina             1011011100001??1?1101101120
+	Sphaerocoryphe_cranium                10110111100??11101111101011
+	Sphaerocoryphe_maquoketensis          101001110100?1?1?111110?100
+	Sphaerocoryphe_murphyi                101?0?11??011??101101111100
+	Sphaerocoryphe_gemina                 1011011110001??100101110120
+	Sphaerocoryphe_goodnovi               101001111100110100101010100
+	Sphaerocoryphe_exserta                112011110100???000001110100
+	Hemisphaerocoryphe_huebneri           11100102100????0111?1100100
+	Hemisphaerocoryphe_pseudohemicranium  1021010210001010111?1100020
+	?_Hemisphaerocoryphe_elliptica        00110102100??1?????????????
+	Actinopeltis_globosa                  10110100100??1?110011100101
+	Actinopeltis_carolialexandri          10110100100??11110111111121
+
+;
+
+END;
+BEGIN SETS;
+	TAXSET Outgroup  =  22 -  23;
+
+	CHARPARTITION * UNTITLED  =  Cephalon :  1- 13, Thorax :  14- 15, Pygidium :  16- 27;
+	CHARPARTITION Four_Rate_Partitions  =  Cephalon :  1- 12, Hypostome :  13, Thorax :  14- 15, Pygidium :  16- 27;
+	CHARPARTITION Partition  =  Cephalon :  1- 12, Hypostome :  13, Thorax :  14- 15, Pygidium :  16- 27;
+	CHARPARTITION 'Trilobite_Partitions'  =  Cephalon :  1- 13, Thorax :  14- 15, Pygidium :  16- 27;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
+	TYPESET * UNTITLED   =  unord:  1- 27;
+
+	WTSET * UNTITLED  =  1: 1 -  27 ;
+
+END;
+
+BEGIN TREES;
+	Title 'Trees from "Deiphoninae_Congreve_&_Lieberman_2010.nex"';
+	ID 016b76f9b1a01;
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		1 Deiphon_barrandei,
+[1] 		2 Deiphon_globifrons,
+[2] 		3 Deiphon_ellipticum,
+[3] 		4 Deiphon_bainsi,
+[4] 		5 Deiphon_grovesi,
+[5] 		6 Deiphon_longifrons,
+[6] 		7 Deiphon_fleur,
+[7] 		8 Onycopyge_liversidgei,
+[8] 		9 Sphaerocoryphe_robusta,
+[9] 		10 Sphaerocoryphe_kingi,
+[10] 		11 Sphaerocoryphe_dentata,
+[11] 		12 Sphaerocoryphe_longispina,
+[12] 		13 Sphaerocoryphe_cranium,
+[13] 		14 Sphaerocoryphe_maquoketensis,
+[14] 		15 Sphaerocoryphe_murphyi,
+[15] 		16 Sphaerocoryphe_gemina,
+[16] 		17 Sphaerocoryphe_goodnovi,
+[17] 		18 Sphaerocoryphe_exserta,
+[18] 		19 Hemisphaerocoryphe_huebneri,
+[19] 		20 Hemisphaerocoryphe_pseudohemicranium,
+[20] 		21 ?_Hemisphaerocoryphe_elliptica,
+[21] 		22 Actinopeltis_globosa,
+[22] 		23 Actinopeltis_carolialexandri;
+	TREE Fig._1.2 = (22,(23,((((((((((((2,1),6),7),3),4),5),18),8),17),16),(((9,13),(((10,15),12),14)),11)),(19,(20,21)))));
+	TREE SCI = (21,((20,19),((11,((9,13),(14,(12,(10,15))))),(16,(17,(8,(18,(5,(4,(3,(7,(6,(2,1)))))))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0 87;
+	LastModified -845387143;
+	FileSettings treewindow '1' '1' '28' '1';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '276' '1' all;
+	EditorPosition '129' '321' '597' '1045';
+	TreeWindowPosition '46' '6' '989' '1630';
+	ListWindow Characters open Gadget '12' '50' '25' '253' '422' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '185' '458' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387';
+	ListWindow TypeSets closed Geneva '9' '50' '10' '276' '490';
+	ListWindow WtSets closed Geneva '9' '50' '10' '276' '490';
+	ListWindow ExSets closed Geneva '9' '50' '10' '276' '490';
+	ListWindow CharSets closed Geneva '9' '50' '10' '276' '490';
+	ListWindow TaxSets closed Gadget '12' '50' '10' '134' '185';
+	ListWindow CharPartitions closed Geneva '9' '50' '10' '276' '490';
+	ListWindow CharPartNames closed Geneva '9' '50' '10' '276' '490';
+	ListWindow WtSets closed Geneva '9' '50' '10' '276' '490';
+	TextWindow AboutFile '89' '689' '280' '445' Gadget '12' ( normal ) 1;
+	ChartWindowPosition '52' '30' '968' '1620';
+	StateNamesSymbols open Gadget '12' '7' '50' '30' '152' '220';
+	WindowOrder Tree Text AboutFile States List Characters;
+	OtherSymbols & / 00 ? -;
+	Correlation '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile '2';
+	ExportHTML _ MOSS '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition '884' '1535' '132' '85';
+	TreeLegendPosition '952' '1437' '64' '93';
+	EditorToolsPosition '771' '46' '115' '165';
+	TreeToolsPosition '866' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous '0' '3' 1;
+	Calculations 0000001;
+	SummaryMode '0' '0' 0;
+	Charts Geneva '9' ( normal ) 0010;
+	NexusOptions '0' '0' '50' 001011001;
+	TipLabel '1';
+	TreeFont Gadget '12' ( normal );
+	TreeShape 1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax '0';
+	TraceAllChangesDisplay '1' 1;
+	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation '3' 1;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Geneva '9' ( normal ) Geneva '10' ( normal ) Geneva '9' ( normal ) Geneva '9' ( normal ) Geneva '9' ( bold ) Geneva '9' ( normal ) Geneva '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools '1';
+
+END;
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 27;
+END;
+
+BEGIN NOTES;
+
+	SU  C = 16 N = selected B = TRUE;
+
+END;
+
+BEGIN LABELS;
+	CHARGROUPLABEL Cephalon COLOR = (RGB 1 1 1) ;
+	CHARGROUPLABEL Pygidium COLOR = (RGB 1 1 1) ;
+	CHARGROUPLABEL Thorax COLOR = (RGB 1 1 1) ;
+	CHARGROUPLABEL Hypostome COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1561526773209;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 6828933820454663272;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 1514149909818217658;
+			tell It;
+				setSelected  16;
+				attachments ;
+			endTell;
+			mqVersion 360;
+			checksumv 0 3 3043413835 null  getNumChars 27 numChars 27 getNumTaxa 23 numTaxa 23   short true   bits 7   states 7   sumSquaresStatesOnly 1594.0 sumSquares 1594.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1468 745;
+			setLocation 8 131;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #1514149909818217658 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 259;
+					endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1368 673;
+					setLocation 8 131;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			showCharacters #1514149909818217658 #mesquite.lists.CharacterList.CharacterList;
+			tell It;
+				setData 0;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.DefaultCharOrder.DefaultCharOrder;
+					newAssistant  #mesquite.lists.CharListInclusion.CharListInclusion;
+					newAssistant  #mesquite.lists.CharListPartition.CharListPartition;
+					newAssistant  #mesquite.parsimony.CharListParsModels.CharListParsModels;
+					newAssistant  #mesquite.lists.CharNumForList.CharNumForList;
+				tell It;
+					suppress;
+					setValueTask  #mesquite.categ.NumberOfStates.NumberOfStates;
+					toggleShadeCells off;
+					desuppress;
+				endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1368 673;
+					setLocation 8 131;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.CharListAnnotPanel.CharListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

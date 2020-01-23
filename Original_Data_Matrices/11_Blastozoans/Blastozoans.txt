@@ -1,0 +1,6 @@
+Blastoidea_Bodenbender_1995.nex
+Blastozoa_Foote_1992.nex
+Glyptocystitidae_Sumrall_&_Brett_2002.nex
+Glyptocystitoida_Paul_&_Rozhnov_2016.nex
+Pleurocystitidae_Sumrall_&_Sprinkle_1995.nex
+Pleurocystitidae_Nardin_&_Bohatny_2013.nex

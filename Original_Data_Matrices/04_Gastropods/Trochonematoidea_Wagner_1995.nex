@@ -1,0 +1,360 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=79 NCHAR=70;
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C D E F G H J" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		1  GL_Prom / _ fine sharp coarse,
+  2  Imb_GLs / _ absent present,
+  3  Sinus / _ absent present,
+  4  Sinus_Width / _ wide narrow very_narrow,
+  5  Sinus_Depth / _ very_deep deep moderate shallow very_shallow,
+  6  Sinus_Shape / _ curved straight,
+  7  Lunulae / _ sharp_crescent straightened_crescent,
+  8  ImbLunulae / _ absent present,
+  9  ?ImbLun / _ _ juvenile_whorls_only all_whorls,
+  10  ImbLun_Type / _ deep_and_obtuse narrow_and_sharp,
+  11  SK / _ absent present,
+  12  Periph_Lira / _ absent present 10 _ absent present,
+  13  ApexThread / _ absent present,
+  14  Selen_Width / _ narrow moderate wide,
+  15  StrDullPL / _ sharp_threads dull_strong_threads,
+  16  SK_Prom / _ slight strong,
+  17  AL_Strength / _ Weak Same_as_P.L. Strong,
+  18  SeratedSK / _ absent present,
+  19  IntChan / _ Absent Moderate Strong,
+  20  Selen_Att / _ parallel abapical_hook,
+  21  Slit / _ Absent Present,
+  22  RRShape / _ Concave Sl._Concave Flat Convex Globular,
+  23  LRShape / _ Flat Sl._Convex Very_Convex Globular,
+  24  RRC / _ absent present,
+  25  RRCType / _ weak_thread sharp_thread thick_sharp_thread,
+  26  ?RRC / _ absent present,
+  27  RRC_Loc / _ '~' 75?_from_SK '~' 45?_from_SK,
+  28  RRC_Att / _ perpendicular_to_ramp abapical_attitude,
+  29  Serr_RRC / _ thread serrated,
+  30  SC / _ absent present,
+  31  SC_Strength / _ weak strong,
+  32  LRC / _ absent present,
+  33  LRC_Type / _ protrusion actual_carina,
+  34  LRCType / _ thick_dull_carina very_weak_thread sharp_thread strong_sharp_thread,
+  35  Serr_LRC / _ plain serrated,
+  36  2LRC / _ one_carina two_carinae,
+  37  UC / _ absent dull_protrusion sharp_lirae,
+  38  UC_Loc / _ '~' 90?_below_exhalent '~' 120?_below_exhalent,
+  39  UCMag / _ weak strong,
+  40  ChanUC / _ Solid Channeled,
+  41  LR_Orn / _ absent present,
+  42  LR_Orn_Type / _ Thin_Threads Thick_Lirae,
+  43  LROrn_Density / _ Sparse Moderate Dense,
+  44  RR_Orn / _ absent present,
+  45  RR_Orn_Type / _ Thin_Threads Thick_Lirae,
+  46  RROrn_Density / _ Sparse Moderate Dense,
+  47  ?RROrn / _ Constant Fading_with_Age,
+  48  Cren_Aperutre / _ smooth crenulate,
+  49  E / _ 0.04_to_0.05 0.06_to_0.08 0.085_to_0.1,
+  50  K / _ high moderate low,
+  51  T / _ low moderate high very_high,
+  52  ?T / _ constant increasing_on_older_whorls,
+  53  Mag_?T / _ lower_suture_point uncoiling_of_shell,
+  54  ? / _ ?_ '>' _100? ?_@_90? ?_@_75? ?_@_60? ?_@_45?,
+  55  Theta / _ '~' 45? '~' 70? '~' 90?,
+  56  Phi / _ '~' 45? '~' 60? '~' 90?,
+  57  Base_Sh / _ flat round acute,
+  58  Extended_UR / _ Absent Present,
+  59  Tangent / _ Absent '~10?-15?' '>' 25?,
+  60  Inclined_Base / _ Absent Present,
+  61  'L-R Inclination' / _ Absent Present,
+  62  ColLip_Sh / _ 'upside-down_"7"_shape' '"L"-shape',
+  63  Round_Lip / _ '"L"-shape' 'rounded_"V"-shape_pointing_->_u' 'half-circle',
+  64  U_Lip / _ 'upside-down_"7"' '"U"-shape',
+  65  Lip_Thick / _ No_Thicker Slightly_Thicker Much_Thicker Extremely_Thick,
+  66  Lip_Reflex / _ Absent Present,
+  67  PI_Thick / _ Absent Thinner Same_as_Shell,
+  68  Size / '<10_mm3' '<100_mm3' '<1000_mm3' '<10000_mm3',
+  69  FA / _ Late_Tremadoc Early_Arenig Middle_Arenig Late_Arenig Llanvirn Llandeilo Early_Caradoc Middle_Caradoc Late_Caradoc Ashgill Early_Llandovery Late_Llandovery Early_Wenlock Middle_Wenlock Late_Wenlock Early_Ludlow Late_Ludlow Pridoli,
+  70  LA / _ Late_Tremadoc Early_Arenig Middle_Arenig Late_Arenig Llanvirn Llandeilo Early_Caradoc Middle_Caradoc Late_Caradoc Ashgill Early_Llandovery Late_Llandovery Early_Wenlock Middle_Wenlock Late_Wenlock Early_Ludlow Late_Ludlow Pridoli,
+		;
+
+MATRIX
+[                                           10        20        30        40        50        60        70]
+[                                           .         .         .         .         .         .         . ]
+
+Pagodispira_cicelia                11212111--22211121211111-----1?21-111---1--1---11241-211111111-1222125
+Lophospira_perangulata             11212111--22211121211111-----1?21-111---1--1---11231-211111111-122212A
+Lophospira_kangyaoensis            11212111--22211121211311-----1?21-111---1--1---11221-211111111-1222236
+Lophospira_grabaui                 21223111--22211121211211-----1?223111---1--1---12121-21111111211222136
+Lophospira_milleri                 21223111--22211121211212211111?223111---1--1---12121-2121111121122214A
+Pagodispira_derwiduii              11212111--22211221211111-----1?21-111---1--1---11241-211111111-1--2156
+Pagodispira_dorothea               11212111--22211221211312111111?21-111---1--1---11241-211111111-1--2156
+Trochonemella_knoxvillensis        21223111--22211121311212211111?2231121111--1---13312141211212211213256
+Lophospira_centralis               21224221--22211121211312211111?223111---1--1---12121-21211121211222177
+Trochonemella_trochonemoides       21223111--2121-131311312211111?2221131111--1---1331?-42211212221113277
+Trochonemella_montrealensis        21233111--221111?131131221111212241122111--1---13312153221212221213277
+Trochonema_bellulum                21223111--2121-13131131221211222221131211--1---13311-53311312221113277
+Lophospira_helicteres              21224221--2221112121131231111212231121111--1---121(23)2221211121211223277
+Trochonemella_n.sp._A              2123311221221111?131141231221212241122111--1---13312253321212221213277
+Lophospira_serrulata               212121122-2221112221111231111212231121111--1---112(23)22211111121-2222177
+Lophospira_ventricosa              11212111--22211121211411-----1?21-111---1--1---12231-211111111-1222178
+Trochonemella_notablis             2123311231221111?131141231221212241122111--1---13312253321212221213277
+Eunema_strigillatum                21224221--2121112131131231111212231121111--1---121(23)2231211111211223277
+Trochonema_umbilicatum             21224111--2121-13131131221211222231132211--1---13311-5332131222111327A
+Lophospira_burginensis             11212111--2221112121121?111111?21-111---1--1---11231-211111111-231218A
+Lophospira_spironema               21222111--22211121211212211111?223111---213213112121-21211111211222188
+Lophospira_oweni                   11212111--22211211211312121111?21-111---1--1---12221-211112111-241228A
+Lophospira_sumnerensis             11212111--22211211211312121112221-111---1--1---12131-421112111-241229A
+Lophospira_decursa                 11212111--22212121211111-----1?21-111---1--1---11231-111111111-1222199
+Lophospira_conoidea                11212111--22212111211311-----1?21-111---1--1---11231-111111111-1222299
+Lophospira_producta                11212111--22212121211211-----1?21-111---1--1---11241-111111111-1222299
+Lophospira_Curdsville_sp.          11212111--22212121211212111111?21-111---1--1---112422111111111-1222299
+Ruedemannia_humilis                21223111--22221121211422212111?1--111---1--1---13121-22221111211222199
+Schizolopha_textilis               21223111--22211121212422312111?1--111---212212113121-22221111?-?--2299
+Ruedemannia_lirata                 11223111--22221121211422212111?1--111---2--1---13121-22221111211222197
+Lophospira_tenuistriata            11212111--22211121211212211111?21-111---212212111231-211111111-23-2199
+Lophospira_tropidophora            11212111--22211211211312121111?21-111---1--1---12221-211112111-241229A
+Schizolopha_moorei                 21212121--22211211212321-----1?21-??1---1--1---12221-211?12111-2--?29A
+Donaldiella_filosa                 11212111--22211221211311111111?21-111---1--1---11241-211111111-1222199
+Lophospira_pulchella               21233111--22211231221122211111?221111---1--1---12131-32312111211222199
+Lophospira_bellicarinata           21233111--22211231221122211111?221111---1--1---12131-3131211121122229A
+Donaldiella_bowdeni                11212111--22211221211312111111?21-111---1--1---11241-211111111-122229A
+Lophospira_aff._L._serrulata       212331123222211122211212312221?2242131111--1---122221333212122212121AA
+'Trochonemella "G. pulchellum"'    212331123222211122211212312221?2242231111--1---122221333212122212122AA
+Trochonemella_churkini             2122311231221111?1311412312221?2241122111--1---133122433212122212132AA
+Trochonemella_reusingi             2122311231221111?1311412312221?2242122111--1---13312-433212122212132AA
+Lophospira_quadrisulcata           21234221--2221112121121231111212231231111--1---121221212121212112232AA
+Arjamannia_thraivensis             21233111--22211231221212211111?221111---2221---12131-323121112112222AA
+Proturritella_bicarinata           21223111--2121-131211212211111?223111---222223112121-21211111211222146
+Trochonema_wilsonae                21224211--2121-13131131221211222231132211--1---13311-53321312221113277
+Gyronema_pulchellum                11234221--2121-121211312211111?22312?---1--221112121-21211121211222177
+Gyronema_semicarinatum             11234221--2121-121211312212111?22312?---221221112121-21211121211222188
+Gyronema_liljevalli                21224211--2121-13131141231211222231212221--1---13311-53321312221113188
+Ruedemannia_Boda_Ls._sp.           11223111--22221121211421-----1?1--111---212212113221-222211112-?--?2AA
+Trochonema_Alaska_sp.              21225211--2121-13131131221211222241131211--1---12221-333212122311132AA
+Globonema_kokeni                   211???11--2121-231311311-----222131131221--1---12121-322211122311132AA
+'Trochonema (Eunema) salteri'      21224211--2121-131311311-----222131131211--1---12221-322211122311132AA
+Trochonema_madisonense             21223111--2121-13131131231111212231132211--1---13311-5331121223111338A
+Trochonema_panderi                 21222111--2121-13131131231111212231132211--1---13311-533112122311132AA
+Lophospira_sedgwicki               21233111--22211231221121-----21221111---1--1---12131-323121112112221AA
+Lophospira_ornate_sp.              21233111--22211231221121-----21221111---212112112131-323121112112221AA
+Arjamannia_cancellatula            21233111--22211231221312212111?223111---223223112131-323211112112222BC
+Longstaffia_cyclonema              21223121--22221221211432212111?223111---1--1---13121-222211112112222BC
+Arjamannia_woodlandi               21233111--22211231221312222111?221111---223223212121-313211112112222BC
+Arjamannia_inexpectans             21233111--22211231221312222111?221111---223221212121-313211112112222CC
+Lophospira_holmi                   21233111--22211231221121-----??1--???---2--1---12131-313321112112212CE
+Lophospira_gothlandica             21233121--22211231221121-----1?1--??31111--1---121321423211112113213CJ
+Kiviasukkaan_nelsonae              21233121--22211231221121-----1?1--??31111--1---121322423211112113213DD
+Frodospira_imbricata               322331123222211232221311-----22223111---222222121141-321112112112210DH
+Longstaffia_laqueata               32223111--22221121211432212111?223111---1--1---23121-222211112112222DG
+Trochonema_turritum                311???11--2121-23131142221211222231132222221---22131-233311122311132DE
+Ruedemannia_laevissima             11223111--22221111211431-----1?1--??1---212113113121-222211112111212EE
+Ruedemannia_robusta                11223111--22221111211432112111?1--??1---213212113121-222211112111213EH
+Longstaffia_tubulosa               322231223222221132211332212111?223121---222121123121-222211112112222GJ
+Loxoplocus_soluta                  212331?1--22211231221121-----1?1--??31211--1---1214?-42321111211--?3GH
+'Trochonema (Eunema) kaysi'        311???11--2121-23131142221211222231132222121---22131-233311112311132GG
+Trochonema_muricatum               311???11--2121-23131142221211222231132221--1---22121-233311122311132GH
+Ruedemannia_subrobusta             11223111--22221111211432112111?1--??1---213211113121-222211112111213GJ
+Frodospira_munda                   212331123222211232221311-----22223111---1--1---21141-321122112113210GH
+Frodospira_cochleata               312331223222211231221111-----22223111---212212121141-321122112113210GH
+Ptychozone_aberrans                11223111--22231111111541-----1?1--??1---222222113121-222212112111-12HJ
+Sinuopea_sweeti                    11213111--1?1?-???1?1531-----1?21-?11---1--1---13221-122211113-1113211
+Hormotoma_confusa                  11212111--221211??111521-----1?21-?11---1--1---11241-222211111-121?211
+Ectomaria_adelina                  11212111--221311??111111-----1?21-?11---1--1---11241-211111111-1222133
+;
+END;
+
+
+BEGIN SETS;
+	TAXSET  Outgroup  =  77-79;
+	TAXSET  CohortA  =  1-7 44 77-79;
+	TAXSET  CohortB  =  8-18;
+	TAXSET  CohortC  =  19-35 45-48 53;
+	TAXSET  bicincta  =  2 4-5 7-14 16-18 23-24 28-34 53;
+	TAXSET  perangulata  =  1-3 6 14-15 19-22 25-27 35 44-48 78-79;
+	TAXSET  Ordovician_Ingroup  =  1-55;
+	TAXSET  Silurian  =  56-76;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MAXSTEPS ;
+	TYPESET  mytypes  = unord: 1-3 5-8 10-13 15-36 38 40-48 52-64 66-71, ord: 4 9 14 37 39 49-51 65;
+	TYPESET * UNTITLED  = unord: 1-3 5-8 10-13 15-36 38 40-48 52-64 66-68, ord: 4 9 14 37 39 49-51 65 70, strat: 69 70;
+	WTSET * UNTITLED  = 1: 1-68, 0: 69-71;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Pagodispira_cicelia,
+		2	Lophospira_perangulata,
+		3	Lophospira_kangyaoensis,
+		4	Lophospira_grabaui,
+		5	Lophospira_milleri,
+		6	Pagodispira_derwiduii,
+		7	Pagodispira_dorothea,
+		8	Trochonemella_knoxvillensis,
+		9	Lophospira_centralis,
+		10	Trochonemella_trochonemoides,
+		11	Trochonemella_montrealensis,
+		12	Trochonema_bellulum,
+		13	Lophospira_helicteres,
+		14	Trochonemella_n.sp._A,
+		15	Lophospira_serrulata,
+		16	Lophospira_ventricosa,
+		17	Trochonemella_notablis,
+		18	Eunema_strigillatum,
+		19	Trochonema_umbilicatum,
+		20	Lophospira_burginensis,
+		21	Lophospira_spironema,
+		22	Lophospira_oweni,
+		23	Lophospira_sumnerensis,
+		24	Lophospira_decursa,
+		25	Lophospira_conoidea,
+		26	Lophospira_producta,
+		27	Lophospira_Curdsville_sp.,
+		28	Ruedemannia_humilis,
+		29	Schizolopha_textilis,
+		30	Ruedemannia_lirata,
+		31	Lophospira_tenuistriata,
+		32	Lophospira_tropidophora,
+		33	Schizolopha_moorei,
+		34	Donaldiella_filosa,
+		35	Lophospira_pulchella,
+		36	Lophospira_bellicarinata,
+		37	Donaldiella_bowdeni,
+		38	Lophospira_aff._L._serrulata,
+		39	'Trochonemella "G. pulchellum"',
+		40	Trochonemella_churkini,
+		41	Trochonemella_reusingi,
+		42	Lophospira_quadrisulcata,
+		43	Arjamannia_thraivensis,
+		44	Proturritella_bicarinata,
+		45	Trochonema_wilsonae,
+		46	Gyronema_pulchellum,
+		47	Gyronema_semicarinatum,
+		48	Gyronema_liljevalli,
+		49	Ruedemannia_Boda_Ls._sp.,
+		50	Trochonema_Alaska_sp.,
+		51	Globonema_kokeni,
+		52	'Trochonema (Eunema) salteri',
+		53	Trochonema_madisonense,
+		54	Trochonema_panderi,
+		55	Lophospira_sedgwicki,
+		56	Lophospira_ornate_sp.,
+		57	Arjamannia_cancellatula,
+		58	Longstaffia_cyclonema,
+		59	Arjamannia_woodlandi,
+		60	Arjamannia_inexpectans,
+		61	Lophospira_holmi,
+		62	Lophospira_gothlandica,
+		63	Kiviasukkaan_nelsonae,
+		64	Frodospira_imbricata,
+		65	Longstaffia_laqueata,
+		66	Trochonema_turritum,
+		67	Ruedemannia_laevissima,
+		68	Ruedemannia_robusta,
+		69	Longstaffia_tubulosa,
+		70	Loxoplocus_soluta,
+		71	'Trochonema (Eunema) kaysi',
+		72	Trochonema_muricatum,
+		73	Ruedemannia_subrobusta,
+		74	Frodospira_munda,
+		75	Frodospira_cochleata,
+		76	Ptychozone_aberrans,
+		77	Sinuopea_sweeti,
+		78	Hormotoma_confusa,
+		79	Ectomaria_adelina
+	;
+	TREE Template =  [&R] (77,(78,(79,(1,(2,((4,(5,((8,((10,(12,19)),(11,(14,(((40,41),(38,39)),17))))),((43,36),35),21,(9,(42,(18,13))),((30,29),28)))),15),16,(24,(26,25,27)),(3,(((32,33),(22,23)),(31,20)))),(((7,37),34),6)))));
+	TREE Truth =  [&R] (77,(78,(79,(1,(2,(4,(5,((8,((10,(12,19)),(11,(14,(((40,41),(38,39)),17))))),((43,36),35),21,(9,(42,18,13)),((30,29),28)))),15,16,(24,(26,25,27)),3,(((32,33),(22,23)),(31,20))),(((7,37),34),6)))));
+	TREE Stratocladogram =  [&R] (77,(78,(79,(1,(((2,(4,(5,((8,((10,(12,19)),(11,(14,(((40,41),(38,39)),17))))),((9,(42,(13,18))),(((43,36),35),((29,(30,28)),21))))))),((16,15),(3,(((32,33),(22,23)),(31,20))))),((24,(26,(27,25))),((7,(37,34)),6)))))));
+	TREE AllLophospirids_1 =  [&R] (77,(78,(79,(1,((2,(4,(5,44,(8,((10,(12,(54,53),(19,((((51,((66,71),72)),52),50),45,48)))),(11,(14,(((40,41),(38,39)),17))))),(9,(47,46),(42,13,18)),((((43,((60,59),57)),36),((56,55),((61,((75,64),74)),(70,62)))),35),((29,((30,(((67,(68,73)),((69,65),58)),49)),28)),21))),16,15,3,(24,((26,27),25)),(((32,33),22,23),31,20)),((7,(37,34)),6))))));
+	TREE AllLophospirids_2 =  [&R] (77,(78,(79,(1,((2,(4,(5,44,(8,((10,(12,(54,53),(19,((((51,((66,71),72)),52),50),45,48)))),(11,(14,(((40,41),(38,39)),17))))),(9,(47,46),(42,13,18)),(((43,((60,59),57)),36),(56,55,(61,((75,64),74),(70,62))),35),((29,(30,((((67,76),(68,73)),((69,65),58)),49))),28),21)),16,15,3,(24,((26,27),25)),(((32,33),22,23),31,20)),((7,(37,34)),6))))));
+	TREE All_through_Silurian =  [&R] (77,(78,(79,(1,((6,(7,(34,37))),(2,(4,(5,44,(8,((11,(14,(17,((40,41),(38,39))))),(10,(12,(54,53),(19,(50,(52,(51,(72,(66,71))))),45,48))))),(9,(47,46),(42,13,18)),((36,(43,(57,(60,59)))),(56,55,(61,((75,64),74),(70,62))),35),(28,(29,(30,(49,((58,(69,65)),((67,76),(68,73))))))),21)),16,15,3,(24,(25,(26,27))),(((32,33),22,23),31,20)))))));
+	TREE All_Lophospirids_3 =  [&R] (77,(78,(79,(1,((6,(7,(34,37))),(2,(4,(5,44,(8,((11,(14,(17,((40,41),(38,39))))),(10,(12,(54,53),(19,((50,(52,(51,(72,(66,71))))),45,48)))))),(9,(47,46),(42,13,18)),((36,(43,(57,(60,59)))),(56,55,(61,(74,(75,64)),((70,63),62))),35),(28,(29,(30,(49,((58,(69,65)),((67,76),(68,73))))))),21)),16,15,3,(24,(25,(26,27))),(((32,33),22,23),31,20)))))));
+	TREE Truth =  [&R] (77,(78,(79,(1,((6,(7,(34,37))),(2,(4,(5,44,(8,((11,(14,(17,((40,41),(38,39))))),(10,(12,(54,53),(19,((50,(52,(51,(72,(66,71))))),45,48)))))),(9,(47,46),(42,13,18)),((36,(43,(57,(60,59)))),(56,55,(61,(74,(75,64)),((70,63),62))),35),(28,(29,(30,(49,((58,(69,65)),((67,76),(68,73))))))),21)),16,15,3,(24,(25,(26,27))),(((32,33),22,23),31,20)))))));
+	TREE  * UNTITLED =  [&R] (1,((6,(34,(7,37))),(2,(3,((24,(25,(26,27))),(16,((31,(20,(23,(22,(32,33))))),(15,(4,((5,((28,(30,(29,49))),((36,43),(35,55)))),(21,(44,((47,46),(9,(42,(13,(18,(8,((11,(14,(17,((40,41),(38,39))))),(10,((54,53),(12,(19,((48,45),(50,(52,51))))))))))))))))))))))))));
+
+END;
+
+
+BEGIN NOTES;
+
+	TEXT  TAXON=38 TEXT= Rohr_1988;
+	TEXT  TAXON=50 TEXT= Rohr_1988;
+	TEXT  TAXON=51 TEXT= was_Globonema_bicarinatus;
+	TEXT  TAXON=79 TEXT= Mislabelled_Ectomaria_ada_in_paper.;
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -845315706;
+	FileSettings treewindow  '1' '1' '69' '1';
+	Singles 010;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '208' '1' all;
+	EditorPosition  '192' '495' '869' '1217';
+	TreeWindowPosition  '46' '6' '997' '1630';
+	ListWindow Characters open Gadget '12' '171' '940' '695' '517' 000;
+	ListWindow Taxa open Gadget '12' '217' '1137' '712' '396' 100000000;
+	ListWindow Trees open Gadget '12' '199' '-608' '202' '400' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets open Gadget '12' '50' '10' '185' '197' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols closed Gadget '12' '10' '50' '30' '203' '220';
+	WindowOrder  List Characters Tree List Taxa List TaxSets List Trees;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '903' '1533' '154' '99';
+	TreeLegendPosition  '936' '1437' '88' '94';
+	EditorToolsPosition  '691' '1527' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 00;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Arial '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '-30629' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

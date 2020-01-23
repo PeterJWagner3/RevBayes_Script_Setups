@@ -1,0 +1,143 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=63 NCHAR=61;
+
+[!Bell, M. A., and S. J. Braddy.  2012.  Cope's rule in the Ordovician trilobite family Asaphidae (order Asaphida): patterns across multiple most parsimonious trees.  Historical Biology 24:223-230.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C D E" MISSING=? GAP=- ;
+
+MATRIX
+Dikelocephalus_minnesotensis	000000?023002000-0?2000?010120?0112110101100??01111101?010010
+Proceratopyge_gordonensis		00?0001021000100-0?000??00000??001?000101001??211100100000010
+Macropyge_chermi				0000011023002000200?1?111??00??011?030111000???1????????0?000
+Anataphrus_borraeus				01-1-11000011000-2?-01110????????????1001?02??0?0--????010000
+Asaphellina_barroisi			000000?0210?2?00-20-01??0??00??000?010010101??00130100?110010
+Asaphellus_homfrayi				0100000001012000-20-011101000??000001000010110000010001010000
+Asaphus_expansus				01-11011210033100011101101003?011010200011011?001011110010000
+Neoasaphus_ludibundus			01-1101121003310-21100110???3??11200210001011000101001?000000
+Aulacoparia_venta				001100?101103010-01-01110??10??001211?????????01111????011001
+Baltiities_steinhardi			01-1001103103311?0?-?1??0???3?0111?01???????1?011211211001000
+Basilicus_tyrannus				00000011200?3310001110110???3?0110?01001?001??201311101110000
+Basiliella_jinlini				000000?02??033100?1110110???3?0010?11?????????011110011110000
+Birmanites_hupeiensis			000100112?101201-?1100010???3?01122000000000??01131121?011000
+Borogothus_stenorhachis			000000?00?004000-003001101003??1100000011?11??01120001?110000
+Burminresia_tertia				000000?023102201001310000000??????????0???????011300310011000
+Eoisotelus_orientalis			0?0010102?013311-11100110????????????0000?00??010--?001110000
+Emanuelaspis_teicherti			001000?123112201011110001???1??00022110?00?1??01121101?100000
+Gog_catillus					01-100?12100400001001000000120?002113000000011011111310012000
+Golasaphus_momedahensis			000000?101100000-10300110???0??000?00???????1?211210011000000
+Isabelinia_glabrata				0000001101103300-11100110??03?0110?0?0000100??011311111010000
+Isoteloides_canalis				0000011001001000-20-0111010?3?00101??00001011?001100011110000
+Isotelus_gigas					01-0011101001000-21-011101103?001012?100110010001110001010000
+Kayseraspis_brackenbuschi		0?0000?101000000-20-0111000?0??000201001?001??001101001110100
+Lachnostoma_latucelsum			000000?001103300-01-011101103?010?21000???????010--1010110000
+Lapidaria_tenella				01-??0?02?10401020?-11110?????????????????????010--?01?111000
+Lonchobasilicus_gansuensis		0??000?00000200?201?1?010??????????????010?0??10131101?110000
+Megalaspides_dalecarlicus		0000001121111200-21-010001003??00010000001011?00120001?010000
+Megistaspidella_extenuata		1000001111001?0?-00-01110???1??0012010001101??001010011110000
+Megistaspis_limbata				100000?111001200100110110?0020?00122100011001?011110001100000
+Merlinia_rhyakos				000010??23012000-213000000001??001020000000000?11110000111000
+Mioptychopyge_binodosa			000000110?103300-00-01110????????????0000?01??011101211010000
+Ningkianites_ningkianensis		0?1100?002101000-20?0???0?????????????0???????01111101?112000
+Niobe_frontalis					01-100?00201400121001000010021?002113?0??0000?01111101?111000
+Niobella_homfrayi				01-100?002004001200010001??021?0021130011?01?0011201011111000
+Proxiniobe_flabellifera			01-100?00201400121001000000???????????0010001?011200010111000
+Niobides_armatus				000000102?011?00-2?-01110????????????0000100??00120????110000
+Nobiliasaphus_powysensis		0000001121101200001110000??03?0012?010010001?101131111?001000
+Norasaphus_skalis				000000?120003310001110110??03?0110111?0???????00120000?113000
+Notopeltis_orthometopa			001000?1010?2000-21-01110????????????10???????001000000010000
+Ogmasaphus_praetextus			01-1?01101113311-213001101003?0112002000010010000101110011000
+Ogyginus_corndensis				0000101022004000-123000000001??00021000000000?001111010010001
+Ogygiocarella_debuchii			0000101122101000-123000000001??0002??000000101001111300010000
+Ogygiocaris_dilatata			0001?01022111001-1230000100??????????00000010?001311311011001
+Opsimasaphus_jaanussoni			0000000121103310001110110??03?011??010010000??011311100010000
+Paraptychopyge_plautini			00000011111033101211101101013?1110?200000?0110011011211111000
+Plectasaphus_plicicostis		01-1?01101103310-213001101003??110002000110110011311010000001
+Presbynileus_ibexenis			01-1?1?12000????-2?-0111011031?112102?????????0?0-1?010010000
+Promegalaspides_kinnekullensis	000000?0?0110000-00?0?000???21?01??000011010??01110????110000
+Protopresbynileus_willdeni		01-1?1?1?011???0-2?-01110??020?000111??01001112?0-1?210010000
+Protoptychopyge_prisca			01-1?010011?3310001?1?110???3?1110?0100000011?00111021?011000
+Pseudoasaphus_globifrons		01-01011011033100011100101003?0110200000000010011101210001000
+Pseudoasaphinus_tecticaudatus	01-1101103103310?011?0110??03?1110?2?0000000102111?1210011000
+Pseudobasilicus_lawrowi			0000001103113300-01100110100?????????000000010001111210011000
+Pseudogygites_latimarginata		0000011103014000-203000101003?0110102000010011001311000110000
+Pseudomegalaspis_formosa		01-1?0110?10331?-21-01110????????????00?1?0110001110011011000
+Ptychopyge_broeggeri			0000001111113310121110110???3?1110221000100111211111211111000
+Ptyocephalus_vigilans			01-1012000011000-2?-0111011?3?00011121000101??010--??01110000
+Stegnopsis_solitarius			0001-1?1010?200?-20-011101003?0110102?????????011011011110000
+Stenorhachis_genalticurvatus	0011?01111012201-21-01110100??????????????????011100011010001
+Thysanopyge_argentina			00001000110?1200-1?100000????????????0000000??00130130?010110
+Trigonocerca_typica				000101?01110?0??-21-0111000020?101201?????????200010010010100
+Trigonocercella_acuta			1?0101?1200??0?0-21-01110???3??11?102?????????0?0--?0??010100
+Xenasaphus_devexus				01-1102103003310001310110??03?011?1020001?00??010--001?110000
+;
+end;
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -848343828;
+	FileSettings editor  '1' '1' '40' '1';
+	Singles 010;
+	Editor 00011011111111100100010010 '0' '72' Gadget '12' '254' '1' all;
+	EditorPosition  '188' '404' '631' '951';
+	TreeWindowPosition  '44' '50' '933' '1359';
+	ListWindow Characters open Gadget '12' '71' '1334' '627' '374' 000;
+	ListWindow Taxa closed Gadget '12' '50' '25' '253' '364' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '968' '1620';
+	StateNamesSymbols open Gadget '12' '19' '301' '48' '356' '295';
+	WindowOrder  Data List Characters States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '771' '46' '115' '165';
+	TreeToolsPosition  '866' '9' '126' '138';
+	TreeWindowProgram 00;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

@@ -1,0 +1,372 @@
+#NEXUS
+[written Mon Jul 15 10:20:16 PDT 2019 by Mesquite  version 3.6 (build 917) at eas-6bcec7.wdynp.ucr.edu/10.28.91.62]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=28;
+	TAXLABELS
+		Rugosochonetes Waagenites Glabrichonetina Permochonetes Pygmochonetes Demonedys Chonetina Costachonetes Subglobosochonetes Tornquistia Airtonia Anopliopsis Caenanoplia Globosochonetes Trichochonetes Yagonia Cedulia Corbicularia Holynetes Davoustia Aseptonetes Austronoplia Caplinoplia Cyrtoniscus Plicanoplia Anoplia Shagamella Eoplicanoplia 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  'Matrix in file "Anopliidae_Hanger_&_Strong_2000.nex"';
+	DIMENSIONS  NCHAR=35;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8 9 A B C D E F G";
+	CHARSTATELABELS 
+34 FA /  Wenlock Ludlow Lockhovian Pragian Emsian Eifelian Givetian Frasnian Tournaisian Visean Serpukovian Bashkirian Stephanian Sakmarian Leonardian Dorashamian Induan,
+		35 LA /  Wenlock Ludlow Lockhovian Pragian Emsian Eifelian Givetian Frasnian Tournaisian Visean Serpukovian Bashkirian Stephanian Sakmarian Leonardian Dorashamian Induan ; 
+	MATRIX
+	Rugosochonetes      2010110101101111111202010101111008A
+	Waagenites          011210210100?1011030020??10110002EG
+	Glabrichonetina     1010??0110?0?0-1111100?1?00000111FF
+	Permochonetes       1010000101?010-10-111111101110001DE
+	Pygmochonetes       0110??10-1?000-1112100?1?11000001EE
+	Demonedys           010-0011010100-110200001100100001EF
+	Chonetina           010-??1??10000-0111100?1?100001??EE
+	Costachonetes       0010??0100???101112101?1?1000??0?CD
+	Subglobosochonetes  0010??011100?0-11111001110100000189
+	Tornquistia         100-000111000101101100010101100018E
+	Airtonia            0?10?10100110110110113?0-001100??99
+	Anopliopsis         100-??010000?0-0110000?1?00?000??89
+	Caenanoplia         011011111101?101110100011001010018B
+	Globosochonetes     011101010000110110110001?0010100099
+	Trichochonetes      10100011001000-110120200-1000002399
+	Yagonia             101010111001110011011101?011111??99
+	Cedulia             10111101110110-10-01100110000000077
+	Corbicularia        00100100-000?0-10-0110?1?0??1????77
+	Holynetes           001101110101?0-11011000111???10??46
+	Davoustia           00111101000111111011010101001010033
+	Aseptonetes         10110000-00000-011110001?10100?0045
+	Austronoplia        001001111000011011011101?1101??0?45
+	Caplinoplia         1010??0101?0?0-111101?1?00?0??0??35
+	Cyrtoniscus         01110001100100-011000011?0???00??34
+	Plicanoplia         01110011100111111120001111001110?35
+	Anoplia             010-0111100110-0112000?1?0000100?24
+	Shagamella          010-000110?1?1111121000111000000001
+	Eoplicanoplia       0110010101??010110010011?000?000011
+
+;
+
+END;
+BEGIN MacCladeStart;
+	Extended;
+
+END;
+BEGIN SETS;
+	TAXSET Outgroup  =  1 -  2;
+	TAXSET Ingroup  =  3 -  28;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	OPTIONS DEFTYPE = unord PolyTcount = MAXSTEPS;
+	TYPESET * UNTITLED   =  unord:  1- 35;
+
+	WTSET * UNTITLED  =  1: 1 -  33, 0: 34 -  35 ;
+
+END;
+
+BEGIN TREES;
+	Title 'Trees from "Anopliidae_Hanger_&_Strong_2000.nex"';
+	ID 016bf6a61ff39;
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		1 Rugosochonetes,
+[1] 		2 Waagenites,
+[2] 		3 Glabrichonetina,
+[3] 		4 Permochonetes,
+[4] 		5 Pygmochonetes,
+[5] 		6 Demonedys,
+[6] 		7 Chonetina,
+[7] 		8 Costachonetes,
+[8] 		9 Subglobosochonetes,
+[9] 		10 Tornquistia,
+[10] 		11 Airtonia,
+[11] 		12 Anopliopsis,
+[12] 		13 Caenanoplia,
+[13] 		14 Globosochonetes,
+[14] 		15 Trichochonetes,
+[15] 		16 Yagonia,
+[16] 		17 Cedulia,
+[17] 		18 Corbicularia,
+[18] 		19 Holynetes,
+[19] 		20 Davoustia,
+[20] 		21 Aseptonetes,
+[21] 		22 Austronoplia,
+[22] 		23 Caplinoplia,
+[23] 		24 Cyrtoniscus,
+[24] 		25 Plicanoplia,
+[25] 		26 Anoplia,
+[26] 		27 Shagamella,
+[27] 		28 Eoplicanoplia;
+	TREE Tree_1 = (27,((24,(26,25)),(12,((18,(22,11)),((8,(15,21)),((28,((19,14),(10,(2,(1,20))))),((7,(5,6)),(9,(3,((4,23),(17,(16,13))))))))))));
+	TREE First_Third = (27,((24,(26,25)),(22,(21,((28,(19,20)),23)))));
+
+END;
+
+
+BEGIN NOTES;
+
+	TEXT   TAXON = 1 CHARACTER = 34 TEXT = 'C_Tour-l';
+	TEXT   TAXON = 2 CHARACTER = 34 TEXT = 'P_Leon-m';
+	TEXT   TAXON = 3 CHARACTER = 34 TEXT = P_Dora;
+	TEXT   TAXON = 4 CHARACTER = 34 TEXT = P_Sakm;
+	TEXT   TAXON = 5 CHARACTER = 34 TEXT = 'P_Leon-u';
+	TEXT   TAXON = 6 CHARACTER = 34 TEXT = 'P_Leon-m';
+	TEXT   TAXON = 7 CHARACTER = 34 TEXT = P_Leon;
+	TEXT   TAXON = 8 CHARACTER = 34 TEXT = 'C_Step-u';
+	TEXT   TAXON = 9 CHARACTER = 34 TEXT = 'C_Tour-l';
+	TEXT   TAXON = 10 CHARACTER = 34 TEXT = C_Tour;
+	TEXT   TAXON = 11 CHARACTER = 34 TEXT = 'C_Vise-l';
+	TEXT   TAXON = 12 CHARACTER = 34 TEXT = 'C_Tour-u';
+	TEXT   TAXON = 13 CHARACTER = 34 TEXT = 'C_Tour-l';
+	TEXT   TAXON = 14 CHARACTER = 34 TEXT = C_Vise;
+	TEXT   TAXON = 15 CHARACTER = 34 TEXT = 'C_Vise-u';
+	TEXT   TAXON = 16 CHARACTER = 34 TEXT = 'C_Vise-l';
+	TEXT   TAXON = 17 CHARACTER = 34 TEXT = D_Fras;
+	TEXT   TAXON = 18 CHARACTER = 34 TEXT = 'D_Fras-l';
+	TEXT   TAXON = 19 CHARACTER = 34 TEXT = D_Emsi;
+	TEXT   TAXON = 20 CHARACTER = 34 TEXT = D_Sieg;
+	TEXT   TAXON = 21 CHARACTER = 34 TEXT = D_Emsi;
+	TEXT   TAXON = 22 CHARACTER = 34 TEXT = D_Emsi;
+	TEXT   TAXON = 23 CHARACTER = 34 TEXT = D_Sieg;
+	TEXT   TAXON = 24 CHARACTER = 34 TEXT = D_Sieg;
+	TEXT   TAXON = 25 CHARACTER = 34 TEXT = 'D_Sieg-u';
+	TEXT   TAXON = 26 CHARACTER = 34 TEXT = 'D_Gedi-u';
+	TEXT   TAXON = 27 CHARACTER = 34 TEXT = 'S_Wenl-u';
+	TEXT   TAXON = 28 CHARACTER = 34 TEXT = S_Ludl;
+
+	TEXT   TAXON = 1 CHARACTER = 35 TEXT = 'C_Serp-u';
+	TEXT   TAXON = 2 CHARACTER = 35 TEXT = 'Tr_Indu-l';
+	TEXT   TAXON = 3 CHARACTER = 35 TEXT = P_Dora;
+	TEXT   TAXON = 4 CHARACTER = 35 TEXT = 'P_Leon-l';
+	TEXT   TAXON = 5 CHARACTER = 35 TEXT = 'P_Leon-u';
+	TEXT   TAXON = 6 CHARACTER = 35 TEXT = P_Dora;
+	TEXT   TAXON = 7 CHARACTER = 35 TEXT = P_Leon;
+	TEXT   TAXON = 8 CHARACTER = 35 TEXT = 'P_Sakm-u';
+	TEXT   TAXON = 9 CHARACTER = 35 TEXT = 'C_Vise-l';
+	TEXT   TAXON = 10 CHARACTER = 35 TEXT = 'P_Leon-u';
+	TEXT   TAXON = 11 CHARACTER = 35 TEXT = 'C_Vise-l';
+	TEXT   TAXON = 12 CHARACTER = 35 TEXT = 'C_Vise-l';
+	TEXT   TAXON = 13 CHARACTER = 35 TEXT = 'C_Bash-l';
+	TEXT   TAXON = 14 CHARACTER = 35 TEXT = C_Vise;
+	TEXT   TAXON = 15 CHARACTER = 35 TEXT = 'C_Vise-u';
+	TEXT   TAXON = 16 CHARACTER = 35 TEXT = 'C_Vise-u';
+	TEXT   TAXON = 17 CHARACTER = 35 TEXT = D_Fras;
+	TEXT   TAXON = 18 CHARACTER = 35 TEXT = 'D_Fras-l';
+	TEXT   TAXON = 19 CHARACTER = 35 TEXT = D_Give;
+	TEXT   TAXON = 20 CHARACTER = 35 TEXT = D_Sieg;
+	TEXT   TAXON = 21 CHARACTER = 35 TEXT = D_Eife;
+	TEXT   TAXON = 22 CHARACTER = 35 TEXT = D_Eife;
+	TEXT   TAXON = 23 CHARACTER = 35 TEXT = D_Eife;
+	TEXT   TAXON = 24 CHARACTER = 35 TEXT = 'D_Emsi-l';
+	TEXT   TAXON = 25 CHARACTER = 35 TEXT = D_Eife;
+	TEXT   TAXON = 26 CHARACTER = 35 TEXT = 'D_Emsi-l';
+	TEXT   TAXON = 27 CHARACTER = 35 TEXT = S_Ludl;
+	TEXT   TAXON = 28 CHARACTER = 35 TEXT = S_Ludl;
+
+END;
+
+BEGIN MacClade;
+	Version 4.0 87;
+	LastModified -817561274;
+	FileSettings treewindow '1' '1' '34' '0';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '162' '1' all;
+	EditorPosition '44' '6' '665' '1267';
+	TreeWindowPosition '221' '89' '847' '1390';
+	ListWindow Characters open Gadget '12' '45' '228' '321' '517' 000;
+	ListWindow Taxa open Gadget '12' '50' '10' '542' '332' 100000000;
+	ListWindow Trees open Gadget '12' '50' '25' '134' '387';
+	ListWindow TypeSets closed Geneva '9' '50' '10' '276' '490';
+	ListWindow WtSets closed Geneva '9' '50' '10' '276' '490';
+	ListWindow ExSets closed Geneva '9' '50' '10' '276' '490';
+	ListWindow CharSets closed Geneva '9' '50' '10' '276' '490';
+	ListWindow TaxSets closed Gadget '12' '50' '10' '134' '185';
+	ListWindow CharPartitions closed Geneva '9' '50' '10' '276' '490';
+	ListWindow CharPartNames closed Geneva '9' '50' '10' '276' '490';
+	ListWindow WtSets closed Geneva '9' '50' '10' '276' '490';
+	ChartWindowPosition '50' '30' '688' '964';
+	StateNamesSymbols closed Gadget '12' '17' '273' '337' '322' '342';
+	WindowOrder Tree List Trees List Characters List Taxa;
+	OtherSymbols & / 00 ? -;
+	Correlation '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile '2';
+	ExportHTML _ MOSS '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition '939' '1378' '110' '85';
+	TreeLegendPosition '961' '1280' '88' '93';
+	EditorToolsPosition '703' '48' '115' '165';
+	TreeToolsPosition '716' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode '0' '0' 0;
+	Charts Geneva '9' ( normal ) 0010;
+	NexusOptions '0' '0' '50' 001011011;
+	TipLabel '1';
+	TreeFont Gadget '12' ( normal );
+	TreeShape 1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax '0';
+	TraceAllChangesDisplay '1' 1;
+	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation '3' 1;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Geneva '9' ( normal ) Geneva '10' ( normal ) Geneva '9' ( normal ) Geneva '9' ( normal ) Geneva '9' ( bold ) Geneva '9' ( normal ) Geneva '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools '1';
+
+END;
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 35;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1563211216901;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 3309963260633356897;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 1965129115950768829;
+			mqVersion 360;
+			checksumv 0 3 3823881641 null  getNumChars 35 numChars 35 getNumTaxa 28 numTaxa 28   short false   bits 131071   states 131071   sumSquaresStatesOnly 9.82294104E9 sumSquares 9.82294104E9 longCompressibleToShort false usingShortMatrix false   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1160 644;
+			setLocation 8 23;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #1965129115950768829 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1060 572;
+					setLocation 8 23;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

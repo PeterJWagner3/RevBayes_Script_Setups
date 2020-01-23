@@ -1,0 +1,88 @@
+#NEXUS 
+[MacClade 4.05 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=8 NCHAR=7;
+
+[!Paul, C. R. C. & S. V. Rozhnov. 2016. Revision of Scoliocystis (Rhombifera: Echinoencrinitidae) and related cystoid genera. Paleontological Journal 50(3):255-275.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5" MISSING=? GAP=- ;
+
+MATRIX
+[                            10        20]
+[                            .         . ]
+Macrocystella		0000000
+Cheirocystella		1000000
+Sprinkleocystis		1100000
+Scoliocystis		1110000
+Echinoencrinites	1011100
+Maenillocysti		1011010
+Lepadocystis		1111011
+Gonocrinites		1111000
+;
+
+END;
+
+BEGIN MacClade;
+	Version 4.0  84;
+	LastModified -1082722215;
+	FileSettings treewindow  '1' '1' '20' '1';
+	Singles 010;
+	Editor 0001101111111110010001001 '0' '72' Gadget '12' '200' '1' all;
+	EditorPosition  '46' '6' '274' '609';
+	TreeWindowPosition  '91' '435' '715' '974';
+	ListWindow Characters closed Gadget '12' '50' '25' '253' '517' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '236' '305' 100000;
+	ListWindow Trees closed Gadget '12' '90' '65' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '686' '964';
+	StateNamesSymbols open Gadget '12' '10' '336' '125' '203' '219';
+	WindowOrder  Tree States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '677' '1308' '110' '85';
+	TreeLegendPosition  '699' '1210' '88' '93';
+	EditorToolsPosition  '563' '46' '115' '165';
+	TreeToolsPosition  '290' '42' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

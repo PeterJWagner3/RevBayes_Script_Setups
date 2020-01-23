@@ -1,0 +1,10 @@
+Acanthoceratidae_Yacobucci_1999.nex
+Ceratitida_McGowan_&_Smith_2007.nex
+Goniatitoidea_Korn_1997.nex
+Hamitidae_Monks_2002.nex
+Hammatoceratinae_Moyne_&_Neige_2004.nex
+Hildoceratidae_Rulleau_2003.nex
+Nautiloidea_Ward_&_Saunders_1997.nex
+Scaphitacoidea_Monks_2000.nex
+Semiformiceras_Cecca_&_Rouget_2006.nex
+Turrilitoidea_Monks_1999.nex

@@ -1,0 +1,31 @@
+#NEXUS [MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]BEGIN DATA;	DIMENSIONS  NTAX=29 NCHAR=16;[!Laurie 2008. Species relationships in the Ptychagnostidae (Cambrian, Agnostina). pp. 211 - 218 in Advances in Trilobite Research]	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8" MISSING=? GAP=- ;MATRIX[                                               10        20 ][                                               .         .  ]Pentagnostus_krusei          1000112000100200
+Ptvchagnostus_punctuosus     2120310212110210
+Ptvchagnostus_affinis        2020310212110210
+Zeteagnostus_incautus        4130110201000000
+Zeteagnostus_sinicus         3130200212100000
+Pentagnostus_praecurrens     1001202212100200
+Pentagnostus_anabarensis     0001102111100200
+Pentaonostus_shergoldi       1001202212110200
+Triolagnostus_gibbus         1021102212210200
+Aotagnostus_culminosus       2010112212220000
+Aotaonostus_aotus            2010212212220000
+Aotagnostus_magniceos        2010112212220000
+Onvmagnostus_semiermis       2011200212110001
+Onvmagnostus_mundus          2110210212110201
+Onvmagnostus_hvbridus        2110310212110201
+Acidusus_atavus              2020101212110400
+Acidusus_cassis              3020111212110?00
+Acidusus_occultatus          2020111212110400
+Acidusus_leptus              3020111212110400
+Acidusus_aculeatus           2020111212121000
+Goniagnostus_nathorsti       1002012212111320
+Goniagnostus_spiniger        1002012212111320
+Goniagnostus_fumicola        1002012212111320
+Criotvnus_oxvtorus           1002002212110300
+Criotvnus_lemniscatus        1002002212110310
+Pseudoohalacroma_lundgreni   3100210201010000
+Pseudophalacroma_scanense    3100210201010000
+Tomagnostus_fissus           1011410212110121
+Tomagnostus_perrugatus       0002300212110120
+;
+END;BEGIN MacClade;	Version 4.0  87;	LastModified -890844114;	FileSettings editor  '1' '1' '21' '1';	Singles 010;	Editor 00011011111111100100010010 '0' '72' Gadget '12' '236' '1' all;	EditorPosition  '46' '6' '597' '1005';	TreeWindowPosition  '71' '206' '670' '804';	ListWindow Characters open Gadget '12' '564' '100' '406' '374' 000;	ListWindow Taxa closed Gadget '12' '50' '10' '270' '402' 100000000;	ListWindow Trees closed Gadget '12' '90' '65' '134' '387' ;	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;	TextWindow AboutFile  '50' '25' '280' '445' Gadget '12' (normal) 1 ;	ChartWindowPosition  '52' '30' '968' '1620';	StateNamesSymbols open Gadget '12' '9' '639' '552' '186' '220';	WindowOrder  Data List Characters States Text AboutFile;	OtherSymbols &/ 00 ?-;	Correlation  '0' '0' '1000' '0' '0' 10011010;	Salmo 00000001;	EditorFile  '2';	ExportHTML _ MOSS  '100' 110000;	PrettyPrint 10;	EditorToolsPosition  '771' '46' '115' '165';	TreeToolsPosition  '866' '9' '126' '138';	TreeWindowProgram 10;	TreeWindow 0000;	Continuous  '0' '3' 1;	Calculations 1000101;	SummaryMode  '0' '0' 0;	Charts  Gadget '12' (normal) 0010;	NexusOptions  '0' '0' '50' 001011001;	TipLabel  '1';	TreeFont  Gadget '12' (normal);	TreeShape  1.0 1.0 0100;	TraceLabels 0101;	ChartColors  '0' '0' '65535' '9' '0' 1;	ChartBiggestSpot 1;	ChartPercent 10;	ChartBarWidth  '10' 1;	ChartVerticalAxis 10101;	ChartMinMax  '0';	TraceAllChangesDisplay  '1' 1;	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;	ContinuousBranchLabels 0;	AllStatesBranchLabels 1;	IndexNotation  '3' 1;	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Geneva '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '2' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;	MatchChar 00 .;	EntryInterpretation 01;	ColorOptions 00;	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;	BothTools  '1';END;

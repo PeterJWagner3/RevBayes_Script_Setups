@@ -1,0 +1,86 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=19 NCHAR=23;
+
+[!Ausich, W. I., and T. W. Kammer.  2010.  Generic concepts in the Batocrinidae Wachsmuth and Springer, 1881 (Class Crinoidea).  Journal of Paleontology 84:32-50.
+
+Strat data from Figure 1]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9" MISSING=? GAP=- ;
+	CHARSTATELABELS  		22  FA,  23  LA
+
+MATRIX
+Batocrinus           (2346)0(02)(01)100112111(016)(135)103???55Abatocrinus          (1456)0(01)010(01)102111(02457)(135)10300105Alloprosallocrinus   (23)12001201(12)1103(13)10000044Azygocrinus          10(01)001001211(01)(05)(01)1010??22Dizygocrinus         (12346)0(012)01000121(01)(01)(05)(013)(12)0000126Eretmocrinus         (126)0(02)0110012111(016)(13)10000127Eutrochocrinus       60(01)0111001(01)11(27)(20)1(12)2(01)0014Globocrinus          1000000011?1103100???66Macrocrinus          (0146)0(01)000(01)002111(02457)(123)(12)0000115Magnuscrinus         (13)023001112000(01)(45)101???34Glannearycrinus      210010202211001102???55Gongylocrinus        10(02)1000012(01)00(05)110200024Simatocrinus         (46)0(02)0100112000(245)(123)111???25Sunwaptacrinus       40010001(01)1100(35)311201011Uperocrinus          (456)0(01)000(01)002(01)01(02)(12)1(12)000024Corocrinus           5015101000000?402201001Gennaeocrinus        10151000000004(13)0130(01)001Pithocrinus          10010000000000(13)01201001Stamnocrinus         70110010000102(13)0120?001
+;
+end;
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-21, strat: 22-23;
+	WTSET * UNTITLED  = 1: 1-21, 0: 22-23;
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -988123841;
+	FileSettings editor  '1' '1' '15' '1';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '188' '1' all;
+	EditorPosition  '40' '4' '291' '693';
+	TreeWindowPosition  '46' '6' '835' '1387';
+	ListWindow Characters open Gadget '12' '329' '1273' '253' '374' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '273' '306' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '50' '30' '688' '964';
+	StateNamesSymbols open Gadget '12' '10' '117' '1114' '203' '220';
+	WindowOrder  States Data List Characters;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '605' '44' '115' '165';
+	TreeToolsPosition  '607' '5' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '1' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '32677' '-5256' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

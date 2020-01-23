@@ -1,0 +1,226 @@
+#NEXUS
+[written Tue Feb 28 15:03:07 CST 2017 by Mesquite  version 3.2 (build 801) at Tyrion.local/10.211.146.189]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=13;
+	TAXLABELS
+		Exigraptus_uniformis Archiclimacograptus_caelatus Jiangxigraptus_mui Jiangxigraptus_wuningensis Dicellograptus_vagus Dicellograptus_sextans Dicellograptus_intortus Levisograptus_sinicus Levisograptus_dicellograptoides Levisograptus_austrodentatus ?_Levisograptus_praesextans Dicranograptus_irregularis Dicranograptus_hystrix 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Dicranograptids;
+	DIMENSIONS  NCHAR=24;
+	FORMAT DATATYPE = STANDARD GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8 9 A B C";
+	CHARSTATELABELS 
+		1 Sicular_length, 2 'Sicular length/width ratio', 3 Sicula_bent /  absent present, 4 Sicular_virgellar_spine_deflected, 5 'Anti-virgellar spines', 6 Sicular_inclination_to_stipe, 7 Distance_between_the_budding_point_of_th11_and_the_sicular_aperture, 8 Origination_of_th11, 9 Growth_of_th11, 10 Growth_of_th12, 11 Origination_of_th21, 12 Dicalycal_theca /  th21 th22, 13 Stipe_attitude, 14 Thecal_apertural_excavation, 15 Thecal_form, 16 Thecal_overlap, 17 Intrathecal_folds, 18 Difference_between_width_of_the_protheca_and_metatheca /  decreasing increasing both, 19 Thecal_aperture, 20 Supragenicular_wall_form, 21 Prothecal_fold, 22 Development_of_subapertural_spines, 23 Development_of_thecal_rutelli, 24 Strong_prothecal_folding ; 
+	MATRIX
+	Exigraptus_uniformis             010100000001000010002000
+	Archiclimacograptus_caelatus     010010110110023210112110
+	Jiangxigraptus_mui               211110111100223202312311
+	Jiangxigraptus_wuningensis       211110111100223202312310
+	Dicellograptus_vagus             200110111100211210311110
+	Dicellograptus_sextans           301111211100222200322310
+	Dicellograptus_intortus          310110211100211200311310
+	Levisograptus_sinicus            200000010111024113222210
+	Levisograptus_dicellograptoides  1101102111?1112102220210
+	Levisograptus_austrodentatus     010000010111013113221010
+	?_Levisograptus_praesextans      ???00???????112???3??110
+	Dicranograptus_irregularis       201110011100123311322310
+	Dicranograptus_hystrix           210000110011013100210210
+
+;
+
+END;
+BEGIN LABELS;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Outgroup :  1, Ingroup :  2 -  13;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1 -  24;
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1 -  24;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1488315787415;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 5306757914780616509;
+			tell It;
+				setDefaultOrder  12 0 1 2 3 4 5 6 7 8 9 10 11;
+				attachments ;
+			endTell;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 2408395313058350847;
+			mqVersion 320;
+			checksumv 0 3 1347540672 null  getNumChars 24 numChars 24 getNumTaxa 13 numTaxa 13   short true   bits 31   states 31   sumSquaresStatesOnly 3125.0 sumSquares 3125.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1007 706;
+			setLocation 11 24;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #2408395313058350847 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 196;
+					endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 907 634;
+					setLocation 11 24;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesEditor.StateNamesEditor;
+				tell It;
+					makeWindow;
+					tell It;
+						getTable;
+						tell It;
+							rowNamesWidth 449;
+						endTell;
+						setExplanationSize 30;
+						setAnnotationSize 20;
+						setFontIncAnnot 0;
+						setFontIncExp 0;
+						setSize 907 634;
+						setLocation 11 24;
+						setFont Gadget;
+						setFontSize 14;
+						getToolPalette;
+						tell It;
+							setTool mesquite.categ.StateNamesEditor.StateNamesWindow.ibeam;
+						endTell;
+						setActive;
+						rowsAreCharacters on;
+						toggleConstrainChar on;
+						toggleConstrainCharNum 3;
+						togglePanel off;
+						toggleSummaryPanel off;
+					endTell;
+					showWindow;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

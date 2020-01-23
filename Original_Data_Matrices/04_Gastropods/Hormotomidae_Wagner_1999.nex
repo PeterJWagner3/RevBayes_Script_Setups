@@ -1,0 +1,2221 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=43 NCHAR=232;
+
+[!Wagner, P. J. 1999. Phylogenetics of the earliest anisostrophically coiled gastropods.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C D E F G H J K L M N P Q R" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		1  Sinus / _ Absent Present,
+  2  Sinus_Depth_Symmetry / _ Right_side_sharper Symmetrical Left_side_sharper,
+  3  R._Sinus_Depth / _0˚ 10˚ 20˚ 30˚ 40˚ 50˚ 60˚ 70˚,
+  4  L._Sinus_Depth / _0˚ 10˚ 20˚ 30˚ 40˚ 50˚ 60˚ 70˚,
+  5  Sinus_Width_Symmetry / _ Right_Wider Symmetric Left_Wider,
+  6  R._Sinus_Width / _ Just_Above_SK Bn._SK_and_RR At_RR Above_RR,
+  7  L._Sinus_Width / At_Selenizone Just_Below_SK Bn._SK_and_LR At_LR Bn._LR_and_Base,
+  8  Sinus_Curve_Sym / _ Left_More_Acute Symmetric Left_More_Obtuse,
+  9  R._Sinus_Curve / _ Plateau Straight Continuous Hyperbolic,
+  10  L._Sinus_Curve / _ Plateau Straight Continuous Hyperbolic,
+  11  Wrinkled_Right_Sinus / _ Absent Present,
+  12  Sinuate_Right_Ramp / _ Absent Present,
+  13  Degree_of_RR_Sinuousity / _ 'Weak_[Curved]' Moderate 'Strong_[Nearly_Half_Circle]',
+  14  Sinuate_Left_Side / _ Absent Present,
+  15  Crenulated_Aperture / _ Absent Present,
+  16  Sigmoidal_Aperture / _ Absent Aperture_stretches_forward Aperture_stretches_backward,
+  17  Sigmoidal_Development / _ Slight_Stretch Strong_Stretch,
+  18  Growth_Line_Symmetry / _ LR_GLs_Stronger Symmetric RR_GLs_Stronger,
+  19  RR_GL_Prominence / _ Not_Visible Weak Fine_Sharp Strong Extremely_Strong,
+  20  LR_GL_Strength / _ Not_Visible Weak Fine_Sharp Strong Extremely_Strong,
+  21  ∆_Growth_Line / Stronger_on_Adult No_∆ Stronger_on_Juveniles,
+  22  Change_in_GL_Spacing / Further_on_Final_Whorl Consistent Closer_on_Final_Whorls,
+  23  Imbricated_Growth_Lines / _ Absent Weak Moderate Strong Extremely_Strong,
+  24  Imbricated_Nodes / _ Absent Present,
+  25  Imbrication_Ontogeny / _ Consistent Becoming_less_prominent Disappearing,
+  26  Basal_Growth_Lines / Weaker_than_Others Same_as_Others Stronger_than_Others,
+  27  'GL''s around Selenizone' / Stronger Same Weaker,
+  28  Juvenile_Selenizone / _ Absent Present,
+  29  Adult_Selenizone / _ Absent Present,
+  30  Selenizone_Position / _ At_Sinus_Apex Below_Sinus,
+  31  Selenizone_Width / _ '∑_=_02.5˚' '∑_=_05˚' '∑_=_10˚' '∑_=_15˚' '∑_=_20˚' '∑_=_25˚' '∑_=_30˚',
+  32  Peripheral_Lirae / _ Absent Present,
+  33  P._L._Type / _ Round Sharp Squared,
+  34  Asymmetrical_PL_Strength / _ 'Upper\Right_Stronger' Same_Strength 'Lower\Left_Stronger',
+  35  P._L._Strength / _ Extremely_Weak Weak Moderate Strong Extremely_Strong,
+  36  Frilled_RPL / _ Absent Present,
+  37  Frilled_LPL / _ Absent Present,
+  38  Frilled_Strength / _ Weak Strong,
+  39  Undulating_RPL / _ Absent Present,
+  40  Undulating_LPL / _ Absent Present,
+  41  Medial_Keel / _ Absent Present,
+  42  MK_Type / _ Rounded Sharp Flange Squared_Ridge Dull_Lump,
+  43  MK_Strength / _ Very_Weak Weak Moderate Strong Very_Strong Extremely_Strong,
+  44  ∆MK_Strength / _ Becomes_Weaker No_∆ Becomes_Stronger,
+  45  'Ontogenetic Zig-Zag' / _ Absent 'Migrates_Down,_then_Jumps_Up',
+  46  MK_Tubes / _ Absent Present,
+  47  Imbricated_MK / _ Consistent Flares_Periodically,
+  48  Selenizone_Prominence / _ None Slight Strong,
+  49  Selenizone_Ontogeny / Becomes_stronger No_major_change Major_reduction Loss_of_Selenizone,
+  50  Slit / _ Absent Present,
+  51  Slit_Depth / _ 'Shallow_(≤20˚)' 'Moderate_(20˚-45˚)' 'Deep_(≥45˚)' 'Really_Deep_(≥90˚)',
+  52  Slit_Continuity / _ Discontinuous Continuous,
+  53  'Slit:Selenizone' / _ Subsuming_Selenizone Within_Selenizone Thinner_than_Selenizone,
+  54  Lira_Within_Selenizone / _ Absent Two_Bordering_Slit,
+  55  Slit_Ontogeny / _ Present_throughout Absent_on_gerontic_whorls,
+  56  Trema_on_Final_Whorl / _ Absent Present,
+  57  Lunulae_Shape / Shallow_Concentric Concentric 'Zipper-Like' '\-shaped' 'V-shaped' Kinked Straight,
+  58  Lunulae_Strength / _ 'Weaker_than_GL''s' 'Same_as_GL''s' 'Stronger_than_GL''s',
+  59  Strong_Lunulae_Type / _ Stronger_and_Concentric Serrated,
+  60  Ont_∆_Imbrications / _ Juvenile_Only Constant_Throughout,
+  61  Ont_∆_in_Sel_Strength / _ Decreasing_Prominence None Increasing_Prominence,
+  62  'Bilineate -> Monolineate' / _ Bilineate_Only 'Bilineate_->_Monolineate',
+  63  Sel_Attitude / _ Parallel_to_ß Curving_Adapically,
+  64  Sel_Symmetry / Entirely_on_L._Ramp Asymmetrical_on_L._Ramp Bisects_Whorl Asymmetrical_on_R._Ramp Entirely_on_R._Ramp,
+  65  ∆_Sel_Symmetry / _ No_Change 'On_R.R_->_Symmetrical',
+  66  MW_Channel / _ Absent Present,
+  67  Channel_Strength / _ Weak Strong,
+  68  Inner_Margin_Shape_at_PB / _ Same_as_Outer_Margin Rounder_than_Outer_Margin,
+  69  Swellings_either_side_of_Seleni / _ Absent Present_on_Either_Side Present_on_Alveozone_Only,
+  70  Exhalent_Position / ß_≈_140˚ ß_≈_130˚ ß_≈_120˚ ß_≈_110˚ ß_≈_100˚ ß_≈_90˚ ß_≈_80˚ ß_≈_70˚ ß_≈_60˚ ß_≈_50˚ ß_≈_40˚ ß_≈_30˚ ß_≈_20˚ ß_≈_10˚ ß_≈_0˚ 'ß_≈_-10˚' 'ß_≈_-20˚' 'ß_≈_-30˚',
+  71  Shape_Symmetry / _ Right_Rounder Symmetric Left_Rounder,
+  72  Right_Ramp_Shape / Acute Globular Convex Slightly_Convex Flat Slightly_Concave Concave,
+  73  ∆_RR_Shape / _ More_Concave Remains_appx._Same More_Convex,
+  74  'R:L Width' / _ 'R:_Longer' Symmetric 'R:_Contracted',
+  75  RR_Length / less_than_20˚ apx._20˚ apx._30˚ apx._40˚ apx._50˚ apx._60˚ apx._70˚ apx._80˚ apx._90˚ apx._100˚ apx._110˚ apx._120˚ apx._130˚,
+  76  Alveozone_Length / less_than_20˚ apx._20˚ apx._30˚ apx._40˚ apx._50˚ apx._60˚ apx._70˚ apx._80˚ apx._90˚ apx._100˚ apx._110˚ apx._120˚ apx._130˚,
+  77  'R:L Projection' / _ Right_Higher Symmetric Left_Higher,
+  78  RR_Projection / 20˚_or_less apx._20˚ apx._30˚ apx._40˚ apx._50˚ apx._60˚ apx._70˚ apx._80˚ apx._90˚ apx._100˚ apx._110˚ apx._120˚,
+  79  LR_Projection / 20˚_or_less apx._20˚ apx._30˚ apx._40˚ apx._50˚ apx._60˚ apx._70˚ apx._80˚ apx._90˚ apx._100˚ apx._110˚ apx._120˚,
+  80  Swollen_Right_Side / _ Absent Present,
+  81  Degree_of_Swelling / _ Weak Moderate Strong Very_Strong,
+  82  ∆_RR_Swelling / _ Always_Acute 'Acute_->_Obtuse' Always_Obtuse,
+  83  ∆Right_Ramp / _ Consistent 'Rounder,_Shorter',
+  84  RR_Carina / _ Absent Present,
+  85  R.R.C._Strength / _ 'Weak_(no_prominence)' 'Moderate_(less_prominent_than_S' 'Strong_(as_prominent_as_SK)' 'Very_Strong_(more_prominent_tha',
+  86  R.R.C._Type / _ Lumpish Thin_Thread Round_Lira Sharp_Thread,
+  87  ∆_R.R.C._Strength / _ Absent Becomes_Weaker Becomes_Sharper,
+  88  Channeled_RC / _ Absent Present,
+  89  RRC_Location / _ @_90˚_from_SK @_45˚_from_SK @_30˚_from_SK,
+  90  RRC_Attitude / Adapical_Hook 'Perp_RR_(“straight_up”)' 'Abapical_hook_(toward_SK)',
+  91  Serrated_RRC / _ Thread Serrated,
+  92  Serration_Strength / _ Slight_Oscillations Strong_Nodes Projecting_Nodes,
+  93  Serration_Early_Ontogeny / _ Consistent Increasing_Strength,
+  94  Serration_Late_Ont0geny / _ Consistent Decreasing_Strength,
+  95  Sutural_Lirum / _ Absent Present,
+  96  SC_Strength / _ Weak Moderate Strong Very_Strong,
+  97  ∆_SC_Swelling / _ Always_Acute 'Acute_->_Obtuse' Always_Obtuse,
+  98  Suture / _ Oblique Acute,
+  99  Acuteness_of_Suture / _ Acute Attenuated,
+  100  Curve_Back_at_Suture / _ Absent Present,
+  101  Left_Ramp_Shape / Acute Globular Convex Slightly_Convex Flat Concave,
+  102  Swollen_Left_“Gill_Channel” / _ Absent Present,
+  103  ˚_of_Swelling / _ Weak Moderate Strong Very_Strong,
+  104  Left_Ramp_Carina / _ Absent Present,
+  105  L.R._Carina_Type / Dull_Swelling Thick_Contusion Sharp_Thread Frill Square_Thread,
+  106  L.R._Carina_Strength / _ Weak 'Moderate_(~_Selenizone)' Strong Very_Strong,
+  107  ∆_LRC_strength / _ Fading_on_older_whorls Constant Becomes_stronger,
+  108  Serrated_LRC / _ Thread Serrated,
+  109  Serration_Strength / _ 'Weak_(undulated)' Small_Nodes Large_Nodes,
+  110  Serration_Pattern / _ Half_Node_Half_Thread Large_Nodes_with_short_intermitant_space '3:2_pattern_"locking"_suture',
+  111  Serration_Ontogeny / _ Constant Fades_on_Older_Whorls,
+  112  2nd_LRC_above_main / _ Absent Present,
+  113  2nd_LRC_below_main / _ Absent Present,
+  114  Tubes_in_2nd_LRC_Above / _ Absent Present,
+  115  Channeled_LRC / _ Absent Present,
+  116  Frilled_L.R._Carina / _ 'Peg_(simply_projects)' 'Frill_(covers_next_whorl)' 'Hyperextended_Frill_(covers_next_whorl_plus)',
+  117  Frill_Bordered_by_Lirae / _ Absent Present,
+  118  Crenulated_Frill / _ Absent Present,
+  119  Channeled_Frill / _ Absent Present,
+  120  Frill_Projection / _ Behind_Aperture Parallel_to_Aperture In_Front_of_Aperture,
+  121  'Hood-Like Frill' / _ Absent Present,
+  122  L.R._Carina_Tubes / _ Absent Present,
+  123  '∆LS: expansion of LR' / _ Absent 'Changes_->_More_Triangular_Form',
+  124  Columella_Thickness / Thinner_than_Rest_of_Shell No_different Thicker_than_Rest_of_Shell Much_Thicker 'P._tropidophora-like',
+  125  Extent_of_Thickness / _ Top_Only Columella_Only Columella_and_Base Base_Only,
+  126  Umbilical_Carina / _ Absent Present,
+  127  Umb._Carina_Type / _ Thickened_Base Channeled_Swelling Sharp_Thread Rounded_Thread Peg,
+  128  Umb._Carina_Prominence / _ Very_Weak Weak Strong Projecting Strongly_Projecting,
+  129  ∆_Umb._Carina / _ Constant Becomes_Weaker Becomes_Stronger,
+  130  Umb._Carina_Position / _ 'Beneath_Inner_Margin_(apx._120˚_from_sinus)' 'Middle_of_Whorl_(apx._90_from_sinus)' 'Beneath_Outer_Margin_(apx._60˚_from_sinus)',
+  131  'Columella / Base Angle' / _45˚_or_less greater_45˚ greater_60˚ greater_75˚ greater_90˚ greater_105˚ greater_120˚ greater_135˚ greater_150˚,
+  132  'Columella Shape (Front)' / _ Rounded Flattened 'Concave_(T._shumardi-like)',
+  133  Curved_Columella / _ Straight Curved,
+  134  ˚_Curvature / _ Slightly Strongly,
+  135  Inner_Margin_Columella_Shape / _ 'arch_@_half-circle' arch_@_obtuse_ellipse straight arch_@_acute,
+  136  Outer_Margin_Columella_Shape / _ Rounder_than_IM Same_as_IM Straighter_than_IM,
+  137  ∆Margin_Shape / _ None Rounder,
+  138  Columella_Attitude / ƒ_≤_0˚ ƒ_≈_0˚ ƒ_≈_15˚ ƒ_≈_30˚ ƒ_≈_45˚ ƒ_≈_60˚ ƒ_≈_75˚ ƒ_≈_90˚ ƒ_≈_105˚ ƒ_≈_120˚,
+  139  Columellar_fold / _ Absent Present,
+  140  Siphon / _ Absent Slight_Twist Strong_Siphon,
+  141  Columella_Lira / _ Absent Present,
+  142  Columella_Callous / _ Lira Callous,
+  143  Callus_Orientation / _ Projects_straight_back_into_umbilicus Folded_Back_into_Umbilicus,
+  144  Extent_of_Callus_Funicle / _ Fills_Umbilicus Partly_Fills_Umbilicus,
+  145  Callus_Ontogeny / _ No_Major_Change Increases_Prominence,
+  146  Columellal_Channel / _ Absent Present,
+  147  Parietal_Inductura / _ Absent Thin__Incomplete Thin Same_as_Shell Thicker_than_Shell,
+  148  Inductura_Projection / _ Parallel_to_Aperture Projects_in_Front_of_Aperture,
+  149  Projection_Type / _ Spread_In Concentrated_Strip Filling_umbilicus Mid_section_extended_forward_slightly,
+  150  Flaring_Aperture / _ Absent Weak Strong,
+  151  Reflected_Col_Lip / _ Absent Present,
+  152  Funicle / _ Absent Present,
+  153  Columella_Fills_Umbilicus / _ Absent Fills_Umbilicus Continguous_w._Previous_Whorl Folds_back_into_Umbilicus,
+  154  Whole_Ap._Inclined / _ Radial Tangential,
+  155  Whole_Aperture_InAn / _ InAn_≈_10˚ InAn_≈_20˚ InAn_≈_30˚ InAn_≈_40˚ InAn_≈_50˚ InAn_≈_60˚,
+  156  Inclined_Left_Half / _ Absent Present,
+  157  Left_InAn / InAn_≈_0˚ InAn_≈_10˚ InAn_≈_20˚ InAn_≈_30˚ InAn_≈_40˚ InAn_≈_50˚ InAn_≈_60˚,
+  158  Inclined_Right_Half / _ Absent Present,
+  159  Right_InAn / _ InAn_≈_10˚ InAn_≈_20˚ InAn_≈_30˚ InAn_≈_40˚ InAn_≈_50˚ InAn_≈_60˚,
+  160  Reverse_InAn / _ Absent Present,
+  161  Posterior_Projection / _ Absent Present,
+  162  Magnitude_of_Posterior_Projecti / _ 'ç_≈_-10˚' 'ç_≈_-20˚' 'ç_≈_-30˚' 'ç_≈_-40˚' 'ç_≈_-50˚',
+  163  Anterior_Projection / _ Absent Present,
+  164  Magnitude_of_Anterior_Projecti / _ 'ç_=_10˚' 'ç_=_20˚' 'ç_=_30˚' 'ç_=_40˚' 'ç_=_50˚' 'ç_=_60˚',
+  165  Adapical_Inclination_of_RR / _ Absent Present,
+  166  Degree_of_Inclination / _ InAn_≈_10˚ InAn_≈_20˚ InAn_≈_30˚ InAn_≈_40˚,
+  167  Basal_Shape / _ Straight Curved Crenulated,
+  168  ˚_Curved_Base / _ Weakly 'Moderate_(Indicating_a_curving_back,_probably_for_foot)' 'Strongly_(typically_reflect_one_type_of_siphon)',
+  169  Ont._Rotation_of_Aperture / _ Absent 'Counter-Clockwise_Rotation' Clockwise_Rotation,
+  170  Mag._of_Rotation / _ 'Small_(<30˚)' 'Great_(>30˚)',
+  171  Expansion / _ 'E_<_.05_(Extremely_Low)' '.05_<_E_<_.10_(Very_Low)' '.10_<_E_<_.15_(Low)' '.15_<_E_<_.20_(Moderate)' '.20_<_E_<_.25_(High)' 'E_>_.25_(Very_High)' 'E_>1.0_(Extremely_High)',
+  172  ∆_Expansion / _ Negative_∆E None Positive_∆E Positive_∆E_to_Negative_∆E,
+  173  Curvature / 'Open-Coiling' 'K_<_0.5_(Extremely_Low)' '0.5_<_K_<_0.55_(Very_Low)' '0.55_<_K_<_0.65_(Low)' '0.65_<_K_<_0.75_(Moderate)' '0.75_<_K_<_0.85_(High)' '0.85_<_K_<_0.95_(Very_High)' 'K_>_0.95_(Extremely_High))',
+  174  Continuous_∆K / _ Negative_∆K '∆K_=_0' Positive_∆K,
+  175  Basic_Curvature / _ Dextral Sinistral,
+  176  Punctuated_Change_in_Curvature / _ Absent Sudden_Reversal,
+  177  Anisostrophy / _ Isostrophic Anisostrophic,
+  178  “Translation” / 'High_(Negative)' 'Moderate_(Negative)' 'Low_(Negative)' Nearly__Planispiral Low Moderate High Very_High Extremely_High,
+  179  Early_∆T / _ Negative_∆T Isometric Positive_∆T,
+  180  Timing_Negative_∆T / _ Early_Only Continuous,
+  181  Timing_Positive_∆T / _ Early_Only Continuous,
+  182  Magnitude_Early_Positive_∆T / _ 'Small_(Lower_Suture)' 'Large_(Opens_Coiling)',
+  183  Late_∆T / _ '∆∂_<_0' '∆∂_=_0' '∆∂_>_0',
+  184  Style_of_Late_∆T / _ Gradual Punctuated,
+  185  Magnitude_Late_∆T / _ 'Slight_(Lowers_Suture)' 'Great_(Open_Coiling)',
+  186  Gerontic_Uncoiling / _ Absent Present,
+  187  Septation / _ Absent Septate Complete_Infilling,
+  188  Basal_Ornament / _ Absent Present,
+  189  Basal_Orn._Density / _ 1_per_20˚ 1_per_10˚ 1_per_5˚ 1_per_1˚,
+  190  BO_Width / _ @_0.5˚ @_1˚ @_2˚ @_4˚,
+  191  BO_Prominence / _ None Weak Moderate Strong,
+  192  Basal_Orn._Consistency / _ Uniform Stronger_Higher Stronger_Lower Highest_Strongest '2_:_1_:_2',
+  193  L.W._Ornament / _ Absent Present,
+  194  L.W._Orn._Density / _ 1_per_20˚ 1_per_10˚ 1_per_5˚ 1_per_1˚,
+  195  LRO_Width / _ @_0.5˚ @_1˚ @_2˚ @_4˚,
+  196  LRO_Relief / _ None Weak Moderate Strong,
+  197  L.W._Orn._Consistency / _ Uniform Stronger_Higher Stronger_Lower Highest_Strongest '2_:_1_:_2' Strongest_in_the_Middle,
+  198  LR_Orn._Pattern / _ Even_strength Every_other_one_stronger,
+  199  RR_Ornament / _ Absent Present On_Upper_Half_only,
+  200  RRO_Density / _ 1_per_20˚ 1_per_10˚ 1_per_5˚ 1_per_1˚,
+  201  RRO_Width / _ @_0.5˚ @_1˚ @_2˚ @_4˚,
+  202  RRO_Relief / _ None Weak Moderate Strong,
+  203  RRO_Gen._Pattern / _ Uniform Stronger_toward_Middle Stronger_at_Top,
+  204  RR_Orn._Spec._Pattern / _ Even_strength Every_other_one_stronger Paired_at_top,
+  205  Ont._∆_RR_Orn / _ Constant Fades_Gradually Fades_Abruptly,
+  206  Orn._Type / _ Local_Thickenings Changes_in_Aperture_Shape,
+  207  Transverse_Ornament / _ Radial Transverse,
+  208  Transverse_Ornament_Type / _ Thin_Threads Rugose_Undulations,
+  209  Selenizone_Ornament / _ Absent Present,
+  210  Carrier_Shell / _ No_scars Scars,
+  211  Size / 'Micro_(<10_mm3)' 'Small_(10_-_100_mm3)' 'Moderate_(100_-_1000_mm3)' 'Large_(1000_-_10000_mm3)' 'Huge_(>10000_mm3)',
+  212  Protoconch / _ Orthocone Coiled,
+  213  Protoconch_Coiling_Axis / _ Same_as_Teleoconch 90˚_from_Teleoconch,
+  214  Different_Protoconch_Translation / _ Planispiral 'Translation_like_Adults_(or_grades_into_adult_coiling)',
+  215  Bulbous_Cap / _ Absent Present,
+  216  Initial_Protoconch_Size / _ Small Large,
+  217  Dimorphic_Coiling / _ Absent Present,
+  218  Degree_of_Dimorphism / _ Weak Strong,
+  219  Dimorphic_Flaring_of_UC_spines / _ Consistent Strong_every_60˚_vs._Weak_every_2GLs,
+  220  Dimorphic_Ornament / _ Absent Present,
+  221  Operculum_Type / _ Accretionary Spiral,
+  222  Operculum_Construction / _ Solid Fibrous,
+  223  Accretion_away_from_the_Apertur / _ 'Very_Little_(Angle_>160˚)' 'Moderate_(Angle_Apx._90˚)' 'Strong_(Angle_Apx._45˚)',
+  224  Prong / _ Absent Present,
+  225  FKA / Early_Cambrian Middle_Cambrian Late_Cambrian Early_Tremadoc Late_Tremadoc Early_Arenig Middle_Arenig Late_Arenig Llanvirn Llandeilo Early_Caradoc Middle_Caradoc Late_Caradoc Ashgill Early_Llandovery Late_Llandovery Early_Wenlock Late_Wenlock Early_Ludlow Late_Ludlow Pridoli Lockhovian Pragian Emsian Eifelian Givetian_or_later,
+  226  FKA2 / PreFrasnian Frasnian Fammenian Tournaisian Visean,
+  227  LKA / Early_Cambrian Middle_Cambrian Late_Cambrian Early_Tremadoc Late_Tremadoc Early_Arenig Middle_Arenig Late_Arenig Llanvirn Llandeilo Early_Caradoc Middle_Caradoc Late_Caradoc Ashgill Early_Llandovery Late_Llandovery Early_Wenlock Late_Wenlock Early_Ludlow Late_Ludlow Pridoli Lockhovian Pragian Emsian Eifelian Givetian,
+  228  Taxon / Pelagielloid Helcionelloid Tergomyan Onychochiliid Hypseloconoid Bellerophontoid Pleurotomarioid Murchisonioid Euomphaloid Macluritoid Subulitioid Loxonematoid Trochoid Pseudophoroid Trochonematoid Microdomatoid Craspedostomatoid Anomphalaloid,
+  229  Family / Eotomariidae Gosseletinidae Lophospiridae Luciellidae Murchisonidae Phanerotrematidae Plethospiridae Raphistomatidae Sinuopeidae Oriostomatidae Porcellidae Portlockidae Trochonematidae Holopeidae Loxonematidae Meekospiridae Microdomatidae Pseudozygopleuridae Subulitidae,
+  230  Genus,  231  R,
+  232  Genus
+		;
+
+MATRIX
+[                                                      10        20        30        40        50        60        70        80        90        100       110       120       130       140       150       160       170       180       190       200       210       220       230]
+[                                                      .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .  ]
+
+Turritoma_ornate_acrea                        224423323311-111-2331111-112216222311-111------111---1-112--211(23)21-11522216(56)16521311----------1--1-121-1------------------1221----411-2211111----131-12111-1-1-11-1-1-1-1-126211273-213-11123221232211232211111-111??-??1---????50574-??
+Hormotoma_?simulatrix                         224423323311-111-2221111-112216212211-111------111---1-112--211211-11522216526621311----------1--1-12211------------------1221----411-2211111----131-12111-1-1-11-1-1-1-1-126211273-213-1111----1-----1---------112??-??1---????40574-??
+Turritoma_acrea                               234513323311-111-2331111-11221(67)222311-111------111---1-112--211311-1152421832661--11----------1--1-141-1------------------1221----311-3211111----13??12111-1-1-11-1-1-1-1-126211273-213-1111----1-----1---------112??-??1---????50574-??
+Turritoma_cf._acrea                           224423323311-111-2221111-112216212211-11212-111211---1-112--321211-11532225526621311----------1--1-12211------------------1221----411-2211111----131-12111-1-1-11-1-1-1-1-126211273-213-11?1----1-----1---------111??-??1---????50574-??
+Turritoma_?anna                               233533423311-111-2221111-112215212211-111------111---1-111--211211-11622226(56)1541--11----------1--1-121-1------------------1221----311-3211111----131-12111-1-1-11-1-1-1-1-126211282---2--111----1-----1---------111??-??1---????50574-??
+Eroicaspira_artemesia                         234633413411-111-2331111-112216212211-111------211---1-112--211211-11632216516622311----------1--1-11221------------------1221----311-3211121----131-12111-1-1-11-1-1-1-1-126211283-213-1111----1-----1---------112??-??1---????40574-??
+Hormotoma_confusa                             234633323311-111-2221111-112216212211-111------111---1-112--211211-1162221652(56)621-11----------1--1-12211------------------1221----411-2211111----131-12111-1-1-11-1-1-1-1-126211273-213-1111----1-----1---------112??-??1---????50574-??
+Straparollina_?dubia                          224422223311-111-2221111-112214212211-11212-111311---1-112--321212111534226626621311----------1--1-14211------------------1221----411-2211111----131-12111-1-1-11-1-1-1-1-126211273-213-1111----1-----1---------112??-??1---????40574-??
+Ectomaria_adelina                             22(45)(45)23323311-111-2221111-112217222511-111------111---1-112--211211-1172423561531--121111111---1--1-141-21121---11-1------11231----311-3211111----131-12111-1-1-11-1-1-1-1-126211272---2--111----1-----1---------111??-??1---????50574-??
+Plethospira_“cassina”                         22(45)(45)23323311-111-2221111-112215222311-111------111---1-112--211211-1162423661541--121111111---1--1-141-21121---11-1------11231----411-3211111----131-12111-1-1-11-1-1-1-1-126211272---2--111----1-----1---------111??-??1---????50574-??
+Eroicaspira_augustina                         234733413411-111-2221111-112215212211-111------211---1-112--211212111732216616(34)21311----------1--1-12211------------------1221----211-3211121----131-12111-1-1-11-1-1-1-1-126211272---2--111----1-----1---------113??-??1---????70974-??
+Eroicaspira_zelleri                           233633413411-111-2221111-112216212211-111------211---1-112--311211-11632226617622311----------1--2111221------------------1221----211-3211121----131-1?111-1-1-11-1-1-1-1-126211283-213-1111----1-----1---------112??-??1---????50574-??
+Plethospira_cannonensis                       223322223311-111-2221111-112215212211-111------111---1-112--211211-11722226617521311----------1--1-12211------------------1221----211-2211121----131-11121-1-1-11-1-1-2-1-326211273-213-1111----1-----1---------112??-??1---????50576-??
+Plethospira_cassina                           223322223311-111-2221111-112215212211-111------111---1-112--211211-1162222661651--11----------1--1-121-1------------------1221----211-2211121----131-1112221-1-11-1-1-2-1-326211273-213-1111----1-----1---------113??-??1---????60676-??
+Plethospira_ventricosa                        223322223311-111-2221111-112215212211-111------111---1-112--21121?-1172221661651--11----------1--1-121-1------------------1221----211-2211121----131-1112221-1-11-1-1-2-1-326211263-213-11122221222211222211111-113??-??1---????60676-??
+Straparollina_grandis                         223322223311-111-2221111-112214212211-11112--11311---1-112--32121211183422(34)61741--11----------1--1-121-21121---11-1------11221----411-2211111----131-1111111-1-12-221-1-1-125211263-213-1111----1-----1---------112??-??1---????50562-??
+Straparollina_turgida                         224421123311-111-2441111-112214212211-11212-111311---1-112--321211-11532237635623311----------1--1-12231------------------1221----411-2211111----141-1211211-1-11-1-1-1-1-426211273-213-1111----1-----1---------112??-??1---????50576-??
+Eroicaspira_sp._Kobayashi_1959                23(23)733413411-111-2221111-112215212211-111------211---1-1----211212111732216516(34)21311----------1--1-12211------------------1221----211-3211121----121-12111-1-1-11-1-1-1-1-126211272---2--1?1----1-----1---------113??-??1---????70774-??
+Plethospira?_Coolibah_Fm.                     223322223311-111-2221111-112213212311-111------211---1-142--11121211173512661641--11----------1--21121-1-------------------231----211-2211121----131-1112211-1-11-1-1-2-1-326211263-213-1111----1-----1---------112?????1???????707?????
+Ectomaria_callahanensis                       223323323311-111-2221111-112217222511-111------111---1-112--211211-1172513561641--122421111---1--1-151-22121---11-1------11231----311-3211111----131-12111-1-1-11-1-1-1-1-2352112712--2-1111----1-----1---------112??-??1---????90974-??
+Straparollina_pelagica                        221121123311-111-2221111-1122131-2------212-11-311---1-142--3-1212111A3423071751--11----------1--1-121-21121---11-1------112223311411-2211111----131-1111211-1-11-221-1-1-125211263-213-1111----1-----1---------112??-??1---????809CD-??
+Ectomaria_prisca                              224423323311-111-2221111-112217222511-111------111---1-112--211211-1172423461541--11----------1--1-141-22221---11-1------11231----311-3211111----131-12111-1-1-11-1-1-1-1-126211182---2--111----1-----1---------111??-??1---????80C74-??
+Hormotoma_gracilis                            233733413411-111-2221111-112215212211-111------111---1-111--211211-11722234(56)1(56)41--11----------1--1-121-1------------------1221----311-3211111----131-12111-1-1-11-1-1-1-1-126211282---2--111----1-----1---------111??-??1---????90D74-??
+Hormotoma_salteri                             233733413411-111-2221111-112215212211-112111111111---1-111--211211-1173423(45)(56)17(34)1--11----------1--21121-1------------------1221----311-3211111----131-12111-1-1-11-1-1-1-1-126211282---2--111----1-----1---------111??-??1---????90D74-??
+Ectomaria_pagoda                              22(45)(45)23323311-111-2221111-112217222511-111------111---1-112--211211-1172423461541--121211211---1--1-141-22221---11-1------11231----311-3211111----131-12111-1-1-11-1-1-1-1-126211272---2--111----1-----1---------111??-??1---????A0A74-??
+Omospira_laticincta                           222233321111-111-2221111-112215212211-111------111---1-112--211211-1192223261741--11----------1--11121-1------------------11-1----311-2211111----131-11111-1-1-11-1-1-1-1-226211273-213-1111----1-----1---------113??-??1---????A0A67-??
+Omospira_alexandra                            233333433211-111-2221111-112215213211-111------111---1-112--211211-11A22232618(23)1--11----------1--1-121-1------------------1231----311-2211111----131-11111-1-1-11-1-1-1-1-226211273-213-1111----1-----1---------113??-??1---????A0B67-??
+Eroicaspira_bellicincta                       234633413411-111-2221111-112215212211-111------111---1-112--211211-1182222451(56)(34)1--11----------1--1-121-1------------------1221----311-3211121----131-12111-1-1-11-1-1-1-1-126211273-213-1111----1-----1---------113??-??1---????A0C74-??
+Omospira_trentonensis                         22(45)(45)33423311-111-2221111-112215212211-111------111---1-112--211211-1192222441(56)(34)1--11----------1--1-121-1------------------1221----311-3211111----131-11111-1-1-11-1-1-1-1-226211273-213-1111----1-----1---------112??-??1---????B0C74-??
+Coelocaulus_insignis                          233513413411-111-2331111-112215212211-111------111---1-111--211211-1153221652661--11----------1--1-111-1212---------------1221----311-3312111----131-12111-1-1-11-1-1-1-1-126211272---2--111----1-----1---------1112?1?21---????C0D74-??
+Ectomaria_pagoda_AL                           222223323311-111-2221111-112217222511-111------111---1-112--211211-1152422541541--123411211---1--1-141-22221---11-1------11231----311-1211111----141-12111-1-1-11-1-1-1-1-116211272---2--111----1-----1---------111??-??1---????D0D74-??
+Ectomaria_aff._E._prisca_1                    224423323311-111-2221111-112217222511-111------111---1-112--211211-1172422552551--11----------1--1-141-22321---11-1------112323311311-3211111----131-12111-1-1-11-1-1-1-1-116211272---2--111----1-----1---------111??-??1---????D0D74-??
+Ectomaria_laticarinata                        223323323311-111-2221111-112217222511-111------111---1-112--211211-1172513561631--11----------1--1-151-22121---11-1------11231----311-3211111----131-12111-1-1-11-1-1-1-1-2352112612--311111----1-----1---------111??-??1---????D0D74-??
+Ectomaria_nieszkowskii                        224423323311-111-2221111-112217222511-111------111---1-112--211211-1172422551531--11----------1--1-141-22221---11-1------11231----311-3211111----121-12111-1-1-11-1-1-1-1-126211272---2--111----1-----1---------112??-??1---????D0D74-??
+Loxonema_murryana                             233433421111-111-2221111-1111--------------------1-----112-------1-1192223371751--11----------2111-121-1------------------11-1----311-2211111----141-11111-1-1-11-1-1-1-1-226211273-213-1111----1-----1---------112??-??1---????A0CBE-??
+Straparollina_erigione                        221122223311-111-2331111-1111--------------------1-----112-------1-??83223071751--11----------1--1-121-1------------------12423311411-1111111----111-1111211-1-11-121-1-1-125211252---1--111----1-----1---------11???-??1---????B0BCD-??
+Straparollina_Zeehan_sp.                      220022221111-111-2331111-1111--------------------1-----112-------1-1183223261751--123331211---1--1-111-22211-------------11231----421-2111111----131-1111241-1-11-1-1-1-1-226211263-213-1111----1-----1---------112?????1???????C0CCD???
+Spiroceus_excavata                            222223321111-111-2221111-1111--------------------1-----112--211211-1192223351841--11----------1--21121-1------------------11-1----211-2211111----11--11131-1-1-11-1-1-1-1-116211273-213-11123111231111211111111-112??-??1---????C0CBE-??
+Spiroecus_girvanensis                         222223321111-111-2221111-112212112------212211-211---1-112--211211-1183513341861--1223121121111--21141-1-----------------111-1----211-2211111----11--11131-1-1-11-1-1-1-1-226211272---2--1123111231111211111111-112??-??1---????C0CBE-??
+Hormotoma_Gordon_Ls._sp.                      225533423311-111-2331111-112214222211-111------111---1-112--211211-1173221641541--11----------22121121-22321---11-1------11221----311-2211111----131-12111-1-1-11-1-1-1-1-226211273-21311111----1-----1---------113?????1???????C0C74???
+Rhabdostropha_Alaska                          221133321111-111-2331111-1111--------------------1-----112-------1-1192223361951--11----------1--21121-1------------------11-1----211-2111111----1???11131-1-1-11-1-1-1-1-126211272---2--111----1-----211111111-112??-??1---????D0DBE-??
+Rhabdostropha_primitiva                       222233323311-111-2221111-1111--------------------1-----112-------1-1192223452551--11----------1--21121-1------------------11-1----311-2211111----11--11131-1-1-11-1-1-1-1-126211272---2--1122111221111211111111-112??-??1---????D0DBE-??
+Daidia_aff._D._cerithioides                   1----------1-111-2441111-1122121--------2222111111---1-112--2-121211183523281931--123311111---1--21121-22121---11-1------1124?????311-1111111----11--1113211-1-11-1-1-1-1-227211272---2--111----1-----1---------112??-??1---????D0DFG-??
+;
+END;
+
+
+BEGIN SETS;
+	CHARSET  Bookkeeping  =  225 227-230;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MAXSTEPS ;
+	TYPESET  Standard  = unord: 1-2 5 8-30 32-42 44-74 77 80-130 132-137 139-154 156-161 163 165-232, ord: 3-4 6-7 31 43 75-76 78-79 131 138 155 162 164;
+	TYPESET  UNTITLED  = unord: 1-2 5 8-12 14-30 32-34 36-42 44-50 52-69 71 73-74 77 80-84 86-100 102-127 129-130 132-137 139-154 156 158 160-161 163 165 167-170 172 174-177 179-210 212-217 219-224 226-232, ord: 3-4 6-7 13 31 35 43 51 70 72 75-76 78-79 85 101 128 131 138 155 157 159 162 164 166 171 173 178 211 218 225;
+	TYPESET  wagner_types  = unord: 1-2 5 8-12 14-30 32-34 36-42 44-50 52-69 71 73-74 77 80-84 86-100 102-127 129-130 132-135 137 139-154 156 158 160-161 163 165 167-170 172 174-177 179-210 212-217 219-224 226-232, ord: 3-4 6-7 13 31 35 43 51 70 72 75-76 78-79 85 101 128 131 136 138 155 157 159 162 164 166 171 173 178 211 218 225;
+	TYPESET * UNTITLED  = unord: 1-2 5-8 11-18 21-69 71-74 77 80-154 156-224 226-232, ord: 3-4 9-10 19-20 70 75-76 78-79 155, strat: 225;
+	WTSET  CambrianWt  = 100: 1-2 5 8-11 16-17 19 21 23 26 29 32-33 35-36 41-43 46 48 50 52-53 57-58 61-66 71 73 80-82 84-87 98 102-106 115-120 122-130 135 140-141 146-148 150-156 158-161 163-164 167 169-170 172 174 177 179 187 189-190 192 199-201 204 206 209 211-212 214 216 230 232, 10: 3-4 75, 25: 6-7 131, 1: 12-15 18 20 22 24-25 27-28 30 34 37-40 44-45 47 49 51 54-56 59-60 67-70 74 77 83 88-97 99-100 107-114 121 132-134 137 139 142-145 149 165-166 168 171 173 175-176 178 180-186 188 191 193-198 202-203 205 207-208 210 213 215 217-224 226-227 229 231, 33: 31 162, 50: 72 101 136 157, 9: 76 78-79, 14: 138, 0: 225 228;
+	WTSET  Step  = 1: 1-231, 100: 232;
+	WTSET  Balance  = 100: 1-2 5 8-11 15-17 19 21 23 26 29 32-33 35-36 38 41-44 46-48 50 52-53 57-58 61-67 71 73-74 77 80-82 84-88 98 100 102-106 115-130 135 140-142 146-148 150-156 158-161 163-164 167 169-170 172 174 177 179 187 189-190 192 199-201 204 206-207 209 211-212 214 216 230 232, 10: 3-4 75, 25: 6-7 131, 1: 12-14 18 20 22 24-25 27-28 30 34 37 39-40 45 49 51 54-56 59-60 68-70 83 89-97 99 107-114 132-134 137 139 143-145 149 165-166 168 175-176 180-186 188 191 193-198 202-203 205 208 210 213 215 217-224 226 229 231, 33: 31 162, 50: 72 101 136 157, 9: 76 78-79, 14: 138 178, 20: 171, 17: 173, 0: 225 227-228;
+	WTSET  UNTITLED  = 100: 1-2 5 8 11-13 15-21 23-26 29-30 32-33 35-36 38 41-42 44 46-48 50 52-54 57-69 71 73-74 77 80-84 86-91 98-100 102-106 108 112 115-127 129-130 132-134 137 140-144 146-148 150-154 156 158 160-161 163 165-170 172 174 177 179 182 187 189-190 192 199-201 204-207 209-210 212 214 216-218 232, 8: 3-4 70, 25: 6-7 155 157 162 164 211, 50: 9-10 51 85 128 135-136 159, 1: 14 22 27-28 34 37 39-40 45 49 55-56 92-97 107 109-111 113-114 139 145 149 175-176 180-181 183-186 188 191 193-198 202-203 208 213 215 219-224 226 231, 20: 31 43 171, 17: 72 101 131 173, 6: 75-76, 7: 78, 9: 79, 14: 138 178, 0: 225 227-230;
+	WTSET  UNTITLED  = 100: 1-2 5 8 11-13 15-21 23-26 29-30 32-33 35-36 38 41-42 44 46-48 50 52-54 57-69 71 73-74 77 80-84 86-91 98-100 102-106 108 112 115-127 129-130 132-134 137 140-144 146-148 150-154 156 158 160-161 163 165-170 172 174 177 179 182 187 189-190 192 199-201 204-207 209-210 212 214 216-218 232, 8: 3-4 70, 25: 6-7 155 157 162 164 211, 50: 9-10 51 85 128 135-136 159, 1: 14 22 27-28 34 37 39-40 45 49 55-56 92-97 107 109-111 113-114 139 145 149 175-176 180-181 183-186 188 191 193-198 202-203 208 213 215 219-224 226 231, 20: 31 43 171, 17: 72 101 131 173, 6: 75-76, 7: 78, 9: 79, 14: 138 178, 0: 225 227-230;
+	WTSET  Balanced  = 100: 1-2 5 8 11-13 15-21 23-26 29-30 32-33 35-36 38 41-42 44 46-48 50 52-54 57-69 71 73-74 77 80-84 86-91 98-100 102-106 108 112 115-127 129-130 132-134 137 140-144 146-148 150-154 156 158 160-161 163 165-170 172 174 177 179 182 187 189-190 192 199-201 204-207 209-210 212 214 216-218 232, 8: 3-4 70, 25: 6-7 155 157 162 164 211, 50: 9-10 51 85 128 135-136 159, 1: 14 22 27-28 34 37 39-40 45 49 55-56 92-97 107 109-111 113-114 139 145 149 175-176 180-181 183-186 188 191 193-198 202-203 208 213 215 219-224 226 231, 20: 31 43 171, 17: 72 101 131 173, 6: 75-76, 7: 78, 9: 79, 14: 138 178, 0: 225 227-230;
+	WTSET  Balanced?  = 100: 1-2 5 8 11-30 32-42 44-50 52-55 57-69 71 73-74 77 80-84 86-100 102-127 129-130 132-134 137 140-144 146-154 156 158 160-161 163 165-170 172 174-177 179-210 212-224 232, 8: 3-4 70, 25: 6-7 155 157 162 164 211, 50: 9-10 51 85 128 135-136 159, 20: 31 43 171, 1: 56 139 145, 17: 72 101 131 173, 6: 75-76, 7: 78, 9: 79, 14: 138 178, 0: 225-231;
+	WTSET * UNTITLED  = 1.00: 1-2 5 8 11-18 21-69 71-74 77 80-100 102-154 156-224 232, 0.33: 3-4 6-7 19-20, 0.50: 9-10 101 155, 0.20: 70 75-76, 0.25: 78-79, 0.00: 225-231;
+	EXSET  CambUninfor  =  11 17 21 36 46 52-53 64-65 73 85-87 105-106 115-120 122-123 125 129-130 136 152 156-159 164 170 172 189-190 192 200-201 204 206 209 212 214 216 230;
+	EXSET  UNTITLED  =  230;
+	EXSET  UNTITLED  =  230;
+	EXSET * UNTITLED  =  226-232;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Turritoma_ornate_acrea,
+		2	Hormotoma_?simulatrix,
+		3	Turritoma_acrea,
+		4	Turritoma_cf._acrea,
+		5	Turritoma_?anna,
+		6	Eroicaspira_artemesia,
+		7	Hormotoma_confusa,
+		8	Straparollina_?dubia,
+		9	Ectomaria_adelina,
+		10	Plethospira_“cassina”,
+		11	Eroicaspira_augustina,
+		12	Eroicaspira_zelleri,
+		13	Plethospira_cannonensis,
+		14	Plethospira_cassina,
+		15	Plethospira_ventricosa,
+		16	Straparollina_grandis,
+		17	Straparollina_turgida,
+		18	Eroicaspira_sp._Kobayashi_1959,
+		19	Plethospira?_Coolibah_Fm.,
+		20	Ectomaria_callahanensis,
+		21	Straparollina_pelagica,
+		22	Ectomaria_prisca,
+		23	Hormotoma_gracilis,
+		24	Hormotoma_salteri,
+		25	Ectomaria_pagoda,
+		26	Omospira_laticincta,
+		27	Omospira_alexandra,
+		28	Eroicaspira_bellicincta,
+		29	Omospira_trentonensis,
+		30	Coelocaulus_insignis,
+		31	Ectomaria_pagoda_AL,
+		32	Ectomaria_aff._E._prisca_1,
+		33	Ectomaria_laticarinata,
+		34	Ectomaria_nieszkowskii,
+		35	Molluscan,
+		36	Helcionella_subrugosa,
+		37	Latouchella_merino,
+		38	Pelagiella_subangulata,
+		39	Costipelagiella_zazcorkai,
+		40	Oelandia_rugosa,
+		41	Coreospira_rugosa,
+		42	Sinuella_minuata,
+		43	Chippewaella_patellitheca,
+		44	Strepsodiscus_major,
+		45	Chalarostrepsis_praecursor,
+		46	Eobucania_mexicana,
+		47	Strepsodiscus_paucivoluta,
+		48	Modestospira_poulseni,
+		49	Peelerophon_oehlerti,
+		50	Kiringella_pyramidalis,
+		51	Cyrtolites_sp.,
+		52	Macluritella?_walcotti,
+		53	Euomphalopsis_involuta,
+		54	'"Maclurites" thomsoni',
+		55	Kobayashiella_circe,
+		56	Scaevogyra_swezeyi,
+		57	Matherella_saratogensis,
+		58	Matherellina_walcotti,
+		59	Hypseloconus_elongatus,
+		60	Knightoconus_antarcticus,
+		61	Sinuites_sowerbyi,
+		62	Cloudia_buttsi,
+		63	Owenella_antiquata,
+		64	Schizopea_normalis,
+		65	Schizopea_subrotunda,
+		66	Schizopea_typica,
+		67	Sinuopea_sweeti,
+		68	Taeniospira_emminencis,
+		69	Sinuopea_basiplanata,
+		70	Gasconadia_putilla,
+		71	Jarlopsis_conicus,
+		72	Ophileta_supraplana,
+		73	Euconia_umbilicata,
+		74	Macluritella_uniangulata,
+		75	Taeniospira_?st._clair,
+		76	Ophileta_complanata,
+		77	Ceratopea_canadensis,
+		78	Lecanospira_compacta,
+		79	Euconia_etna,
+		80	Macluritella_stantoni,
+		81	Bridgeina_?disjuncta,
+		82	Bridgeites_planodorsalis,
+		83	Bridgeites_supraconvexa,
+		84	Ceratopea_?laurentia,
+		85	Ceratopea_pygmaea,
+		86	'Orospira bigranosa*',
+		87	Teiichispira_odenvillensis,
+		88	Macluritella_?ponderosus,
+		89	Lecanospira_?nereine,
+		90	Lecanospira_?lecanospiroides,
+		91	Palliseria_longwelli,
+		92	Palliseria_crenulata,
+		93	Teiichispira_auricula,
+		94	Malayaspira_cannigensis,
+		95	Ceratopea_lemoni,
+		96	Climacoraphistoma_vaginati,
+		97	Lesueurilla_prima,
+		98	Ceratopea_unguis,
+		99	Lophonema_peccatonica,
+		100	Lophonema_taneyensis,
+		101	'Teiichispira kobayashi*',
+		102	Palliseria_robusta,
+		103	Maclurites_magna,
+		104	Malayaspira_rugosa,
+		105	Asgaradaspira_measuresae,
+		106	Lytospira_angelini,
+		107	Asgardaspira_yochelsoni,
+		108	Malayaspira_speciosa,
+		109	Mesteronema_bipatellera,
+		110	Mesteronema_aff._M._marginalis,
+		111	Scalites_giganteus,
+		112	Climacoraphistoma_damesi,
+		113	Eccyliopterus_regularis,
+		114	Lesueurilla_infundibulum,
+		115	Eccyliopterus_louderbacki,
+		116	Eccyliopterus_declivis,
+		117	Pararaphistoma_qualteriatum,
+		118	Pararaphistoma_schmidti,
+		119	Scalites_kanesi,
+		120	Boucotspira_fimbricata,
+		121	Walcottoma_frydai,
+		122	Asgardaspira_gerulus,
+		123	Asgardaspira_?norvegica,
+		124	Eccyliopterus_alatus,
+		125	Raphistoma_gubanovii,
+		126	Helicotoma_medfraensis,
+		127	'Raphistoma striatum*',
+		128	'Scalites angulatus*',
+		129	Lophospira_?debagensis_1,
+		130	Lophospira_?debagensis_2,
+		131	Maclurina_sedgwicki,
+		132	Malayaspira_hintzei,
+		133	Ecculiomphalus_harrisae,
+		134	Ecculiomphalus_bucklandi,
+		135	Pachystrophia_devexa,
+		136	Raphistomina_lapicida,
+		137	Eccyliopterus_undulans,
+		138	Maclurina_bigsbyi,
+		139	Maclurina_logani,
+		140	Lytospira_subrotundus,
+		141	Eccyliopterus_beloitensis,
+		142	Holopea_rotunda,
+		143	Pachystrophia_contiguous,
+		144	Raphistomina_aperta,
+		145	Raphistomina_fissurata,
+		146	Scalites_peracutum,
+		147	Helicotoma_planulata,
+		148	Helicotoma_tennesseensis,
+		149	Ophiletina_sublaxa,
+		150	Oriostoma_bromidensis,
+		151	Eccyliopterus_?princeps,
+		152	Maclurina_aff._M._manitobensis,
+		153	Holopea_ampla,
+		154	Pachystrophia_spiralis,
+		155	Holopea_appressa,
+		156	Holopea_pyrene,
+		157	Holopea_symmetrica,
+		158	Ophiletina_angularis,
+		159	Euomphalopterus_?ordovicia,
+		160	Euomphalopterus_aff._E._ord.,
+		161	Euomphalopterus_carinifera,
+		162	Palaeomphalus_gradata?,
+		163	'Asgardaspira (Ophiletina cf. O. sublaxa)',
+		164	Mesteronema_scotica,
+		165	Eccyliopterus_owenanus,
+		166	Raphistomina_rugata,
+		167	Maclurina_aff._M._manitobensis,
+		168	Scalites_tellerensis,
+		169	Pachystrophia_esthetica,
+		170	Trochomphalus_borkholmensis,
+		171	Helicotoma_blodgetti,
+		172	Helicotoma_robinsoni,
+		173	Helicotoma_brocki,
+		174	Helicotoma_Girvan_sp.,
+		175	Straporillina_cf._S._circe,
+		176	Euomphalopterus_subcarinata,
+		177	Pachystrophia_gotlandicus,
+		178	Pachystrophia_triquetrus,
+		179	Euomphalopterus_alatus,
+		180	Euomphalopterus_frenata,
+		181	Euomphalopterus_praetexta,
+		182	Euomphalopterus_togata,
+		183	Euomphalopterus_undulans,
+		184	Poleumita_discors,
+		185	Discordichilus_kolmodini,
+		186	Poleumita_alata,
+		187	Siluriphorus_gotlandicus,
+		188	Streptotrochus_incisus,
+		189	Streptotrochus_aff._S._incisus,
+		190	Poleumita_rugosa,
+		191	Discordichilus_dali,
+		192	Pseudophourus_stuxbergi,
+		193	Streptotrochus?_?lamellosa,
+		194	Streptotrochus_lundgreni,
+		195	Streptotrochus?_visbeyensis,
+		196	Pachystrophia_tuba,
+		197	Discordichilus_mollis,
+		198	'Pseudophorus profundus*',
+		199	Siluriphorus_undulans,
+		200	Discordichilus_conus,
+		201	Hystriacoceras_astraciformis,
+		202	Poleumita_walmstedti,
+		203	Pachystrophia_subulitioides,
+		204	Centrifugus_planorbis,
+		205	Pseudotectus?_comes,
+		206	Straparollus_paveyi,
+		207	Poleumita_granulosa,
+		208	Kitikamispira_octavia,
+		209	Spinicharybdis_wilsoni,
+		210	Straparollus_sodalis,
+		211	Scalaeotrochus_lindströmi,
+		212	Pseudotectus_comes,
+		213	Pagodea_concomitans,
+		214	Grantlandispira_christei,
+		215	Pycnomphalus_acutus,
+		216	Pycnomphalus_obesus,
+		217	Turbocheilus_immaturum,
+		218	Antirotella_“michiganensis”,
+		219	Antirotella_helicinaeformis,
+		220	Anomphalus_pajelli,
+		221	“Acanthrotopis”_“meglacanthe”,
+		222	Kitikamispira_speciosum,
+		223	Kitikamispira_ornata,
+		224	Kitikamispira_armatus,
+		225	Kitikamispira_ukulundensis,
+		226	Kitikamispira_kanekoi,
+		227	Decorospria_squamiferum,
+		228	Devononerita_brevis,
+		229	Mastigospira_ingens,
+		230	Straparollus?_filifora,
+		231	Straparollus_leptoni,
+		232	Straparollus_cyclostomus,
+		233	Straparollus_Gilmour_Ls._sp.,
+		234	Philoxene_hypotropis,
+		235	Philoxene_cf._P._laevis,
+		236	Philoxene_laevis,
+		237	Philoxene_serpens,
+		238	Philoxene_multispira,
+		239	Straparollus_cottrelli,
+		240	Euomphalus_incrustatus,
+		241	Liomphalus_northi,
+		242	Omphalocirrus_goldfussi,
+		243	Omphalocirrus_spinosa,
+		244	Hypomphalocirrus_manitobensis,
+		245	Hypomphalocirrus_rugosus,
+		246	Taemasotrochus_Brogan‘s_Creek,
+		247	Taemasotrochus_giganticus,
+		248	Sylvestria_sötenichensis,
+		249	Sylvestria_leonhardi,
+		250	Pseudomphalotrochus_hoffmanni,
+		251	Pseudomphalotrochus_linsleyi,
+		252	Pseudomphalotrochus_philosophus,
+		253	Labrocuspis_kobayashii,
+		254	Pseudomphalotrochu?s_clarkii,
+		255	Bassotrochus_?angulatus,
+		256	Labrocuspis_nodosa,
+		257	Orecopia_applanatum,
+		258	Orecopia_kirchholmiensis,
+		259	Orecopia_cotei,
+		260	Orecopia_mccoyi,
+		261	Orecopia_aff._O._murrayi,
+		262	Pseudomphalotrochus_bonapartens,
+		263	Odontomaria_elephantina,
+		264	Burdikinia_burdekinensis,
+		265	Burdikinia_axionides,
+		266	Amphelissa_carinatum,
+		267	Amphelissa_isisensis,
+		268	Amphelissa_isisensis.2,
+		269	Brokenriveria_pharlapensis,
+		270	Philoxene_Boulonnais_sp.,
+		271	Westwooditrochus_westwoodensis,
+		272	Roemeriella_alticonicus,
+		273	Microdoma_Virgin_Hill_sp.,
+		274	Straparollus_Virgin_Hill_sp.,
+		275	Euomphalus_Smithland_sp.,
+		276	Clathrospira_“laflinensis”,
+		277	Clathrospira_cf._C._glindmeyeri,
+		278	Semizona_glindmeyeri,
+		279	Clathrospira_euconica,
+		280	Mourlonia_maritima,
+		281	Clathrospira_?trochiformis,
+		282	Ptychonema_desideratum,
+		283	Ptychonema_marocanum,
+		284	Mourlonia_hotzi,
+		285	Clathrospira_elliptica,
+		286	Clathrospira_inflata,
+		287	Cataschisma_convexa,
+		288	Clathrospira_conica,
+		289	Clathrospira_subconica,
+		290	Clathrospira_amouguerana,
+		291	Eotomaria_canalifera,
+		292	Eotomaria_dryope,
+		293	Eotomaria_labrosa,
+		294	Eotomaria_larvata,
+		295	Eotomaria_supracingulata,
+		296	Liospira_decipens,
+		297	Liospira_subconcava,
+		298	Liospira_progne,
+		299	Paraliospira_mundula,
+		300	Liospira_angustata,
+		301	Brachytomaria_kiari,
+		302	Paraliospira_angulatum,
+		303	Eotomaria_elevata,
+		304	Liospira_micula,
+		305	Eotomaria_notablis,
+		306	Palaeoschisma?_globosa,
+		307	Brachytomaria_baltica,
+		308	Brachytomaria_kindlei,
+		309	Semizona_bella,
+		310	Paraliospira_aff._P._angulatum,
+		311	Paraliospira_rugata,
+		312	Brachytomaria_semele,
+		313	Brachytomaria_striata,
+		314	Clathrospira_thraivensis,
+		315	Eotomaria_rupestris,
+		316	Pseudocryptaenia_majewski,
+		317	Cataschisma_exquisita,
+		318	Globispira_prima,
+		319	Pleurorima_wisbeyensis,
+		320	Eocryptaulina_filitexta,
+		321	Conotoma_claustrata,
+		322	Conotoma_?bispiralis,
+		323	Crenilunula_limata,
+		324	Crenilunula_hallei,
+		325	Liospira_marklandensis,
+		326	Phanerotrema_jugosum,
+		327	Ulrichospira_similis,
+		328	Brachytomaria_papillosa,
+		329	Brachytomaria_aff._B._furcata,
+		330	Phanerotrema_lloydi,
+		331	Brachytomaria_“laquetta”,
+		332	Phanerotrema_lindstroemi,
+		333	Phanerotrema_dolia,
+		334	Phanerotrema_calliaudi,
+		335	Phanerotrema_australis,
+		336	Ulrichospira_othemensis,
+		337	Phanerotrema_vitellia,
+		338	Phanerotrema_occidens,
+		339	Conotoma_glandifromis,
+		340	Oriostoma_dispar,
+		341	Stenoloron_aequilatera,
+		342	Prosolarium_procerum,
+		343	Epiptychia_potens,
+		344	Stenoloron_shelvensis,
+		345	Eocryptaulina_helcinia,
+		346	Stenoloron_biformis,
+		347	Stenoloron_angulifer,
+		348	Stenoloron_voluta,
+		349	Stenoloron_bohemica,
+		350	Stenoloron_“pollens”,
+		351	Stenoloron_subaequilatera,
+		352	Stenoloron_pollens,
+		353	Stenoloron_minor,
+		354	Bembexia_spiny_sp.,
+		355	Bembexia_sulcomarginata,
+		356	Genuspira_nodosa,
+		357	Pleurorima_pragensis,
+		358	Pleurorima_migrans,
+		359	Pleurorima_moydartensis,
+		360	Pleurodima_aratula,
+		361	Leptozone_esthetica,
+		362	Ptycomphalina_vesiculosa,
+		363	Pleurorima_famula,
+		364	Tragatoma_extensa,
+		365	Coelozone_verna,
+		366	Euryzone_connulastus,
+		367	Bicarina_coluber,
+		368	Balbinipleura_bohemica,
+		369	Mourlonia_subglobosa,
+		370	Umbotropis_mesoni,
+		371	Euryzone_delphinuloides,
+		372	Bicarina_vittatum,
+		373	Mourlonia_hoffmanni,
+		374	Ptychomphalina_aurorae,
+		375	“Serpulospira”_sp._Tassell_1982,
+		376	Euryzone_burdekinensis,
+		377	Euryzone_nummularis,
+		378	Mourlonia_vicinalis,
+		379	Mourlonia_velutinoides,
+		380	Oehlertia_scutulata,
+		381	Oehlertia_gradata,
+		382	Oehertia_cancellata,
+		383	Oehlertia_pioni,
+		384	Oehlertia_senilis,
+		385	Porcellia_sinistrosa,
+		386	Porcellia_aberrans,
+		387	Zlatokonia_eximia,
+		388	Umbotropis_albicans,
+		389	Anarconcha_pulchra,
+		390	Vladanella_avia,
+		391	Chlupacispira_spinosa,
+		392	Bembexia_sp,
+		393	Agnesia_elegans,
+		394	Agnesia_dentatolimata,
+		395	Alaskiella_medfraensis,
+		396	Quadricarina_glabrobasis,
+		397	Quadricarina_n._sp._A,
+		398	Porcellia_denayi,
+		399	Paraporcellia_rohri,
+		400	Porcellia_striata,
+		401	Porcellia_costata,
+		402	Porcellia_spinosa,
+		403	Porcellia_cornuarietis,
+		404	Porcellia_bifida,
+		405	Porcellia_primordialis,
+		406	Porcellia_kindlei,
+		407	Arizonella?_conoidea,
+		408	Buechelia_tyrellii,
+		409	Buechelia_tyrellii.2,
+		410	Buechelia_goldfussi,
+		411	Buechelia_bronni,
+		412	Goldfussoceras_circanalis,
+		413	Schizostoma_radiata,
+		414	Pleuronotus_decewi,
+		415	“Bathmospira”_“michiganensis”,
+		416	Euryzone_infranodosa,
+		417	Manitobiella_goniostoma,
+		418	Euryzone_onoi,
+		419	Wisconsinella_clelandi,
+		420	Bembexia_crenostriata,
+		421	Bembexia?_Perigny_sp.,
+		422	Bembexia_defrancei,
+		423	Shansiella_catenulata,
+		424	Shansiella_rotundata,
+		425	Bembexia_procteri,
+		426	Spinulrichospira_cheeneetnukens,
+		427	Dictyobembix?_orbignyii,
+		428	Dictyobembix?_beaumontii,
+		429	Mourlonia_undulata,
+		430	Mourlonia_semilaevis,
+		431	Bembexia?_neapolitana,
+		432	Frillbeastia_queenslandica,
+		433	Denayella_lomandarensis,
+		434	Catantostoma_clathratum,
+		435	Euconospira?_longdalei,
+		436	Ninbingia_robertsi,
+		437	Westralospira_dickinsi,
+		438	Hespieriella_cannigensis,
+		439	Euryzone_hullensis,
+		440	Playfordia_australis,
+		441	Tasselliana_australis,
+		442	Mourlonia_teicherti,
+		443	Baylea_teicherti,
+		444	Porcellia_Virgin_Hill_Fm.,
+		445	Euconospira_nodosa,
+		446	Shansiella?_Virgin_Hill_sp.,
+		447	Turritoma_ornate_acrea,
+		448	Taeniospira_?st._clair,
+		449	Hormotoma_?simulatrix,
+		450	Turritoma_acrea,
+		451	Turritoma_cf._acrea,
+		452	Turritoma_?anna,
+		453	Eoangyomphalus_klapperi,
+		454	'Taeniospira emminencis*',
+		455	Taeniospira_st._clairi,
+		456	Fusispira_Smithville_sp,
+		457	Lophospira_perangulata,
+		458	El_Paso_Subulitid,
+		459	Pagodospira_cicelia,
+		460	Haplospira_nereis,
+		461	Daidia_cerithioides,
+		462	Straparollina_circe,
+		463	Loxonema_murryana,
+		464	Straparollina_erigione,
+		465	Straparollina_Zeehan_sp.,
+		466	Spiroceus_excavata,
+		467	Spiroecus_girvanensis,
+		468	Hormotoma_Gordon_Ls._sp.,
+		469	Rhabdostropha_Alaska,
+		470	Rhabdostropha_primitiva,
+		471	Daidia_aff._D._cerithioides
+	;
+	TREE Hormotomids_Equal_Weights_Parsi =  [&R] (8,((21,16),(17,(4,(2,(7,(((11,18),(12,6)),((28,(29,((26,27),(13,(19,(14,15)))))),((5,(30,(24,23))),((1,3),(10,(9,((33,20),((25,22),(31,(32,34))))))))))))))));
+	TREE  * Hormotomids_Strat_ReRooted =  [&R] (2,((4,(17,(8,(21,16)))),(7,(((11,18),(12,6)),((28,(29,((26,27),(13,(19,(14,15)))))),((5,(30,(24,23))),((1,3),(10,(9,((33,20),((25,22),(31,(32,34)))))))))))));
+
+END;
+
+
+BEGIN NOTES;
+
+	TEXT  CHARACTER=3 TEXT= 'Angle_of_"retreat"_into_SK';
+	TEXT  CHARACTER=9 TEXT= L._Sinus_not_coded_because_of_persistent_symmetry;
+	TEXT  CHARACTER=12 TEXT= As_on_Raphistoma;
+	TEXT  CHARACTER=14 TEXT= 'As_on_Ptychocaulus_-_not_the_same_as_euomphalid_stretch_at_base_of_LR';
+	TEXT  CHARACTER=16 TEXT= 'Formerly_"sigmoidal:_-_aperture_projects_strongly_in_middle_of_base_(~outer_periphery_on_Poleumita),_then_"falls_back"_to_LR.__What_this_should_measure_is_the_transition_between_the_base_&_the_LR';
+	TEXT  CHARACTER=17 TEXT= As_on_Ptychocaulus;
+	TEXT  CHARACTER=22 TEXT= Become_fainter_and_more_closely_packed;
+	TEXT  CHARACTER=24 TEXT= This_might_just_be_strongly_imbricated_growth_lines_imbricating_ornament;
+	TEXT  CHARACTER=29 TEXT= Now_the_juvenile_and_adult_conditions_are_separated;
+	TEXT  CHARACTER=34 TEXT= 'Was_Upper_(Right)_Only';
+	TEXT  CHARACTER=43 TEXT= Final_strength;
+	TEXT  CHARACTER=44 TEXT= 'On_adult_whorls;__if_SK_fades_in,_then_this_applies_to_changes_after_that_trend';
+	TEXT  CHARACTER=48 TEXT= '10/5/01_-_make_it_describe_the_swelling_bn._PLs_for_Hormotoma,_Pleurorima_and_like_species.__Also,_I_need_something_to_show_species_with_lunulae_regions_raised.';
+	TEXT  CHARACTER=52 TEXT= as_denoted_by_the_relative_distances_between_lunulae_and_those_between_GLs;
+	TEXT  CHARACTER=53 TEXT= 'Slits_and_selenizones_are_morphogenetically_separate_features,_contra_Knight_1940';
+	TEXT  CHARACTER=54 TEXT= '”Shallow”_indicates_slit_too_shallow_to_leave_impression;__“Moderate”_is_deep_enough_to_leave_obvious_impression;__“Deep”_curves_back_90˚_-_180˚';
+	TEXT  CHARACTER=55 TEXT= 'Some_slits_grew_periodically_(at_lower_frequency_than_growth_lines),_apparently_filling_up_entirely_at_times';
+	TEXT  CHARACTER=57 TEXT= Includes_shape_of_GL’s_at_apex_when_there_is_no_selenizone;
+	TEXT  CHARACTER=70 TEXT= Recode_this_so_that_0˚_is_||_to_coiling_axis_at_the_top_of_the_whorl;
+	TEXT  CHARACTER=77 TEXT= RECHECK_THIS_FOR_LOXONEMATOIDS!!!!;
+	TEXT  CHARACTER=89 TEXT= Recode_to_give_position_between_RR_top_and_SK;
+	TEXT  CHARACTER=111 TEXT= This_is_independent_of_fading_of_the_LRC;
+	TEXT  CHARACTER=121 TEXT= Does_frill_cover_suture_of_next_whorl?;
+	TEXT  CHARACTER=123 TEXT= 'Ontogenetic_change_in_left_side,_such_as_seen_on_macluritids';
+	TEXT  CHARACTER=132 TEXT= 'Refers_to_Apertural_view_(flat_on_Cylconema);_also,_move_"reflected"_here_for_somewhat_flattened.';
+	TEXT  CHARACTER=133 TEXT= 'This_refers_to_curvature_front-back-front,_not_relative_to_coiling_axis_on_planar_view';
+	TEXT  CHARACTER=134 TEXT= 'curved_back_toward_apex_(i.e.,_"into"_the_shell)';
+	TEXT  CHARACTER=139 TEXT= 'Simple,_single_strong_lirum_in_middle_of_columella';
+	TEXT  CHARACTER=141 TEXT= Includeds_a_callous;
+	TEXT  CHARACTER=149 TEXT= State_3_is_redundant_with_funicle;
+	TEXT  CHARACTER=150 TEXT= 'I_don''t_think_this_is_real_anymore';
+	TEXT  CHARACTER=152 TEXT= 'Umbilicus_filled_by_inductura,_not_columella;_should_be_united_with_chars146-7';
+	TEXT  CHARACTER=153 TEXT= 'Where_columella_becomes_contiguous_with_prior_whorl;__not_a_callous';
+	TEXT  CHARACTER=156 TEXT= 'Don''t_credit_inclination_due_to_projected_base';
+	TEXT  CHARACTER=167 TEXT= This_could_be_an_artifact_of_aperture_inclination;
+	TEXT  CHARACTER=168 TEXT= '"Weak"_means_a_slight_undulation;__"Moderate"_means_a_very_shallow_U;__"Strong"_means_a_U_with_depth_~1/3_width';
+	TEXT  CHARACTER=169 TEXT= 'Don''t_confuse_this_with_differential_contraction_of_right_whorl;_also,_this_really_is_rotation_of_the_whole_aperture';
+	TEXT  CHARACTER=174 TEXT= 'Relabeled_continuous_change_10/20/00_and_reflects_changes_in_degree_of_curvature,_not_direction';
+	TEXT  CHARACTER=175 TEXT= 'Added_10/20/00_because_of_Scoliostoma';
+	TEXT  CHARACTER=176 TEXT= 'Added_10/20/00_because_of_Scoliostoma';
+	TEXT  CHARACTER=178 TEXT= '=_Mathematical_torsion;';
+	TEXT  CHARACTER=179 TEXT= '"Punctuated"_is_misidentified_by_Bandel_(1992)_as_heterostrophy;__"Gradual"_shows_the_suture_"rising"_or_"sinking;_also,_Make_sure_that_this_character_is_coded_properly_for_"isometric"_taxa"';
+	TEXT  CHARACTER=182 TEXT= Increasing_T_can_simply_lower_the_suture_or_it_can_drastically_change_the_logarithmic_spiral;
+	TEXT  CHARACTER=183 TEXT= 'This_means_a_shift_if_∆T_-_if_it_already_is_increasing_(or_decreasing),_then_another_marked_change';
+	TEXT  CHARACTER=186 TEXT= á_la_Anarconcha;
+	TEXT  CHARACTER=212 TEXT= 'Separated_simply_into_those_with_distinct_protoconch_morphs_and_those_without;__this_should_be_modified';
+	TEXT  CHARACTER=214 TEXT= Based_on_Shell_Volume;
+	TEXT  CHARACTER=216 TEXT= '"Small"_denotes_microscopic_(<_0.5_mm);__"large"_reserved_for_those_with_clearly_visible_protoconchs';
+	TEXT  TAXON=147 CHARACTER=124 TEXT= Recode_this;
+	TEXT  TAXON=173 TEXT= 'UMMP_54022-4';
+	TEXT  TAXON=215 CHARACTER=16 TEXT= really?;
+	TEXT  TAXON=216 CHARACTER=16 TEXT= really?;
+	TEXT  TAXON=187 CHARACTER=156 TEXT= 'originally_coded_as_right;_this_is_inclination_surpassing_that_of_the_base';
+	TEXT  TAXON=187 CHARACTER=158 TEXT= 'Originally_present,_30˚';
+	TEXT  TAXON=189 CHARACTER=156 TEXT= 'originally_coded_as_right;_this_is_inclination_surpassing_that_of_the_base';
+	TEXT  TAXON=189 CHARACTER=158 TEXT= 'Originally_present,_10˚';
+	TEXT  TAXON=190 CHARACTER=108 TEXT= serrated_because_of_imbrications;
+	TEXT  TAXON=190 CHARACTER=126 TEXT= This_might_be_subsumed_into_the_ornament;
+	TEXT  TAXON=190 CHARACTER=161 TEXT= present_in_some_specimens;
+	TEXT  TAXON=190 CHARACTER=162 TEXT= up_to_20˚_in_some_specimens;
+	TEXT  TAXON=190 CHARACTER=163 TEXT= absent_in_some_specimens;
+	TEXT  TAXON=190 CHARACTER=167 TEXT= curve_due_to_anterior_projection;
+	TEXT  TAXON=190 CHARACTER=47 TEXT= This_creates_nodes;
+	TEXT  TAXON=190 TEXT= BM_69774;
+	TEXT  TAXON=192 CHARACTER=1 TEXT= kink_just_below_suture_might_be_remnant_sinus;
+	TEXT  TAXON=192 CHARACTER=126 TEXT= 'I_don''t_see_one_on_the_figures...';
+	TEXT  TAXON=192 CHARACTER=147 TEXT= obscures_basal_growth_lines;
+	TEXT  TAXON=192 CHARACTER=152 TEXT= 'formerly_present,_but_umbilicus_clearly_is_there....';
+	TEXT  TAXON=192 CHARACTER=156 TEXT= 'originally_coded_as_right;_this_is_inclination_surpassing_that_of_the_base';
+	TEXT  TAXON=192 CHARACTER=158 TEXT= 'Originally_present,_20˚';
+	TEXT  TAXON=198 CHARACTER=1 TEXT= 'GL''s_swept_back_into_suture_-_this_might_be_remnant_sinus';
+	TEXT  TAXON=198 CHARACTER=126 TEXT= 'I_don''t_see_one_on_the_figures...';
+	TEXT  TAXON=198 CHARACTER=147 TEXT= obscures_basal_growth_lines;
+	TEXT  TAXON=198 CHARACTER=152 TEXT= 'formerly_present,_but_umbilicus_clearly_is_there....';
+	TEXT  TAXON=198 CHARACTER=156 TEXT= 'originally_coded_as_right;_this_is_inclination_surpassing_that_of_the_base';
+	TEXT  TAXON=198 CHARACTER=158 TEXT= 'Originally_present,_20˚';
+	TEXT  TAXON=198 CHARACTER=72 TEXT= check_this;
+	TEXT  TAXON=198 CHARACTER=73 TEXT= check_this;
+	TEXT  TAXON=199 CHARACTER=156 TEXT= 'originally_coded_as_right;_this_is_inclination_surpassing_that_of_the_base';
+	TEXT  TAXON=199 CHARACTER=158 TEXT= 'Originally_present,_30˚';
+	TEXT  TAXON=205 CHARACTER=100 TEXT= this_might_have_been_the_sinus....;
+	TEXT  TAXON=205 TEXT= 'I''m_not_sure_what_species_this_is_based_on_-_something_from_the_Ludlow,_not_P._comes_proper_(but_something_similar)_(?Perneritrochus??)';
+	TEXT  TAXON=206 CHARACTER=167 TEXT= curve_due_to_anterior_projection;
+	TEXT  TAXON=206 CHARACTER=28 TEXT= Check_this;
+	TEXT  TAXON=206 TEXT= USNM_85345;
+	TEXT  TAXON=207 CHARACTER=108 TEXT= serrated_because_of_imbrications;
+	TEXT  TAXON=207 CHARACTER=47 TEXT= This_creates_nodes;
+	TEXT  TAXON=208 CHARACTER=112 TEXT= same_strength;
+	TEXT  TAXON=208 CHARACTER=113 TEXT= weaker_than_one_below;
+	TEXT  TAXON=208 CHARACTER=126 TEXT= 'check_on_this;__visible_on_Lindstrom';
+	TEXT  TAXON=208 CHARACTER=134 TEXT= check_on_this;
+	TEXT  TAXON=208 CHARACTER=29 TEXT= Top_carina_assumed_to_be_PB;
+	TEXT  TAXON=208 CHARACTER=47 TEXT= This_creates_nodes;
+	TEXT  TAXON=208 CHARACTER=70 TEXT= check_this;
+	TEXT  TAXON=208 TEXT= 'Turbo_octavia_A_d''Orbigny;_=_Cyclonema_carinatum_Lindström;_was_Nodonema';
+	TEXT  TAXON=210 CHARACTER=161 TEXT= was_present;
+	TEXT  TAXON=210 CHARACTER=162 TEXT= 'was_ç_≈_-10˚';
+	TEXT  TAXON=210 CHARACTER=163 TEXT= was_absent;
+	TEXT  TAXON=210 TEXT= was_bohemicus;
+	TEXT  TAXON=211 CHARACTER=1 TEXT= 'GL''s_swept_back_into_suture_-_this_might_be_remnant_sinus';
+	TEXT  TAXON=211 CHARACTER=101 TEXT= see_RR_shape;
+	TEXT  TAXON=211 CHARACTER=102 TEXT= there_is_a_weak_frill;
+	TEXT  TAXON=211 CHARACTER=131 TEXT= close_to_135˚;
+	TEXT  TAXON=211 CHARACTER=134 TEXT= the_columella_coes_curve_back_slightly;
+	TEXT  TAXON=211 CHARACTER=147 TEXT= obscures_basal_growth_lines;
+	TEXT  TAXON=211 CHARACTER=156 TEXT= 'originally_coded_as_right;_this_is_inclination_surpassing_that_of_the_base;_later_coded_as_20˚_extra_beyond_whol_whorl,_but_that_is_due_to_sinus-remnant_near_suture';
+	TEXT  TAXON=211 CHARACTER=158 TEXT= 'Originally_present,_20˚_(orig._note:_might_be_better_coded_as_swept_back_in_front_of_suture)';
+	TEXT  TAXON=211 CHARACTER=179 TEXT= was_negative;
+	TEXT  TAXON=211 CHARACTER=57 TEXT= there_is_a_slight_change_in_trajectory_in_that_area;
+	TEXT  TAXON=211 CHARACTER=70 TEXT= '110˚_-_120˚_from_||_to_CA';
+	TEXT  TAXON=211 CHARACTER=72 TEXT= 'slopes_toward_midramp_(LR_&_RR_nearly_merged_here)';
+	TEXT  TAXON=211 TEXT= 'Trochus_(Scalaeotrochus)_lindströmi_(Etheridge_1890).__PG.38031;__PG.3836;_PG.2877';
+	TEXT  TAXON=241 CHARACTER=12 TEXT= 'originally_coded_as_present_-_now_I_think_it_is_the_remnant_sinus';
+	TEXT  TAXON=241 CHARACTER=13 TEXT= originally_coded_as_weak_&_present;
+	TEXT  TAXON=241 CHARACTER=16 TEXT= was_stretches_back;
+	TEXT  TAXON=241 CHARACTER=2 TEXT= was_Right_Deeper;
+	TEXT  TAXON=241 CHARACTER=222 TEXT= 'back_is_solid_with_a_divot_in_the_middle_(muscle_attachment?)';
+	TEXT  TAXON=241 CHARACTER=26 TEXT= '_Might_be_stronger_on_base;__this_difference_fades_over_ontogeny';
+	TEXT  TAXON=241 CHARACTER=29 TEXT= was_absent;
+	TEXT  TAXON=241 CHARACTER=3 TEXT= was_10˚;
+	TEXT  TAXON=241 CHARACTER=30 TEXT= was_at_sinus_apex;
+	TEXT  TAXON=241 CHARACTER=31 TEXT= 'if_present,_then_5˚';
+	TEXT  TAXON=241 CHARACTER=4 TEXT= was_nearly_0˚;
+	TEXT  TAXON=241 CHARACTER=41 TEXT= was_absent;
+	TEXT  TAXON=241 CHARACTER=42 TEXT= rounded_if_present;
+	TEXT  TAXON=241 CHARACTER=43 TEXT= 'weak,_if_present';
+	TEXT  TAXON=241 CHARACTER=44 TEXT= no_ontogenetic_change_if_present;
+	TEXT  TAXON=241 CHARACTER=47 TEXT= flares_weakly;
+	TEXT  TAXON=241 CHARACTER=7 TEXT= was_at_LR;
+	TEXT  TAXON=241 TEXT= 'PG_3838,_3649,_3840-3';
+	TEXT  TAXON=212 CHARACTER=1 TEXT= 'Weak,_shallow_notch_just_below_suture';
+	TEXT  TAXON=212 CHARACTER=100 TEXT= this_might_be_the_sinus;
+	TEXT  TAXON=212 CHARACTER=120 TEXT= 'Curves_forward,_but_only_in_keeping_with_general_trend_of_aperture';
+	TEXT  TAXON=212 CHARACTER=147 TEXT= visble_on_L9480;
+	TEXT  TAXON=212 CHARACTER=156 TEXT= 'originally_coded_as_right;_this_is_inclination_surpassing_that_of_the_base';
+	TEXT  TAXON=212 CHARACTER=158 TEXT= 'Originally_present,_10˚';
+	TEXT  TAXON=212 CHARACTER=172 TEXT= Increasing_W_despite_increasing_T;
+	TEXT  TAXON=212 CHARACTER=187 TEXT= 'visible_on_L._9738_(64:13-15)';
+	TEXT  TAXON=212 CHARACTER=217 TEXT= Only_2_specimens;
+	TEXT  TAXON=212 TEXT= 'L._9479-80;_L._9656-7_(65:25-26,_text_fig._214_b-c)_provide_columella_view';
+	TEXT  TAXON=213 CHARACTER=100 TEXT= coded_as_the_sinus;
+	TEXT  TAXON=213 CHARACTER=112 TEXT= 'highest_thread_considered_to_be_the_one_-_that''s_the_one_that_weakens';
+	TEXT  TAXON=213 CHARACTER=141 TEXT= 'closed_coiling_-_cannot_tell';
+	TEXT  TAXON=213 CHARACTER=154 TEXT= Only_one_side_present;
+	TEXT  TAXON=213 CHARACTER=19 TEXT= Sharp_on_small_Konêprusy_specimens;
+	TEXT  TAXON=213 CHARACTER=194 TEXT= 'one_moderately_thick_thread,_becoming_weaker_with_age';
+	TEXT  TAXON=213 CHARACTER=2 TEXT= only_left_side_visible;
+	TEXT  TAXON=213 CHARACTER=57 TEXT= 'BL''s_at_suture';
+	TEXT  TAXON=213 CHARACTER=66 TEXT= acute_suture_could_be_this;
+	TEXT  TAXON=213 TEXT= 'L.9643_(type;_64:21-22)';
+	TEXT  TAXON=230 CHARACTER=124 TEXT= obscured_by_matrix;
+	TEXT  TAXON=230 CHARACTER=133 TEXT= obscured;
+	TEXT  TAXON=230 CHARACTER=141 TEXT= matrix_in_the_way;
+	TEXT  TAXON=230 CHARACTER=172 TEXT= Increased_W_due_to_lowering_of_K;
+	TEXT  TAXON=230 CHARACTER=217 TEXT= One_specimen_only;
+	TEXT  TAXON=230 TEXT= 'L._9478;_unclear_if_there_is_an_actual_diagnosis';
+	TEXT  TAXON=248 CHARACTER=11 TEXT= faint_undulation_present?;
+	TEXT  TAXON=248 CHARACTER=12 TEXT= 'Was_present,_weak_-_Now_absent_-_this_is_the_sinus!';
+	TEXT  TAXON=248 CHARACTER=13 TEXT= 'was_Weak_[Curved]';
+	TEXT  TAXON=248 CHARACTER=44 TEXT= Initially_absent;
+	TEXT  TAXON=248 TEXT= 'Coded_10/1999._G._23343-7;_recoded_11/17/2003_based_on_Heidelberger_2001';
+	TEXT  TAXON=242 CHARACTER=12 TEXT= 'Now_absent_-_this_is_the_sinus!';
+	TEXT  TAXON=242 CHARACTER=127 TEXT= 'Need_flaring_here_somewhere,_although_this_is_due_to_dimorphism';
+	TEXT  TAXON=242 CHARACTER=13 TEXT= was_Moderate;
+	TEXT  TAXON=242 CHARACTER=2 TEXT= Was_Right_deeper;
+	TEXT  TAXON=242 CHARACTER=30 TEXT= was_at_sinus_apex;
+	TEXT  TAXON=242 CHARACTER=4 TEXT= was_20˚;
+	TEXT  TAXON=242 CHARACTER=41 TEXT= was_absent;
+	TEXT  TAXON=242 CHARACTER=42 TEXT= sharp_if_present;
+	TEXT  TAXON=242 CHARACTER=43 TEXT= 'weak,_if_present';
+	TEXT  TAXON=242 CHARACTER=44 TEXT= no_ontogenetic_change_if_present;
+	TEXT  TAXON=242 CHARACTER=47 TEXT= flares_weakly;
+	TEXT  TAXON=242 CHARACTER=68 TEXT= rounder_than_outer_if_LRC_is_PB;
+	TEXT  TAXON=242 CHARACTER=7 TEXT= was_at_LR;
+	TEXT  TAXON=242 TEXT= 'Coded_summer_1996;_Euomphalus_goldfussi_Archiac_and_Verneuil_1842;_Humboldt_MB.1998.1_(=MB.Ga.601)_added_Spring_2003';
+	TEXT  TAXON=221 CHARACTER=108 TEXT= serrated_because_of_imbrications;
+	TEXT  TAXON=221 CHARACTER=112 TEXT= check_relative_strenght;
+	TEXT  TAXON=221 CHARACTER=132 TEXT= check_this;
+	TEXT  TAXON=221 CHARACTER=29 TEXT= Top_carina_assumed_to_be_PB;
+	TEXT  TAXON=221 CHARACTER=47 TEXT= This_creates_nodes;
+	TEXT  TAXON=221 CHARACTER=74 TEXT= 'Oops!__I_confused_the_SK_&_main_AC!_(so_why_did_I_code_it_as_longer?';
+	TEXT  TAXON=221 TEXT= 'UMMP_22394;_USNM_UM22387-8,_93_(A._typica)“Acanthrotopis”_“meglacanthe”';
+	TEXT  TAXON=222 CHARACTER=1 TEXT= 'was_present,_symmetrical_10˚_with_wider_right,_straight,_just_either_side_of_SK';
+	TEXT  TAXON=222 CHARACTER=108 TEXT= serrated_because_of_imbrications;
+	TEXT  TAXON=222 CHARACTER=132 TEXT= 'was_rounded,_but_GSC_4063_shows_rounding';
+	TEXT  TAXON=222 CHARACTER=29 TEXT= Top_carina_assumed_to_be_PB;
+	TEXT  TAXON=222 CHARACTER=47 TEXT= 'This_creates_nodesThis_creates_nodes_-_apx._1/2_frequency_of_other_nodes';
+	TEXT  TAXON=222 CHARACTER=74 TEXT= Oops!__I_confused_the_SK_&_main_AC!;
+	TEXT  TAXON=222 CHARACTER=91 TEXT= due_to_imbrications;
+	TEXT  TAXON=222 TEXT= 'Sometimes_called_Longstaffia;_UMMP_22330;_also,_GSC_4066-67';
+	TEXT  TAXON=223 CHARACTER=1 TEXT= 'was_present,_symmetrical_10˚_with_symmetric_width,_straight,_just_either_side_of_SK';
+	TEXT  TAXON=223 CHARACTER=108 TEXT= serrated_because_of_imbrications;
+	TEXT  TAXON=223 CHARACTER=112 TEXT= check_relative_strength;
+	TEXT  TAXON=223 CHARACTER=126 TEXT= subsumed_into_ornament?;
+	TEXT  TAXON=223 CHARACTER=134 TEXT= the_growth_lines_within_the_umbilicus_curve_away_from_the_aperture_then_spring_forward;
+	TEXT  TAXON=223 CHARACTER=153 TEXT= Could_be_coded_as_contiguous_with_previous_whorl;
+	TEXT  TAXON=223 CHARACTER=154 TEXT= 'The_base_of_the_shell_is_tilted_forward,_but_the_LR_is_not_-_however,_this_reflects_the_sigmoidal_shape_of_the_aperture';
+	TEXT  TAXON=223 CHARACTER=167 TEXT= curve_due_to_anterior_projection;
+	TEXT  TAXON=223 CHARACTER=198 TEXT= 'PB,_1_or_2_thin,_LCu,_1_thin,_LCl,_1_thin,_3_thick';
+	TEXT  TAXON=223 CHARACTER=29 TEXT= 'Top_carina_assumed_to_be_PB_-_lunulae_are_different_there';
+	TEXT  TAXON=223 CHARACTER=47 TEXT= This_creates_nodes;
+	TEXT  TAXON=223 CHARACTER=86 TEXT= Fills_suture;
+	TEXT  TAXON=223 TEXT= 'Turbo_ornata_Goldfuss;__BM_21[4?]4517;_8264';
+	TEXT  TAXON=224 CHARACTER=109 TEXT= sharp_early_nodes_turn_into_dull_nodes_later;
+	TEXT  TAXON=224 CHARACTER=16 TEXT= 'Base_projected,_then_it_falls_back';
+	TEXT  TAXON=224 CHARACTER=188 TEXT= '7_threads,_middle_ones_weak_(~1˚,_slightly_prominence),_Odd_ones_strong_(~2˚,_prominent)';
+	TEXT  TAXON=224 CHARACTER=192 TEXT= every_other_one_stronger;
+	TEXT  TAXON=224 CHARACTER=193 TEXT= '5_strong_threads,_with_weak_ones_between';
+	TEXT  TAXON=224 TEXT= 'AMF.1260,_from_Sötenich,_Eifel';
+	TEXT  TAXON=231 CHARACTER=1 TEXT= 'weak_sinus_near_suture_is_what_I''m_coding';
+	TEXT  TAXON=231 CHARACTER=131 TEXT= 'Very_acute_for_a_nearly-planispiral_beast';
+	TEXT  TAXON=231 CHARACTER=133 TEXT= slight_kink_at_the_base;
+	TEXT  TAXON=231 CHARACTER=138 TEXT= Unusually_straight;
+	TEXT  TAXON=231 CHARACTER=17 TEXT= 'slight_curve_back_visible_on_holotype_(area_usually_obscured_by_PI)';
+	TEXT  TAXON=231 CHARACTER=172 TEXT= 'might_increase_-_apical_“umbilicus”_seems_to_get_larger';
+	TEXT  TAXON=231 CHARACTER=187 TEXT= ANU_35713_shows_rounded_breakage;
+	TEXT  TAXON=231 CHARACTER=29 TEXT= 'Possibly_a_very_dull_SK_just_below_sinus_(at_top_of_whorl)';
+	TEXT  TAXON=231 TEXT= 'ANU_35700_(holo)-13';
+	TEXT  TAXON=228 CHARACTER=108 TEXT= serrated_because_of_imbrications;
+	TEXT  TAXON=228 CHARACTER=112 TEXT= check_relative_strength;
+	TEXT  TAXON=228 CHARACTER=153 TEXT= Could_be_coded_as_contiguous_with_previous_whorl;
+	TEXT  TAXON=228 CHARACTER=154 TEXT= 'The_base_of_the_shell_is_tilted_forward,_but_the_LR_is_not_-_however,_this_reflects_the_sigmoidal_shape_of_the_aperture';
+	TEXT  TAXON=228 CHARACTER=167 TEXT= curve_due_to_anterior_projection;
+	TEXT  TAXON=228 CHARACTER=179 TEXT= Double_check_this;
+	TEXT  TAXON=228 CHARACTER=19 TEXT= visible_on_15308;
+	TEXT  TAXON=228 CHARACTER=21 TEXT= 'imbrications_lost_on_gerontic_whorls,_but_the_remaining_growth_lines_do_not_change';
+	TEXT  TAXON=228 CHARACTER=23 TEXT= '2-3_strong_lines_between_big_ones;__lost_in_gerontic_whorls';
+	TEXT  TAXON=228 CHARACTER=29 TEXT= Top_carina_assumed_to_be_PB;
+	TEXT  TAXON=228 CHARACTER=42 TEXT= 'Hard_to_judge_-_it_is_sort_of_round,_but_that_could_be_due_to_weathering_and_the_extreme_size_of_PB';
+	TEXT  TAXON=228 CHARACTER=44 TEXT= Apparent_reduction_is_due_to_gerontic_loss_of_perioid_nodes;
+	TEXT  TAXON=228 CHARACTER=47 TEXT= This_is_lost_in_gerontic_whorls;
+	TEXT  TAXON=228 CHARACTER=86 TEXT= fills_suture;
+	TEXT  TAXON=228 TEXT= 'Turbo_brevis_Sowerby;__BMG_15038;_15041-2,_15046-7;_was_called_Liotia';
+	TEXT  TAXON=229 CHARACTER=165 TEXT= Might_be_an_artifact_of_asymmetrical_sinus;
+	TEXT  TAXON=229 CHARACTER=173 TEXT= Nearly_straight;
+	TEXT  TAXON=229 CHARACTER=174 TEXT= Early_in_ontogeny;
+	TEXT  TAXON=229 CHARACTER=70 TEXT= check_this;
+	TEXT  TAXON=229 CHARACTER=84 TEXT= START_HERE;
+	TEXT  TAXON=229 TEXT= 'from_LaRocque_1949_-_assuming_sinistral_coiling!';
+	TEXT  TAXON=246 CHARACTER=105 TEXT= Starts_off_a_sharp_thread;
+	TEXT  TAXON=246 CHARACTER=124 TEXT= Often_absent_due_to_preservation;
+	TEXT  TAXON=246 CHARACTER=133 TEXT= appears_curved_in_Tassell’s_Figures;
+	TEXT  TAXON=246 CHARACTER=57 TEXT= 'Become_U-shaped';
+	TEXT  TAXON=246 TEXT= 'Based_on_juvenile_material_from_Brogan’s_Creek;_also,_Tassell_1982';
+	TEXT  TAXON=247 CHARACTER=126 TEXT= appears_to_be_absent_even_on_juveniles;
+	TEXT  TAXON=247 CHARACTER=135 TEXT= curved_at_ends_only;
+	TEXT  TAXON=247 CHARACTER=167 TEXT= curve_just_in_front_of_strong_sweep_forward;
+	TEXT  TAXON=247 CHARACTER=17 TEXT= 'fairly_sharp_turn_back,_too';
+	TEXT  TAXON=247 CHARACTER=188 TEXT= 'very_fine_threads_packed_together_with_space_bn._=_width;_appear_to_be_lost_with_age';
+	TEXT  TAXON=247 CHARACTER=24 TEXT= 'slight_nodes_(marking_SK?)_on_juvenile_whorls';
+	TEXT  TAXON=247 CHARACTER=44 TEXT= disappearing;
+	TEXT  TAXON=247 CHARACTER=47 TEXT= 'note_imbrication_-_this_is_it,_though.';
+	TEXT  TAXON=247 CHARACTER=77 TEXT= 'it_is,_because_left_sticks_out_so_much';
+	TEXT  TAXON=247 TEXT= 'ANU_35801_(holo);_35800,2-7';
+	TEXT  TAXON=244 CHARACTER=12 TEXT= 'Now_absent_-_this_is_the_sinus!';
+	TEXT  TAXON=244 CHARACTER=127 TEXT= Need_flaring_here_somewhere;
+	TEXT  TAXON=244 CHARACTER=13 TEXT= was_Moderate;
+	TEXT  TAXON=244 CHARACTER=47 TEXT= flares_strongly;
+	TEXT  TAXON=244 CHARACTER=7 TEXT= 'was_"At_LR"';
+	TEXT  TAXON=244 TEXT= Based_on_Linsley_1978;
+	TEXT  TAXON=218 CHARACTER=16 TEXT= Check_this;
+	TEXT  TAXON=218 CHARACTER=17 TEXT= Check_this;
+	TEXT  TAXON=218 CHARACTER=70 TEXT= Check_this;
+	TEXT  TAXON=218 CHARACTER=75 TEXT= Check_this;
+	TEXT  TAXON=218 TEXT= 'USNM_15(=1029405),_UM_22,395';
+	TEXT  TAXON=232 CHARACTER=167 TEXT= curve_due_to_anterior_projection;
+	TEXT  TAXON=232 CHARACTER=28 TEXT= Check_this;
+	TEXT  TAXON=232 TEXT= Coded_summer_1996;
+	TEXT  TAXON=233 CHARACTER=28 TEXT= Check_this;
+	TEXT  TAXON=233 TEXT= Coded_summer_1996;
+	TEXT  TAXON=234 CHARACTER=134 TEXT= check_this;
+	TEXT  TAXON=234 CHARACTER=167 TEXT= curve_due_to_anterior_projection;
+	TEXT  TAXON=234 CHARACTER=183 TEXT= check_this;
+	TEXT  TAXON=234 CHARACTER=210 TEXT= really?;
+	TEXT  TAXON=234 CHARACTER=28 TEXT= check_this;
+	TEXT  TAXON=234 CHARACTER=29 TEXT= check_this;
+	TEXT  TAXON=234 TEXT= Coded_summer_1996;
+	TEXT  TAXON=235 CHARACTER=167 TEXT= this_is_straight_despite_a_very_round_base;
+	TEXT  TAXON=235 TEXT= 'I_had_thought_that_this_equalled_P._serpens,_but_there_are_a_couple_of_important_differences;_G.4532a_-_but_it_isn''t_P._laevis_(see_Knight_1941)';
+	TEXT  TAXON=237 CHARACTER=134 TEXT= 'GL''s_curved_backward_slighlty_in_umblicus';
+	TEXT  TAXON=237 CHARACTER=210 TEXT= scars_are_where_PB_probably_should_be_on_PG.519;
+	TEXT  TAXON=237 TEXT= 'Euomphalus_serpens_Phillips_1841;_=_E._planorbis_&_E._laevis;_G._15013_&_PG.519,_w._G._22734,_G.15015_&_G.15019;_PG.518_protoconch!';
+	TEXT  TAXON=238 CHARACTER=104 TEXT= Might_be_a_dull_swelling_there;
+	TEXT  TAXON=238 CHARACTER=167 TEXT= might_be_weakly_curved;
+	TEXT  TAXON=238 CHARACTER=66 TEXT= hard_to_be_certain;
+	TEXT  TAXON=238 TEXT= 'Trochus_multispira_Sandb.,_AMF_1280;_NOTE:_this_might_not_be_the_same_thing_as_Heidelberger_called_Champernownia_multispira.';
+	TEXT  TAXON=250 CHARACTER=127 TEXT= Sharp_or_rounded?;
+	TEXT  TAXON=250 CHARACTER=44 TEXT= check_this;
+	TEXT  TAXON=250 CHARACTER=57 TEXT= check_this;
+	TEXT  TAXON=250 TEXT= Coded_summer_1996;
+	TEXT  TAXON=251 CHARACTER=127 TEXT= Sharp_or_rounded?;
+	TEXT  TAXON=251 CHARACTER=44 TEXT= check_this;
+	TEXT  TAXON=251 CHARACTER=57 TEXT= check_this;
+	TEXT  TAXON=251 TEXT= Coded_summer_1996;
+	TEXT  TAXON=239 CHARACTER=183 TEXT= check_this;
+	TEXT  TAXON=239 CHARACTER=28 TEXT= Check_this;
+	TEXT  TAXON=239 TEXT= Coded_summer_1996;
+	TEXT  TAXON=252 CHARACTER=124 TEXT= Hard_to_be_certain....;
+	TEXT  TAXON=252 CHARACTER=129 TEXT= 'pretty_weak_by_the_end,_but_early_portions_not_visible';
+	TEXT  TAXON=252 CHARACTER=167 TEXT= 'a_little_curve,_but_an_illusion_due_to_forward_projection_&_roundness_of_the_base';
+	TEXT  TAXON=252 CHARACTER=217 TEXT= too_few_specimens;
+	TEXT  TAXON=252 CHARACTER=42 TEXT= Could_be_a_dull_lump;
+	TEXT  TAXON=252 CHARACTER=44 TEXT= Initially_absent;
+	TEXT  TAXON=252 TEXT= 'Was_E._laevis_sensu_Sandberger_(might_not_be_Euo._laevis_de_Archiac_&_de_Verneuil_1842);__BMG_3112;__Good_specimen,_with_matrix_obscuring_a_little_of_the_base';
+	TEXT  TAXON=245 CHARACTER=12 TEXT= 'this_could_be_the_sinus_-_which_makes_the_"PB"_something_else_altogether.';
+	TEXT  TAXON=245 CHARACTER=127 TEXT= Need_flaring_here_somewhere;
+	TEXT  TAXON=245 CHARACTER=13 TEXT= was_Moderate;
+	TEXT  TAXON=245 CHARACTER=2 TEXT= This_might_not_be_the_sinus....;
+	TEXT  TAXON=245 CHARACTER=29 TEXT= was_absent;
+	TEXT  TAXON=245 CHARACTER=3 TEXT= Was_30˚;
+	TEXT  TAXON=245 CHARACTER=30 TEXT= was_at_sinus_apex;
+	TEXT  TAXON=245 CHARACTER=31 TEXT= 'if_present,_then_5˚';
+	TEXT  TAXON=245 CHARACTER=4 TEXT= was_nearly_0˚;
+	TEXT  TAXON=245 CHARACTER=41 TEXT= was_absent;
+	TEXT  TAXON=245 CHARACTER=42 TEXT= sharp_if_present;
+	TEXT  TAXON=245 CHARACTER=43 TEXT= 'strong,_if_present';
+	TEXT  TAXON=245 CHARACTER=44 TEXT= no_ontogenetic_change_if_present;
+	TEXT  TAXON=245 CHARACTER=47 TEXT= flares_strongly;
+	TEXT  TAXON=245 CHARACTER=57 TEXT= 'V-shaped_if_LRC_is_PB';
+	TEXT  TAXON=245 CHARACTER=68 TEXT= rounder_than_outer_if_LRC_is_PB;
+	TEXT  TAXON=245 CHARACTER=7 TEXT= was_at_LR;
+	TEXT  TAXON=245 TEXT= Coded_summer_1996;
+	TEXT  TAXON=253 CHARACTER=101 TEXT= was_acute!;
+	TEXT  TAXON=253 CHARACTER=126 TEXT= Obscured_by_callous;
+	TEXT  TAXON=253 TEXT= Based_on_Kase_&_Nishida_1986_&_Kase_1989;
+	TEXT  TAXON=275 CHARACTER=28 TEXT= Check_this;
+	TEXT  TAXON=275 CHARACTER=68 TEXT= rounder_than_outer_if_LRC_is_PB;
+	TEXT  TAXON=275 TEXT= 'USNM_59308,_Smithland_KY.__Chester_(Birdsville);_likely_E._planodorsatus_or_a_near_relative';
+	TEXT  TAXON=219 CHARACTER=16 TEXT= 'Was_stretches_forward_,_but_Is_it_really?__I''m_beginning_to_dislike_the_character_9/13/99';
+	TEXT  TAXON=219 CHARACTER=70 TEXT= Check_this;
+	TEXT  TAXON=219 TEXT= 'UMGC_212_-_3_specimens;_G-22805-7';
+	TEXT  TAXON=220 CHARACTER=98 TEXT= round_inside;
+	TEXT  TAXON=220 TEXT= 'QMF_34850-8';
+	TEXT  TAXON=225 CHARACTER=104 TEXT= Second_one_down;
+	TEXT  TAXON=225 CHARACTER=108 TEXT= serrated_because_of_imbrications;
+	TEXT  TAXON=225 CHARACTER=112 TEXT= same_strength;
+	TEXT  TAXON=225 CHARACTER=113 TEXT= wekaer_than_one_below;
+	TEXT  TAXON=225 CHARACTER=126 TEXT= subsumed_into_ornament?;
+	TEXT  TAXON=225 CHARACTER=189 TEXT= Two_very_strong_threads;
+	TEXT  TAXON=225 CHARACTER=23 TEXT= 'Nodes_independent_of_GL''s';
+	TEXT  TAXON=225 CHARACTER=29 TEXT= Top_carina_assumed_to_be_PB;
+	TEXT  TAXON=225 CHARACTER=47 TEXT= Creating_nodes;
+	TEXT  TAXON=225 CHARACTER=58 TEXT= look_stronger_because_of_flaring;
+	TEXT  TAXON=225 CHARACTER=91 TEXT= 'Due_to_flaring,_fits_into_flares_of_penultimate_LRC.';
+	TEXT  TAXON=225 TEXT= 'QMF_33358;_from_Cook_1995';
+	TEXT  TAXON=226 CHARACTER=108 TEXT= serrated_because_of_imbrications;
+	TEXT  TAXON=226 CHARACTER=112 TEXT= stronger_than_one_below;
+	TEXT  TAXON=226 CHARACTER=126 TEXT= subsumed_into_ornament?;
+	TEXT  TAXON=226 TEXT= 'From_Kase_&_Nishido_1988;_NSM-15381-3';
+	TEXT  TAXON=240 CHARACTER=124 TEXT= columella_alone_appears_thicker_on_some_specimens;
+	TEXT  TAXON=240 TEXT= 'USNM_183669-78;_also_Linsley_&_Yochelson_1973';
+	TEXT  TAXON=254 CHARACTER=16 TEXT= 'actually,_it_falls_back!__This_is_the_way_to_describe_it';
+	TEXT  TAXON=254 CHARACTER=23 TEXT= 'produces_undulations_in_whole_aperture,_not_in_GL_strength';
+	TEXT  TAXON=254 CHARACTER=30 TEXT= At_Sinus_Apex_if_present;
+	TEXT  TAXON=254 CHARACTER=169 TEXT= hard_to_be_certain_about_this;
+	TEXT  TAXON=254 TEXT= 'F.1441,_F.44620_(AM);_from_Limestone_Creek,_near_Yass,_NSW';
+	TEXT  TAXON=255 CHARACTER=16 TEXT= 'Stretches_forward_strongly,_then_falls_back';
+	TEXT  TAXON=255 TEXT= AMF.26629_from_Bowning_NSW;
+	TEXT  TAXON=264 CHARACTER=108 TEXT= Due_to_nodes;
+	TEXT  TAXON=264 CHARACTER=112 TEXT= nodose;
+	TEXT  TAXON=264 CHARACTER=113 TEXT= nodose;
+	TEXT  TAXON=264 CHARACTER=24 TEXT= 'Much_stronger_than_growth_lines_-_might_require_a_new_character';
+	TEXT  TAXON=264 CHARACTER=47 TEXT= Nodose_but_not_due_to_growth_lines;
+	TEXT  TAXON=264 CHARACTER=84 TEXT= was_absent;
+	TEXT  TAXON=264 TEXT= 'Based_on_Heidecker’s_types_and_Cook_1997_(QMF_35452)';
+	TEXT  TAXON=265 CHARACTER=17 TEXT= curves_back_without_curving_forward;
+	TEXT  TAXON=265 CHARACTER=183 TEXT= flattens_last_profile;
+	TEXT  TAXON=265 TEXT= 'MMF_16014-5';
+	TEXT  TAXON=266 TEXT= Based_on_Heidecker’s_types_and_Cook_1997;
+	TEXT  TAXON=267 CHARACTER=10 TEXT= It_does_halt_a_little_above_the_apex;
+	TEXT  TAXON=267 CHARACTER=126 TEXT= obscured_by_callous;
+	TEXT  TAXON=267 CHARACTER=16 TEXT= It_curves_back_before_sinus;
+	TEXT  TAXON=267 CHARACTER=188 TEXT= 7_dull_but_fairly_wide_threads_on_base_&_LR;
+	TEXT  TAXON=267 CHARACTER=197 TEXT= do_look_a_little_stronger_higher;
+	TEXT  TAXON=267 CHARACTER=2 TEXT= sinus_so_close_to_suture_that_it_is_tought_to_be_certain;
+	TEXT  TAXON=267 CHARACTER=169 TEXT= based_on_top_view;
+	TEXT  TAXON=267 CHARACTER=98 TEXT= 'almost_acute,_due_to_RRC';
+	TEXT  TAXON=267 TEXT= 'AM_F52326_(5_good_specimens);_F48059;_F52327_(14_so-so_specimens);_also,_MMF16011-24_(might_be_a_different_locality)_-_not_really_good_specimens';
+	TEXT  TAXON=268 CHARACTER=188 TEXT= Now_all_thread_is_on_base;
+	TEXT  TAXON=268 CHARACTER=30 TEXT= actually_a_little_above;
+	TEXT  TAXON=268 TEXT= coded_with_upper_lira_as_SK;
+	TEXT  TAXON=256 CHARACTER=126 TEXT= Obscured_by_callous;
+	TEXT  TAXON=256 CHARACTER=24 TEXT= SK_only_nodose;
+	TEXT  TAXON=256 CHARACTER=47 TEXT= Nodes;
+	TEXT  TAXON=256 TEXT= Based_on_Heidecker’s_types_and_Cook_&_Camilleri_1997;
+	TEXT  TAXON=269 CHARACTER=189 TEXT= '11_thick_threads,_every_other_one_stronger';
+	TEXT  TAXON=269 CHARACTER=193 TEXT= '5_threads,_as_on_base';
+	TEXT  TAXON=269 CHARACTER=29 TEXT= I_am_assuming_the_stronger_of_the_upper_lira_is_the_SK;
+	TEXT  TAXON=269 TEXT= 'QMF_32234,_32261,_32247,_32282_from_Cook_&_Camilleri_1997';
+	TEXT  TAXON=262 CHARACTER=126 TEXT= slightly_nodose_on_younger_specimens_in_box_full;
+	TEXT  TAXON=262 CHARACTER=187 TEXT= apparent_on_Cook_&_Pan_figure;
+	TEXT  TAXON=262 CHARACTER=28 TEXT= Hard_to_be_certain;
+	TEXT  TAXON=262 CHARACTER=66 TEXT= based_on_box_full_of_stratigraphic_material;
+	TEXT  TAXON=262 TEXT= 'QMF_35087_-_Good_plastic_cast_of_holotype;_later,_a_ton_of_material_at_QM';
+	TEXT  TAXON=270 CHARACTER=44 TEXT= Initially_absent;
+	TEXT  TAXON=270 TEXT= 'Unnamed_sp.;__"Euomphalus":__PG._unlabelled;__"Pholus:__PG.14628;_G.20315-6';
+	TEXT  TAXON=271 CHARACTER=126 TEXT= Obscured_by_callous;
+	TEXT  TAXON=271 CHARACTER=66 TEXT= clear_on_holotype;
+	TEXT  TAXON=271 CHARACTER=93 TEXT= 'Might_decrease_with_age;_no,_RRC_just_gets_weaker';
+	TEXT  TAXON=271 TEXT= 'Cook_1998;_DC_plastotypes_+_QMF_35014,_35011,_35009';
+	TEXT  TAXON=272 CHARACTER=104 TEXT= 'I''m_assuming_that_it_all_is_ornament';
+	TEXT  TAXON=272 CHARACTER=147 TEXT= thin_but_there;
+	TEXT  TAXON=272 CHARACTER=188 TEXT= '9_weak_threads;_space_3x_width';
+	TEXT  TAXON=272 CHARACTER=193 TEXT= '4_strong_threads,_with_distance_between_increasing_towards_the_top';
+	TEXT  TAXON=272 CHARACTER=29 TEXT= Top_lirum;
+	TEXT  TAXON=272 TEXT= 'CPC_34604-9';
+	TEXT  TAXON=273 CHARACTER=16 TEXT= Distinct_U;
+	TEXT  TAXON=273 CHARACTER=189 TEXT= '9_thin_threads_(2x_thinner_than_gaps)';
+	TEXT  TAXON=273 CHARACTER=193 TEXT= 12_very_fine_threads;
+	TEXT  TAXON=273 TEXT= from_Cook’s_material;
+	TEXT  TAXON=274 TEXT= 'Based_on_photos;_QMF_37276;_CPC_34626';
+	TEXT  TAXON=276 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=276 TEXT= 'Fix_1975_id_-_invalid_name';
+	TEXT  TAXON=277 TEXT= 'Lohrman_Shale,_Zone_N_species';
+	TEXT  TAXON=278 TEXT= Based_on_Rohr_1994_J._Paleo;
+	TEXT  TAXON=279 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=281 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=282 CHARACTER=147 TEXT= might_simply_be_absent;
+	TEXT  TAXON=282 TEXT= from_Horny_1997;
+	TEXT  TAXON=283 CHARACTER=35 TEXT= wide_but_almost_no_relief;
+	TEXT  TAXON=283 TEXT= from_Horny_1997;
+	TEXT  TAXON=284 CHARACTER=35 TEXT= Upper_lirum;
+	TEXT  TAXON=284 TEXT= 'USNM_253130-2_(distorted_silicified_specimens_from_Rohr_1980)';
+	TEXT  TAXON=285 CHARACTER=199 TEXT= Is_this_true?;
+	TEXT  TAXON=285 CHARACTER=212 TEXT= From_Dzik_1982;
+	TEXT  TAXON=285 CHARACTER=41 TEXT= Once_coded_as_present;
+	TEXT  TAXON=285 CHARACTER=42 TEXT= 'Once_"sharp"';
+	TEXT  TAXON=285 CHARACTER=43 TEXT= 'Once_"very_weak"';
+	TEXT  TAXON=285 CHARACTER=44 TEXT= 'Once_"No_∆"';
+	TEXT  TAXON=285 CHARACTER=46 TEXT= 'Once_"absent"';
+	TEXT  TAXON=285 CHARACTER=47 TEXT= 'Once_"consistent"';
+	TEXT  TAXON=287 CHARACTER=48 TEXT= 'was_none_-_check_this!';
+	TEXT  TAXON=288 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=289 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=289 CHARACTER=52 TEXT= 'Periodically_there;_filled_in_regularly';
+	TEXT  TAXON=290 CHARACTER=147 TEXT= 'Clearly_thins_greatly_on_pl._13:1-2';
+	TEXT  TAXON=290 CHARACTER=164 TEXT= Double_check_this;
+	TEXT  TAXON=290 CHARACTER=48 TEXT= None_at_all;
+	TEXT  TAXON=290 CHARACTER=58 TEXT= Slightly_weaker;
+	TEXT  TAXON=290 CHARACTER=73 TEXT= Note_that_early_whorls_have_flat_profile;
+	TEXT  TAXON=290 TEXT= 'NM_2654-7_(from_Horny_1997)';
+	TEXT  TAXON=291 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=292 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=293 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=294 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=295 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=296 CHARACTER=212 TEXT= 'Based_on_SEM''s_with_Roberto';
+	TEXT  TAXON=296 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=297 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=298 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=299 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=300 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=301 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=302 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=304 CHARACTER=212 TEXT= Visible_on_Type_Material;
+	TEXT  TAXON=304 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=305 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=306 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=307 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=308 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=309 CHARACTER=41 TEXT= 'Was_present_and_considered_upper_PL_only_-_but_that_was_silly.';
+	TEXT  TAXON=309 TEXT= 'Based_on_Ebbestad_1999;_RM_Mo._151976-7';
+	TEXT  TAXON=310 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=311 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=312 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=313 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=328 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=326 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=327 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=319 CHARACTER=41 TEXT= now_prominence;
+	TEXT  TAXON=319 CHARACTER=48 TEXT= formerly_none;
+	TEXT  TAXON=323 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=380 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=346 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=346 TEXT= Stenoloron_biformis;
+	TEXT  TAXON=329 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=330 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=330 TEXT= Ulrichospira?_lloydi;
+	TEXT  TAXON=318 CHARACTER=41 TEXT= 'formerly_present_-_now_prominence';
+	TEXT  TAXON=318 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=325 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=331 TEXT= 'Different_species_from_the_type_(Longstaffia)';
+	TEXT  TAXON=332 TEXT= Pleurotomaria_labrosa_Lindström_non_Hall;
+	TEXT  TAXON=336 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=337 TEXT= 'Initially_based_on_UMNH_specimen,_not_Billings_Types;_Examination_of_syntypes_corroborates_the_assignment.';
+	TEXT  TAXON=338 CHARACTER=15 TEXT= strongest_example;
+	TEXT  TAXON=338 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=338 CHARACTER=98 TEXT= was_acute;
+	TEXT  TAXON=338 TEXT= 'Based_on_BM_Strat_material;_also_L._9718_in_Národni;';
+	TEXT  TAXON=381 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=342 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=349 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=364 CHARACTER=178 TEXT= Open_coiling;
+	TEXT  TAXON=364 CHARACTER=50 TEXT= 'See_photos_-_they_should_show_this';
+	TEXT  TAXON=364 TEXT= '_was_Euryzone_tuboides;_now_T._extensa_(Heidenhain);_L.9856;_L.11308,_L.11310,_L.11357,_L.11402-3;';
+	TEXT  TAXON=350 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=365 CHARACTER=100 TEXT= check_on_this;
+	TEXT  TAXON=366 CHARACTER=100 TEXT= check_on_this;
+	TEXT  TAXON=366 CHARACTER=188 TEXT= this_might_be_variable;
+	TEXT  TAXON=366 CHARACTER=193 TEXT= this_might_be_variable;
+	TEXT  TAXON=366 CHARACTER=199 TEXT= this_might_be_variable;
+	TEXT  TAXON=358 CHARACTER=41 TEXT= 'formerly_present_-_now_prominence';
+	TEXT  TAXON=358 CHARACTER=42 TEXT= formerly_coded_as_a_dull_lump;
+	TEXT  TAXON=358 CHARACTER=43 TEXT= formerly_very_weak;
+	TEXT  TAXON=358 CHARACTER=44 TEXT= formerly_no_∆;
+	TEXT  TAXON=358 CHARACTER=46 TEXT= formerly_absent;
+	TEXT  TAXON=358 CHARACTER=47 TEXT= formerly_consistent;
+	TEXT  TAXON=359 CHARACTER=41 TEXT= 'formerly_present_-_now_prominence';
+	TEXT  TAXON=359 CHARACTER=42 TEXT= formerly_coded_as_a_dull_lump;
+	TEXT  TAXON=359 CHARACTER=43 TEXT= formerly_very_weak;
+	TEXT  TAXON=359 CHARACTER=44 TEXT= formerly_no_∆;
+	TEXT  TAXON=359 CHARACTER=46 TEXT= formerly_absent;
+	TEXT  TAXON=359 CHARACTER=47 TEXT= formerly_consistent;
+	TEXT  TAXON=385 CHARACTER=167 TEXT= formerly_coded_as_weakly_curved;
+	TEXT  TAXON=385 CHARACTER=58 TEXT= definitely_not_stronger;
+	TEXT  TAXON=385 CHARACTER=169 TEXT= 'this_occurs_very_early,_which_fools_Klaus_into_thinking_it_is_heterstrophy_of_a_sort';
+	TEXT  TAXON=335 CHARACTER=15 TEXT= might_be_an_illusion_due_to_ornament;
+	TEXT  TAXON=335 CHARACTER=190 TEXT= 'thin_threads_stronger_than_GL''s_but_still_create_cancellate_pattern';
+	TEXT  TAXON=335 CHARACTER=51 TEXT= exaggerated_growth_lines;
+	TEXT  TAXON=335 CHARACTER=52 TEXT= 'lunulae_have_same_spacing_as_grow_lines_but_don''t_match';
+	TEXT  TAXON=335 CHARACTER=84 TEXT= might_be_subsumed_into_ornament;
+	TEXT  TAXON=335 CHARACTER=85 TEXT= weak;
+	TEXT  TAXON=335 CHARACTER=86 TEXT= thin_thread;
+	TEXT  TAXON=335 CHARACTER=90 TEXT= Perp_RR;
+	TEXT  TAXON=335 CHARACTER=98 TEXT= was_acute;
+	TEXT  TAXON=335 TEXT= Phanerotrema_australis_Etheridge.__PG.3854;
+	TEXT  TAXON=351 CHARACTER=124 TEXT= 'mid-lower_columella_visible';
+	TEXT  TAXON=351 CHARACTER=135 TEXT= based_on_lower_part;
+	TEXT  TAXON=351 CHARACTER=57 TEXT= 'actually,_the_are_almost_straight';
+	TEXT  TAXON=351 CHARACTER=58 TEXT= slightly_weaker;
+	TEXT  TAXON=351 CHARACTER=64 TEXT= 'compare_with_others_-_but_it_looks_symmetrical';
+	TEXT  TAXON=351 TEXT= 'Stenoloron_(Mourlonia)_subaequilatera_Chapman;._G.3856';
+	TEXT  TAXON=352 CHARACTER=148 TEXT= this_might_be_an_illusion;
+	TEXT  TAXON=352 CHARACTER=19 TEXT= 'strongly_indented_on_small_specimens_(strong_even_for_Koneprusy)';
+	TEXT  TAXON=352 CHARACTER=209 TEXT= cannot_see_in_there;
+	TEXT  TAXON=352 CHARACTER=66 TEXT= 'opposite_-_there_is_an_indentation_on_steinkerns!';
+	TEXT  TAXON=352 TEXT= 'L.11373_(96:32-35);_L11353-5_(95:37-43)';
+	TEXT  TAXON=388 CHARACTER=48 TEXT= 'lunulae_are_elevated_-_that''s_what_this_means!';
+	TEXT  TAXON=368 TEXT= Based_on_Bandel_&_Fryda_1996;
+	TEXT  TAXON=343 CHARACTER=131 TEXT= actually_more_like_150˚;
+	TEXT  TAXON=343 CHARACTER=147 TEXT= shows_nicely_on_holotype;
+	TEXT  TAXON=343 CHARACTER=200 TEXT= '39-41_threads';
+	TEXT  TAXON=343 CHARACTER=208 TEXT= Actually_not_rugose;
+	TEXT  TAXON=343 CHARACTER=209 TEXT= 'it_appears_that_undulations_are_there,_too';
+	TEXT  TAXON=343 CHARACTER=217 TEXT= '5-6_specimens,_no_sign';
+	TEXT  TAXON=343 CHARACTER=26 TEXT= Periodically_stronger;
+	TEXT  TAXON=343 CHARACTER=36 TEXT= 'frill_projects_forward_(unlike_Crenilunula??)';
+	TEXT  TAXON=343 CHARACTER=38 TEXT= Weaker_on_adult_whorls;
+	TEXT  TAXON=343 CHARACTER=57 TEXT= Illustrated_in_Knight_1945;
+	TEXT  TAXON=343 TEXT= 'Holotype_(no_number:_text_fig._216)';
+	TEXT  TAXON=386 CHARACTER=10 TEXT= might_be_better_coded_as_straight_for_both_sides;
+	TEXT  TAXON=386 CHARACTER=167 TEXT= 'but_"columella"_is_curved!';
+	TEXT  TAXON=386 CHARACTER=174 TEXT= expansion_might_be_increasing_&_aperture_becoming_more_oval;
+	TEXT  TAXON=386 CHARACTER=27 TEXT= hard_to_tell_w._BM_specimens;
+	TEXT  TAXON=386 CHARACTER=169 TEXT= better_material_should_show_this;
+	TEXT  TAXON=386 TEXT= 'Porcellia_aberrans_Koken_(P._bohemia_Barrande).__G.70936{2sp}';
+	TEXT  TAXON=387 CHARACTER=190 TEXT= Barely_visible_on_11335;
+	TEXT  TAXON=387 CHARACTER=194 TEXT= '7-8_threads';
+	TEXT  TAXON=387 CHARACTER=199 TEXT= '~15_threads_on_RR_(plus_2-3_on_shoulder)';
+	TEXT  TAXON=387 CHARACTER=201 TEXT= 'Still,_stronger_than_basal_threads';
+	TEXT  TAXON=387 CHARACTER=209 TEXT= 'Hard_to_seen_in_there,_though';
+	TEXT  TAXON=387 CHARACTER=69 TEXT= 'Actually,_these_might_be_weakly_present_-_check_if_other''s_have_them';
+	TEXT  TAXON=387 CHARACTER=169 TEXT= 'slightly_clockwise,_but_that_is_early';
+	TEXT  TAXON=387 TEXT= 'L._11334-7_(type_must_be_here);_L.11753-5_(show_protoconch!)';
+	TEXT  TAXON=384 CHARACTER=10 TEXT= 'Check_if_this_plateau''s';
+	TEXT  TAXON=384 CHARACTER=133 TEXT= Curved_inward;
+	TEXT  TAXON=384 CHARACTER=138 TEXT= decreases_with_age_as_aperture_rotates;
+	TEXT  TAXON=384 CHARACTER=147 TEXT= not_apparent_in_thin_section;
+	TEXT  TAXON=384 CHARACTER=167 TEXT= curve_is_at_left_ramp;
+	TEXT  TAXON=384 CHARACTER=174 TEXT= it_might_be_increasing_to_accomodate_∆T;
+	TEXT  TAXON=384 CHARACTER=188 TEXT= faintly_visible_on_O._daphanella_specimens;
+	TEXT  TAXON=384 CHARACTER=189 TEXT= 'about_8-10_threads,_with_none_near_SK_-_but_that_is_probably_in_the_restricted_LR';
+	TEXT  TAXON=384 CHARACTER=199 TEXT= 'variable_-_on_specimens_id''d_as_O._daphnella';
+	TEXT  TAXON=384 CHARACTER=200 TEXT= '8-10_threads_on_upper_whorl;__weakly_visible_on_L.11323_(O._senilis),_stronger_on_L.5963_&_L.10902';
+	TEXT  TAXON=384 CHARACTER=201 TEXT= 'Weakly_cancellate_pattern_(not_quite_as_strong_as_growth_lines,_usually)';
+	TEXT  TAXON=384 CHARACTER=57 TEXT= 'Based_on_Knight_1945''s_figures';
+	TEXT  TAXON=384 CHARACTER=84 TEXT= unless_swellings_are....;
+	TEXT  TAXON=384 TEXT= 'Based_on_L.10893_[91:12],_10892_[O._humilis,_91:8-10],_L.10897-900_[91:24-28],_holotype_[94:15-16]_&_Knight''s_photos_of_holotype';
+	TEXT  TAXON=360 CHARACTER=131 TEXT= based_on_section;
+	TEXT  TAXON=360 CHARACTER=189 TEXT= '9-10_threads;_no_2:1:2';
+	TEXT  TAXON=360 CHARACTER=190 TEXT= Wide_but_not_prominent;
+	TEXT  TAXON=360 CHARACTER=194 TEXT= '4-5_threads';
+	TEXT  TAXON=360 CHARACTER=200 TEXT= '6-7_large_threads_with_weak_ones_in_between';
+	TEXT  TAXON=360 CHARACTER=209 TEXT= one_thread;
+	TEXT  TAXON=360 CHARACTER=41 TEXT= 'prominence_present,_though';
+	TEXT  TAXON=360 CHARACTER=66 TEXT= shown_on_steinkern;
+	TEXT  TAXON=360 CHARACTER=70 TEXT= based_on_section;
+	TEXT  TAXON=360 CHARACTER=169 TEXT= 'perhaps_very_slight,_due_to_increasing_T';
+	TEXT  TAXON=360 CHARACTER=80 TEXT= small_hump_visible_in_section;
+	TEXT  TAXON=360 TEXT= 'L.11306_(pl_92:21-24),_L.11345-6_(pl._95:28-29;_holotype_=_11345);_also,_section_view_(4[2]:_TF_127)';
+	TEXT  TAXON=361 CHARACTER=126 TEXT= illustrated_thread_is_edge_of_funicle;
+	TEXT  TAXON=361 CHARACTER=148 TEXT= Any_extension_is_due_to_funicle;
+	TEXT  TAXON=361 CHARACTER=189 TEXT= '8-10_on_L11333';
+	TEXT  TAXON=361 CHARACTER=190 TEXT= Fine_but_sharp;
+	TEXT  TAXON=361 CHARACTER=194 TEXT= '8-9_on_LR';
+	TEXT  TAXON=361 CHARACTER=200 TEXT= '16-18_on_RR';
+	TEXT  TAXON=361 CHARACTER=209 TEXT= '3-4_threads';
+	TEXT  TAXON=361 CHARACTER=66 TEXT= shown_on_steinkern;
+	TEXT  TAXON=361 CHARACTER=169 TEXT= very_slight;
+	TEXT  TAXON=361 TEXT= 'L.11333_(type);_L.11303-3';
+	TEXT  TAXON=362 CHARACTER=131 TEXT= shown_by_whorl_profile;
+	TEXT  TAXON=362 CHARACTER=19 TEXT= stand_out_on_Koneprusy;
+	TEXT  TAXON=362 CHARACTER=199 TEXT= 'present_on_P._reticuloidea;_13-14_uniform_fine_threadson_RR';
+	TEXT  TAXON=362 CHARACTER=209 TEXT= 6_fine_threads_on_P._regulosa;
+	TEXT  TAXON=362 CHARACTER=217 TEXT= Only_one_good_specimen;
+	TEXT  TAXON=362 CHARACTER=28 TEXT= upper_whorls_missing;
+	TEXT  TAXON=362 CHARACTER=50 TEXT= 'TF_148_shows_this;_however,_P._reticuloidea';
+	TEXT  TAXON=362 CHARACTER=66 TEXT= no_trace_on_steinkern;
+	TEXT  TAXON=362 CHARACTER=69 TEXT= very_weak_ones_might_be_present;
+	TEXT  TAXON=362 CHARACTER=8 TEXT= was_more_acute;
+	TEXT  TAXON=362 TEXT= 'L.10887_(type);_91:1-2,_TF_148';
+	TEXT  TAXON=334 CHARACTER=124 TEXT= 'I''m_uncertain_about_this,_but_it_looks_like_there_is_a_thick_columella_behind_the_matrix_&_plaster';
+	TEXT  TAXON=334 CHARACTER=15 TEXT= very_weak;
+	TEXT  TAXON=334 CHARACTER=183 TEXT= slight_increase_at_the_end;
+	TEXT  TAXON=334 CHARACTER=189 TEXT= '17_thin_lira,_w._slight_2:1:2_pattern';
+	TEXT  TAXON=334 CHARACTER=19 TEXT= 'Stand_out,_even_for_Koneprusy';
+	TEXT  TAXON=334 CHARACTER=194 TEXT= '7-8_threads';
+	TEXT  TAXON=334 CHARACTER=198 TEXT= especially_toward_the_base;
+	TEXT  TAXON=334 CHARACTER=200 TEXT= 12_threads;
+	TEXT  TAXON=334 CHARACTER=217 TEXT= only_2_specimens;
+	TEXT  TAXON=334 CHARACTER=50 TEXT= 'GL''s_clearly_don''t_match_lunulae';
+	TEXT  TAXON=334 CHARACTER=84 TEXT= could_be_one_of_the_many_lira....;
+	TEXT  TAXON=334 TEXT= 'L.5965_(110:1-2);_L11759_(110:3);_L11758_(110:4);_all_called_P._labrosa';
+	TEXT  TAXON=363 CHARACTER=189 TEXT= apx._20_threads;
+	TEXT  TAXON=363 CHARACTER=194 TEXT= '11-13_fine_thin_threads';
+	TEXT  TAXON=363 CHARACTER=200 TEXT= '45-50_fine_thin_threads';
+	TEXT  TAXON=363 CHARACTER=48 TEXT= gone_by_final_whorls;
+	TEXT  TAXON=363 TEXT= 'L.11764_(111:7-8)';
+	TEXT  TAXON=389 CHARACTER=124 TEXT= at_least_on_gerontic_whorl;
+	TEXT  TAXON=389 CHARACTER=138 TEXT= this_changes_in_vermetid_stage;
+	TEXT  TAXON=389 CHARACTER=147 TEXT= at_least_in_gerontic_phase;
+	TEXT  TAXON=389 CHARACTER=186 TEXT= 'Note_that_Perner''s_specimen_goes_straight_whereas_others_meander_upwards';
+	TEXT  TAXON=389 TEXT= 'L.6404-6_(Horny_1964)';
+	TEXT  TAXON=367 CHARACTER=16 TEXT= 'maybe_-_I_cannot_make_up_my_mind.__It_might_just_be_forward_projecting_base_with_no_inclination_of_left_side';
+	TEXT  TAXON=367 CHARACTER=187 TEXT= It_is_there;
+	TEXT  TAXON=367 TEXT= 'L._9854-5,_11471';
+	TEXT  TAXON=390 CHARACTER=41 TEXT= 'present_early,_then_becomes_bilineate';
+	TEXT  TAXON=390 TEXT= 'L.29155-8;';
+	TEXT  TAXON=354 CHARACTER=167 TEXT= curve_centered_away_from_base;
+	TEXT  TAXON=354 CHARACTER=190 TEXT= 'Cast_relief,_so_they_are_lira';
+	TEXT  TAXON=354 CHARACTER=24 TEXT= 'Not_like_Porcellia;_RRC_nodes_are_strong,_LRC_nodes_are_weaker_and_offset_so_that_RRC_of_ultimate_whorl_locks_into_LRC_of_penultimate';
+	TEXT  TAXON=354 CHARACTER=50 TEXT= 'Indicated_by_great_distortion;_however,_you_cannot_really_see_it';
+	TEXT  TAXON=354 CHARACTER=84 TEXT= Nodose_and_right_above_the_Selenizone;
+	TEXT  TAXON=354 CHARACTER=91 TEXT= Actual_nodes;
+	TEXT  TAXON=354 TEXT= 'Uncataloged_stratigraphic_specimen_from_Potter_Farm_fm.,_1/4_M_S_4-Mile_Dam,_East-Side_of_Road,_Alpena_Cty_MI';
+	TEXT  TAXON=391 CHARACTER=100 TEXT= weak_sinuation_bn._suture_and_RRC;
+	TEXT  TAXON=391 CHARACTER=122 TEXT= 2nd_LRC_has_tubes;
+	TEXT  TAXON=391 CHARACTER=26 TEXT= might_be_abraded;
+	TEXT  TAXON=391 CHARACTER=50 TEXT= 'cannot_tell_for_certain,_but_weak_lunulae_suggest_it';
+	TEXT  TAXON=391 CHARACTER=91 TEXT= 'Very_strong_GL''s_make_it_looks_so_(plus_very_weak_RRC)';
+	TEXT  TAXON=391 TEXT= 'USNM_416188-9';
+	TEXT  TAXON=375 CHARACTER=70 TEXT= very_approximate;
+	TEXT  TAXON=375 TEXT= 'Based_on_Tassell_1982_&_stratigraphic_material;_shows_septum_and_weak_growth_lines_indicating_no_sinus_or_attached_shells;_WAIT_-_QMF_35589_shows_slit_-_it''s_a_Euryzone';
+	TEXT  TAXON=383 TEXT= 'ANU_35741_(holo)_-_45';
+	TEXT  TAXON=407 CHARACTER=1 TEXT= barely_visibly_on_holotype;
+	TEXT  TAXON=407 CHARACTER=133 TEXT= seems_to_curve_backwards;
+	TEXT  TAXON=407 CHARACTER=19 TEXT= 'extremely_is_more_like_it,_but_specimens_are_coarsely_silicified';
+	TEXT  TAXON=407 CHARACTER=26 TEXT= cannot_see_due_to_inductura_&_columella;
+	TEXT  TAXON=407 CHARACTER=169 TEXT= causes_flattening_of_profile_with_RR_nearly_90˚_off_coiling_axis;
+	TEXT  TAXON=407 TEXT= 'ANU_35726_(holo)_-_30';
+	TEXT  TAXON=369 CHARACTER=148 TEXT= 'Broken_-_I_cannot_be_sure';
+	TEXT  TAXON=369 CHARACTER=167 TEXT= 'Bembexia-style';
+	TEXT  TAXON=369 TEXT= 'ANU_35732_(holo)_-_5.';
+	TEXT  TAXON=392 CHARACTER=100 TEXT= short_sweep_back_at_suture;
+	TEXT  TAXON=392 CHARACTER=168 TEXT= very_weak;
+	TEXT  TAXON=392 CHARACTER=172 TEXT= 'W_increases_but_suture_doesn''t_change_and_umbilicus_doesn''t_seem_to_get_bigger';
+	TEXT  TAXON=392 CHARACTER=188 TEXT= '28-30_very_fine_threads_(but_with_2:1:2_pattern,_at_least_near_LR';
+	TEXT  TAXON=392 CHARACTER=51 TEXT= 'Imbricated_GL''s_(only_a_couple)_show_this';
+	TEXT  TAXON=392 TEXT= 'ANU_35740_(from_Tassell_1982)';
+	TEXT  TAXON=370 CHARACTER=147 TEXT= or_very_thin;
+	TEXT  TAXON=370 CHARACTER=174 TEXT= this_plus_negative_T;
+	TEXT  TAXON=370 CHARACTER=169 TEXT= 'I_looked_closely_but_couldn''t_see_it_(despite_increasing_W)';
+	TEXT  TAXON=370 TEXT= 'ANU_35720_(holo)_-_23;__I''m_not_sure_I_trust_the_GL’s_-_if_they_are_there,_then_they_are_very_faint';
+	TEXT  TAXON=371 CHARACTER=167 TEXT= 'GL''s_curve_back_slightly_at_UC_-_however,_this_isn''t_the_same_as_Stenoloron''s_foot-hole';
+	TEXT  TAXON=371 CHARACTER=190 TEXT= 'weaker_than_GL''s_but_a_weak_cancellate_pattern_is_visible';
+	TEXT  TAXON=371 CHARACTER=199 TEXT= fades_on_older_whorls;
+	TEXT  TAXON=371 CHARACTER=212 TEXT= 'Based_on_G.4507_(3_small_specimens)';
+	TEXT  TAXON=371 CHARACTER=51 TEXT= 'G.83319_(with_healed_breakage)_suggests_slit_went_back_~30˚_at_broken_part';
+	TEXT  TAXON=371 TEXT= 'Helictes_delphinuloides_Schlotheim_1821;__G.22801-4_G.83319_G.2351_G.3338;_Also_MCZ_16724_(7_specimens)_and_unnumbered_MCZ_material.';
+	TEXT  TAXON=393 CHARACTER=138 TEXT= this_is_groovy;
+	TEXT  TAXON=393 CHARACTER=153 TEXT= 'it_does,_but_this_is_strictly_due_to_hyperdexterity';
+	TEXT  TAXON=393 CHARACTER=19 TEXT= Really_thick_but_dull;
+	TEXT  TAXON=393 CHARACTER=209 TEXT= maybe..._YES!!!_Two_threads_present_in_German_specimens;
+	TEXT  TAXON=393 TEXT= 'Agnesia_elegans_(D''Archaic_&_de_Vernueil)_G.36208;_Also,_unnumbered_Humboldt_specimens_(2_good,_11_OK);_additional_specimens_labelled_Pleurotomaria_nodulosa_Goldbr._from_Humboldt';
+	TEXT  TAXON=395 CHARACTER=153 TEXT= 'it_does,_but_this_is_strictly_due_to_hyperdexterity';
+	TEXT  TAXON=353 CHARACTER=100 TEXT= check_this_again;
+	TEXT  TAXON=398 CHARACTER=12 TEXT= 'possibly,_with_weakly_curved_base,_too';
+	TEXT  TAXON=398 CHARACTER=167 TEXT= formerly_coded_as_weakly_curved;
+	TEXT  TAXON=398 CHARACTER=172 TEXT= Causes_ramp_bn._suture_&_RR_to_expand;
+	TEXT  TAXON=398 CHARACTER=24 TEXT= 'recode_these_as_serrated_/_imbricated_RRC_&_LRC';
+	TEXT  TAXON=398 CHARACTER=169 TEXT= 'this_occurs_very_early,_which_fools_Klaus_into_thinking_it_is_heterstrophy_of_a_sort';
+	TEXT  TAXON=399 CHARACTER=12 TEXT= 'possibly,_with_weakly_curved_base,_too';
+	TEXT  TAXON=399 CHARACTER=167 TEXT= formerly_coded_as_weakly_curved;
+	TEXT  TAXON=399 CHARACTER=172 TEXT= Causes_ramp_bn._suture_&_RR_to_expand;
+	TEXT  TAXON=399 CHARACTER=174 TEXT= expansion_might_be_increasing_&_aperture_becoming_more_oval;
+	TEXT  TAXON=399 CHARACTER=24 TEXT= 'recode_these_as_serrated_/_imbricated_RRC_&_LRC_-_11/17/2003_but_note_how_these_are_asymmetrical!!!!';
+	TEXT  TAXON=399 CHARACTER=169 TEXT= 'this_occurs_very_early,_which_fools_Klaus_into_thinking_it_is_heterstrophy_of_a_sort';
+	TEXT  TAXON=402 CHARACTER=167 TEXT= formerly_coded_as_weakly_curved;
+	TEXT  TAXON=402 CHARACTER=172 TEXT= Causes_ramp_bn._suture_&_RR_to_expand;
+	TEXT  TAXON=402 CHARACTER=24 TEXT= 'recode_these_as_serrated_/_imbricated_RRC_&_LRC';
+	TEXT  TAXON=402 CHARACTER=169 TEXT= 'this_occurs_very_early,_which_fools_Klaus_into_thinking_it_is_heterstrophy_of_a_sort';
+	TEXT  TAXON=403 CHARACTER=167 TEXT= formerly_coded_as_weakly_curved;
+	TEXT  TAXON=403 CHARACTER=172 TEXT= Causes_ramp_bn._suture_&_RR_to_expand;
+	TEXT  TAXON=403 CHARACTER=24 TEXT= 'recode_these_as_serrated_/_imbricated_RRC_&_LRC;_asymmetrical_on_MCZ_specimen.';
+	TEXT  TAXON=403 CHARACTER=26 TEXT= 'originally_coded_as_stronger_-_might_mean_weaker_arond_SK';
+	TEXT  TAXON=403 CHARACTER=169 TEXT= 'this_occurs_very_early,_which_fools_Klaus_into_thinking_it_is_heterstrophy_of_a_sort';
+	TEXT  TAXON=408 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=410 CHARACTER=179 TEXT= it_looks_like_increase_then_decrease_then_increase;
+	TEXT  TAXON=410 CHARACTER=69 TEXT= 'Present_on_the_Right_side_-_11/19/2003:_but_this_might_be_just_the_RPL!';
+	TEXT  TAXON=410 CHARACTER=169 TEXT= 'absent_on_G.4568_but_present_on_B.14575;__also,_it_looks_like_there_is_counterclockwise_then_clockwise_rotation_(spire,_then_flat,_then_spire)';
+	TEXT  TAXON=410 CHARACTER=80 TEXT= 'well,_there_is_a_weak_lump_in_the_middle';
+	TEXT  TAXON=410 TEXT= 'G.4568;_also_MB__1998.1_MB.Ga.603.1-2_from_Bergisch-Gladbach;_MCZ';
+	TEXT  TAXON=415 CHARACTER=48 TEXT= formerly_slight;
+	TEXT  TAXON=415 CHARACTER=64 TEXT= 'Hmmm,_if_this_is_asymmetrical_on_the_rightside,_then_the_right_thread_is_the_strong_one';
+	TEXT  TAXON=355 CHARACTER=100 TEXT= weak_sinuation_bn._SC_and_RRC_seen_on_BM_specimens;
+	TEXT  TAXON=355 CHARACTER=104 TEXT= possibly_a_very_weak_carina;
+	TEXT  TAXON=355 CHARACTER=58 TEXT= 'PG.3101-2';
+	TEXT  TAXON=355 TEXT= USNM_45713_and_a_few_gazillion_others;
+	TEXT  TAXON=356 CHARACTER=179 TEXT= 'wait,_does_this_start_high,_get_low,_then_get_high_again?';
+	TEXT  TAXON=356 CHARACTER=183 TEXT= see_earlier_comment;
+	TEXT  TAXON=356 CHARACTER=89 TEXT= check_this;
+	TEXT  TAXON=356 TEXT= 'Bembexia_(Genuspira)_nodosa_Tyler_1965;_USNM_16476;_144462_acc_26557';
+	TEXT  TAXON=420 CHARACTER=104 TEXT= possibly_a_very_weak_carina;
+	TEXT  TAXON=420 CHARACTER=138 TEXT= 'umbilicus_filled_-_cannot_see_it!';
+	TEXT  TAXON=420 CHARACTER=21 TEXT= Fine_&_sharp_on_adult_whorls;
+	TEXT  TAXON=420 CHARACTER=75 TEXT= check_these_with_better_specimens;
+	TEXT  TAXON=420 CHARACTER=76 TEXT= check_these_with_better_specimens;
+	TEXT  TAXON=420 TEXT= 'Pleurotomaria_crenostriata_Sandberger.__G.8263;__Damn,_this_looks_loke_B._sulcomarginata';
+	TEXT  TAXON=421 CHARACTER=100 TEXT= 'GL''s_too_weak_and_node_too_strong_to_see';
+	TEXT  TAXON=421 CHARACTER=136 TEXT= check_this_in_slides;
+	TEXT  TAXON=421 CHARACTER=179 TEXT= protoconch_is_planispiral;
+	TEXT  TAXON=421 CHARACTER=214 TEXT= 'slightly_bulbous,_with_slightly_open_coil_-_try_to_photgraph_this';
+	TEXT  TAXON=421 CHARACTER=30 TEXT= 'check_this_-_i''ll_bet_it_is_wrong';
+	TEXT  TAXON=421 CHARACTER=4 TEXT= It_looks_lower_because_the_aperture_is_inclined;
+	TEXT  TAXON=421 CHARACTER=89 TEXT= at_top_of_RR;
+	TEXT  TAXON=421 CHARACTER=91 TEXT= Strong_projecting_nodes;
+	TEXT  TAXON=421 TEXT= 'G.36924_&_3375-89;_misid''ed_as_Murchisonia';
+	TEXT  TAXON=422 CHARACTER=147 TEXT= thin_layer_observable;
+	TEXT  TAXON=422 CHARACTER=148 TEXT= no_evidence_of_projection;
+	TEXT  TAXON=422 CHARACTER=151 TEXT= 'possibly,_but_it_looks_solid';
+	TEXT  TAXON=422 CHARACTER=89 TEXT= at_top_of_RR;
+	TEXT  TAXON=422 CHARACTER=91 TEXT= weakly_present_possibly;
+	TEXT  TAXON=422 TEXT= 'Murchisonia_defrancei_(D''Archaic_&_deVernuiel).__G.1482_&_36305.__2_small_sp._each.';
+	TEXT  TAXON=423 CHARACTER=104 TEXT= see_RRC;
+	TEXT  TAXON=423 CHARACTER=19 TEXT= cast_definite_relief;
+	TEXT  TAXON=423 CHARACTER=84 TEXT= 'too_much_ornament_-_one_might_be_RRC_(it_would_be_a_strong_medium_strength_sharp_thread)';
+	TEXT  TAXON=423 CHARACTER=91 TEXT= not_serrated_certainly;
+	TEXT  TAXON=423 TEXT= 'Pleurotomaria_catentulata_D''Archaic_&_de_Vernuiel;_=Dictyobembix?';
+	TEXT  TAXON=425 CHARACTER=100 TEXT= trends_straight_back_into_suture;
+	TEXT  TAXON=425 CHARACTER=167 TEXT= This_and_asymmetrical_sinus_convince_me_that_it_is_not_Ruedemannia;
+	TEXT  TAXON=425 CHARACTER=179 TEXT= 'Was_negative_-_double_check';
+	TEXT  TAXON=425 CHARACTER=183 TEXT= Originally_the_only_isometric;
+	TEXT  TAXON=425 CHARACTER=26 TEXT= 'No_longer_create_profile,_as_they_do_on_RR_-_this_might_be_ontogenetic';
+	TEXT  TAXON=425 CHARACTER=50 TEXT= 'GL''s_clearly_go_right_through_PL''s';
+	TEXT  TAXON=425 CHARACTER=91 TEXT= 'slightly_serrated_by_strong_GL''s';
+	TEXT  TAXON=425 TEXT= 'USNM_51251-2_(Nettelroth)';
+	TEXT  TAXON=426 CHARACTER=100 TEXT= weak_sinuation_bn._suture_and_RRC;
+	TEXT  TAXON=426 CHARACTER=122 TEXT= 2nd_LRC_has_tubes;
+	TEXT  TAXON=426 CHARACTER=19 TEXT= was_weak;
+	TEXT  TAXON=426 CHARACTER=35 TEXT= 'Thick__but_dull_(little_relief)';
+	TEXT  TAXON=426 TEXT= 'USNM_416190-3';
+	TEXT  TAXON=376 CHARACTER=100 TEXT= not_a_real_good_view;
+	TEXT  TAXON=376 CHARACTER=167 TEXT= might_just_be_curve_of_shell;
+	TEXT  TAXON=376 CHARACTER=187 TEXT= 'several_smooth,_ronded_truncations';
+	TEXT  TAXON=376 TEXT= 'QMF_34917-27,_QMF_34964,_34969';
+	TEXT  TAXON=377 CHARACTER=194 TEXT= 'appx._8-10_very_fine,_very_faint_threads';
+	TEXT  TAXON=377 CHARACTER=200 TEXT= 'appx._8-10_very_fine,_very_faint_threads';
+	TEXT  TAXON=377 CHARACTER=217 TEXT= only_2_specimens;
+	TEXT  TAXON=377 CHARACTER=66 TEXT= obvious_from_steinkern;
+	TEXT  TAXON=377 TEXT= 'L.11751-2_(109:1-4)';
+	TEXT  TAXON=404 CHARACTER=167 TEXT= perhaps_a_very_slight_curve_to_the_columella;
+	TEXT  TAXON=404 CHARACTER=174 TEXT= expansion_might_be_increasing_&_aperture_becoming_more_oval;
+	TEXT  TAXON=404 CHARACTER=169 TEXT= 'none_of_the_specimens_really_show_this_well;__however,_G._36320_basal_umbilicus_is_shallower_than_apical_one';
+	TEXT  TAXON=404 TEXT= 'Pleurotomaria_bifida_Sandberger_1853;_G.4535;_G.533;';
+	TEXT  TAXON=405 CHARACTER=174 TEXT= expansion_might_be_increasing_&_aperture_becoming_more_oval;
+	TEXT  TAXON=405 CHARACTER=204 TEXT= apparently_weaker_by_SK;
+	TEXT  TAXON=405 TEXT= 'Ammonites_promordialis_Schlotheim;__PG.2296-7;_PG.2300;_G.1490{3sp};_also,_numerous_unnumbered_MB_specimens_from_Grund_-_however,_I_suspect_that_these_are_different_species!';
+	TEXT  TAXON=406 CHARACTER=100 TEXT= Double_check_this_on_others;
+	TEXT  TAXON=406 CHARACTER=131 TEXT= check_this_on_others;
+	TEXT  TAXON=406 CHARACTER=167 TEXT= slight_abapical_curve?;
+	TEXT  TAXON=406 CHARACTER=225 TEXT= Check_this;
+	TEXT  TAXON=406 CHARACTER=24 TEXT= 'recode_these_as_serrated_/_imbricated_RRC_&_LRC';
+	TEXT  TAXON=406 TEXT= 'USNM_85984,_Milwaukee_Cement_Quarry,_Berthelet_WI_(USNM_85984)';
+	TEXT  TAXON=427 CHARACTER=100 TEXT= goes_straight_back_into_suture;
+	TEXT  TAXON=427 CHARACTER=104 TEXT= see_RRC;
+	TEXT  TAXON=427 CHARACTER=124 TEXT= G.63904;
+	TEXT  TAXON=427 CHARACTER=126 TEXT= 'might_be_lost_in_ornament,_but....';
+	TEXT  TAXON=427 CHARACTER=156 TEXT= 'slight_sweep_forward_at_periphery_of_base,_where_LR_begins';
+	TEXT  TAXON=427 CHARACTER=190 TEXT= 'weaker_than_on_RR,_though';
+	TEXT  TAXON=427 CHARACTER=26 TEXT= 'Apparent_on_numerous_specimens,_so_this_probably_isn''t_taphonomic';
+	TEXT  TAXON=427 CHARACTER=50 TEXT= 'imbricated_GL''s_truncate_at_PL';
+	TEXT  TAXON=427 CHARACTER=84 TEXT= 'too_many_lira_-_one_might_be_the_RRC';
+	TEXT  TAXON=427 CHARACTER=91 TEXT= thread_if_RRC_present;
+	TEXT  TAXON=427 TEXT= 'Pleurotomaria_orbignyii_d''Archiac_&_de_Verneuil_1842';
+	TEXT  TAXON=431 CHARACTER=100 TEXT= trends_straight_back_into_suture;
+	TEXT  TAXON=431 CHARACTER=126 TEXT= could_be_lost_in_ornament;
+	TEXT  TAXON=431 CHARACTER=156 TEXT= 'slight_sweep_forward_at_periphery_of_base,_where_LR_begins';
+	TEXT  TAXON=431 CHARACTER=27 TEXT= 'Barely_visible_there,_but_strong_on_base_and_RR';
+	TEXT  TAXON=431 CHARACTER=50 TEXT= probably....;
+	TEXT  TAXON=431 CHARACTER=58 TEXT= same_as_basal_and_RR_GLs;
+	TEXT  TAXON=431 CHARACTER=91 TEXT= 'Present_only_on_GL_-_completely_absent_in_between';
+	TEXT  TAXON=431 CHARACTER=95 TEXT= 2nd_nodose_lirum_near_suture;
+	TEXT  TAXON=431 TEXT= 'Pleurotomaria_neapolitana_Whidborne_1892;_incl._P._trochoides_Whid._G.526-8;_G.15060-3';
+	TEXT  TAXON=432 CHARACTER=108 TEXT= slight_nodosity_due_to_growth_lin_es;
+	TEXT  TAXON=432 CHARACTER=167 TEXT= visible_on_some_latex_molds;
+	TEXT  TAXON=432 CHARACTER=178 TEXT= begins_planispiral;
+	TEXT  TAXON=432 CHARACTER=36 TEXT= right_only;
+	TEXT  TAXON=432 TEXT= 'QMF_34265;_also_QMF33687_(whole_rock)_&_QMF33089';
+	TEXT  TAXON=433 CHARACTER=126 TEXT= lirum_reflects_edge_of_callus_or_funicle;
+	TEXT  TAXON=433 CHARACTER=73 TEXT= swellin_next_to_suture_increases;
+	TEXT  TAXON=433 TEXT= 'QMF_34215-22,_33650,_33619,_33651-72';
+	TEXT  TAXON=436 CHARACTER=100 TEXT= This_is_what_gives_away_that_it_is_not_Tropidodiscus;
+	TEXT  TAXON=436 CHARACTER=135 TEXT= 35010_shows_this_nicely;
+	TEXT  TAXON=436 CHARACTER=172 TEXT= Accompanies_increasingly_lenticular_shape;
+	TEXT  TAXON=436 TEXT= 'from_Cook_1998;_also_QMF_35059;_35061;_35090;_35010';
+	TEXT  TAXON=437 CHARACTER=167 TEXT= Curved_on_CPC_34619;
+	TEXT  TAXON=437 CHARACTER=19 TEXT= this_might_vary;
+	TEXT  TAXON=437 CHARACTER=193 TEXT= 4_very_weak_threads;
+	TEXT  TAXON=437 CHARACTER=199 TEXT= 3_very_weak_threads;
+	TEXT  TAXON=437 TEXT= 'from_Cook_et_al._Canning_Basin;_CPC_34618-21';
+	TEXT  TAXON=438 CHARACTER=135 TEXT= slightly_acutte_due_to_odd_orientation;
+	TEXT  TAXON=438 CHARACTER=154 TEXT= negative_inclination;
+	TEXT  TAXON=438 CHARACTER=160 TEXT= Backwards_about_30˚_because_of_sinus;
+	TEXT  TAXON=438 CHARACTER=189 TEXT= '5_moderate_threads_(1/2_wide_as_gap)';
+	TEXT  TAXON=438 CHARACTER=193 TEXT= '12_threads_(wide_but_faint,_becoming_fainter)';
+	TEXT  TAXON=438 TEXT= Unpublished_Burgin_Hill_material_of_Cook’s;
+	TEXT  TAXON=439 CHARACTER=189 TEXT= '8_more_closely_packed_(space_bn._3/4_width)';
+	TEXT  TAXON=439 CHARACTER=193 TEXT= '8_fine_threads,_space_bn._5X_width';
+	TEXT  TAXON=439 CHARACTER=4 TEXT= comes_in_nearly_straight_because_of_inclination;
+	TEXT  TAXON=439 CHARACTER=51 TEXT= 'Aperture_pretty_complete_but_doesn''t_show_it';
+	TEXT  TAXON=439 CHARACTER=66 TEXT= Nice_view_from_silicified_material;
+	TEXT  TAXON=439 CHARACTER=82 TEXT= fades_with_age;
+	TEXT  TAXON=439 TEXT= 'QMF_35991,4,5,_36003,_40422';
+	TEXT  TAXON=440 CHARACTER=100 TEXT= 'Curves_back_slightly_before_suture,_then_springs_forward_again';
+	TEXT  TAXON=440 TEXT= 'QMF_49942;_109340;';
+	TEXT  TAXON=441 CHARACTER=167 TEXT= might_be_slightly_curved;
+	TEXT  TAXON=441 CHARACTER=188 TEXT= 'Present_on_102835_(misid''ed_as_Playfordia)';
+	TEXT  TAXON=441 CHARACTER=189 TEXT= '12_fine,_dull_threads';
+	TEXT  TAXON=441 CHARACTER=193 TEXT= 'Present_on_102835_(misid''ed_as_Playfordia)';
+	TEXT  TAXON=441 CHARACTER=194 TEXT= '10_lira,_space_bn._2X_width';
+	TEXT  TAXON=441 CHARACTER=199 TEXT= '12_threads,_very_dull_but_fairly_wide;_space_bn._~1/2_width';
+	TEXT  TAXON=441 CHARACTER=80 TEXT= 'very_weak,_but_there,_below_suture';
+	TEXT  TAXON=441 TEXT= 'QMF_49948-9,_49951';
+	TEXT  TAXON=442 CHARACTER=188 TEXT= '7_on_base,_weak_relief,_gap_=_3W';
+	TEXT  TAXON=442 CHARACTER=193 TEXT= '6-7_present,_G_=_3W';
+	TEXT  TAXON=442 CHARACTER=199 TEXT= '7_threads,_slightly_wider_at_top';
+	TEXT  TAXON=442 CHARACTER=26 TEXT= actually_stronger_on_columella_half;
+	TEXT  TAXON=442 CHARACTER=58 TEXT= same_as_LR_GLs;
+	TEXT  TAXON=442 CHARACTER=71 TEXT= left_might_be_slightly_rounder;
+	TEXT  TAXON=442 TEXT= 'NMVP_148729-30_(type,_paratype)';
+	TEXT  TAXON=443 CHARACTER=193 TEXT= '8_threads,_more_closely_packed_near_base,_gap_5X_->_3X';
+	TEXT  TAXON=443 CHARACTER=199 TEXT= '3-4_threads,_gap_2XW';
+	TEXT  TAXON=443 TEXT= 'QMF_102835_(LR_GL''s_good);_also_50026';
+	TEXT  TAXON=444 CHARACTER=139 TEXT= perhaps_this_should_be_0˚;
+	TEXT  TAXON=444 CHARACTER=172 TEXT= Causes_ramp_bn._suture_&_RR_to_expand;
+	TEXT  TAXON=444 CHARACTER=194 TEXT= 9_threads_bn._ramp_&_SK;
+	TEXT  TAXON=444 TEXT= Burgin_Hills_Fm._material;
+	TEXT  TAXON=445 CHARACTER=189 TEXT= 5_moderate_threads;
+	TEXT  TAXON=445 CHARACTER=19 TEXT= Create_nodes;
+	TEXT  TAXON=445 CHARACTER=194 TEXT= '4_moderate_threads;_space_bn._~_width';
+	TEXT  TAXON=445 CHARACTER=200 TEXT= '7_threads,_every_other_one_stronger,_~_strong_as_space_bn.';
+	TEXT  TAXON=445 TEXT= Burgin_Hill_Fm;
+	TEXT  TAXON=446 CHARACTER=104 TEXT= see_RRC;
+	TEXT  TAXON=446 CHARACTER=189 TEXT= '8_threads,_2X_wide_as_space_bn.';
+	TEXT  TAXON=446 CHARACTER=194 TEXT= '5_threads,_2X_wider_than_spacing';
+	TEXT  TAXON=446 CHARACTER=200 TEXT= '10_threads,_wide_as_space_bn.';
+	TEXT  TAXON=446 CHARACTER=24 TEXT= weakly_nodose_ornament;
+	TEXT  TAXON=446 TEXT= Based_on_numerous_Cook_specimens;
+	TEXT  TAXON=451 CHARACTER=41 TEXT= Formerly_coded_as_a_weak_round_consistent_NK;
+	TEXT  TAXON=73 CHARACTER=100 TEXT= Well_illustrated_in_Heller_1954;
+	TEXT  TAXON=11 CHARACTER=150 TEXT= 'was_"weak"';
+	TEXT  TAXON=13 CHARACTER=140 TEXT= 'not_really_-_more_like_a_shoveling';
+	TEXT  TAXON=13 CHARACTER=167 TEXT= slight_shoveling_backwards;
+	TEXT  TAXON=14 CHARACTER=140 TEXT= 'not_really_-_more_like_a_shoveling';
+	TEXT  TAXON=14 CHARACTER=167 TEXT= slight_shoveling_backwards;
+	TEXT  TAXON=15 CHARACTER=140 TEXT= 'not_really_-_more_like_a_shoveling';
+	TEXT  TAXON=15 CHARACTER=167 TEXT= slight_shoveling_backwards;
+	TEXT  TAXON=18 CHARACTER=150 TEXT= 'was_"weak"';
+	TEXT  TAXON=18 TEXT= Based_on_Setul_Fm._stratigraphic_collection;
+	TEXT  TAXON=19 CHARACTER=140 TEXT= 'not_really_-_more_like_a_shoveling';
+	TEXT  TAXON=19 CHARACTER=167 TEXT= slight_shoveling_backwards;
+	TEXT  TAXON=19 CHARACTER=33 TEXT= broad_but_dull;
+	TEXT  TAXON=19 CHARACTER=42 TEXT= 'was_rounded,_but_it_really_looks_like_2_dull_ones';
+	TEXT  TAXON=19 TEXT= Based_on_silicified_strat._material_at_QM;
+	TEXT  TAXON=463 CHARACTER=150 TEXT= 'was_"weak"';
+	TEXT  TAXON=465 CHARACTER=98 TEXT= Apparent_acuteness_is_RRC_and_is_below_the_suture;
+	TEXT  TAXON=465 TEXT= 'Based_on_stratigraphic_material_from_Zeehan_Qrry,_NZ.__“901”_specimens';
+	TEXT  TAXON=468 TEXT= 'AMF.4277-8_(1_&_3_sp.,_slightly_to_strongly_distorted),_Gordon_River,_Tas.';
+	TEXT  TAXON=469 TEXT= 'from_Rohr_1988_("Murchisonia_sp.")';
+	TEXT  TAXON=471 TEXT= from_Rohr_1988;
+	TEXT  TAXON=90 CHARACTER=22 TEXT= double_check_this;
+	TEXT  TAXON=94 CHARACTER=106 TEXT= almost_lost_in_ornament;
+	TEXT  TAXON=94 CHARACTER=189 TEXT= '5_threads_of_increasing_thickness;_wide_but_weak';
+	TEXT  TAXON=94 CHARACTER=194 TEXT= two_wide_weak_threads;
+	TEXT  TAXON=94 CHARACTER=200 TEXT= 'two_fine_threads_bn._RRC_&_suture;_another_5_bn._thread_&_SK';
+	TEXT  TAXON=94 TEXT= 'Yü_1993;_based_on_stratigraphic_material_at_QM';
+	TEXT  TAXON=104 CHARACTER=58 TEXT= 'Was_stronger,_deep_&_concave,_throughout';
+	TEXT  TAXON=104 CHARACTER=70 TEXT= was_20˚;
+	TEXT  TAXON=107 CHARACTER=141 TEXT= Double_check_this;
+	TEXT  TAXON=111 CHARACTER=179 TEXT= late_only;
+	TEXT  TAXON=127 CHARACTER=179 TEXT= late_only;
+	TEXT  TAXON=127 CHARACTER=181 TEXT= was_continuous;
+	TEXT  TAXON=127 CHARACTER=182 TEXT= was_lowers_suture;
+	TEXT  TAXON=132 CHARACTER=124 TEXT= was_no_different;
+	TEXT  TAXON=132 CHARACTER=58 TEXT= 'Was_stronger,_deep_&_concave,_throughout';
+	TEXT  TAXON=132 CHARACTER=70 TEXT= was_20˚;
+	TEXT  TAXON=408 CHARACTER=34 TEXT= check_this;
+	TEXT  CHARACTER=32 TEXT= Outer_two_lira_of_the_trilineate_selenizone_assumed_to_be_synapomorphy_with_paired_lira_of_murchisonioids;
+	TEXT  CHARACTER=98 TEXT= 'Sutureless_shells_coded_on_shape_at_that_approximate_region_(it’s_always_oblique)';
+	TEXT  TAXON=129 TEXT= 'Horny_1997_pl._13_7-10_(NM_S_2644-5)';
+	TEXT  TAXON=130 TEXT= 'Horny_1997_pl._14_1-9_(NM_S_2646-9)';
+	TEXT  TAXON=125 CHARACTER=12 TEXT= It_is_present_on_some_specimens;
+	TEXT  TAXON=10 TEXT= misidentified_as_Hormotoma_cassina;
+	TEXT  TAXON=408 TEXT= 'USNM_10-29359,_10-22.338;_types:_GSC_4050-451';
+	TEXT  TAXON=320 TEXT= USNM_88652;
+	TEXT  TAXON=395 TEXT= 'CGU_JF565-7_(Fryda_1998)';
+	TEXT  TAXON=261 TEXT= 'From_Tassell_1978;_might_not_be_the_same_species';
+	TEXT  TAXON=418 TEXT= From_Kase_&_Nishida_1986;
+	TEXT  TAXON=108 TEXT= 'Was_Malayaspira_annulata;_based_on_stratigraphic_material_from_USNM_&_Rohr_&_Measures_2001;';
+	TEXT  TAXON=92 TEXT= 'Was_Teiichispira;_probably_the_same_as_M._crenulata_(see_Rohr_&_Measures_2001)';
+	TEXT  TAXON=88 TEXT= 'Originally_Macluritella_smithville_sp._(probably_equivalent_to_Maclurea_ponderosus_Billings_1865_[see_Rohr_&_Measures_2001]).';
+	TEXT  TAXON=92 CHARACTER=221 TEXT= 'Based_on_Rohr_&_Measures_2001_(for_M._crenulata)';
+	TEXT  CHARACTER=61 TEXT= 'This_describes_changes_in_prominence,_not_lirum_strength';
+	TEXT  TAXON=222 CHARACTER=193 TEXT= One_very_strong_thread_in_middle_of_LRC;
+	TEXT  TAXON=222 CHARACTER=188 TEXT= '4_strong_threads,_with_higher_ones_stronger';
+	TEXT  CHARACTER=15 TEXT= 'Shown_by_zig-zagging_of_GLs';
+	TEXT  TAXON=222 CHARACTER=75 TEXT= SK_low;
+	TEXT  TAXON=222 CHARACTER=76 TEXT= SK_low;
+	TEXT  TAXON=222 CHARACTER=78 TEXT= SK_low;
+	TEXT  TAXON=222 CHARACTER=79 TEXT= SK_low;
+	TEXT  TAXON=222 CHARACTER=43 TEXT= was_moderate;
+	TEXT  TAXON=221 CHARACTER=78 TEXT= coded_assuming_middle_thread_was_SK;
+	TEXT  TAXON=222 CHARACTER=126 TEXT= Ornament_might_include_it;
+	TEXT  TAXON=223 CHARACTER=127 TEXT= was_rounded_thread;
+	TEXT  TAXON=223 CHARACTER=128 TEXT= was_weak;
+	TEXT  TAXON=223 CHARACTER=129 TEXT= was_becomes_weaker;
+	TEXT  TAXON=223 CHARACTER=130 TEXT= was_apx._90˚;
+	TEXT  TAXON=222 CHARACTER=172 TEXT= ???_check_on_this;
+	TEXT  TAXON=416 TEXT= 'GSC_4041-2';
+	TEXT  TAXON=416 CHARACTER=19 TEXT= Visible_on_4041;
+	TEXT  TAXON=416 CHARACTER=35 TEXT= 'Visible_as_wide_lumps_on_steinkern_(GSC_4042)';
+	TEXT  TAXON=416 CHARACTER=58 TEXT= Also_more_densely_packed;
+	TEXT  TAXON=416 CHARACTER=66 TEXT= 'channels_beneath_lira,_though';
+	TEXT  TAXON=416 CHARACTER=147 TEXT= 'Thin,_but_whole_shell_is_thin;_visible_on_GSC_4041';
+	TEXT  TAXON=416 CHARACTER=184 TEXT= Profile_flattened_at_the_end;
+	TEXT  TAXON=416 CHARACTER=187 TEXT= rounded_steinkerns_on_4041_&_4042;
+	TEXT  CHARACTER=119 TEXT= 'Additional_channel_making_the_frill_a_siphon,_as_on_Euomphalopterus';
+	TEXT  TAXON=417 TEXT= 'GSC_4163_(?4153),_4164';
+	TEXT  TAXON=417 CHARACTER=35 TEXT= 'Upper_one_sharp,_moderately_strong';
+	TEXT  TAXON=417 CHARACTER=18 TEXT= 'GL’s_are_nicely_visible_on_4163_(?4153),_a_cast_of_the_shell.';
+	TEXT  TAXON=417 CHARACTER=66 TEXT= Dull_channel_underneath_R_PL;
+	TEXT  TAXON=415 TEXT= This_might_simply_be_E._infranodosa;
+	TEXT  TAXON=409 TEXT= GSC_specimens_showing_GL’s_nicely;
+	TEXT  TAXON=409 CHARACTER=8 TEXT= Difference_simply_difference_in_sharpness;
+	TEXT  TAXON=409 CHARACTER=34 TEXT= I_think_the_Selenizone_is_on_the_RR_and_the_sharp_thread_here_is_the_left_one;
+	TEXT  TAXON=409 CHARACTER=35 TEXT= Other_one_is_moderate_and_lightly_serrated;
+	TEXT  TAXON=409 CHARACTER=169 TEXT= 'spire,_then_flat';
+	TEXT  CHARACTER=219 TEXT= See_Linsley_1968;
+	TEXT  TAXON=179 CHARACTER=29 TEXT= really_absent_by_the_end;
+	TEXT  TAXON=209 CHARACTER=28 TEXT= 'looks_absent,_but_check_photos';
+	TEXT  TAXON=209 CHARACTER=70 TEXT= was_80˚;
+	TEXT  TAXON=324 TEXT= 'GSC_2981_(holotypes_of_Whiteaves_variant)';
+	TEXT  TAXON=259 TEXT= 'GSC_17633_(holo),_17634-6_(one_sectioned)';
+	TEXT  TAXON=259 CHARACTER=5 TEXT= asymmetry_an_artifact_of_whorl_asymmetry;
+	TEXT  TAXON=259 CHARACTER=98 TEXT= see_SL_comment;
+	TEXT  TAXON=259 CHARACTER=95 TEXT= 'channeled_-_perhaps_should_just_be_acute';
+	TEXT  TAXON=259 CHARACTER=105 TEXT= very_much_like_Poleumita;
+	TEXT  TAXON=259 CHARACTER=125 TEXT= concentrated_at_top_with_callus;
+	TEXT  TAXON=259 CHARACTER=141 TEXT= describes_the_extra_thickening_on_top_of_the_columella;
+	TEXT  TAXON=259 CHARACTER=164 TEXT= base_then_curves_back;
+	TEXT  TAXON=259 CHARACTER=167 TEXT= 'curve_in_middle,_at_bottom_of_columella';
+	TEXT  TAXON=260 TEXT= 'GSC_17637-8_(hypotypes)';
+	TEXT  TAXON=260 CHARACTER=2 TEXT= looks_asymmetrical_because_of_plateauing_&_truncation_of_RR;
+	TEXT  TAXON=259 CHARACTER=2 TEXT= looks_asymmetrical_because_of_plateauing_&_truncation_of_RR;
+	TEXT  TAXON=259 CHARACTER=66 TEXT= Sectioned_specimens_shows_this.;
+	TEXT  TAXON=260 CHARACTER=66 TEXT= Sectioned_specimens_shows_this.;
+	TEXT  TAXON=260 CHARACTER=95 TEXT= 'channeled_-_perhaps_should_just_be_acute';
+	TEXT  TAXON=260 CHARACTER=98 TEXT= see_SL_comment;
+	TEXT  TAXON=260 CHARACTER=105 TEXT= A_thicker_version_of_O._cotei;
+	TEXT  TAXON=259 CHARACTER=133 TEXT= curve_appears_to_be_at_base;
+	TEXT  TAXON=260 CHARACTER=133 TEXT= 'curve_appears_to_be_at_base;_weakly_visible_on_sectioned_specimen_&_GSC_17637_(basically_like_O._cotei)';
+	TEXT  TAXON=260 CHARACTER=141 TEXT= 'The_columella_is_uniformly_thick_-_I_don''t_think_that_there_is_an_extra_callus';
+	TEXT  TAXON=260 CHARACTER=147 TEXT= Section_shows_almost_no_added_thickness;
+	TEXT  TAXON=259 CHARACTER=147 TEXT= Section_shows_little_added_thickness;
+	TEXT  TAXON=260 CHARACTER=167 TEXT= 'curve_in_middle,_at_bottom_of_columella';
+	TEXT  TAXON=463 TEXT= 'GSC_1189_(holotype);_also,_USNM_strat_material';
+	TEXT  TAXON=463 CHARACTER=3 TEXT= 'was_40˚_-_less_on_some_places,_but_I_think_that_these_are_distorted_GL''s_due_to_damage';
+	TEXT  TAXON=463 CHARACTER=7 TEXT= 'Sinus_becings_below_the_base,_actually';
+	TEXT  TAXON=463 CHARACTER=9 TEXT= 'was_continuous,_but_really_it_plateaus';
+	TEXT  TAXON=152 TEXT= Based_on_Late_Ordovician_material;
+	TEXT  TAXON=152 CHARACTER=70 TEXT= 'was_70˚,_but_it_is_more_asymmetrical_than_that';
+	TEXT  TAXON=152 CHARACTER=104 TEXT= all_threads_assumed_to_be_ornament;
+	TEXT  TAXON=139 CHARACTER=104 TEXT= all_threads_assumed_to_be_ornament;
+	TEXT  TAXON=138 CHARACTER=104 TEXT= all_threads_assumed_to_be_ornament;
+	TEXT  TAXON=139 CHARACTER=173 TEXT= 'D=15/25';
+	TEXT  TAXON=139 TEXT= 'Cotypes_examined_(&_sp._recoded):_GSC_1263_(type_lot,_with_2_shells_&_several_opercula)';
+	TEXT  TAXON=139 CHARACTER=3 TEXT= was_20˚;
+	TEXT  TAXON=139 CHARACTER=14 TEXT= '*might*_be_weakly_present;_definite_on_one_part_of_the_best_one,_but_that_looks_distorted_(?injury_repair)_with_a_groove';
+	TEXT  TAXON=139 CHARACTER=49 TEXT= 'might_become_weaker_-_hard_to_say_as_it_is_always_weak.';
+	TEXT  TAXON=139 CHARACTER=70 TEXT= probably_about_right;
+	TEXT  TAXON=139 CHARACTER=72 TEXT= 'was_flat_-_but_it_is_convex_really';
+	TEXT  TAXON=139 CHARACTER=172 TEXT= It_does_get_rounder;
+	TEXT  TAXON=139 CHARACTER=169 TEXT= associated_with_expansion_of_whorl;
+	TEXT  TAXON=139 CHARACTER=187 TEXT= 'only_earliest_whorls,_though';
+	TEXT  TAXON=139 CHARACTER=188 TEXT= 'previously_absent,_but_basal_whorl_is_on_base!__11_threads_sl._stronger_than_selenizone_(weak_relief),_width_2X_space_bn.';
+	TEXT  TAXON=139 CHARACTER=193 TEXT= '33-37_weak_threads,_about_as_wide_as_space_bn_and_very_weak_relief.__Not_even_visible_on_one_specimen.';
+	TEXT  TAXON=139 CHARACTER=224 TEXT= 'at_base_of_inner_margin;__muscle_scar_oblique_to_IM_(45˚)at_the_top_of_IM';
+	TEXT  TAXON=27 CHARACTER=35 TEXT= 'right_weak,_left_strong';
+	TEXT  TAXON=27 TEXT= 'GSC_1242_(type_lot)';
+	TEXT  TAXON=27 CHARACTER=10 TEXT= 'almost_plateuas_in_(RGL''s_normal_looking_for_Hormotoma).';
+	TEXT  TAXON=27 CHARACTER=98 TEXT= 'was_acute_(acute)';
+	TEXT  TAXON=26 CHARACTER=98 TEXT= 'was_acute_(acute)';
+	TEXT  TAXON=463 CHARACTER=98 TEXT= slight_rise_into_suture_appears_to_reflect_SL;
+	TEXT  TAXON=463 CHARACTER=95 TEXT= weak_one_probably_present;
+	TEXT  TAXON=419 TEXT= 'MPM_22577;_also_UM_22,423_(Radabaugh''s_Platyloron_simozonus).';
+	TEXT  TAXON=419 CHARACTER=26 TEXT= 'Visible_on_Radabaugh''s_specimen';
+	TEXT  TAXON=419 CHARACTER=7 TEXT= 'Visible_on_Radabaugh''s_specimen';
+	TEXT  TAXON=419 CHARACTER=51 TEXT= 'based_on_Blodgett''s_specimen_&_variation_in_GL_strength.';
+	TEXT  TAXON=419 CHARACTER=68 TEXT= See_Radabaugh;
+	TEXT  TAXON=419 CHARACTER=72 TEXT= 'actually,_very_slightly_convex';
+	TEXT  TAXON=419 CHARACTER=147 TEXT= 'See_radabaugh_pl_6:1';
+	TEXT  TAXON=419 CHARACTER=171 TEXT= 'W_=_2.0';
+	TEXT  TAXON=419 CHARACTER=173 TEXT= 'D=10/32';
+	TEXT  TAXON=419 CHARACTER=178 TEXT= 'T_=_tan_(55˚)';
+	TEXT  TAXON=419 CHARACTER=179 TEXT= 'Starts_out_planispiral,_then_drops_after_2_whorls';
+	TEXT  TAXON=261 CHARACTER=51 TEXT= Fig._6E;
+	TEXT  TAXON=418 CHARACTER=147 TEXT= Fig._6G;
+	TEXT  TAXON=418 CHARACTER=171 TEXT= '=49/21';
+	TEXT  TAXON=414 CHARACTER=16 TEXT= It_looks_sigmoidal_because_base_is_projected_forward_and_sinus_begins_low.;
+	TEXT  TAXON=414 CHARACTER=51 TEXT= 'See_Linsley_Pl._249,_Fig._1';
+	TEXT  TAXON=414 TEXT= Knight_1941_&_Linsley_1994;
+	TEXT  TAXON=419 CHARACTER=133 TEXT= See_Radabaugh;
+	TEXT  TAXON=414 CHARACTER=147 TEXT= Thicker_on_final_whorl;
+	TEXT  TAXON=414 CHARACTER=164 TEXT= Really_juts_forward;
+	TEXT  TAXON=315 TEXT= 'Based_on_Mo._25196,_25197,_25914_from_the_Boda_Ls.;_originally_identified_by_me_as_Eocryptaenia_singularis?';
+	TEXT  TAXON=307 TEXT= Mo._70711;
+	TEXT  TAXON=308 TEXT= GSC_N8505;
+	TEXT  TAXON=328 TEXT= 'BMNH_36444,_460,_480;_GSC_29607_(from_Bolton_1972_GSC_Paper_71-19);_GSC_2303_(3_spec.)_collected_by_J._Richardson_1_M_E_Junction_Cliff.';
+	TEXT  CHARACTER=173 TEXT= 'Describe_how_whole_columella_curves_-_if_straight_and_no_umbilicus,_then_maxium.__If_round_with_umbilicus_bn._middle_and_base,_then_very_high_(etc.)';
+	TEXT  TAXON=243 TEXT= 'Abschrift_MB_1-2_(3673-4)_from_Villmar';
+	TEXT  TAXON=243 CHARACTER=68 TEXT= ditto;
+	TEXT  TAXON=243 CHARACTER=193 TEXT= 'GL''s_come_foreward_about_45˚_-_creates_nodose_pattern_with_threads_that_descend_about_30˚_relative_to_LRC.';
+	TEXT  TAXON=243 CHARACTER=194 TEXT= approximately_12;
+	TEXT  CHARACTER=220 TEXT= 'See_Linsley_1968_-_split_3/17/03';
+	TEXT  TAXON=257 TEXT= 'MB.228_(8_specimens,_also_id''ed_as_Platyschisma_priscum_Schlotheim).__3/18/03';
+	TEXT  TAXON=257 CHARACTER=5 TEXT= 'RR_is_much_shorter,_making_the_sinus_facultatively_asymmetrical';
+	TEXT  TAXON=257 CHARACTER=23 TEXT= 'Every_2nd-3rd_GL_is_quite_strong;';
+	TEXT  TAXON=257 CHARACTER=26 TEXT= Less_sign_of_imbrications_on_base;
+	TEXT  CHARACTER=49 TEXT= This_could_be_redundant_with_adult_vs._juvenile_characters_before;
+	TEXT  TAXON=257 CHARACTER=73 TEXT= shape_at_sinus_apex_becomes_more_convex!;
+	TEXT  TAXON=257 CHARACTER=126 TEXT= Weak_thread_on_juveniles_an_artifact_of_callus;
+	TEXT  TAXON=257 CHARACTER=136 TEXT= due_to_callus;
+	TEXT  CHARACTER=145 TEXT= 'Added_for_Orecopia_applanatum_3/18/03';
+	TEXT  TAXON=257 CHARACTER=167 TEXT= Apparent_curve_is_due_to_projection;
+	TEXT  TAXON=257 CHARACTER=173 TEXT= Fairly_low_D;
+	TEXT  TAXON=257 CHARACTER=174 TEXT= D_decreases;
+	TEXT  TAXON=257 CHARACTER=187 TEXT= Upper_whorls_usually_absent_despite_being_shielded_by_coiling....;
+	TEXT  TAXON=258 TEXT= 'MB_T.266_(10_specimens);_MB_T.227_(4_specimens);';
+	TEXT  TAXON=258 CHARACTER=23 TEXT= 'most_GL''s_invisible_due_to_coarse_preservation,_but_some_are_at_intervals';
+	TEXT  TAXON=257 CHARACTER=29 TEXT= 'dull_ridge_visible,_later_lost';
+	TEXT  TAXON=258 CHARACTER=29 TEXT= 'dull_ridge_visible,_later_lost';
+	TEXT  TAXON=258 CHARACTER=145 TEXT= 'Range_of_sizes_present_for_O._applanatum_not_present,_but_smaller_ones_do_seem_to_have_larger_umbilicus';
+	TEXT  TAXON=257 CHARACTER=178 TEXT= 'begins_nearly_planispiral,_then_has_low';
+	TEXT  TAXON=258 CHARACTER=179 TEXT= 'Spire_height_175˚_->_130˚_->_85˚_in_three_whorls';
+	TEXT  TAXON=257 CHARACTER=179 TEXT= 'AA_160˚_->_120˚_->_95˚_in_three_whorls';
+	TEXT  TAXON=258 CHARACTER=187 TEXT= 'Some_broken_Schönkirchen_specimens_suggest_one,_but_it_is_hard_to_be_certain';
+	TEXT  TAXON=434 TEXT= 'Humbolt_specimens,_including_unnumbered_type.__Characters_based_on_pre-gerontic_whorls_(except_those_describing_gerontic_growth,_of_course).';
+	TEXT  TAXON=257 CHARACTER=210 TEXT= 'It_is_difficult_to_be_certain_due_to_imbricated_GL''s,_and_a_couple_of_specimens_might_show_weak_ones.';
+	TEXT  TAXON=434 CHARACTER=2 TEXT= 'left_side_has_45˚_retreat_at_SK;_right_side_continuous_30˚_from_mid-ramp';
+	TEXT  TAXON=434 CHARACTER=18 TEXT= definitely_easier_to_see_on_RR;
+	TEXT  TAXON=434 CHARACTER=50 TEXT= 'GL''s_go_straight_through!';
+	TEXT  TAXON=434 CHARACTER=56 TEXT= 'Slit_about_30˚_deep,_begining_about_45˚_back.__Right_were_selenizone_was_before_aperture_goes_nutty.';
+	TEXT  TAXON=434 CHARACTER=71 TEXT= Nearly_circular_profile;
+	TEXT  TAXON=434 CHARACTER=84 TEXT= 'Might_be_one,_but_it_is_lost_in_the_ornament.__If_so,_it_is_slightly_less_prominent_than_SK_threads.';
+	TEXT  TAXON=434 CHARACTER=131 TEXT= nearly_circular_intersection;
+	TEXT  TAXON=434 CHARACTER=135 TEXT= much_less_round_than_the_rest_of_the_aperture;
+	TEXT  TAXON=356 CHARACTER=168 TEXT= Was_weakly;
+	TEXT  TAXON=434 CHARACTER=186 TEXT= 'Begins_to_coil_too_far_into_the_shell,_creating_a_small_hole_near_the_umbilicus_and_a_trema';
+	TEXT  TAXON=434 CHARACTER=188 TEXT= '7_threads,_as_wide_as_space_between_them,_with_moderate_relief.__Also,_14_fine_threads_along_columella,_also_as_thick_as_space_bn._them,_but_creating_no_relief.';
+	TEXT  TAXON=434 CHARACTER=193 TEXT= 'About_7_threads,_half_as_wide_as_gap_between_them,_with_moderate_relief';
+	TEXT  TAXON=434 CHARACTER=199 TEXT= '5_threads,_half_as_wide_as_gap,_with_moderate_relief';
+	TEXT  TAXON=393 CHARACTER=194 TEXT= should_be_1_per_2˚;
+	TEXT  TAXON=393 CHARACTER=199 TEXT= '12_threads,_slightly_wider_than_gap,_creating_almost_no_relief';
+	TEXT  TAXON=393 CHARACTER=200 TEXT= should_be_1_per_2˚;
+	TEXT  TAXON=393 CHARACTER=201 TEXT= was_1˚;
+	TEXT  TAXON=393 CHARACTER=193 TEXT= '8_threads,_about_as_wide_as_space_between,_creating_very_little_relief';
+	TEXT  TAXON=393 CHARACTER=188 TEXT= '4_threads,_same_dimensions_as_LR_threads';
+	TEXT  TAXON=393 CHARACTER=190 TEXT= was_1˚;
+	TEXT  TAXON=393 CHARACTER=3 TEXT= 'was_20˚,_then_40˚_-_box_of_P._nodulosa_specimens_suggests_20˚_or_30˚_is_correct';
+	TEXT  TAXON=394 TEXT= 'Pleurotomaria_dentat-limata_Sandberg.__Two_Humboldt_specimens';
+	TEXT  TAXON=394 CHARACTER=2 TEXT= 'flip-flops_from_others_on_a_few_GL''s,_but_usually_left_is_sharper.';
+	TEXT  TAXON=394 CHARACTER=50 TEXT= Lunulae_do_not_quite_match_the_GL’s;
+	TEXT  TAXON=394 CHARACTER=64 TEXT= At_least_asymmetrically_so.;
+	TEXT  TAXON=393 CHARACTER=68 TEXT= 'Danken_Sie,_Berlinner-Gastropoden....';
+	TEXT  TAXON=394 CHARACTER=72 TEXT= 'slightly_convex_-_LR_flat';
+	TEXT  TAXON=393 CHARACTER=124 TEXT= Danke!;
+	TEXT  TAXON=394 CHARACTER=153 TEXT= ditto;
+	TEXT  TAXON=394 CHARACTER=161 TEXT= This_might_simply_be_the_sinus....;
+	TEXT  TAXON=393 CHARACTER=180 TEXT= Planispiral_to_high;
+	TEXT  TAXON=394 CHARACTER=180 TEXT= Planispiral_to_high;
+	TEXT  TAXON=395 CHARACTER=180 TEXT= Planispiral_to_high;
+	TEXT  TAXON=394 CHARACTER=193 TEXT= '12_very_thin_threads,_much_narrower_than_space_between,_casting_no_relief';
+	TEXT  TAXON=424 TEXT= Humboldt_specimens;
+	TEXT  TAXON=424 CHARACTER=44 TEXT= also_seems_to_be_a_little_variable;
+	TEXT  TAXON=424 CHARACTER=84 TEXT= top_thread_is_much_stronger;
+	TEXT  TAXON=424 CHARACTER=188 TEXT= '13_threads_fairly_wide_(~2/3rds_space_between_peaks)_but_casting_very_little_relief';
+	TEXT  TAXON=424 CHARACTER=193 TEXT= '7_threads,_more_closely_packed_than_on_base_and_slightly_thinner';
+	TEXT  TAXON=424 CHARACTER=199 TEXT= 3_threads;
+	TEXT  TAXON=435 TEXT= 'Three_pretty_good_(but_slightly_distorted)_Humboldt_specimens.';
+	TEXT  TAXON=435 CHARACTER=19 TEXT= 'Not_strong,_but_ornament_is_strong,_the_preservation_is_a_little_coarse_and_the_specimens_are_small';
+	TEXT  TAXON=435 CHARACTER=84 TEXT= Uniform_thickness_to_RRO;
+	TEXT  TAXON=435 CHARACTER=71 TEXT= 'Right_nearly_flat,_short_left_convex.';
+	TEXT  TAXON=435 CHARACTER=104 TEXT= 'LRO_fairly_uniform_-_none_stand_out.';
+	TEXT  TAXON=435 CHARACTER=188 TEXT= '6_sharp_threads,_~1/2_wide_as_space_between';
+	TEXT  TAXON=435 CHARACTER=193 TEXT= 'two_threads,_with_upper_one_much_stronger';
+	TEXT  TAXON=435 CHARACTER=199 TEXT= '6_threads,_alternative_in_strength';
+	TEXT  TAXON=428 TEXT= Probably_a_junior_synonym_of_D._orbignyii.__Based_on_two_very_nice_Humboldt_specimens_from_Paffrath;
+	TEXT  TAXON=428 CHARACTER=24 TEXT= 'strong-fine-strong,_or_strong-fine-fine-strong';
+	TEXT  TAXON=428 CHARACTER=84 TEXT= 'too_many_lira_-_one_might_be_the_RRC.__If_so,_then_it_is_moderately_strong_sharp_thread,_but_it_might_be_at_45˚,_30˚_or_closer.';
+	TEXT  TAXON=428 CHARACTER=91 TEXT= thread_if_RRC_present;
+	TEXT  TAXON=428 CHARACTER=100 TEXT= 'GL''s_go_straight_into_suture_(radial_at_this_point)';
+	TEXT  TAXON=428 CHARACTER=104 TEXT= 'uppermost_one_on_boundary,_stronger_than_ornament';
+	TEXT  TAXON=428 CHARACTER=106 TEXT= perhaps_a_little_stronger;
+	TEXT  TAXON=428 CHARACTER=135 TEXT= nearly_straight;
+	TEXT  TAXON=428 CHARACTER=132 TEXT= Berlin_specimens_show_this_nicely;
+	TEXT  TAXON=428 CHARACTER=156 TEXT= 'GL''s_go_up_nearly_straight,_but_not_quite_(before_very_narrow_sinus)';
+	TEXT  TAXON=428 CHARACTER=158 TEXT= tilted_at_about_20˚_above_sinus;
+	TEXT  TAXON=428 CHARACTER=173 TEXT= almost_no_umbilicus;
+	TEXT  TAXON=428 CHARACTER=181 TEXT= Apical_angle_nearly_constant_after_early_whorls;
+	TEXT  TAXON=428 CHARACTER=188 TEXT= '6_strong_threads_half_as_wide_as_space_between,_casting_moderate_relief';
+	TEXT  TAXON=428 CHARACTER=199 TEXT= '3_or_5_threads_-_3_strong_with_weaker_ones_between_on_later_whorls.';
+	TEXT  TAXON=428 CHARACTER=204 TEXT= On_final_whorls_only;
+	TEXT  TAXON=429 TEXT= 'M._undulata_(Roemer)_&_M._imbricata_(Roemer)_combined_here_-_obviously_the_same_species.___Based_on_Humboldt_specimens_from_Grund.';
+	TEXT  TAXON=429 CHARACTER=73 TEXT= whorls_definitely_flatter.;
+	TEXT  CHARACTER=83 TEXT= Change_in_dimensions_over_ontogeny;
+	TEXT  TAXON=429 CHARACTER=147 TEXT= Ornament_can_be_seen_through_PI_on_broken_specimens;
+	TEXT  TAXON=429 CHARACTER=173 TEXT= 'D_~0.75';
+	TEXT  TAXON=429 CHARACTER=181 TEXT= T_decreases_with_age_on_Teleoconch;
+	TEXT  TAXON=429 CHARACTER=188 TEXT= 'apx._25_threads_from_columella_to_LR,_about_2/3rds_as_wide_as_intervening_space,_with_only_weak_relief';
+	TEXT  TAXON=429 CHARACTER=193 TEXT= '7-8_threads,_apx._as_wide_as_space_bn.,_casting_little_relief';
+	TEXT  TAXON=429 CHARACTER=199 TEXT= '11_fine_threads,_highest_stronger_than_others,';
+	TEXT  TAXON=430 TEXT= 'MB_Ga.469;_also_two_so-so_specimens_“aff._undulata_supra_semilaevis”';
+	TEXT  TAXON=430 CHARACTER=58 TEXT= Both_pretty_weak.;
+	TEXT  TAXON=430 CHARACTER=31 TEXT= more_like_35˚;
+	TEXT  TAXON=429 CHARACTER=84 TEXT= 'Top_thread_is_stronger_than_other_ornament_-_if_so,_then_weak_thread_~45˚_from_SK';
+	TEXT  TAXON=430 CHARACTER=87 TEXT= If;
+	TEXT  TAXON=430 CHARACTER=100 TEXT= goes_straight_into_suture;
+	TEXT  TAXON=430 CHARACTER=173 TEXT= D_apx._0.8;
+	TEXT  TAXON=430 CHARACTER=193 TEXT= '4_fine_threads_casting_little_relief,_beginning_in_middle_of_LR_and_width_about_1/3rd_space_bn._peaks.';
+	TEXT  TAXON=430 CHARACTER=199 TEXT= two_weak_threads_bn._RRC_&_suture;
+	TEXT  TAXON=430 CHARACTER=188 TEXT= '17_threads_from_columella_to_LR,_fine_casting_little_relief_and_width_about_1/3rd_of_distance_bn._threads';
+	TEXT  TAXON=430 CHARACTER=211 TEXT= Large_if_sublaevis_included;
+	TEXT  TAXON=378 TEXT= '40+_small_MB_specimens_from_Büdesheim';
+	TEXT  TAXON=378 CHARACTER=19 TEXT= barely_visible_on_fine_preservation;
+	TEXT  TAXON=379 TEXT= MB_specimen_without_number;
+	TEXT  TAXON=379 CHARACTER=24 TEXT= perhaps_very_weak_imbrications.;
+	TEXT  TAXON=379 CHARACTER=51 TEXT= 'Goes_back_at_least_80˚_on_broken_specimen_-_breakage_shows_it_nicely';
+	TEXT  TAXON=379 CHARACTER=199 TEXT= '24_threads,_every_other_one_stronger.__Thick_ones_3/4ths_thick_as_space_between,_thin_ones_1/3rd_as_thick.';
+	TEXT  TAXON=379 CHARACTER=193 TEXT= '8_threads,_same_strength_as_strong_threads_on_RR,_about_3/4';
+	TEXT  TAXON=379 CHARACTER=188 TEXT= '~19_fine_threads_(wide_but_casting_almost_no_relief),_oddly_spaced_towards_the_end:_2,_space,_2,_etc.__No_real_pattern,_though.';
+	TEXT  TAXON=393 CHARACTER=50 TEXT= 'Rugose_GL''s_do_not_match_rugose_lunulae;_based_on_P._nodulosa_specimens';
+	TEXT  TAXON=410 CHARACTER=4 TEXT= 'looks_a_bit_shallower_on_Berlin_specimens_-_about_30-40˚';
+	TEXT  TAXON=410 CHARACTER=7 TEXT= 'Hard_to_be_certain,_but_looks_like_it_curves_on_middle_of_LR.';
+	TEXT  TAXON=410 CHARACTER=20 TEXT= 'Very_weak,_really';
+	TEXT  TAXON=410 CHARACTER=18 TEXT= 'changed_in_Berlin;_however,_this_might_be_preservational_as_MCZ_28948_does_not_show_this_really.';
+	TEXT  TAXON=410 CHARACTER=31 TEXT= 'was_10˚_-_changed_in_Berlin';
+	TEXT  TAXON=410 CHARACTER=34 TEXT= 'Basically,_there_is_no_upper_PL.__Lower_one_weak_-_moderate_and_nodose';
+	TEXT  TAXON=410 CHARACTER=50 TEXT= 'GL''s_from_Berlin_specimen_indicate_a_slit_from_the_right_side_-_cannot_tel_the_depth';
+	TEXT  TAXON=410 CHARACTER=51 TEXT= Based_on_patterns_of_different_GL_strength_reflected_in_lunulae;
+	TEXT  TAXON=410 CHARACTER=57 TEXT= 'Like_Leusueurilla,_actually_-_seen_in_Berlin';
+	TEXT  TAXON=410 CHARACTER=58 TEXT= Certainly_as_strong_as_LR;
+	TEXT  TAXON=227 TEXT= 'Turbo_squamiferum.__Based_on_17_unnumbered,_slightly_distorted_MB_specimens_from_Eifel';
+	TEXT  TAXON=227 CHARACTER=28 TEXT= 'Serrated,_channeled_thread_treated_as_SK';
+	TEXT  TAXON=227 CHARACTER=47 TEXT= 8_times_over_180˚;
+	TEXT  TAXON=227 CHARACTER=60 TEXT= Might_increase_with_age;
+	TEXT  TAXON=227 CHARACTER=66 TEXT= Periodically_there....;
+	TEXT  TAXON=227 CHARACTER=104 TEXT= 'Top_thread_is_much_stronger_and_serrated,_so_I_code_it_as_LRC,_not_ornament.__Not_all_show_any_other_threads,_too.';
+	TEXT  TAXON=227 CHARACTER=126 TEXT= Sharp_thread_at_base_of_shell.;
+	TEXT  TAXON=227 CHARACTER=171 TEXT= L._perangulata_coiling_parameters;
+	TEXT  TAXON=227 CHARACTER=188 TEXT= two_fairly_strong_threads_on_either_side_of_UC;
+	TEXT  TAXON=263 TEXT= 'Unnumbered_type_from_Humboldt_-_probably_figured_by_Knight_1941';
+	TEXT  TAXON=263 CHARACTER=9 TEXT= nearly_straight;
+	TEXT  TAXON=263 CHARACTER=16 TEXT= 'Poleumita-like';
+	TEXT  TAXON=263 CHARACTER=21 TEXT= 'Well,_not_over_this_whorl....';
+	TEXT  TAXON=227 CHARACTER=50 TEXT= 'This_is_the_flaring_of_the_SK_-_perhaps_it_should_not_be_coded_as_present';
+	TEXT  TAXON=263 CHARACTER=51 TEXT= based_on_pair_of_imbricated_GL’s_with_apparently_accompanying_imbricated_lunulae_about_20˚_back.;
+	TEXT  TAXON=263 CHARACTER=58 TEXT= 'more_closely_packed_than_main_GL''s_it_seems....';
+	TEXT  TAXON=263 CHARACTER=73 TEXT= Only_front_of_specimen_present;
+	TEXT  TAXON=263 CHARACTER=84 TEXT= 'OK,_I''m_taking_a_chance_here_-_the_thickening_at_the_top_could_be_a_sutural_carina,_but_there_is_no_suture.__Alternatively,_it_might_be_the_PI_of_Poleumita.__Sigh.....';
+	TEXT  TAXON=263 CHARACTER=89 TEXT= 'actually,_more_like_60˚';
+	TEXT  TAXON=263 CHARACTER=95 TEXT= see_RRC;
+	TEXT  TAXON=263 CHARACTER=98 TEXT= 'Well,_it_would_be_if_there_was_a_suture....';
+	TEXT  TAXON=263 CHARACTER=105 TEXT= 'I_don''t_like_this_coding_now,_but_it_is_the_same_as_Poleumita';
+	TEXT  CHARACTER=95 TEXT= check_this_for_consistency;
+	TEXT  TAXON=400 TEXT= 'MB_298_(2_sp.),_MB.294,_plus_un#_specimen';
+	TEXT  TAXON=400 CHARACTER=193 TEXT= 'might_have_8-10_very_weak_threads_(barely_visible_if_at_all)_on_top_of_LR,_in_a_20˚_space.';
+	TEXT  TAXON=401 TEXT= 'Two_un#_MB_specimens_(one_from_Eifel,_other_from_Gerolstein_Eifel).';
+	TEXT  TAXON=386 CHARACTER=54 TEXT= Was_absent;
+	TEXT  TAXON=401 CHARACTER=92 TEXT= '~5_per_90˚';
+	TEXT  TAXON=405 CHARACTER=19 TEXT= was_fine_sharp;
+	TEXT  TAXON=405 CHARACTER=20 TEXT= was_fine_sharp;
+	TEXT  TAXON=405 CHARACTER=31 TEXT= '∑_=_05˚';
+	TEXT  TAXON=405 CHARACTER=69 TEXT= looks_like_it_to_me.;
+	TEXT  TAXON=405 CHARACTER=84 TEXT= 'Was_present,_weak_(no_prom.),_Lumpish,_becomes_sharper,_absent,_@90˚,_perp_RR,_thread';
+	TEXT  TAXON=405 CHARACTER=78 TEXT= was_apx._60˚;
+	TEXT  TAXON=405 CHARACTER=79 TEXT= was_apx._60˚;
+	TEXT  TAXON=405 CHARACTER=104 TEXT= 'Was_Present,_thick_contusion,_weak,_becomes_stronger,_thread,_-,-,-,absent,absent,-,absent,-,-,-,-,-,-,-';
+	TEXT  TAXON=405 CHARACTER=161 TEXT= 'was_present,_-40˚';
+	TEXT  TAXON=405 CHARACTER=179 TEXT= MB_specimens_show_this;
+	TEXT  TAXON=405 CHARACTER=188 TEXT= 'apx._12_threads,_somewhat_irregularly_spaced_so_that_space_bn._is_2X_width_to_1/2_width,_but_with_little_prominence_(which_seems_to_fade,_anyway)';
+	TEXT  TAXON=405 CHARACTER=189 TEXT= was_1_per_10˚;
+	TEXT  TAXON=405 CHARACTER=190 TEXT= was_1˚;
+	TEXT  TAXON=405 CHARACTER=191 TEXT= was_none;
+	TEXT  TAXON=405 CHARACTER=193 TEXT= 'apx._14-15_threads,_about_as_wide_as_space_bn.,_casting_some_relief,_but_getting_thinner_toward_SK';
+	TEXT  TAXON=405 CHARACTER=194 TEXT= was_1_per_10˚;
+	TEXT  TAXON=405 CHARACTER=195 TEXT= was_@1˚;
+	TEXT  TAXON=405 CHARACTER=197 TEXT= was_uniform;
+	TEXT  TAXON=405 CHARACTER=200 TEXT= 1_per_10˚;
+	TEXT  TAXON=405 CHARACTER=201 TEXT= @_1˚;
+	TEXT  TAXON=405 CHARACTER=203 TEXT= Uniform;
+	TEXT  TAXON=405 CHARACTER=199 TEXT= 'apx._14-15_threads,_about_as_wide_as_space_bn.,_casting_some_relief,_but_getting_thinner_toward_SK';
+	TEXT  TAXON=405 CHARACTER=205 TEXT= 'does_on_some_specimens,_but_not_all';
+	TEXT  TAXON=322 TEXT= 'Based_on_Racine_dolomite_material_from_Wauwatosa,_Wisconsin_(Day_collection)_housed_at_MCZ.__7_total,_1_pretty_good_(but_faint_GL''s),_others_show_some_features.';
+	TEXT  TAXON=322 CHARACTER=19 TEXT= 'Comparable_to_those_on_P._occidens_and_L._gotlandicus_from_the_same_locality;_slightly_sharpter_than_those_of_R._robusta';
+	TEXT  TAXON=322 CHARACTER=35 TEXT= 'Strong,_but_not_as_exaggerated_as_other_Conotoma;_does_not_really_create_a_frill.';
+	TEXT  TAXON=322 CHARACTER=50 TEXT= 'GL''s_contiguous_with_lunulae';
+	TEXT  TAXON=322 CHARACTER=58 TEXT= 'Definitly_stronger_than_GL''s';
+	TEXT  TAXON=322 CHARACTER=171 TEXT= 'W=25.22/16.44_=_1.5';
+	TEXT  TAXON=322 CHARACTER=173 TEXT= 'D_=_0.14-0.16';
+	TEXT  TAXON=322 CHARACTER=188 TEXT= PI_covers_base_on_good_specimen..._can_see_GL_impressions_but_not_ornament.;
+	TEXT  TAXON=446 CHARACTER=25 TEXT= was_consistent;
+	TEXT  TAXON=248 CHARACTER=30 TEXT= '11/17/2003:_Was_At_Sinus_Apex';
+	TEXT  TAXON=248 CHARACTER=31 TEXT= '11/17/2003:_Was_5˚';
+	TEXT  TAXON=248 CHARACTER=57 TEXT= '11/17/2003:_was_straight';
+	TEXT  TAXON=248 CHARACTER=70 TEXT= '11/157/2003:_was_ß_≈_30˚';
+	TEXT  TAXON=248 CHARACTER=75 TEXT= '11/17/2003:_was_apx._30˚';
+	TEXT  TAXON=248 CHARACTER=76 TEXT= '11/17/2003:_was_apx._50˚';
+	TEXT  TAXON=248 CHARACTER=101 TEXT= '11/17/2003:_was_flat';
+	TEXT  TAXON=249 TEXT= 'also_MCZ_28970_(1),_28974_(3),_unnumbered_(all_from_Schultze_collection),_labelled_"Solarium"_and_"Solarium_angustum_n._sp._Neidezehe"';
+	TEXT  TAXON=249 CHARACTER=112 TEXT= '11/17/2003:_was_absent;_a_second_thick_but_low-relief_thread_visible_between_LRC_&_SK';
+	TEXT  TAXON=249 CHARACTER=106 TEXT= '11/17/2003:_wide_but_dull_-_looks_stronger_on_crushed_specimens';
+	TEXT  TAXON=249 CHARACTER=101 TEXT= 2nd_lrc_makes_it_look_slightly_convex;
+	TEXT  TAXON=248 CHARACTER=16 TEXT= '11/17/2003:_check_this....';
+	TEXT  TAXON=249 CHARACTER=127 TEXT= definitely_sharp....;
+	TEXT  TAXON=249 CHARACTER=126 TEXT= rotates_out_due_to_counterclockwise_rotation_of_aperture_late;
+	TEXT  TAXON=249 CHARACTER=171 TEXT= 'W_=_2';
+	TEXT  TAXON=249 CHARACTER=173 TEXT= 'D_=_0.26';
+	TEXT  TAXON=249 CHARACTER=210 TEXT= definitely_present;
+	TEXT  TAXON=403 TEXT= 'From_Bandel_paper;_also,_unnumbered_MCZ_specimen_(11/17/2003)_from_Schultze_collection_(Kerpen);_another_labeled_“Schizostoma_costatum”_from_Prum';
+	TEXT  TAXON=413 TEXT= '11/17/2003:_MCZ_specimens_28966,_28968_(Gerolstein);_E._verneuli:_28962_(Pelm)';
+	TEXT  TAXON=413 CHARACTER=6 TEXT= 'actually,_just_below_top';
+	TEXT  TAXON=413 CHARACTER=7 TEXT= '11/17/2003';
+	TEXT  TAXON=413 CHARACTER=26 TEXT= 'this_decreases_on_older_whorls;_also,_this_is_not_the_case_on_S._verneuli_specimens';
+	TEXT  TAXON=413 CHARACTER=41 TEXT= '11/17/2003:_like_a_slightly_weak_Lecanospira';
+	TEXT  TAXON=413 CHARACTER=57 TEXT= I_think_that_I_can_see_them....;
+	TEXT  TAXON=413 CHARACTER=49 TEXT= 'this_is_visible_on_steinkerns_-_however,_this_might_mean_that_the_channel_is_getting_stronger!';
+	TEXT  TAXON=413 CHARACTER=67 TEXT= becomes_stronger;
+	TEXT  TAXON=413 CHARACTER=128 TEXT= creates_a_weak_frill;
+	TEXT  TAXON=413 CHARACTER=133 TEXT= 'projects_back,_too.';
+	TEXT  TAXON=413 CHARACTER=161 TEXT= columella_projects_backwards_about_20˚;
+	TEXT  TAXON=413 CHARACTER=171 TEXT= 'W_=_2.05_-_2.15';
+	TEXT  TAXON=413 CHARACTER=173 TEXT= 'D_=_0.47-0.49';
+	TEXT  TAXON=413 CHARACTER=187 TEXT= Steinkerns_clearly_show_this_on_MCZ_28952;
+	TEXT  TAXON=372 TEXT= '11/17/2003:_Two_unnumbered_specimens_from_Dollendorf';
+	TEXT  TAXON=371 CHARACTER=48 TEXT= 'definitely_visible_on_some_MCZ_specimens_from_Paffrath;_this_decreases_with_age.';
+	TEXT  TAXON=371 CHARACTER=126 TEXT= '11/17/2003:_Was_“Present,_thickened_base,_strong,_becomes_stronger,_apx._90˚).__However,_this_is_just_due_to_a_sharp_angle_between_the_base_and_a_relatively_straight_columella.';
+	TEXT  TAXON=371 CHARACTER=124 TEXT= '11/17/2003:_Was_thicker_than_rest_of_shell,_columella_&_base,_but_MCZ_material_shows_that_this_is_not_the_case.';
+	TEXT  TAXON=371 CHARACTER=131 TEXT= '11/17/2003:_still_comes_to_a_point....';
+	TEXT  TAXON=371 CHARACTER=135 TEXT= '11/17/2003:_was_arch_@_obtuse_ellipse,_but_it_really_is_nearly_straight_(there_is_a_slight_lump_in_the_middle)';
+	TEXT  TAXON=371 CHARACTER=147 TEXT= '11/17/2003:_Was_"same_as_shell",_but_it_is_thin.';
+	TEXT  TAXON=372 CHARACTER=163 TEXT= '11/17/2003:_really_projects_forward.';
+	TEXT  TAXON=372 CHARACTER=171 TEXT= 'W_=_2.75';
+	TEXT  TAXON=372 CHARACTER=173 TEXT= 'D_=_0.220';
+	TEXT  TAXON=371 CHARACTER=171 TEXT= 'W_=_1.716';
+	TEXT  TAXON=371 CHARACTER=173 TEXT= 'D_=_0.221';
+	TEXT  TAXON=372 CHARACTER=179 TEXT= 'seems_to_coil_downwards_a_little,_then_upwards.';
+	TEXT  TAXON=413 CHARACTER=16 TEXT= This_is_visible_on_silicified_E._verneueli_MCZ_28929_specimens;
+	TEXT  TAXON=413 CHARACTER=28 TEXT= It_is_present_early_on_MCZ_28929_specimens;
+	TEXT  TAXON=413 CHARACTER=47 TEXT= very_weak_nodosity;
+	TEXT  TAXON=413 CHARACTER=50 TEXT= 'The_MCZ_28929_specimens_make_this_clear_-_trilineate_SK_probably_is_an_artifact_of_this.';
+	TEXT  TAXON=236 TEXT= 'based_on_unnumbered_MCZ_material_-_double_check_with_Bob_&_Ellis''_paper.';
+	TEXT  TAXON=236 CHARACTER=1 TEXT= 'absent_on_initial_whorl,_but_a_dull_U-shaped_sinus_starting_about_half-way_down_ramp_and_trending_back_~10˚_present_on_larger_whorls,_culminating_at_dull_SK';
+	TEXT  TAXON=236 CHARACTER=29 TEXT= broad_dull_lump_becomes_increasingly_prominent;
+	TEXT  TAXON=236 CHARACTER=72 TEXT= nearly_flat;
+	TEXT  TAXON=236 CHARACTER=101 TEXT= nearly_globular;
+	TEXT  TAXON=236 CHARACTER=133 TEXT= weak_curvature_due_to_roundness;
+	TEXT  TAXON=236 CHARACTER=171 TEXT= 'W_=_1.57';
+	TEXT  TAXON=236 CHARACTER=173 TEXT= 'D_=_0.433';
+	TEXT  TAXON=236 CHARACTER=179 TEXT= Seems_to_have_both_continuous_early_∆T_and_later_∆T;
+	TEXT  TAXON=236 CHARACTER=187 TEXT= clearly_shown;
+	TEXT  TAXON=414 CHARACTER=2 TEXT= '11/19/2003:_was_left_side_sharper...';
+	TEXT  TAXON=413 CHARACTER=4 TEXT= '11/was_20˚';
+	TEXT  TAXON=410 CHARACTER=10 TEXT= MCZ_28948_shows_continuous_on_both_sides;
+	TEXT  TAXON=411 CHARACTER=10 TEXT= 'it_jumps_up_to_60+˚_after_beginning_at_a_gentler_20˚-30˚';
+	TEXT  TAXON=411 CHARACTER=6 TEXT= 'actually,_about_3/4_way_down_to_SK';
+	TEXT  TAXON=411 CHARACTER=7 TEXT= A_little_above__base;
+	TEXT  TAXON=411 TEXT= '5_unnumbered_MCZ_specimens,_showing_shells_and_fine_surface_features.__“Euomphalus_bronnü”';
+	TEXT  TAXON=411 CHARACTER=19 TEXT= 'Liospira-like';
+	TEXT  TAXON=410 CHARACTER=40 TEXT= '11/17/2003:_I_had_this_for_RPL,_but_that_cannot_be_right:_“Nodose,_actually”__Also,_not_visible_on_MCZ_28942';
+	TEXT  TAXON=409 CHARACTER=40 TEXT= see_comment_under_PL_strength....;
+	TEXT  TAXON=413 CHARACTER=32 TEXT= 'I_think_that_this_is_just_due_to_the_slit,_with_GL''s_strong_enough_to_raise_the_sinus/slit_boundary.';
+	TEXT  TAXON=411 CHARACTER=41 TEXT= '11/19/2003:_consider_-_perhaps_it_should_be_present,_sharp,_moderate,_no_∆,_no_zig-zag,_no_tubes,_no_imbrication.';
+	TEXT  TAXON=411 CHARACTER=57 TEXT= '11/17/2003:_I_can_see_these_-_and_I_think_that_this_applies_to_S._radiata,_too.';
+	TEXT  TAXON=410 CHARACTER=41 TEXT= '11/19/2003:_Reconsider_-_perhaps_this_should_be_present,_rounded,_very_strong,_no_∆,_absent,_absent,_flares_periodically_(variable)';
+	TEXT  TAXON=409 CHARACTER=41 TEXT= '11/19/2003:_Reconsider_-_perhaps_this_should_be_present,_rounded,_very_strong,_no_∆,_absent,_absent,_flares_periodically_(variable)';
+	TEXT  TAXON=411 CHARACTER=51 TEXT= cannot_tell_the_depth;
+	TEXT  TAXON=413 CHARACTER=53 TEXT= 'It_is_wider_than_the_selenizone_and_possibly_off-center.';
+	TEXT  TAXON=411 CHARACTER=53 TEXT= 'If_this_is_the_lower_of_the_PL,_then_it_subsumes_it_and_is_off-center.';
+	TEXT  TAXON=410 CHARACTER=53 TEXT= 'If_this_is_the_lower_of_the_PL,_then_it_subsumes_it_and_is_off-center.';
+	TEXT  TAXON=409 CHARACTER=53 TEXT= 'If_this_is_the_lower_of_the_PL,_then_it_subsumes_it_and_is_off-center.';
+	TEXT  TAXON=413 CHARACTER=64 TEXT= '11/19/2003:_This_might_need_to_change.';
+	TEXT  TAXON=413 CHARACTER=73 TEXT= '11/19/2003:_MCZ_28929_shows_this.';
+	TEXT  TAXON=411 CHARACTER=80 TEXT= '11/19/2003:_a_thin_thread_in_the_middle,_sort_of_like_B._goldfussi';
+	TEXT  TAXON=411 CHARACTER=84 TEXT= '11/19/2003:_a_thin_thread_in_the_middle,_sort_of_like_B._goldfussi.__I_think_that_this_is_part_of_weak_ornament.';
+	TEXT  TAXON=412 TEXT= 'MCZ_28952_(numerous_poorly_preserved_specimens,_mostly_steinkern_but_with_bits_of_shell_scattered_throughout)';
+	TEXT  TAXON=408 CHARACTER=133 TEXT= '11/19/2003:_was_straight,_but_cannot_really_see.';
+	TEXT  TAXON=409 CHARACTER=133 TEXT= '11/19/2003:_was_straight,_but_cannot_really_see.';
+	TEXT  TAXON=410 CHARACTER=133 TEXT= '11/19/2003:_was_straight,_but_cannot_really_see.';
+	TEXT  TAXON=411 CHARACTER=133 TEXT= '11/19/2003:_was_straight,_but_cannot_really_see.';
+	TEXT  TAXON=410 CHARACTER=138 TEXT= '11/19/2003:_was_30˚_but_MCZ_suggests_~15˚';
+	TEXT  TAXON=411 CHARACTER=147 TEXT= '11/19/2003:_MCZ_steinkerns_indicate_some_shell_between.';
+	TEXT  TAXON=409 CHARACTER=167 TEXT= MCZ_28948_shows_this_nicely;
+	TEXT  TAXON=412 CHARACTER=169 TEXT= 'Step-like,_then_becoming_bowl-like.';
+	TEXT  TAXON=413 CHARACTER=169 TEXT= '11/19/2003:_there_slightly';
+	TEXT  TAXON=412 CHARACTER=171 TEXT= 'MCZ_28954W_=_2.564';
+	TEXT  TAXON=412 CHARACTER=173 TEXT= 'D_=_0.4325';
+	TEXT  TAXON=411 CHARACTER=173 TEXT= 'D_=_0.19_(due_to_thick_columella)';
+	TEXT  TAXON=411 CHARACTER=199 TEXT= 'two_weak_threads_about_1˚_wide_casting_weak_relief;';
+	TEXT  TAXON=258 CHARACTER=153 TEXT= check_this....;
+	TEXT  TAXON=257 CHARACTER=153 TEXT= check_this...;
+	TEXT  TAXON=200 TEXT= 'Kindle_USNM_062206_(holo),_312194_(para);_01/14/2005';
+	TEXT  TAXON=200 CHARACTER=1 TEXT= 'gl''s_swept_back_at_suture';
+	TEXT  TAXON=200 CHARACTER=2 TEXT= right_side_only;
+	TEXT  TAXON=200 CHARACTER=4 TEXT= depth_is_due_to_high_inclination_of_aperture;
+	TEXT  TAXON=199 CHARACTER=46 TEXT= was_absent;
+	TEXT  TAXON=199 CHARACTER=47 TEXT= was_consistent;
+	TEXT  TAXON=199 CHARACTER=48 TEXT= was_None;
+	TEXT  TAXON=200 CHARACTER=57 TEXT= based_on_lunulae_visible_right_at_suture;
+	TEXT  TAXON=199 CHARACTER=62 TEXT= was_None;
+	TEXT  TAXON=199 CHARACTER=63 TEXT= was_Parallel_to_ß;
+	TEXT  TAXON=199 CHARACTER=64 TEXT= was_Bisects_Whorl;
+	TEXT  TAXON=199 CHARACTER=65 TEXT= was_No_Change;
+	TEXT  TAXON=200 CHARACTER=100 TEXT= might_be_sinus;
+	TEXT  TAXON=200 CHARACTER=147 TEXT= cannot_see;
+	TEXT  TAXON=200 CHARACTER=148 TEXT= cannot_see;
+	TEXT  TAXON=200 CHARACTER=149 TEXT= cannot_see;
+	TEXT  CHARACTER=6 TEXT= 'Recoded_this_for_palaozygopleurids:_follow_suit_elsewhere';
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -845306610;
+	FileSettings treewindow  '1' '1' '225' '0';
+	Singles 100;
+	Editor 00011011111111100100010010 '0' '100' Gadget '12' '268' '1' all;
+	EditorPosition  '234' '11' '835' '1017';
+	TreeWindowPosition  '46' '6' '1135' '1870';
+	ListWindow Characters open Gadget '12' '51' '1189' '1018' '622' 000;
+	ListWindow Taxa open Gadget '12' '50' '25' '1086' '450' 100000000;
+	ListWindow Trees open Gadget '12' '50' '10' '134' '488' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '185' '234' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '185' '234' ;
+	ChartWindowPosition  '50' '30' '688' '964';
+	StateNamesSymbols open Gadget '12' '9' '50' '30' '186' '463';
+	WindowOrder  List Trees Tree List Characters List Taxa States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '997' '1775' '165' '85';
+	TreeLegendPosition  '1074' '1677' '88' '93';
+	EditorToolsPosition  '795' '1169' '115' '165';
+	TreeToolsPosition  '607' '5' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '10' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '83' '115' '13' '45' '116' '148' '13' '45' '149' '181' '13' '45' '182' '214' '13' '45' '209' '47' '0' '0' '516' '456' '612' '35' '678' '35' '678' '288' '24' '35' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '30' '30' '0' '2' 0100111000000001010100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

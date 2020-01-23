@@ -1,0 +1,9 @@
+Astacidae_Rode_&_Babcock_2003.nex
+Astacidea_Amati_et_al_2004.nex
+Beyrichiocopa_Tinn_&_Meidla_2004.nex
+Eumalacostraca_Clark_et_al_2016.nex
+Gomphocytheres_Parks_et_al_2002.nex
+Phyllocarida_Stigall-Rode_&_Lieberman_2002.nex
+Poseidonamicus_Hunt_2007.nex
+Thylacocephala_Schram_et_al_1999.nex
+Xanthoidea_Karasaw_&_Schweitzer_2006.nex

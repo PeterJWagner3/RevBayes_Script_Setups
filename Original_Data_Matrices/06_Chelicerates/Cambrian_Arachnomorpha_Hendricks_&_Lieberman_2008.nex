@@ -1,0 +1,138 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=26 NCHAR=37;
+
+[!Edgecombe, G. D., and L. Ramsköld.  1999.  Relationships of Cambrian Arachnata and the systematic position of Trilobita.  Pp. 263 - 287 in J. M. Adrain and S. R. Westrop, eds. Trilobite Paleobiology 73. 
+Hendricks, J. R., and B. S. Lieberman.  2008.  New phylogenetic insights into the Cambrian Radiation of arachnomorph arthropods.  Journal of Paleontology 82:585-594..]
+
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		36  FA / _ e._Atdabanian u._Atdabanian Botomian 'Cm_(mMid)' 'Cm_(uMid)' U._Cambrian Ordovician Devonian,
+  37  LA / _ e._Atdabanian u._Atdabanian Botomian 'Cm_(mMid)' 'Cm_(uMid)' U._Cambrian Ordovician Devonian
+		;
+
+MATRIX
+[                         10        20        30        40        50     ]
+[                         .         .         .         .         .      ]
+
+Marrellomorpha	0(1,2)1(2,3)?000000000000000--0-002-000---0??
+Sidneyia		00200000000000000000--0010?-001120145
+Emeraldella		0612?000000000000000--001100001?00145
+Cindarella		05100000200110000000--100100100---011
+Xandarella		07100010200110000000--100110000---011
+Sinoburius		0510011020110000000101100????00---033
+Retifacies		031000000000000000010000000-001?00022
+Kuamaia			0?10010001?20000111101000101000---022
+Helmetia		04?00?0001120000111101000?????0---044
+Skioldia		0?30010001?2-0020?1?-0000????00---0??
+Saperion		0?30010001?2-002011?-0000101100---0??
+Tegopelte		0?1?0?0001??-0?201??-0000?0?100---0??
+Liwia			0?2????010???1000001000?0????00---0??
+Tariccoia		0??(0,2)?00010???100000110010?????0---0??
+Soomaspis		0??(0,2)?00010???100000110010?????0---0??
+Misszhouia		0412?0000011-111000100000110000---0??
+Naraoia			0422?00000?1-111000100000110000---0??
+Eoredlichia		1411100100030000010100000100000---0??
+Olenoides		1411100100030000010100000100000---0??
+Alalcomenaeus	03000000000?00000000--00000-0111110??
+Leanchoilia		02000000000?00000000--00000-0110010??
+Sanctacaris		06000000000?01000010--00000-0010110??
+Dicranocaris	0(1,2,3,5,6,7)??0000000?00000000--000????111210??
+Nettapezoura	0(1,2,3,5,6,7)??0000000?00000000--000101??11201??
+Weinbergina		07010000000100000000--00000-001000188
+Aglaspis		0(3,5)110000000300000000--00100-0010000??
+;
+end;
+
+BEGIN NOTES;
+	TEXT  TAXON=2 TEXT= 'Walcott 1911';
+	TEXT  TAXON=3 TEXT= 'Walcott 1912';
+	TEXT  TAXON=4 TEXT= 'Chen et al. 1996';
+	TEXT  TAXON=5 TEXT= 'Hou et al. 1991';
+	TEXT  TAXON=6 TEXT= 'Hou et al. 1991';
+	TEXT  TAXON=7 TEXT= 'Hou et al. 1989';
+	TEXT  TAXON=8 TEXT= 'Hou 1987';
+	TEXT  TAXON=9 TEXT= 'Walcott 1918';
+	TEXT  TAXON=10 TEXT= 'Hou and Bergström 1997';
+	TEXT  TAXON=11 TEXT= 'Hou et al. 1991';
+	TEXT  TAXON=12 TEXT= 'Simonetta and Delle Cave 1975';
+	TEXT  TAXON=13 TEXT= 'Dzik and Lendzion 1988';
+	TEXT  TAXON=14 TEXT= 'Hammann et al. 1990';
+	TEXT  TAXON=15 TEXT= 'Fortey and Theron 1994';
+	TEXT  TAXON=16 TEXT= 'Chen et al. 1997';
+	TEXT  TAXON=17 TEXT= 'Walcott 1912';
+	TEXT  TAXON=18 TEXT= 'Zhang 1951';
+	TEXT  TAXON=19 TEXT= 'Rominger 1887';
+	TEXT  TAXON=20 TEXT= 'Simonetta 1970';
+	TEXT  TAXON=21 TEXT= 'Walcott 1912';
+	TEXT  TAXON=22 TEXT= 'Briggs and Collins 1988';
+	TEXT  TAXON=23 TEXT= 'Briggs et al. 2008';
+	TEXT  TAXON=24 TEXT= 'Briggs et al. 2008';
+	TEXT  TAXON=25 TEXT= 'Richter and Richter 1929';
+	TEXT  TAXON=26 TEXT= 'Hall 1862';
+END;
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -845299117;
+	FileSettings  '1' '1' '55' '1';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '162' '1' all;
+	EditorPosition  '117' '-1024' '835' '1027';
+	TreeWindowPosition  '182' '-1258' '912' '1196';
+	ListWindow Characters closed Gadget '12' '312' '1137' '491' '321' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '440' '281' 100000000;
+	ListWindow Trees closed Gadget '12' '90' '65' '134' '472' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '10' '199' '972' '203' '220';
+	WindowOrder  States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '820' '30' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 00;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Arial '9' (normal) Arial '10' (normal) Arial '9' (normal) Arial '9' (normal) Arial '9' (bold ) Arial '9' (normal) Arial '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '2' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

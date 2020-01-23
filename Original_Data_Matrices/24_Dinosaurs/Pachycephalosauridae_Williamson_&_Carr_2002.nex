@@ -1,0 +1,166 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=21 NCHAR=56;
+
+[!Williamson, T.E. & T.D. Carr.  2002.  A new genus of derivd pachycephalosaurian from western North America.  Journal of Vertebrate Paleontology: Vol. 22, No. 4, pp. 779?801.
+]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		54  Geography,
+  55  FA / Berriasian Barremian Aptian Albian Santonian Campanian Maestrichtian,
+  56  LA / Berriasian Barremian Aptian Albian Santonian Campanian Maestrichtian
+		;
+
+MATRIX
+[                                           10        20        30        40        50     ]
+[                                           .         .         .         .         .      ]
+
+Psittacosaurus_mongoliensis        00000000000000000000000000000000000000000000000000000023
+Stenopelix_valdensis               111?????00?0?????0?00????0000????????????????????????000
+Wannanosaurus_yansiensis           ???11111111100?00????0???????0???00000?00??0???1??0??055
+Goyocephale_lattimorei             1?111111111?1111011110??100??0??001100100010011110011045
+Homalocephale_calathocercos        1?11?111???1111?11111111111110000011001000110111100??056
+Tylocephale_gilmorei               ???1?111????1111?????11??????1110212011121111??1101??055
+Prenocephale_prenes                1?111111????11?111?1111111111111021202112111102120111056
+Yaverlandia_bitholus               ???1?1?0????1???????????????????00???????00???????0??011
+Ornatotholus_browni                ???1???1????1????????1???????1??00?????11010?????00??155
+Pachycephalosauridae_indet.        ???1?111????1????????1???????1???2?????12????????01??166
+Stegoceras_edmontonense            ???1???1????1????????1???????1??021???112110???1?01??166
+Stegoceras_breve                   ???1???1????1????????1???????1??121?1?111110???1?01??155
+Stegoceras_sternbergi              ???1???1????1????????1???????1??11?????11220???1?02??155
+Stegoceras_lambei                  ???1???1????1????????1???????1??11?????11220???1?02??155
+Stegoceras_validum                 ?1111111111111111111111111111100111200111220011120200155
+Gravitholus_albertae               ???1???1????1????????1???????1??11?????112?0???1?02??155
+Stegoceras_sp._UCMP_130051         ???1?111????1????????1???????1??1100000112200??1102??155
+Stygimoloch_spinifer               ???1??11????1????????1???????1??0211??2121111????1122166
+Pachycephalosaurus_wyomingensis    ???1?111????11???????11??????11002111?212110100111122156
+Sphaerotholus_goodwini             ???1?111????11?1?????1??1????1??0212111121111021301??155
+Sphaerotholus_buchholtzae          ???1?111????1????????1???????1??0212111121101??1301??155
+;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MAXSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-54 56, strat: 55;
+	WTSET * UNTITLED  = 1: 1-53, 0: 54-56;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Psittacosaurus_mongoliensis,
+		2	Stenopelix_valdensis,
+		3	Wannanosaurus_yansiensis,
+		4	Goyocephale_lattimorei,
+		5	Homalocephale_calathocercos,
+		6	Tylocephale_gilmorei,
+		7	Prenocephale_prenes,
+		8	Yaverlandia_bitholus,
+		9	Ornatotholus_browni,
+		10	Pachycephalosauridae_indet.,
+		11	Stegoceras_edmontonense,
+		12	Stegoceras_breve,
+		13	Stegoceras_sternbergi,
+		14	Stegoceras_lambei,
+		15	Stegoceras_validum,
+		16	Gravitholus_albertae,
+		17	Stegoceras_sp._UCMP_130051,
+		18	Stygimoloch_spinifer,
+		19	Pachycephalosaurus_wyomingensis,
+		20	Sphaerotholus_goodwini,
+		21	Sphaerotholus_buchholtzae
+	;
+	TREE  * Published =  [&R] (1,(2,(8,(3,(4,(5,(9,((12,(17,(13,(14,(15,16))))),(((6,7),(10,11)),((18,19),(20,21)))))))))));
+
+END;
+
+
+BEGIN NOTES;
+
+	TEXT  TAXON=10 TEXT= SMP_VP_1084;
+	TEXT  TAXON=9 TEXT= 'Pachycephalosauridae_indet.;_AMNH_5450_(holotype)';
+	TEXT  TAXON=11 TEXT= holotype_CMN_8830;
+	TEXT  TAXON=16 TEXT= 'holotype_TMP_72.27.1_(Stegoceras_sp._)';
+	TEXT  TAXON=15 TEXT= UA_2;
+	TEXT  TAXON=14 TEXT= holotype_CMN_8818;
+	TEXT  TAXON=13 TEXT= holotype_CMN_8817;
+	TEXT  TAXON=12 TEXT= holotype_CMN_1423;
+	TEXT  TAXON=19 CHARACTER=55 TEXT= Earlier_members_of_genus;
+	TEXT  TAXON=20 TEXT= holotype_NMMNH_P_27403;
+	TEXT  TAXON=21 TEXT= holotype_TMP_87.113.3;
+	TEXT  TAXON=17 CHARACTER=55 TEXT= Judith_River;
+	TEXT  TAXON=10 CHARACTER=55 TEXT= Kirtland_formation;
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -967187616;
+	FileSettings  '1' '1' '55' '0';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '162' '1' all;
+	EditorPosition  '46' '6' '614' '715';
+	TreeWindowPosition  '99' '655' '723' '974';
+	ListWindow Characters open Gadget '12' '56' '692' '253' '321' 000;
+	ListWindow Taxa closed Gadget '9' '50' '10' '273' '335' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '686' '964';
+	StateNamesSymbols closed Gadget '12' '9' '273' '1144' '186' '220';
+	WindowOrder  List Characters;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '660' '556' '115' '165';
+	TreeToolsPosition  '576' '6' '126' '138';
+	TreeWindowProgram 00;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 0000001;
+	SummaryMode  '0' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

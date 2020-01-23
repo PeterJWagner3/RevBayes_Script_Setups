@@ -1,0 +1,37 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=19 NCHAR=19;
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B" MISSING=? GAP=- ;
+
+MATRIX
+[                              10        20    ]
+[                              .         .     ]
+Rafinesquina	0000000(01)00000000000
+Leptostrophia	0000211332010111211
+Rhytistrophia	1022113321100111121
+Brachyprion	1000(12)02211100101120
+Castellaroina_fascifer	12(01)1102200(01)01000110
+Castellaroina_fuertensis	0211102(12)0010(01)000100
+Chynistrophia	0002203321100111121
+Eomegastrophia	1000102200000000(01)00
+Erinostrophia	202220221110010022(12)
+Eostropheodonta_chilcaensis_parvula	000010(12)00000000(01)0(01)0
+Eostropheodonta_chilcaensis_chilcaensis	000(01)10(12)(01)00001000110
+Eostropheodonta_hirnantensis	0(01)(01)0100(12)0000(01)000000
+Gibberostrophia	2002113022100111121
+Mesoleptostrophia	0000103222100111121
+Paraleptostrophia	0(01)111(01)3022100111222
+Protoleptostrophia	0002113020100011121
+Viodostrophia	0002102200000001000
+Nervostrophia	0302113321100111121
+Palaeoleptostrophia	0010102200000000100
+;
+end;

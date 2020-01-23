@@ -1,0 +1,12 @@
+Asteropyginae_Bignon_&_Cronier_2014.nex
+Asteropyginae_Lieberman_&_Kloc_1997.nex
+Basidechenella_Lieberman_1994.nex
+Calmoniidae_Lieberman_1993.nex
+Crassiproetus_Lieberman_1994.nex
+Calmoniidae_Lieberman_et_al_1991.nex
+Harpes_Ebach_&_McNamara_2002.nex
+Dechenella_Lieberman_1994.nex
+Koneprusiinae_Adrain_et_al_2008.nex
+Proetidae_Lamsdell_&_Seldon_2015.nex
+Proetidae_Lieberman_1994.nex
+Trimerocephalus_Cronier_2003.nex

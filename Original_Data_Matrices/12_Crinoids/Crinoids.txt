@@ -1,0 +1,16 @@
+Basal_Crinoidea_Ausich_1998.nex
+Batocrinidae_Ausich_&_Kammer_2010.nex
+Botryocrinindae_Gahn_&_Kammer_2002.nex
+Calceocrinidae_Harvey_&_Ausich_1998.nex
+Camerata_Ausich_1998.nex
+Cladida_Ausich_1998.nex
+Crinoidea_Foote_1999.nex
+Cupulocrinidae_Brower_2001.nex
+Cyathocrinites_Kammer_&_Gahn_2003.nex
+Dicyclic_Camerata_Cole_et_al_2017.nex
+Disparida_Ausich_1998.nex
+Early_to_Middle_Paleozoic_Crinoids_Wright_2017.nex
+Mespilocrinus_Kammer_&_Ausich_2007.nex
+Ordovician_Camerata_Cole_2017.nex
+Pereichocrinidae_Auisch_&_Kammer_2008.nex
+Petalocrinidae_Mao_et_al_2017.nex

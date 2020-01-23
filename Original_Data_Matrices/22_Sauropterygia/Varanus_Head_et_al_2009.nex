@@ -1,0 +1,41 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=22 NCHAR=10;
+
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9" MISSING=? GAP=- ;
+
+MATRIX
+[                                              10]
+[                                              . ]
+Estesi					0000000000
+Heloderma				0000000000
+Lanthanotus				0010?00100
+Varanus_beccarii		1010000000
+Varanus_bengalensis		10101(01)0000
+Varanus_dumerili		001000(01)000
+Varanus_exanthematicus	1010(01)1(01)0(01)0
+Varanus_flavescens		1010111000
+Varanus_giganteus		111011110(01)
+Varanus_gouldi			0010010000
+Varanus_griseus			0010(01)10000
+Varanus_indicus			101?11?000
+Varanus_jobiensis		1010100(01)00
+Varanus_komodoensis 	(01)111(12)11111
+Varanus_niloticus 		(01)010(01)(01)0(01)(01)0
+Odatria					0010?00(01)00
+Varanus_olivaceus		101011????
+Varanus_prasinus		1010?00100
+Varanus_prisca			0111211111
+Varanus_salvadori		00100(01)0(01)(01)0
+Varanus_salvator		1011000000
+Varanus_varius			0?1???0010
+;
+END;

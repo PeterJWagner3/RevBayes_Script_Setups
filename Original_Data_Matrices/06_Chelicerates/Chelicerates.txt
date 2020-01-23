@@ -1,0 +1,7 @@
+Adelophthalmoidea_Tetlie_&_Poschmann_2008.nex
+Cambrian_Arachnomorpha_Cotton_&_Brady_2004.nex
+Cambrian_Arachnomorpha_Hendricks_&_Lieberman_2008.nex
+Eurypetriidae_Tetlie_&_Cuggy_2007.nex
+Eurypterus_Tetlie_2006.nex
+Stylonurina_Lamsdell_et_al_2010.nex
+Xiphosura_Lamsdell_2013.nex

@@ -1,0 +1,133 @@
+#NEXUS
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=21 NCHAR=22;
+
+[!Dececchi, T. A., G. M. Narbonne, C. Greentree, and M. Laflamme.  2017.  Relating Ediacaran fronds.  Paleobiology 43:171–180. doi:10.1017/pab.2016.54.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C D E F G H J K L M N" MISSING=? GAP=- ;
+
+Matrix
+Thaumaptilon				0-01100010000120111011
+Charnia	      				1102100200202100100011
+Beothukis	    			1102100200111100100011
+Vinlandia					11021002002?2100100011
+Avalofractus				1102100100111100100212
+Culmofrons					1102100200111100100212
+Trepassia					1102100200201100100011
+Pectinifrons				1102110?00?2?112100012
+Frondophyllas				11021002002?21001100??
+Hapsidophyllas				11021102002?2102110012
+Fractofusus_andersoni		11021001001111110--00-
+Fractofusus_misrai			11021001011111110--00-
+Bradgatia					11021101001111120--00-
+Rangea						11021011011?1110100010
+Ernietta					10100000000100200--00-
+Pteridinium					10100010000000200--00-
+Swartpuntia					10100010000?0020110???
+Charniodiscus_spinosus		0-011003?0?11120111112
+Charniodiscus_procerus		0-011003?0?12120111212
+Charniodiscus_arboreus		0-01100310012120111112
+Charniodiscus_yourgenesis	0-01100310011120111012
+;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-12 14, strat: 13;
+	WTSET * UNTITLED  = 1: 1-12, 0: 13-14;
+END;
+
+
+BEGIN TREES;
+
+	TRANSLATE
+		1	Valletia,
+		2	Pachytraga,
+		3	Praecaprina,
+		4	Retha,
+		5	Amphitriscoelus,
+		6	Monopleura,
+		7	Horiopleura,
+		8	Polyconites,
+		9	Praecaprotina,
+		10	Magallanesia,
+		11	Plagioptychus,
+		12	Sellaea,
+		13	Neocaprina
+	;
+	TREE  * UNTITLED =  [&R] (1,(((2,3),(4,5)),(6,(7,(8,(9,(10,(11,(12,13)))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -812719948;
+	FileSettings treewindow  '1' '1' '13' '0';
+	Singles 010;
+	Editor 00011011111111100100010010 '0' '72' Gadget '12' '188' '1' all;
+	EditorPosition  '96' '1071' '529' '813';
+	TreeWindowPosition  '67' '381' '981' '1425';
+	ListWindow Characters open Gadget '12' '494' '1253' '270' '517' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '253' '305' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '134' '215' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '25' '441' '1556' '458' '431';
+	WindowOrder  Tree List Characters States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '904' '1705' '165' '85';
+	TreeLegendPosition  '937' '1607' '88' '93';
+	EditorToolsPosition  '704' '1407' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 00;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Geneva '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '2' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

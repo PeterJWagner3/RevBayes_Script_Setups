@@ -1,0 +1,126 @@
+#NEXUS 
+[MacClade 4.05 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=11 NCHAR=21;
+
+[!Sumrall, C. D. & C. E. Brett. 2002. A revision of Novacystis hawkesi Paul and Bolton 1991 (Middle Silurian: Glyptocystitida, Echinodermata) and the phylogeny of early callocystitids. Journal of Paleontology 76:733-740.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		20  FA / 'O_(Aren-u)' 'O_(Ashg-m)' 'S_(Ldov-m)' 'S_(Wenl)' 'S_(Prid)',
+  21  LA / 'O_(Aren-u)' 'O_(Ashg-m)' 'S_(Ldov-m)' 'S_(Wenl)' 'S_(Prid)'
+		;
+
+MATRIX
+[                            10        20]
+[                            .         . ]
+
+Echinoencrinites    1000??040000000?00?00
+Proctocystis        1110??030000?00?00?00
+Scoliocystis        0000??011110010?00?00
+Jaekelocystis       011111241112100111044
+Lepadocystis        000100041110110000011
+Anartiocystis       001110141110100000022
+Novacystis          001100021112111100133
+Apiocystites        011111231112100011033
+Callocystites       011110231112110011033
+Brockocystis        001100141112000?00?22
+Pseudocrinites      011111051111110100134
+;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-19 21, strat: 20;
+	WTSET * UNTITLED  = 1: 1-19, 0: 20-21;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Echinoencrinites,
+		2	Proctocystis,
+		3	Scoliocystis,
+		4	Jaekelocystis,
+		5	Lepadocystis,
+		6	Anartiocystis,
+		7	Novacystis,
+		8	Apiocystites,
+		9	Callocystites,
+		10	Brockocystis,
+		11	Pseudocrinites
+	;
+	TREE Fig._1.1 =  [&R] (1,2,(3,(5,((7,11),(10,(6,(4,8,9)))))));
+	TREE Fig._1.1B =  [&R] (1,2,(3,(((7,11),(10,(6,(4,(9)8)))))5));
+	TREE Fig._1.4B =  [&R] (1,2,(3,(((10,6),(7,(11,((9)8)4))))5));
+	TREE  * UNTITLED =  [&R] (1,(2,(3,(5,((10,6),(7,(11,(4,(8,9)))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  84;
+	LastModified -1082722215;
+	FileSettings treewindow  '1' '1' '20' '1';
+	Singles 010;
+	Editor 0001101111111110010001001 '0' '72' Gadget '12' '200' '1' all;
+	EditorPosition  '46' '6' '274' '609';
+	TreeWindowPosition  '91' '435' '715' '974';
+	ListWindow Characters closed Gadget '12' '50' '25' '253' '517' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '236' '305' 100000;
+	ListWindow Trees closed Gadget '12' '90' '65' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '686' '964';
+	StateNamesSymbols open Gadget '12' '10' '336' '125' '203' '219';
+	WindowOrder  Tree States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '677' '1308' '110' '85';
+	TreeLegendPosition  '699' '1210' '88' '93';
+	EditorToolsPosition  '563' '46' '115' '165';
+	TreeToolsPosition  '290' '42' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

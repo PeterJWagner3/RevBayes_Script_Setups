@@ -1,0 +1,8 @@
+"Data_group"	"Study"	"OTUs"	"Characters"	"Binary"	"Multistate"	"Total_States"	"Autapomorphic_Binary"	"Autapomoprhic_Multistate"	"Autapomoprhic_Multistate_States"	"Prop_Missing"	"Identicals"	"Reducibles"
+"Chelicerates"	"Adelophthalmoidea_Tetlie_&_Poschmann_2008.nex"	"13"	"30"	"28"	"2"	"64"	"5"	"2"	"5"	"0.315384615384615"	"0"	"0"
+"Chelicerates"	"Cambrian_Arachnomorpha_Cotton_&_Brady_2004.nex"	"37"	"54"	"45"	"9"	"124"	"0"	"2"	"6"	"0.11011011011011"	"0"	"0"
+"Chelicerates"	"Cambrian_Arachnomorpha_Hendricks_&_Lieberman_2008.nex"	"26"	"35"	"27"	"8"	"84"	"0"	"2"	"3"	"0.101098901098901"	"0"	"0"
+"Chelicerates"	"Eurypetriidae_Tetlie_&_Cuggy_2007.nex"	"24"	"37"	"22"	"14"	"104"	"4"	"7"	"8"	"0.227477477477477"	"0"	"0"
+"Chelicerates"	"Eurypterus_Tetlie_2006.nex"	"14"	"21"	"14"	"7"	"51"	"3"	"4"	"5"	"0.295918367346939"	"0"	"0"
+"Chelicerates"	"Stylonurina_Lamsdell_et_al_2010.nex"	"30"	"60"	"57"	"3"	"138"	"2"	"2"	"3"	"0.259444444444444"	"0"	"0"
+"Chelicerates"	"Xiphosura_Lamsdell_2013.nex"	"37"	"114"	"70"	"44"	"291"	"0"	"21"	"27"	"0.279516358463727"	"0"	"0"

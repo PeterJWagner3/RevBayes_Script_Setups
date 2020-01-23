@@ -1,0 +1,296 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=147 NCHAR=67;
+
+[!Foote, M.  1992.  Paleozoic record of morphological diversity in blastozoan echinoderms.  Proceedings of the National Academy of Sciences, USA 89:7325 - 7329.]
+
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C D E F" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		1  thecal_arrangement / neither_columns_nor_circlets columns_or_circlets,
+		2  form_of_columns / straight curved,
+		3  form_of_circlets / not_clearly_differentiated well_differentiated,
+		4  thecal_plate_number / indeterminate essentially_determinate,
+		5  thecal_shape / globular,_conical,_cylindrical lenticular strongly_flattened,
+		6  'thecal_symmetry_(viewed_along_oral-aboral_axis)' / circular_or_asymmetric bilateral triradial quadrangular pentaradial hexaradial,
+		7  thecal_plate_arrangement / irregular regular,
+		8  thecal_plate_arrangement / imbricate mixed adjacent,
+		9  intercalated,_secondary_and/or_tertiary_plate_cycles / absent present,
+		10  Number_of_basals,_if_differentiated:_1,2,_etc / inapplicable one two three four five six seven eight nine,
+		11  main_food_groove / brachioles_empty_directly_into_mouth differentiated_ambulacra_present,
+		12  'ambs_branching_(away_from_oral_area,_other_than_single_branches_leading_to_brachioles)' / no yes,
+		13  number_of_ambulacra / highly_variable essentially_fixed,
+		14  'number_of_ambulacra_(or_brachioles_if_they_empty_directly_into_mouth)' / inapplicable one two three four five six seven eight,
+		15  'ambulacral_symmetry_(if_number_of_ambs_=_4)' / not_2-2 2-2,
+		16  'ambulacral_symmetry_(if_number_of_ambs_=_5)' / not_2-1-2 2-1-2,
+		17  ambulacral_attitude / fully_recumbent partly_or_fully_erect,
+		18  elevation_of_recumbent_ambulacra_by_thecal_growth / no yes,
+		19  extent_of_recumbent_ambulacra_away_from_mouth / less_than_half_way_down_theca half_way_down_or_more,
+		20  'form_of_ambulacra_(viewed_from_oral_pole)' / straight curving,
+		21  seating_of_recumbent_ambs / strictly_incised_into_thecal_plates flooring-_or_side-plates_present,
+		22  position_of_flooring/side_plates / '(partly)_over_thecal_interior' only_over_thecal_plates,
+		23  'position_of_flooring/side_plates_(if_over_thecal_interior)' / mainly_between_thecal_plates both_conditions_codominant mainly_in_sinus,
+		24  'additional_special_ambulacral_plate(s)' / absent present,
+		25  'special_ambulacral_plate(s)' / 'single_(lancet-type_or_equiv.)' multiple,
+		26  ambulacral_cover_plates / absent present,
+		27  ambulacral_cover_plates / single_pair_per_amb series,
+		28  position_of_mouth / '(sub)central_on_summit' lateral_,
+		29  oral_cover_plates / absent present,
+		30  oral_cover_plates / slightly_modified_ambulacral_or_brachiolar_cpp differentiated_oral_cpp,
+		31  brachioles / absent present,
+		32  brachiole_position / end_of_amb one_side_of_amb both_sides_of_amb,
+		33  brachiole_position / aboral_end_of_amb adoral_end_of_amb,
+		34  brachiole_position / both_sides_of_amb_alternating both_sides_of_amb,_opposite,
+		35  brachiole_plating / irregular regular,
+		36  brachiole_form / biserial 'uniserial_(or_apparently_so)',
+		37  brachiole_form / straight '(partly)_spiral',
+		38  brachiole_form / asymmetric symmetric,
+		39  brachiole_form / not_coiled coiled,
+		40  brachiole_cover_plates / absent present,
+		41  brachiole_cover_plates / asymmetrically_situated symmetrically_situated,
+		42  brachiole_support / merge_with_calyx distinct,_supported_on_plates,
+		43  plates_supporting_brachioles / thecal_plates both ambulacral_flooring/side_plates,
+		44  predominant_number_of_supporting_plates_per_facet / one two three four_plus,
+		45  structure_supporting_theca / absent present,
+		46  nature_of_support_structure / simple_prolongation_of_theca distinct_structure,
+		47  'form_of_support_structure_(if_distinct)' / multiplated_holdfast column,
+		48  holdfast_plating / imbricate mixed adjacent,
+		49  holdfast_plating / irregular regular,
+		50  column_plating / fusular_rings columnals,
+		51  column_plating / meric mixed holomeric,
+		52  columnals_imbricating_as_inner_and_outer_rings / no yes,
+		53  columnals_alternate_in_size_(proximally) / 'no_(homeomorphic)' 'yes_(heteromorphic)',
+		54  proximal_vs_distal_differentiation_of_columnals / none_or_slight pronounced,
+		55  'columnal_shape_(proximally)' / disc-like both elongate/ellipsoidal,
+		56  'attachment_specialization_(if_support_structure=simple_prolongation_of_theca)' / absent present,
+		57  anus_distinct / 'no_(absent,_merged_with_mouth,_etc)' yes,
+		58  position_of_anus / adjacent_to_mouth lateral_and_top_1/3_of_theca lateral_and_mid_1/3_of_theca antipodal_,
+		59  anal_pyramid / absent present,
+		60  pore-_or_fold-like_respiratory_structures / absent present,
+		61  Major_type_of_respiratory_structure / epispire,sutural_pores,slits exothecal endospire_folds,
+		62  type_of_pores/slits / 'not_covered_by_calcite_(epispires)' 'covered_by_calcite_(paracrinoid_type)',
+		63  type_of_exothecal_structure / diplopores humatirhombs humatipores coronal_tubes exospire_folds,
+		64  type_of_endospire_folds / dichoporite hydrospires cataspires,
+		65  type_of_dichoporite_structures / cryptorhombs pectinirhombs,
+		66  FA / Lower_Cambrian Middle_Cambrian Upper_Cambrian Lower_Ordovician Middle_Ordovician Upper_Ordovician Lower_Silurian Middle_Silurian Late_Silurian Lower_Devonian Middle_Devonian Late_Devonian Mississippian Pennsylvannian Permian,
+  67  LA / Lower_Cambrian Middle_Cambrian Upper_Cambrian Lower_Ordovician Middle_Ordovician Upper_Ordovician Lower_Silurian Middle_Silurian Late_Silurian Lower_Devonian Middle_Devonian Late_Devonian Mississippian Pennsylvannian Permian
+;
+
+MATRIX
+Lepidocystis_wanneri			0--000010-1015-100000----1101112-0100101110210000-------111100---00
+Kinzercystis_durhami			0--000010-1015-100000----1101112-0100101110?10010-------111100---00
+Gogia_prolifica				0--000020-1???--00000----11011100-101?01?10?10010-------121100---00
+'Gogia (Alanisicystis) andalusiae'	0--00002--1?????000????????0??100-101101?10210000-------111100---00
+Gogia_ojenai					0--000020-1013--00000----11011100-100101110?10010-------121100---11
+Acanthocystites_briareus			0--000020-1?????000???????????101-10010111?????????????????100---11
+Akadocrinus_jani				1-0000020-1?????0?0???????????100-10010111??101--0---0--???100---11
+Lichenoides_priscus				1-110412051015-100000----1101012-010010111000----------0???100---11
+Eustypocystis_minor				0--000020-0-??-------------0??1---100?01?10?101--120000-1210-----11
+Nolichuckia_casteri				0--000020-1?????000???????????100-100101110?10020-------???0-----22
+Trachelocrinus_resseri			0--000020-1015-?1--0-----110??12-?1001011122101--120100-???0-----22
+Ridersia_watsonae				1-010012041015-10000?????110??100-10010111??101--120010-1110-----22
+Rhopalocystis_destombesi			1-000002011015-?00000----??0??12-01001011101101--120?00-111100---33
+Lingulocystis_elongata			0--01002041012--00000----11010100-1001011100101--120100-1210-----33
+Blastocystis_rossica			1-1104120?1015-000?01000-??0??12-0???????12????????????-???12--2-33
+Macrocystella_mariae			1-110012041015-10000???--??0??12-010010111??101--121010-1210-----33
+Asteroblastus_volborthi			1-110412041015-000101000-0-00-12-01?0?0??120101--1200?0-11?11-0--33
+Asterocystis_globula			1-110412041015-000?01000-0-00-12-0???????10?101--??????-11?11-0--33
+Mesocystis_pusirefskii			0--004020-1015-0001011-0-1100-12-0???????120101--??????-11111-0--33
+Glyptosphaerites_leuchtenbergi	0--000020-1015-000110----??01112-0???????100101--1?????-12111-0--33
+Hadrocystis_pauli				1-110?12041015-100001020-110??12-0100101?121101--1210?0-12112--0133
+Echinoencrinites_reticulatus		1-110012041015-?00000----??0??100-100?01?10?101--12???0-12?12--0133
+Ascocystites_drabowensis			10-000020-1015-100010----110??11--1001011101101--120100-???0-----44
+Cryptocrinites_laevis			1-110412031015-100000----11010100-???????100101--??????-1110-----44
+Cardiocystites_bohemicus			1-112012020-??-------------0??1---10010??10?101--120110-???0-----44
+Rhipidocystis_gigas				0--12012011012--0000???????0??100-110101110?101--120000-???0-----44
+Petalocystites_ikecanensis		0--12012021012--0000???????0??12-?100101110?101--120002-1110-----44
+Blastoidocrinus_carchariaedens	1-110412051015-000101000-1101112-010000??120101--120000-???12--2-44
+Meristoschisma_hudsoni			1-1104120?1015-000101000-1101112-01001011120101--120000-11?12--2-44
+Glyptocystella_loeblichi			1-110012041015-100001010-1101012-0100101?121101--121010-12112--0144
+Pirocystella_strimplei			1-110012041015-100001010-110??12-0100101?121101--121010-12112--0144
+Hesperocystis_deckeri			1-110012041015-100001020-110??12-0???????110101--1200?0-12?12--0144
+Strabocystis_fayi				1-110012041015-100001020-1101012-0100?01?121101--1210?0-12?12--0144
+Tanaocystis_watkinsi			1-110012041015-100001020-1101012-0100101?121101--121010-12?12--0144
+Quadrocystis_graffhami			1-110012041015-100001020-1101012-0100?01?121101--1210?0-12112--0144
+Praepleurocystis_watkinsi		1-112012040-12-------------0101---100101?0--101--1210?0-13112--0144
+Eumorphocystis_multiporata		0--00002041015-110001000-1101112-0100101?120101--1201?0-11011-0--44
+Echinosphaerites_aurantium		0--000020-100---00000----11010100-100?01?100101--??????-11111-1--44
+Mandalocystis_dockeryi			0--120120310140-000111-11??0??11--1001011120101--1201?0-1110-----44
+Dactylocystis_schmidti			10-004020?1015-?00101000-??0??12-0?00101?120101--??????-12111-0--44
+Cystoblastus_leuchtenbergi		1-110412041015-0001011-0-??0??12-0???????121101--??????-12?12--0144
+Amecystis_laevis				1-112112040012-------------0101---101?01?0--101--121010-1310-----44
+Plethoschisma_grandis			1-112012040-12-------------0101---100?01?0--101--121010-1??12--0144
+Deltacystis_symmetricus			1-112112020-12-------------0101---100?01?0--101--121010-12112--0144
+Aristocystites_bohemicus			0--000021-0-12-------------0??1---???????10?0----------111111-0--44
+Arachnocystites_infaustus		0--000020-100---00000----??0??100-100?01?10?101--100000-11111-1--44
+Glyptocystites_ehlersi			1-110012041015-1001011-0-1101012-0100?0??121101--1210?0-12?12--0144
+Fungocystites_rarissimus			0--000020-1015-000100----??0??12-0???????1000----------111111-0--44
+Stichocystis_geometrica			0--000020-10140-00000----11010100-???????101101--???????12111-1--44
+Comarocystites_punctatus			0--000020310141-10000----1101011--110?01?120101--120000-111101---44
+Amygdalocystites_florealis		0--00002031012--001111-0-111??11--110?01?120101--120100-111101---44
+Platycystites_cristatus			0--01012031012--001011-0-1111011--11???1?120101--120100-1110-----44
+Canadocystis_tennesseensis		0--00012031012--000111-0-111??11--???????120101--120??0-11?0-----44
+'Sphaeronites_(Peritaphros)_litchi'	0--000021-1015-000000----0-011100-???????10?0----------110111-0--55
+Haplosphaeronis_multifida		1-0100120-1015-000000----0-011100-???????1000----------110111-0--55
+Archegocystis_stellulifera		???000020-1015-000000----0-011100-???????1000----------111111-0--55
+Eucystis_munita				1-0?00?20-1014-000000----0-0??100-???????1000----------110111-0--55
+Diplosphaeronis_laevis			0--00002?-1014?-00000----0-011100-???????100????????????11111-0--55
+Brightonicystis_gregaria			0--000021-1015-000000----0-0??100-???????1020----------111?11-2--55
+Gomphocystites_asper			11-000020-1015-?00111000-1101111--???????1200----------110?11-0--55
+Homocystites_constrictus			1-110012041015-?00001000-110??12-??0???1?12?101--121010-12112--0155
+Pygecystis_quadrata				1-112012040-12-------------0101---10000100--101--121010-13112--0155
+Regulaecystis_inconstans			1-111012040-12-------------0101---???????0--101--121010-13?12--0155
+Thomacystis_tuberculata			1-1100120310140-00000----??0??100-???????1??101--??????-11?12--0055
+Protocrinites_rugatus			10-00002011015-100100----1101012-0100101?101101--120100-12111-0--55
+Tetreucystis_kalvoeyensis		0--000020-10140-00000----??0??100-???????1000----------111?11-0--55
+Parasphaeronites_socialis		0--000020-1014?-00000----??0??100-???????10?0----------111?11-0--55
+Pachycystis_norvegica			0--000020-10140-00000----??0??100-???????1000----------110?11-0--55
+Rhombifera_bohemica				1-1101120?1015-000000----??0??100-???????100101--1?????-11?12--0155
+Lepadocystis_moorei				1-110012041015-1000011-0-1101012-0100?0??121101--12?000-12112--0155
+Caryocystites_lagenalis			1-0000021?1013--00000----??0??100-???????101101--10-----12111-1--55
+Macurdablastus_uniplicatus		1-1104120?1015-0000010111??0??12-???????????????????????11012--1-55
+Anartiocystis_foerstei			1-110012041015-1001011-0-??0??12-0???????120101--1110?0-12?12--0166
+Osculocystis_monobrachiolata		1-1100120400??-------------0??1---???????1--101--??????-12112--0166
+Lysocystites_nodosa				1-110412031015-0000010010??0??101-???????12110?????????-10?11-4--77
+Caryocrinites_ornatus			1-110012041113--10000----1101012-01000010121101--120100-11112--0077
+Staurocystis_quadrifasciatus		1-110012041014?-001011-0-110??12-0100101?121101--121010-12112--0177
+Pseudocrinites_bifasciatus		1-111112041012--001011-0-110??12-0100?01?121101--12???0-12112--0177
+Tetracystis_oblongus			1-1101120410140-001011-0-110??12-0???????121101--1210?0-12112--0177
+Prunocystites_fletcheri			1-1100120410????000?11-0-110??12-0?????1?12?101--121010-11112--0177
+Apiocystites_pentrematoides		1-1100120410140-001011-0-110??12-010?????121101--121000-12112--0177
+Glansicystis_baccata			1-1100120410????000011-0-110??100-?????1?121101--121010-12112--0177
+Schizocystis_armata				1-110012041012--00011010-110??11--??0????121101--121010-12112--0177
+Stephanocrinus_angulatus			1-110412031015-010001--101001112-0100-1??121101--120000-11011-3--77
+Triamara_ventricosa				0--000020-1012--00000----110??100-???????1000----------011111-0--77
+Holocystites_cylindricus			1-0000120-1015-000000----0-011100-???????10211---------111111-2--77
+Pentacystis_simplex				0--000020-1015-000000----??0??100-???????1000----------111?11-2--77
+Trematocystis_globosus			1-0000020-10140-00000----0-011100-???????1000----------111111-2--77
+Pustulocystis_ornatissimus		1-0000020-10140-00000----??0??100-???????1000----------11??11-2--77
+Callocystites_jewetti			1-110012041115-1001011-0-1101012-010010??121101--12?010-12112--0177
+Celticystis_gotlandicus			11-000020-1015-100111000-110??11--???????1200----------110?11-0--77
+Decaschisma_pulchellum			1-110412031015-0000010110??0??12-0???????121101--120??0-10?12--1-77
+Troosticrinus_reinwardti			1-110412031015-0000010210??0??12-0???????121????????????10?12--1-77
+Polydeltoideus_enodatus			1-110412031015-0000010110??0??12-0???????121101--??????-10?12--1-88
+Tyrridiocystis_cheylon			1-110012041013--00000----??0??100-???????101101--??????-12?12--0199
+Lepocrinites_manlius			1-110012041014?-001011-0-110??12-0???????121101--121010-12112--0199
+Jaekelocystis_hartleyi			1-1100120410141-001011-0-1101012-0???????121101--12?0?0-11112--0199
+Sphaerocystites_multifasciatus	1-1100120411141-001011-0-110??12-0100?0??12?101--120?10-11112--0199
+Leptoschisma_lorae				1-110412031015-0000010110??0??12-0???????121101--??????-10?12--1-99
+Caryoblastus_bohemicus			1-110412031015-0001010110??0??12-0???????12?101--??????-10?12--1-99
+Cryptoschisma_schultzii			1-110412031015-0000010110??0??12-0???????121101--120??2-10?12--1-99
+Pentremitidea_archiaci			1-110412031015-0000010110??0??12-0???????121101--1200?0-10?12--1-99
+Pachyblastus_dicki				1-1104120?1015-0001010110??0??12-0??0?0??12?????????????1??12--1-99
+Lipsanocystis_traversensis		1-1100120410140-001011-0-110??12-0???????121101--1210?0-11112--01AA
+Pleuroschisma_lycorias			1-110412031015-0001010110??0??12-0100?0??121101--1201?0-10?12--1-AA
+Heteroschisma_alternatum			1-110412031015-0000010110??0??12-0???????121101--??????-10?12--1-AA
+Brachyschisma_corrugatum			1-110412031015-0000010110??0??12-0???????121????????????10?12--1-AA
+Eleutherocrinus_cassedayi		1-110112031015-0001010210??00-12-0100?0??1210-----------10012--1-AA
+Devonoblastus_whiteavesi			1-110412031015-0001010110??00-12-0???????121111--??????-10012--1-AA
+Adocetocystis_williamsi			1-1100120410141-000011-0-1101012-0100?01?121101--121010-11112--01BB
+Strobilocystites_calvini			10-100120411141-001011-0-1101012-010010??121101--121??0-12112--01BB
+Phaenoschisma_acutum			1-110412031015-0000010110??0??12-0???????121101--??????-10?12--1-CC
+Koryschisma_parvum				1-110412031015-0000010110??0??12-0???????12?101--120??0-10?12--1-CC
+Pentremoblastus_conicus			1-110412031015-0000010110??0??12-0???????121101--12????-10?12--1-CC
+Phaenoblastus_caryophyllatus		1-110412031015-0001010110110??12-0100?0??121101--120??0-10?12--1-CC
+Kazachstanoblastus_carinatus		1-110412031015-0001010110??0?????????????121101--120??0-1??12--1-CC
+Artuschisma_rossica				1-110412031015-0001010110??0??12-0??????????101--12???0-1??12--1-CC
+Dolichoblastus_shimanskii		1-110?12031015-000?010110??0??12-0???????121????????????11?12--1-CC
+Katoblastus_puzos				1-110412031015-0001010110110??12-0???????121101--??????-11?12--1-CC
+Orophocrinus_stelliformis		1-110412031015-00110101101101112-0???????121101--12????-11112--1-CC
+Acentrotremites_ellipticus		1-1104120?1015-0001010110??0??12-0???????12?101--12????-10?12--1-CC
+Mastoblastus_ornatus			1-110412031015-0000010110??0??12-0???????121101--???????10?12--1-CC
+Xenoblastus_decussatus			1-110412031015-0001010110??0??12-0???????121101--??????-11?12--1-CC
+Nymphaeoblastus_bancrofti		1-1104120?1015-0001010110??0??12-0???????121????????????10?12--1-CC
+Astrocrinus_tetragonus			1-110112021015-0001010110??0??12-0???????1210----------010?12--1-CC
+Hadroblastus_convexus			1-110412031015-0000010110??0??12-0???????121101--12???0-11?12--1-CC
+Codaster_acutus				1-110412031015-0000010110??0??12-0???????121101--??????-10?12--1-CC
+Cribroblastus_cornutus			1-110412031015-0001010110??00-12-0???????121111--??????-11012--1-CC
+Pentremites_godoni				1-110412031015-0001010110??00-12-0???????121111--??????-10012--1-CC
+Arcuoblastus_shumardi			1-110412031015-0001010210??00-12-0100?0??121111--??????-10012--1-CC
+Costatoblastus_sappingtonensis	1-110412031015-00010101101100-12-01001011121111--120100-10012--1-CC
+Pyramiblastus_fusiformis			1-110412031015-0001010110??0??12-0100?0??121111--120100-10?12--1-CC
+Pentablastus_supracarbonicus		1-110412031015-0001010110??0??12-0???????121101--120??0-10?12--1-DD
+Agmoblastus_caddense			1-110412031015-0000010010??0????????????????111--??????-11012--1-DD
+Pentremites_rusticus			1-110412031015-00010101101100-12-0???????121111--??????-11012--1-DD
+Anthoblastus_stelliformis		1-110412031015-0011011010??0??12-0???????121101--??????-10?12--1-EE
+Sphaeroschisma_somoholense		1-110412031015-0001010110??0??12-????????121????????????10?12--1-EE
+Neoschisma_timorense			1-110412031015-0000010210??0??12-0???????121101--??????-11?12--1-EE
+Dipteroblastus_permicus			1-110012031015-0000010110??0??12-0???????121101--??????-10?12--1-EE
+Timoroblastus_coronatus			1-110412031015-0000010210??0??12-0???????12?101--12???0-11?12--1-EE
+Angioblastus_variabilis			1-110412031015-0000010110??0??12-0???????121101--12???0-11?12--1-EE
+Tympanoblastus_elongatus			1-110412031015-0000010110??0??12-0???????12?101--??????-11?12--1-EE
+Pterotoblastus_brevialatus		1-110412031015-0000010210??0??12-0???????121101--12???0-11?12--1-EE
+Nannoblastus_pyramidatus			1-110412031015-0000011-10??0??100-???????121101--12???0-11?12--1-EE
+Ceratoblastus_nanus				1-110412031015-0000010110110??12-0???????121????????????11?0-----EE
+Indoblastus_granulatus			1-110412031015-0000010210??0??12-0???????121101--??????-11?12--1-EE
+Calycoblastus_tricavatus			1-110412031015-0001010110??00-12-0???????121????????????11012--1-EE
+;
+end;
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -845290560;
+	FileSettings treewindow  '1' '1' '24' '1';
+	Singles 010;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '178' '1' all;
+	EditorPosition  '56' '739' '376' '683';
+	TreeWindowPosition  '91' '435' '723' '974';
+	ListWindow Characters open Gadget '12' '50' '25' '253' '517' 000;
+	ListWindow Taxa closed Gadget '12' '50' '25' '241' '327' 100000000;
+	ListWindow Trees closed Gadget '12' '90' '65' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	TextWindow AboutFile  '190' '165' '280' '445' Gadget '12' (normal) 1 ;
+	ChartWindowPosition  '52' '30' '686' '964';
+	StateNamesSymbols open Gadget '12' '10' '447' '1424' '203' '219';
+	WindowOrder  Tree List Characters Text AboutFile States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '641' '1308' '154' '85';
+	TreeLegendPosition  '707' '1210' '88' '93';
+	EditorToolsPosition  '563' '46' '115' '165';
+	TreeToolsPosition  '290' '42' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;
+

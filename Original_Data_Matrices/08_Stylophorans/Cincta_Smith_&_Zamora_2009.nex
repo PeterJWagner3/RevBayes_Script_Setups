@@ -1,0 +1,252 @@
+#NEXUS
+[written Mon Feb 18 20:05:28 CST 2019 by Mesquite  version 3.6 (build 917) at EAS-6BCEC7.local/10.0.1.7]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=23;
+	TAXLABELS
+		Ctenocystis Gyrocystis_platessa Gyrocystis_testudiformis Gyrocystis_cruzae Gyrocystis_badulesiensis Gyrocystis_erecta Progyrocystis_disjuncta Protocinctus_mansillaensis Elliptocinctus_barrandei Elliptocinctus_vizcainoi Sucocystis_theronensis Sucocystis_bretoni Lignanicystis_barriosensis Undatacinctus_undata Sucocystis_acrofera Undatacinctus_quadricornuta Undatacinctus_melendezi Asturicysis_jaeckeli Sotocinctus_ubaghi Trochcystites_bohemicus Trochocystoides_parvus Ludwigicinctus_truncatus Graciacystis_ambigua 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=60;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3";
+	MATRIX
+	Ctenocystis                  011???000?0?????0000?000000000????????0020?00????????????000
+	Gyrocystis_platessa          1101110100(0 1)100000000-0000000000010012020110000001200001-1300
+	Gyrocystis_testudiformis     00011111000100000000-0000100000010012020101110001200001-1310
+	Gyrocystis_cruzae            1001?10?000100000000??000100000010012???0?00?0001200001-?310
+	Gyrocystis_badulesiensis     11011102000110000000-01101011000201120?0010000001200001-1310
+	Gyrocystis_erecta            110??????00110000000-??????????0201120??????00001200001-?3?0
+	Progyrocystis_disjuncta      010?????100100000000-0000000000001001000200000001200001-0300
+	Protocinctus_mansillaensis   010111??200010000000-0022200000000-120??2000?0?122000011?310
+	Elliptocinctus_barrandei     (0 1)(0 1)0111010(1 2)(0 1 2)000000000022201022200201120?01100000122100011?210
+	Elliptocinctus_vizcainoi     0100?0??0100?1000000-0220102??00201120?001000001221?001??210
+	Sucocystis_theronensis       130111011(0 1)(0 1 2)010000000022201022200100121??0100000122000011?310
+	Sucocystis_bretoni           13011??111(0 1)010000000002201022200100120??0100000122000111?310
+	Lignanicystis_barriosensis   13110112011000010000022201022201101120112000000122100000?210
+	Undatacinctus_undata         100?????010010001111-0220102220000-1????0?00?00122100010?211
+	Sucocystis_acrofera          230?????010010000000-02201022200100120??01000001222100110110
+	Undatacinctus_quadricornuta  100?????010010000202-0222222220000-120??0100000122100001?211
+	Undatacinctus_melendezi      130?????010010001111-0220102220000-120??0100?0012210001??211
+	Asturicysis_jaeckeli         121111?2000010000000-0000000000000-100??20000012222210110100
+	Sotocinctus_ubaghi           100?01??0(0 1)0010000000-0000000000000-0000020000012222100110200
+	Trochcystites_bohemicus      1(0 3)(0 1)111010(1 2)(0 1)02000000002220002220000-110112000012222221111?210
+	Trochocystoides_parvus       1000?000000010000000-0022002200000-1????20000122222210110210
+	Ludwigicinctus_truncatus     101?????010010100000-0222222222000-12???000000012200001-?210
+	Graciacystis_ambigua         00(0 1)1011200(0 1)000000000000022200000100000102000001022100010????
+
+;
+
+END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Outgroup :  1, Ingroup :  2- 23;
+
+	CHARPARTITION * UNTITLED  =  Lognormal :  1- 57, Exclude :  58- 60;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 60;
+TYPESET RevBayes   =  unord:  1- 60;
+
+END;
+
+BEGIN NOTES;
+
+	SU  C = 56 N = selected B = TRUE;
+
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+
+	CHARGROUPLABEL Exclude COLOR = (RGB 1 1 1) ;
+	CHARGROUPLABEL Lognormal COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 60;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1550541928269;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 446649146743680863;
+			tell It;
+				setSelected  2 -  23;
+				attachments ;
+			endTell;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 6329011859696130875;
+			tell It;
+				setSelected  56;
+				attachments ;
+			endTell;
+			mqVersion 360;
+			checksumv 0 3 1560728720 null  getNumChars 60 numChars 60 getNumTaxa 23 numTaxa 23   short true   bits 15   states 15   sumSquaresStatesOnly 5852.0 sumSquares 5852.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1670 464;
+			setLocation 10 206;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #6329011859696130875 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1570 392;
+					setLocation 10 206;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			showCharacters #6329011859696130875 #mesquite.lists.CharacterList.CharacterList;
+			tell It;
+				setData 0;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.DefaultCharOrder.DefaultCharOrder;
+					newAssistant  #mesquite.lists.CharListInclusion.CharListInclusion;
+					newAssistant  #mesquite.lists.CharListPartition.CharListPartition;
+					newAssistant  #mesquite.parsimony.CharListParsModels.CharListParsModels;
+					newAssistant  #mesquite.stochchar.CharListProbModels.CharListProbModels;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1570 392;
+					setLocation 10 206;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.CharListAnnotPanel.CharListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

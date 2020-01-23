@@ -1,0 +1,95 @@
+#NEXUS 
+[MacClade 4.05 registered to Peter Wagner, Field Museum of Natural History]
+
+BEGIN DATA;
+    DIMENSIONS  NTAX=17 NCHAR=20;
+
+[!Melchin, M. J., A. C. Lenz, and A. Kozłowska.  2017.  Retiolitine graptolites from the Aeronian and lower Telychian (Llandovery, Silurian) of Arctic Canada.  Journal of Paleontology 91:116-145.]
+
+FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C" MISSING=? GAP=- ;
+
+Matrix
+Pseudorthograptus_obuti			0000000-001100?10000
+Pseudorthograptus_inoptinatus	0100000-000100-10011
+Hercograptus_introversus		00000000111100101?00
+?_Pseudoretiolities_sp.			0010010011100?101??0
+Pseudoretiolites_perlatus		00111102111001101100
+Pseudoretiolites_hyrichos		00201102111001101111
+Pseudopelgmatograptus_obesus	21202103101001111100
+Stomatograptus_canadensis		21112103001001101100
+Retiolites_geinitzianus			21112103001000101100
+Aeroretiolites_cancellatus		01212111101000001111
+? Aeroretiolites_sp.			112?211110000--01111
+Rotaretiolites_cf._exutus		1122211110001--10011
+Rotaretiolites_exutus			1122211110001--00011
+Eorograptus_spirifer			012021?300000--01111
+?_Paraplectograptus_sp.			112021?3?010000011??
+Paraplectograptus_eiseli		112321?3001020001111
+Sokolovograptus_textor			11232023001120(01)01111
+;
+END:
+
+;
+end;
+
+BEGIN MacClade;
+	Version 4.0  84;
+	LastModified -1049985170;
+	FileSettings editor  '1' '1' '47' '1';
+	Singles 010;
+	Editor 0001101111111110010001001 '0' '72' Gadget '12' '152' '1' all;
+	EditorPosition  '44' '6' '495' '777';
+	TreeWindowPosition  '46' '6' '677' '752';
+	ListWindow Characters closed Gadget '12' '50' '25' '321' '374' 000;
+	ListWindow Taxa closed Gadget '12' '70' '45' '253' '318' 100000;
+	ListWindow Trees closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '10' '559' '1407' '203' '235';
+	WindowOrder  Data States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '578' '1268' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

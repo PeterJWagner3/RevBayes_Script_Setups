@@ -1,0 +1,171 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=13 NCHAR=14;
+
+[!Sano, S.-I., Y. Iba, P. W. Skelton, J.-P. Masse, Y. M. Aguilar, and T. Kase.  2014.  The evolution of canaliculate rudists in the light of a new canaliculate polyconitid rudist from the Albian of the Central Pacific.  Palaeontology 57:951-962. doi:10.1111/pala.12096]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C D E F G H J K L M N" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		13  FA / Hettangian Sinemurian Pliensbachian Toarcian Aaelnian Bajocian Bathonian Callovian Oxfordian Kimmeridgian Tithonian Berriasian Valanginian Hauterivian Barremian Aptian Albian Cenomanian Turonian Coniacian Santonian Campanian Maastrichtian,
+  14  LA / Hettangian Sinemurian Pliensbachian Toarcian Aaelnian Bajocian Bathonian Callovian Oxfordian Kimmeridgian Tithonian Berriasian Valanginian Hauterivian Barremian Aptian Albian Cenomanian Turonian Coniacian Santonian Campanian Maastrichtian
+		;
+
+MATRIX
+[                           10   ]
+[                           .    ]
+
+Valletia           00000000000099
+Pachytraga         000011010000DF
+Praecaprina        000011410010EF
+Retha              000013001000DD
+Amphitriscoelus    000013301011EF
+Monopleura         011000000000CN
+Horiopleura        111120100100FG
+Polyconites        111124100100FH
+Praecaprotina      111122120100FF
+Magallanesia       101122420100GG
+Plagioptychus      101122420120JN
+Sellaea            001122220200GG
+Neocaprina         001122320211GG
+;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-12 14, strat: 13;
+	WTSET * UNTITLED  = 1: 1-12, 0: 13-14;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Valletia,
+		2	Pachytraga,
+		3	Praecaprina,
+		4	Retha,
+		5	Amphitriscoelus,
+		6	Monopleura,
+		7	Horiopleura,
+		8	Polyconites,
+		9	Praecaprotina,
+		10	Magallanesia,
+		11	Plagioptychus,
+		12	Sellaea,
+		13	Neocaprina
+	;
+	TREE  * UNTITLED =  [&R] (1,(((2,3),(4,5)),(6,(7,(8,(9,(10,(11,(12,13)))))))));
+
+END;
+
+
+BEGIN NOTES;
+
+	TEXT  TAXON=13 TEXT= 'Sepkoski''s_age_data:_K_Ceno-m_K_Ceno-u';
+	TEXT  TAXON=12 TEXT= 'Sepkoski''s_age_data:_K_Albi-m_K_Ceno';
+	TEXT  TAXON=11 CHARACTER=13 TEXT= 'Early/Lower_Turonian_93.5_-_89.3';
+	TEXT  TAXON=11 CHARACTER=14 TEXT= 'Late/Upper_Maastrichtian_70.6_-_66.0';
+	TEXT  TAXON=12 CHARACTER=13 TEXT= 'Early/Lower_Albian_112.03_-_109.0_';
+	TEXT  TAXON=12 CHARACTER=14 TEXT= 'Late/Upper_Albian_105.3_-_99.6';
+	TEXT  TAXON=13 CHARACTER=13 TEXT= 'Late/Upper_Albian_105.3_-_99.6_';
+	TEXT  TAXON=10 CHARACTER=13 TEXT= 'Late/Upper_Albian_105.3_-_99.6';
+	TEXT  TAXON=10 CHARACTER=14 TEXT= 'Late/Upper_Albian_105.3_-_99.6';
+	TEXT  TAXON=9 TEXT= 'Sepkoski''s_age_data:_K_Apti';
+	TEXT  TAXON=9 CHARACTER=13 TEXT= 'Late/Upper_Aptian_122.46_-_112.03_';
+	TEXT  TAXON=9 CHARACTER=14 TEXT= 'Late/Upper_Aptian_122.46_-_112.03_';
+	TEXT  TAXON=8 TEXT= 'Sepkoski''s_age_data:_K_Apti-l_K_Ceno-u';
+	TEXT  TAXON=8 CHARACTER=13 TEXT= 'Early/Lower_Aptian_125.45_-_122.46';
+	TEXT  TAXON=8 CHARACTER=14 TEXT= 'Middle_Cenomanian_99.6_-_93.5';
+	TEXT  TAXON=7 TEXT= 'Sepkoski''s_age_data:_K_Apti_K_Ceno-m';
+	TEXT  TAXON=7 CHARACTER=13 TEXT= 'Early/Lower_Aptian_125.45_-_122.46';
+	TEXT  TAXON=7 CHARACTER=14 TEXT= 'Early/Lower_Albian_-_Middle_Albian_112.03_-_105.3_';
+	TEXT  TAXON=6 TEXT= 'Sepkoski''s_age_data:_J_Tith-u_K_Maes-u';
+	TEXT  TAXON=6 CHARACTER=13 TEXT= 'Valanginian_139.8_-_132.9';
+	TEXT  TAXON=6 CHARACTER=14 TEXT= 'Early/Lower_Maastrichtian_70.6_-_66.0';
+	TEXT  TAXON=5 TEXT= 'Sepkoski''s_age_data:_K_Barr_K_Albi-l';
+	TEXT  TAXON=5 CHARACTER=13 TEXT= 'Barremian_129.4_-_125.0';
+	TEXT  TAXON=5 CHARACTER=14 TEXT= 'Late/Upper_Aptian_122.46_-_112.03';
+	TEXT  TAXON=4 TEXT= 'Sepkoski''s_age_data:_K_Barr_K_Apti-l';
+	TEXT  TAXON=4 CHARACTER=13 TEXT= 'Hauterivian_132.9_-_129.4_';
+	TEXT  TAXON=4 CHARACTER=14 TEXT= 'Hauterivian_132.9_-_129.4_';
+	TEXT  TAXON=3 TEXT= 'Sepkoski''s_age_data:_K_Barr-u_K_Apti-l';
+	TEXT  TAXON=3 CHARACTER=13 TEXT= 'Late/Upper_Barremian_-_Early/Lower_Aptian_130.0_-_122.46';
+	TEXT  TAXON=3 CHARACTER=14 TEXT= 'Early/Lower_Aptian_125.45_-_122.46';
+	TEXT  TAXON=2 TEXT= 'Sepkoski''s_age_data:_K_Haut_K_Albi-u';
+	TEXT  TAXON=2 CHARACTER=13 TEXT= 'Early/Lower_Hauterivian_136.4_-_130.0';
+	TEXT  TAXON=2 CHARACTER=14 TEXT= 'Early/Lower_Aptian_125.45_-_122.46_';
+	TEXT  TAXON=1 TEXT= 'Sepkoski''s_age_data:_J_Kimm_K_Vala';
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -812719948;
+	FileSettings treewindow  '1' '1' '13' '0';
+	Singles 010;
+	Editor 00011011111111100100010010 '0' '72' Gadget '12' '188' '1' all;
+	EditorPosition  '96' '1071' '529' '813';
+	TreeWindowPosition  '67' '381' '981' '1425';
+	ListWindow Characters open Gadget '12' '494' '1253' '270' '517' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '253' '305' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '134' '215' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '25' '441' '1556' '458' '431';
+	WindowOrder  Tree List Characters States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '904' '1705' '165' '85';
+	TreeLegendPosition  '937' '1607' '88' '93';
+	EditorToolsPosition  '704' '1407' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 00;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Geneva '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '2' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

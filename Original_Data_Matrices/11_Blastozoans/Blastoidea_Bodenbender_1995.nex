@@ -1,0 +1,486 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=71 NCHAR=95;
+
+[!Bodenbender, B. E.  1995.  Morphological, crystallographic, and stratigraphic data in cladistic analyses of blastoid phylogeny.  Contributions from the Museum of Paleontology, The University of Michigan 29:201 - 257. 
+
+Notes provided by Brian in 1995:  ?This matrix has been proofread.  This matrix has variable characters modified for Hennig86 input.  Most have  been made uncertain, but some have been coded for a particular feature.  This matrix should be run in Paup and Hennig both, to compare program  results on an identical matrix.  S. osgoodensis, T allanensis, C clavatus, Austroblastus and Notoblastus  deleted.  Run35 coding.  Polydeltoideus 137.0; exclude 60, 63, 65, 95, and 80.  Added 160.  Added Macurdablastus to matrix.?]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C D E F G H J K" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		1  1._Widest_Portion_of_Theca,  2  '2. Thecal Width:Height',  3  3._Lateral_Outline_of_Pelvis,  4  4._Summit_Plate_Configuration,  5  6._#_Hydrospire_Folds,  6  7.,
+  7  8.,  8  9.,  9  10.,  10  11.,  11  12.,
+  12  13.,  13  14.,  14  15.,  15  16.,  16  17.,
+  17  18.,  18  19.,  19  20.,  20  21._revised,  21  22.,
+  22  23.,  23  24.,  24  25.,  25  26.,  26  27.,
+  27  28.,  28  29.,  29  30.,  30  31._revised,  31  32.,
+  32  33.,  33  34.,  34  35._revised,  35  36.,  36  37._revised,
+  37  38.,  38  39.,  39  40.,  40  41.,  41  42.,
+  42  43.,  43  44.,  44  45.,  45  46.,  46  47.,
+  47  48.,  48  49._revised,  49  50.,  50  51.,  51  52.,
+  52  53.,  53  54.,  54  55.,  55  56.,  56  57._revised,
+  57  58.,  58  59.,  59  60.,  60  61.,  61  62.,
+  62  63.,  63  64.,  64  65._AD2,  65  66._AD2,  66  67.,
+  67  68.,  68  69.,  69  70.,  70  71._Prominent_Radial_Lip,  71  72.,
+  72  73.,  73  74.,  74  75._Radial_Surface_?_Intersecti,  75  '76. Radial-Radial Suture',  76  77.,
+  77  78.,  78  79.,  79  80.,  80  81.,  81  82.,
+  82  83._Plate_Growth_Lines,  83  84.,  84  85.,  85  86.,  86  87.,
+  87  88.,  88  89.,  89  90.,  90  91.,  91  92._CR2,
+  92  93._CR2,  93  94._CR2,
+  94  FA / Llandeilo Caradoc Wenlock 'Ludlow-Pr?doli' 'Gedinnian-Siegenian' Emsian Eifelian Givetian Frasnian Tournaisian E._Visean M._Visean U._Visean Serpukhovian 'Bashkirian-Moscovian' 'Kasimovian-Gzelian' Asselian Sakmarian 'Artinskian-Kungurian' Kazanian,
+  95  LA / Llandeilo Caradoc Wenlock 'Ludlow-Pr?doli' 'Gedinnian-Siegenian' Emsian Eifelian Givetian Frasnian Tournaisian E._Visean M._Visean U._Visean Serpukhovian 'Bashkirian-Moscovian' 'Kasimovian-Gzelian' Asselian Sakmarian 'Artinskian-Kungurian' Kazanian
+		;
+
+MATRIX
+[                                          10        20        30        40        50        60        70        80        90    ]
+[                                          .         .         .         .         .         .         .         .         .     ]
+
+Ambolostoma_baileyi               10?22?110001-??001?10120120??2??100?110??112010???0001010000010????01000001?10???0-?1????????CC
+Angioblastus_wanneri              100?2-10-2-0-00-00-200202000?11?000011011--?10001000110000120011---0?0001001102?00-0132020222EK
+Anthoblastus_stelliformis         115?2010?00?020100-0?020111?02??0000110?1--0?10???100100101001?1---000010001102?00-01??0??102GJ
+Arcuoblastus_shumardi             106?2???1001-1?2010000?2230??10?100001000011100000010100000001?21??01010000?102?01?0103202???99
+Astrocrinus_tetragonus            110?1010300?020000-000?0230?1?110000??1?1--??101?0001?000010010210-000?0020?0--2-0-31??????12CC
+Auloblastus_clinei                105?2?113001-???011000222301?1111000??0??11210020002010000000112100010100012102?00-010300????99
+Austroblastus_whitehousei         ????41??-2-?-20-00-???????????????????0??--?????????100000111??1---0?00000???????????????????GG
+Brachyschisma_corrugatus          105?3010-2-1-21-00-00052210??0-112000100?--21002110111000?1001120--000000101102?01301?201?10257
+Calycoblastus_tricavatus          ?05?3?110001-201010000302?1?01011200110110121000000001000000011211001000010110???100103001???HH
+Caryoblastus_bohemicus            104?2?10?001-20000-0?020?10100-112????0?0--?10??0?00110100100??2110011100101100?010012201000055
+Codaster_acutus                   000?3-00-2-1-20-00-31051000?0101000001011--211001010100000110000---000000001102?00-0132020222BC
+Cordyloblastus_eifelensis         005?3001000?-100010000?02001?001120001001011100200001101001001020--011000101101?00-012201000058
+Costatoblastus_sappingtonensis    10??2?01100?-100?10000?2220?01011?00110??11110020001010?0?0001?1---01010000?102001211??0?????99
+Cribroblastus_cornutus            1?6?1?112001-1020100002023?1010?1100?10??011101?000201001?1001?212001000000?110??120103002???BB
+Cryptoblastus_melo                106?1?11200?-10010-000102301?1011000110010211002000201000100011210-010100010100?012010300221299
+Cryptoschisma_schultzi            004?3-000000100-00-20121100101110000?1001--201020000100000100?021100?00001011021010013201002055
+Decaschisma_pulchellum            001?3?10?101-20-00-000?1100100-1020??10??--100020000110100100??20--010100001101?2100122010?2022
+Decemoblastus_melonoides          105?1???300?-?0201000??22?0?0?001200010??0101002000201000?000?12120000?0002?102?0120103002???99
+Deliablastus_cumberlandensis      1?0?1???300?-100010000102211?1?11000?10??1111010000201000?0001121??01000001?102?01351???0????AA
+Deltoblastus_permicus             10621?10300?-??1?10100301311021?00001100111111010000010000100101---110000000100?00-0101202?13KK
+Dentiblastus                      ?1??1???20???10001000??22????0??12???10?011000?????0010?0?100101---02?01000?102?0100122012???99
+Devonoblastus                     105?3?10000?-??0?1000?12220101011200110010121000000101010000010210-010100001102?010010300110277
+Diploblastus                      115?10111001-10201000012220101011000110111111002000101010000011210-000100001112?0100113011211CD
+Elaeacrinus                       10611?113002-??1?1?00042230?00-?02000101?11100???0010100000001121100?010000?102?01?4100202???67
+Eleutherocrinus                   105?3?110101-10001000012221100-?12000110?012100000010100000001021100?010000-10-2-10010300110267
+Ellipticoblastus                  106?00-10000-10010-00012230111011000110112200001000101110000011210-010100002100?0120102102212AB
+Euryoblastus                      11??1??030?1-??201?000?122???1?1100???0??11??0?????201000?00011????010???000102?010?1????????AA
+Globoblastus                      11611?11000?-10010-000122301?10011000100?0210200000201100000011210-01010001010000120113012?2399
+Granatocrinus                     106?0?-13000-?0011000?102311?1??10001100?22?1000000201000?000111---00000001?10???1221???02???AB
+Hadroblastus                      115?3100-2-1-20-00-100521101011110001100?--112021000110000100101---0?0100002102?01011220112029C
+Heteroblastus                     106?????3002-??1?1000?101311????0?001100?11????????101001?100??????02010000?1????1321???0????CC
+Heteroschisma                     001?3-11-101-00-00-00010200??0-?1200010?1--210001100100000100001---0??000001101?00-012201002267
+Hyperoblastus                     105?3011001?-10001000010220100-?120001011011100000011101001001020--011100001102?010011300110058
+Katoblastus                       101?3?0?2101120?00-30021?1010101100001001--1110010010101000001?2110020100001102?010012201010299
+Koryschisma                       10113?10?1?1120100-100?02101?10?1000110??--1110????101010?100111---01?10000?10200100112010???9D
+Leptoschisma                      001?3?11?101-?0-00-00020200100-01200?10??--10002000011000010??020--011100001101?0100122010???45
+Lophoblastus                      105?2?10200?-??1?10100?12201010100001100111100110002010000000111---000100001100?010010200121399
+Macurdablastus                    0???0?-0???1????0???1?1??000????1?????0????????????0100000100??????0?1000000101?00-01??0?????11
+Mesoblastus                       100?2?103001-??011030012220?010110001101100011000001010000000102110010?00002102?01011130022139B
+Metablastus                       ?01?3?00100??20101001030010100??120001000?11100000001101001001?2110010100001101?11001120101209B
+Monadoblastus                     106?0?-?300?-??0?1000012230101??10000101102010020000010001000111---0?010000?10???120113002?1199
+Monoschizoblastus                 106?0?-12002-??010-000222301?10100001100102112010000010000000111---02010000010000120101202?12CC
+Montanablastus                    101?2???00??1?00010000?1?10??1??1?001100?11?11?????1010?0?000??1---0001000011020???01????????99
+Nannoblastus                      113?0--0-2-0-00-00-21?20?000?2??01????0?1--11?0????00100000201?1---000101001101?0100022020101GK
+Notoblastus                       ????3?00-2-?-20-00-30?422?0001?1?000110?1--2100000011?0000111??????0???1000?102?01221????????GJ
+Nucleocrinus                      10601?113002-??1?10000422300?0-10200010??11100120001010?0?0001121110?01000011020?1?410020221167
+Orbiblastus                       106?2???200?-10101000?21231??10010000100?111100000010100000001?1---010?00011100?01?0102102???99
+Orbitremites                      116?01-10002-100110000222301110100011101?111020100010111000001?1---02010000?100?0122101202212CE
+Orophocrinus                      00413010300?010100-00052000?01??1000??0??--21?120000110000000101---0?0000101102001001220111029C
+Pentremites                       10523010000?-100?1?301210211020?10011100111201010001010000000111---010100000102?01001121012129D
+Pentremitidea                     004?3-01?101100-00-10020?00100-0120???0??--1100?00001100001001?2110011000011101?213013201002055
+Pentremoblastus                   101?3???0011-20001030010110101011000110010101102000110010010010????010100001101?01001??01002099
+Perittoblastus                    110?????300?-??201?00?30230??1?110????0?111100??0??10101000001?????010?00001112?01351?3?0????AA
+Phaenoblastus                     001?3?002111120100-300200101010110001100?--1010000001?000?100????10010000001101?010012201000099
+Phaenoschisma                     001?30110111120100-10020200101110000?1001--101020000100000100101---010000001101??1001220100209D
+Placoblastus                      10601?113002-??1?1?00042230?00??020?010011120?1????1010?0?00011211?0?010000?10?001?4100202???67
+Pleuroschisma                     105?3?011101-?0-00-00010210100-11200-0000--2100000001100001001?211?0110001011010010012201012257
+Polydeltoideus                    001?30011100-20-00-11020000?00-012100100?--1000000001100001001030--0?100000?1010010013201002033
+Poroblastus                       106?0?-13000-100110000122301?10110000101?12112000001010001000111---010100001100?010010??02?119A
+Pterotoblastus                    01512-??-2-0-00-00-01002201002-?110?110?1--0100?0000100000120000---000010001102??0-0122020102HK
+Ptychoblastus                     1?6?0?-1300?-??01??0001123?1011?100001001?2110????010100010001?1---00010000?10??01201???0????99
+Schizoblastus                     11611?013002-10101100011230??10?00000100?01201110002010001000111---020?00001100?013010120221199
+Schizotremites                    101?3?011001-100010000?0211100-?12000100??11100?0001010010100??210?010100001101??1001??0?????77
+Strongyloblastus                  105230012001-101010300312211010?10001100101201000001010000000111---010100001102?01001???0?20299
+Tanaoblastus                      100?1?11300?-10011000011220101011000110110101000000101000100010210-010100001102?012211200120299
+Timoroblastus                     ?12?00-1-2-1-10-00-200202001?11?0100110?1--21?0000001000001101?1---01000?20-102?012?133120222KK
+Tricoelocrinus                    100?2?1?100?-??1010010200101?0-?12000100?11110000000110000100??21??010000001101011000?30?1?22AB
+Troosticrinus                     001?3010100?-200010100200001?0-?120?-00??0111002???01100001001021??01100000110??00-012201002022
+Stephanocrinus_angulatus          0010------?---------10202001?0??02?---0??--???-----010-000100001---001001001101?01010???1000100
+Stephanocrinus_gemmiformis        1030------?---------1?20200??0??02?---0??--???-----010-?0?100001---001001001101?00-01????010100
+Stephanocrinus_hammeli            0030------?---------1020200??0??02?---0??--???-----010-?0010000????0010010011?1?00-113301000100
+;
+END;
+
+
+BEGIN SETS;
+	CHARSET  Stratigraphic  =  94-95;
+	CHARSET  Primary_Characters  =  1-93;
+	TAXSET  Outgroup  =  69-71;
+END;
+
+
+BEGIN ASSUMPTIONS;
+
+
+	USERTYPE Circle6 (STEPMATRIX) = 6
+	     0 1 2 3 4 5
+	 [0] . 1 2 3 2 1
+	 [1] 1 . 1 2 3 2
+	 [2] 2 1 . 1 2 3
+	 [3] 3 2 1 . 1 2
+	 [4] 2 3 2 1 . 1
+	 [5] 1 2 3 2 1 .
+	;
+
+	USERTYPE Circle5 (STEPMATRIX) = 5
+	     0 1 2 3 4
+	 [0] . 1 2 2 1
+	 [1] 1 . 1 2 2
+	 [2] 2 1 . 1 2
+	 [3] 2 2 1 . 1
+	 [4] 1 2 2 1 .
+	;
+
+	USERTYPE Circle4 (STEPMATRIX) = 4
+	     0 1 2 3
+	 [0] . 1 2 1
+	 [1] 1 . 1 2
+	 [2] 2 1 . 1
+	 [3] 1 2 1 .
+	;
+
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+	TYPESET  MCCURRENT  = unord: 1-95;
+	TYPESET  AssumptionLaden  = unord: 1-4 6-8 11-23 25 27-29 31-33 35-43 45-59 61-63 65-85 91-94, ord: 5 9-10 24 26 30 34 44 60 64 86-90 95;
+	TYPESET  BestGuess  = unord: 1-4 6-9 11-25 27-63 65-85 91-95, ord: 5 10 26 64 86-90;
+	TYPESET  Bodenbender_Types  = unord: 1-4 6-9 11-25 27-63 65-85 91-93, ord: 5 10 26 64 86-90, irrev: 94-95;
+	TYPESET * UNTITLED  = unord: 1-93 95, strat: 94;
+	WTSET  MCCURRENT  = 1: 1-95;
+	WTSET  ContinuousWeight1  = 6: 1-38 40-85 94, 1: 39 91-93 95, 2: 86-87, 3: 88-90;
+	WTSET  EqualWeights  = 1: 1-95;
+	WTSET  SelectedCharEqualWt  = 30: 1 10 12 14 24-25 30 34 44 48 60 69 76 91-92, 60: 2 4 6-8 11 13 15-19 21-22 27-29 31-33 35-38 40-43 45-47 49-59 61-63 65-68 70-75 77-85 94, 10: 3, 15: 5, 20: 9 20 26 64 86-87 93, 12: 23, 1: 39 88-90 95;
+	WTSET  NewBestGuessSelectWt  = 6: 1 10 12 14 24-25 30 34 44 48 60 69 76 91-92, 12: 2 4 6-8 11 13 15-19 21-23 27-29 31-33 35-38 40-43 45-47 49-59 61-63 65-68 70-75 77-85, 2: 3, 3: 5, 4: 9 20 26 64 86-87 93, 1: 39 88-90, 60: 94, 15: 95;
+	WTSET  Table_4_weights  = 12: 1-2 4 6-8 11 13 15-19 21-23 27-29 31-33 35-43 45-47 49-59 61-68 70-75 77-85, 2: 3, 3: 5, 4: 9 20 26 86-92, 6: 10 12 14 24-25 30 34 44 48 60 69 76 93, 0: 94, 1: 95;
+	WTSET * UNTITLED  = 1: 1-93, 0: 94-95;
+	EXSET  MCCURRENT  =  5 8 11 15 37 42-43 57 60 63 73 95;
+	EXSET  DiscreteVsQuantified  =  86-90 94-95;
+	EXSET  AssumptionLaden  =  94-95;
+	EXSET  DanRun  =  14-15 94-95;
+	EXSET  AnalDeltoidComparison  =  64-65 94-95;
+	EXSET  NoCrystallography  =  94-95;
+	EXSET  NewBestGuess  =  94-95;
+	EXSET  BestGuess  =  91-95;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Ambolostoma_baileyi,
+		2	Angioblastus_wanneri,
+		3	Anthoblastus_stelliformis,
+		4	Arcuoblastus_shumardi,
+		5	Astrocrinus_tetragonus,
+		6	Auloblastus_clinei,
+		7	Austroblastus_whitehousei,
+		8	Brachyschisma_corrugatus,
+		9	Calycoblastus_tricavatus,
+		10	Caryoblastus_bohemicus,
+		11	Codaster_acutus,
+		12	Cordyloblastus_eifelensis,
+		13	Costatoblastus_sappingtonensis,
+		14	Cribroblastus_cornutus,
+		15	Cryptoblastus_melo,
+		16	Cryptoschisma_schultzi,
+		17	Decaschisma_pulchellum,
+		18	Decemoblastus_melonoides,
+		19	Deliablastus_cumberlandensis,
+		20	Deltoblastus_permicus,
+		21	Dentiblastus,
+		22	Devonoblastus,
+		23	Diploblastus,
+		24	Elaeacrinus,
+		25	Eleutherocrinus,
+		26	Ellipticoblastus,
+		27	Euryoblastus,
+		28	Globoblastus,
+		29	Granatocrinus,
+		30	Hadroblastus,
+		31	Heteroblastus,
+		32	Heteroschisma,
+		33	Hyperoblastus,
+		34	Katoblastus,
+		35	Koryschisma,
+		36	Leptoschisma,
+		37	Lophoblastus,
+		38	Macurdablastus,
+		39	Mesoblastus,
+		40	Metablastus,
+		41	Monadoblastus,
+		42	Monoschizoblastus,
+		43	Montanablastus,
+		44	Nannoblastus,
+		45	Notoblastus,
+		46	Nucleocrinus,
+		47	Orbiblastus,
+		48	Orbitremites,
+		49	Orophocrinus,
+		50	Pentremites,
+		51	Pentremitidea,
+		52	Pentremoblastus,
+		53	Perittoblastus,
+		54	Phaenoblastus,
+		55	Phaenoschisma,
+		56	Placoblastus,
+		57	Pleuroschisma,
+		58	Polydeltoideus,
+		59	Poroblastus,
+		60	Pterotoblastus,
+		61	Ptychoblastus,
+		62	Schizoblastus,
+		63	Schizotremites,
+		64	Strongyloblastus,
+		65	Tanaoblastus,
+		66	Timoroblastus,
+		67	Tricoelocrinus,
+		68	Troosticrinus,
+		69	Stephanocrinus_angulatus,
+		70	Stephanocrinus_gemmiformis,
+		71	Stephanocrinus_hammeli
+	;
+	TREE Stratocladogram =  [&R] (69,((70,71),(38,((68,(17,(36,((10,(63,(40,67))),(16,(55,(54,(52,(34,35))))))))),(58,(51,(32,(57,((8,(21,(49,(30,(11,((7,45),(2,(66,(44,(3,60)))))))))),(12,(33,((25,(9,22)),((24,(46,56)),((((43,(64,(1)50)),(37,(47,(62,(5,(20,31)))))),((23,13),(39,65))),(6,((4,(18,(14,(53,(19,27))))),(((29)61,(41,59)),(15,(28,(26,(48,42)))))))))))))))))))));
+	TREE Fig._9 =  [&R] (69,(70,(71,(38,(32,((68,12),((57,(58,51)),((17,36),(10,((40,67),((52,(34,(35,((8,(49,30)),((16,(55,54)),(66,((11,60),(7,45)))))))),(33,(63,(25,(9,(22,((21,(3,(2,44))),((24,(46,56)),((((23,13),(39,65)),((43,(64,(50,1))),(37,(47,(62,(5,(20,31))))))),(6,((4,(18,(14,(53,(19,27))))),(((61,29),(41,59)),(15,(28,(26,(48,42))))))))))))))))))))))))));
+	TREE Fig._9 =  [&R] (69,(70,(71,(38,(32,((12,68),((57,(58,51)),((17,36),(10,((40,67),((52,(34,(35,((8,(49,30)),((2,44),((16,(55,54)),(66,((7,45),(11,60))))))))),(33,(63,(25,(9,(22,((39,65),((19,((27,(23,53)),(6,(18,(4,14))))),(13,((43,(64,(50,(1,(20,(21,(3,5))))))),((47,(37,(31,(62,(24,(46,56)))))),((61,(41,59)),(29,(15,(28,(26,(48,42)))))))))))))))))))))))))));
+	TREE Fig._9_sans_outgroup =  [&R] (38,(32,((12,68),((57,(58,51)),((17,36),(10,((40,67),((52,(34,(35,((8,(49,30)),((2,44),((16,(55,54)),(66,((7,45),(11,60))))))))),(33,(63,(25,(9,(22,((39,65),((19,((27,(23,53)),(6,(18,(4,14))))),(13,((43,(64,(50,(1,(20,(21,(3,5))))))),((47,(37,(31,(62,(24,(46,56)))))),((61,(41,59)),(29,(15,(28,(26,(48,42))))))))))))))))))))))));
+	TREE Fig._9_w._Ancestors =  [&R] ((((12,68),((57,(58,51)),((17,36),(10,((40,67),((52,(34,(((8,(49,30)),((2,44),((16,(55,54)),(66,((7,45),(11,60)))))))35)),(33,(63,(25,(9,(22,((39,65),((19,((27,(23,53)),(6,(18,(4,14))))),(13,((43,(64,(50,(1,(20,(21,(3,5))))))),((47,(37,(31,(62,(24,(56)46))))),((61,(41,59)),(29,(15,(28,(26,(48,42)))))))))))))))))))))))32)38;
+	TREE Parsimony =  [&R] (38,(32,((12,68),((57,(58,51)),((17,36),(10,((40,67),((34,(52,(35,((16,(55,54)),((30,(49,8)),((2,(60,44)),(66,(11,(7,45))))))))),(33,(63,(25,(9,(22,((39,65),((19,((27,(23,53)),(6,(18,(4,14))))),(13,((43,(64,(50,(1,(20,(21,(3,5))))))),((47,(37,(31,(62,(24,(46,56)))))),((61,(41,59)),(29,(15,(28,(26,(48,42))))))))))))))))))))))));
+
+END;
+
+BEGIN NOTES;
+
+	TEXT  TAXON=13 CHARACTER=5 TEXT= '3-4;_using_largest_number';
+	TEXT  TAXON=35 CHARACTER=5 TEXT= '6_or_7;_used_largest_number_recorded';
+	TEXT  TAXON=57 CHARACTER=14 TEXT= '6-31_states_can_be_1_or_2;_2_on_all_observed_(broken)_specimens';
+	TEXT  CHARACTER=19 TEXT= 'Redefine_and_recode.__Don''t_use_present_coding';
+	TEXT  TAXON=36 CHARACTER=5 TEXT= '3-8;_using_largest_number';
+	TEXT  TAXON=57 CHARACTER=5 TEXT= '2-8;_using_largest_number';
+	TEXT  TAXON=2 CHARACTER=5 TEXT= '1-3;_using_largest_number';
+	TEXT  TAXON=16 CHARACTER=5 TEXT= '4-7;_using_largest_number';
+	TEXT  TAXON=25 CHARACTER=5 TEXT= '6-9_folds';
+	TEXT  TAXON=30 CHARACTER=5 TEXT= '4-12_folds';
+	TEXT  TAXON=32 CHARACTER=5 TEXT= '3-10_folds';
+	TEXT  TAXON=51 CHARACTER=5 TEXT= '4-7_folds';
+	TEXT  TAXON=58 CHARACTER=5 TEXT= '5-10_folds';
+	TEXT  TAXON=60 CHARACTER=5 TEXT= '1-4_folds';
+	TEXT  TAXON=68 CHARACTER=5 TEXT= '5-6_folds;_using_largest_number';
+	TEXT  TAXON=34 CHARACTER=5 TEXT= '4-6_folds';
+	TEXT  TAXON=43 CHARACTER=5 TEXT= '2-3_folds';
+	TEXT  TAXON=55 CHARACTER=5 TEXT= '7-8_and_12-13_folds_both_reported';
+	TEXT  TAXON=67 CHARACTER=5 TEXT= '3-4_folds';
+	TEXT  TAXON=54 CHARACTER=5 TEXT= '4-8_folds;_using_largest_number';
+	TEXT  TAXON=12 CHARACTER=5 TEXT= '4-9_folds;_using_largest_number';
+	TEXT  TAXON=29 CHARACTER=2 TEXT= 'varies_0_or_1,_largest_0';
+	TEXT  TAXON=63 CHARACTER=5 TEXT= '4?-6;_using_largest_number';
+	TEXT  TAXON=8 CHARACTER=5 TEXT= '5-8_folds';
+	TEXT  TAXON=9 CHARACTER=26 TEXT= 1_or_2;
+	TEXT  TAXON=9 CHARACTER=5 TEXT= '4-5_folds;_using_largest_number';
+	TEXT  TAXON=10 CHARACTER=80 TEXT= 0_or_1;
+	TEXT  TAXON=27 CHARACTER=80 TEXT= 0_or_1;
+	TEXT  TAXON=3 CHARACTER=80 TEXT= 0_or_1;
+	TEXT  TAXON=8 CHARACTER=80 TEXT= 0_or_1;
+	TEXT  TAXON=10 CHARACTER=5 TEXT= '3-4_folds;_largest_number_used';
+	TEXT  TAXON=17 CHARACTER=5 TEXT= '3-9_folds';
+	TEXT  TAXON=21 TEXT= Dentiblastus_sirius;
+	TEXT  TAXON=22 TEXT= Devonoblastus_whiteavesi;
+	TEXT  TAXON=23 TEXT= Diploblastus_glaber;
+	TEXT  TAXON=24 TEXT= Elaeacrinus_venustus;
+	TEXT  TAXON=25 TEXT= Eleutherocrinus_cassedayi;
+	TEXT  TAXON=26 TEXT= Ellipticoblastus_ellipticus;
+	TEXT  TAXON=27 TEXT= '^';
+	TEXT  TAXON=28 TEXT= Globoblastus_norwoodi;
+	TEXT  TAXON=29 TEXT= Granatocrinus_granulatus;
+	TEXT  TAXON=30 TEXT= Hadroblastus_whitei;
+	TEXT  TAXON=31 TEXT= Heteroblastus_cumberlandi;
+	TEXT  TAXON=32 TEXT= Heteroschisma_subtruncatum;
+	TEXT  TAXON=33 TEXT= Hyperoblastus_filosa;
+	TEXT  TAXON=34 TEXT= Katoblastus_konincki;
+	TEXT  TAXON=35 TEXT= Koryschisma_elegans;
+	TEXT  TAXON=36 TEXT= Leptoschisma_lorae;
+	TEXT  TAXON=37 TEXT= Lophoblastus_inopinatus;
+	TEXT  TAXON=39 TEXT= Mesoblastus_crenulatus;
+	TEXT  TAXON=40 TEXT= Metablastus_wortheni;
+	TEXT  TAXON=41 TEXT= Monadoblastus_granulosus;
+	TEXT  TAXON=42 TEXT= Monoschizoblastus_rofei;
+	TEXT  TAXON=43 TEXT= Montanablastus_baldyensis;
+	TEXT  TAXON=44 TEXT= Nannoblastus_pyramidatus;
+	TEXT  TAXON=46 TEXT= Nucleocrinus_meloniformis;
+	TEXT  TAXON=47 TEXT= Orbiblastus_hoskynae;
+	TEXT  TAXON=48 TEXT= Orbitremites_derbiensis;
+	TEXT  TAXON=49 TEXT= Orophocrinus_stelliformis;
+	TEXT  TAXON=50 TEXT= Pentremites_godoni;
+	TEXT  TAXON=51 TEXT= Pentremitidea_archiaci;
+	TEXT  TAXON=52 TEXT= Pentremoblastus_conicus;
+	TEXT  TAXON=53 TEXT= Perittoblastus_liratus;
+	TEXT  TAXON=54 TEXT= Phaenoblastus_caryophyllatus;
+	TEXT  TAXON=55 TEXT= Phaenoschisma_laeviculum;
+	TEXT  TAXON=56 TEXT= Placoblastus_ehlersi;
+	TEXT  TAXON=57 TEXT= Pleuroschisma_lycorias;
+	TEXT  TAXON=58 TEXT= Polydeltoideus_enodatus;
+	TEXT  TAXON=59 TEXT= Poroblastus_granulosus;
+	TEXT  TAXON=60 TEXT= Pterotoblastus_gracilis;
+	TEXT  TAXON=61 TEXT= Ptychoblastus_pustulosus;
+	TEXT  TAXON=62 TEXT= Schizoblastus_sayi;
+	TEXT  TAXON=63 TEXT= Schizotremites_kopfi;
+	TEXT  TAXON=64 TEXT= Strongyloblastus_petalus;
+	TEXT  TAXON=65 TEXT= Tanaoblastus_roemeri;
+	TEXT  TAXON=66 TEXT= 'Timoroblastus_coronatus_0_and_1,_varies_within_species.__1_is_small_sector';
+	TEXT  TAXON=67 TEXT= Tricoelocrinus_woodmani;
+	TEXT  TAXON=68 TEXT= Troosticrinus_reinwardti;
+	TEXT  TAXON=16 CHARACTER=12 TEXT= '0,_but_could_be_1';
+	TEXT  TAXON=22 CHARACTER=22 TEXT= 0_and_1;
+	TEXT  TAXON=36 CHARACTER=14 TEXT= 'varies,_1/2';
+	TEXT  TAXON=59 CHARACTER=75 TEXT= originally_coded_0_and_1.__Reobserved_as_0.;
+	TEXT  TAXON=13 CHARACTER=83 TEXT= '1&2_-_for_hennig_matrix_coded_2_since_all_1''s_are_now_blanks';
+	TEXT  TAXON=24 CHARACTER=83 TEXT= 0&1;
+	TEXT  TAXON=46 CHARACTER=83 TEXT= '0&1;_0_on_radials,_1_on_edges_of_deltoids';
+	TEXT  TAXON=56 CHARACTER=83 TEXT= 0&1;
+	TEXT  TAXON=47 CHARACTER=83 TEXT= 0&2;
+	TEXT  TAXON=66 CHARACTER=84 TEXT= '0&2;_some_specimens_show_ornamentation,_others_don''t';
+	TEXT  CHARACTER=5 TEXT= '1=1;_2=2;_3-4=3;_5-13=4;_33=5;__coding_maximum_number_of_folds_reported;_rescored_so_that_1_is_0;';
+	TEXT  TAXON=6 CHARACTER=5 TEXT= 4_folds;
+	TEXT  TAXON=11 CHARACTER=5 TEXT= 5_folds;
+	TEXT  TAXON=22 CHARACTER=5 TEXT= 5_folds;
+	TEXT  TAXON=33 CHARACTER=5 TEXT= 5_folds;
+	TEXT  TAXON=40 CHARACTER=5 TEXT= 5_folds;
+	TEXT  TAXON=49 CHARACTER=5 TEXT= 5_folds;
+	TEXT  TAXON=50 CHARACTER=5 TEXT= 5_folds;
+	TEXT  TAXON=52 CHARACTER=5 TEXT= 5_folds;
+	TEXT  TAXON=64 CHARACTER=5 TEXT= 5_folds;
+	TEXT  CHARACTER=94 TEXT= 'Stratigraphy_from_Waters,_1990,_with_additions_from_Fay1961+COSUNA_charts_and_Sprinkle_&_Gutschick_1990';
+	TEXT  TAXON=32 CHARACTER=70 TEXT= 0_and_1;
+	TEXT  CHARACTER=73 TEXT= 'coding_for_non-fissiculates_is_somewhat_uncertain;_compare_with_radial_prong_character,_and_ask_Macurda_about_outgroup_coding';
+	TEXT  TAXON=50 CHARACTER=19 TEXT= crystal_growth;
+	TEXT  TAXON=56 CHARACTER=19 TEXT= crystal_growth;
+	TEXT  TAXON=65 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=23 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=34 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=35 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=39 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=43 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=64 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=4 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=13 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=21 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=24 CHARACTER=79 TEXT= '2_B_(secondary_calcite_butresses_stem)';
+	TEXT  TAXON=18 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=3 CHARACTER=79 TEXT= '2_M_(massive_secondary_calcite)';
+	TEXT  TAXON=6 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=8 CHARACTER=79 TEXT= '2_M_(massive_secondary_calcite)';
+	TEXT  TAXON=27 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=19 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=53 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=2 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=11 CHARACTER=79 TEXT= '2_M_(massive_secondary_calcite)_?';
+	TEXT  TAXON=16 CHARACTER=79 TEXT= '2_M_(massive_secondary_calcite)';
+	TEXT  TAXON=22 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=30 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=33 CHARACTER=79 TEXT= '2_F_(frilly_secondary_calcite)';
+	TEXT  TAXON=49 CHARACTER=79 TEXT= '2_M_(massive_secondary_calcite)';
+	TEXT  TAXON=46 CHARACTER=79 TEXT= '2_B_(secondary_calcite_butresses_stem)';
+	TEXT  TAXON=50 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=60 CHARACTER=79 TEXT= '2__M_(massive_secondary_calcite)';
+	TEXT  TAXON=66 CHARACTER=79 TEXT= '2_C_(conical_collar_of_secondary_calcite)';
+	TEXT  TAXON=66 CHARACTER=1 TEXT= 'varies__0,_1,_2';
+	TEXT  TAXON=18 CHARACTER=26 TEXT= varies_2_and_3;
+	TEXT  TAXON=29 CHARACTER=50 TEXT= kentuckyensis;
+	TEXT  TAXON=29 CHARACTER=51 TEXT= kentuckyensis;
+	TEXT  TAXON=29 CHARACTER=49 TEXT= kentuckyensis;
+	TEXT  TAXON=21 CHARACTER=44 TEXT= macurdai;
+	TEXT  TAXON=21 CHARACTER=45 TEXT= macurdai;
+	TEXT  TAXON=29 CHARACTER=45 TEXT= kentuckyensis;
+	TEXT  TAXON=29 CHARACTER=36 TEXT= kentuckyensis;
+	TEXT  TAXON=29 CHARACTER=48 TEXT= kentuckyensis;
+	TEXT  CHARACTER=64 TEXT= 'include_137_with_this_(and_15,_16,_and_33)';
+	TEXT  CHARACTER=65 TEXT= Include_136_with_this;
+	TEXT  TAXON=25 CHARACTER=10 TEXT= 'varies_0_or_1;_1_on_best-preserved';
+	TEXT  TAXON=66 CHARACTER=73 TEXT= 0_and_1;
+	TEXT  CHARACTER=93 TEXT= '2nd_crystallography_coding,_within_limits_of_intraspecific_variation:_deltoids';
+	TEXT  CHARACTER=91 TEXT= '2nd_crystallography_coding,_within_limits_of_intraspecific_variation:_basals';
+	TEXT  CHARACTER=92 TEXT= '2nd_crystallography_coding,_within_limits_of_intraspecific_variation:_radials';
+	TEXT  TAXON=67 CHARACTER=94 TEXT= A_assignment_is_questionable;
+	TEXT  TAXON=38 TEXT= Macurdablastus_uniplicatus;
+	TEXT  TAXON=38 CHARACTER=70 TEXT= 'coding_is_questionable-_not_completely_obvious_from_specimen';
+	TEXT  TAXON=45 TEXT= Notoblastus_stellaris;
+	TEXT  CHARACTER=95 TEXT= Can_I_add_notes_like_this?;
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -845290698;
+	FileSettings treewindow  '1' '1' '94' '0';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '162' '1' all;
+	EditorPosition  '44' '6' '818' '1195';
+	TreeWindowPosition  '46' '6' '847' '1390';
+	ListWindow Characters open Gadget '12' '50' '25' '253' '500' 000;
+	ListWindow Taxa open Gadget '12' '50' '25' '559' '398' 100000000;
+	ListWindow Trees open Gadget '12' '50' '10' '168' '407' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '70' '45' '129' '177' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '686' '964';
+	StateNamesSymbols closed Gadget '12' '26' '50' '30' '475' '220';
+	WindowOrder  List Trees Tree List Characters List Taxa;
+	OtherSymbols &/ 10 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '753' '1295' '264' '130';
+	TreeLegendPosition  '786' '1197' '64' '94';
+	EditorToolsPosition  '881' '37' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 00;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 0000001;
+	SummaryMode  '0' '0' 0;
+	Charts  Geneva '9' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 0;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Geneva '9' (normal) Geneva '10' (normal) Geneva '9' (normal) Geneva '9' (normal) Geneva '9' (bold ) Geneva '9' (normal) Geneva '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

@@ -1,0 +1,419 @@
+#NEXUS
+[written Thu Feb 14 20:31:13 CST 2019 by Mesquite  version 3.6 (build 917) at EAS-6BCEC7.local/10.0.1.7]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=19;
+	TAXLABELS
+		Eochonetes_advena Thaerodonta_aspera Thaerodonta_aff_clarksvillensis Eochonetes_celticus Thaerodonta_clarksvillensis Eochonetes_minerva Thaerodonta_dignata Thaerodonta_johnsonella Thaerodonta_magna Thaerodonta_mucronata Thaerodonta_recedens Eochonetes_maearum Eochonetes_voldemortus Eochonetes_vaurelenesis Eochonetes_glabra Thaerodonta_saunjaensis Thaerodonta_minnesotensis Sowerbyella_socialis Sowerbyella_rugosa 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	LINK TAXA = Taxa;
+	DIMENSIONS  NCHAR=30;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8 9 A B";
+	CHARSTATELABELS 
+		1 Maximum_width /  small medium large,
+		2 Shell_length /  small medium large,
+		3 Shell_height /  low medium high,
+		4 Angle_between_hinge_and_cardinal_extremity,
+		5 Delthyrium_size,
+		6 Costal_density,
+		7 Angle_of_ventral_interarea,
+		8 Hinge_line_equivalent_to_maximum_width,
+		9 Dental_plate_length,
+		10 Muscle_scar_angle,
+		11 Ventral_adductor_scar_length,
+		12 Ventral_adductor_scar_width,
+		13 Ventral_diductor_scar_length,
+		14 Ventral_diductor_scar_width,
+		15 Primary_teeth_size,
+		16 Accessory_teeth,
+		17 Fossettes_Number,
+		18 Lateral_ridge_strength,
+		19 Tubules,
+		20 Dorsal_adductor_scar_length,
+		21 Dorsal_adductor_scar_width,
+		22 Muscle_scar_angle,
+		23 Socket_size,
+		24 Accessory_sockets_number,
+		25 Denticles_number,
+		26 Brachial_process_angle,
+		27 Lateral_ridge_strength,
+		28 Bema,
+		29 Bema_strength,
+		30 Raised_muscle_scars ; 
+	MATRIX
+	Eochonetes_advena                (0 1)(0 1 2)?(0 1)???(0 1)(0 1)0(0 1)(0 1)(0 1)(0 1)1(0 1)0(0 1)1110(0 1)?0000?0
+	Thaerodonta_aspera               20000(0 1)010111000211?(0 1)02(0 1)2101100
+	Thaerodonta_aff_clarksvillensis  (0 1)(1 2)(0 1)(0 1)01(0 2)1???????????1(0 1)1(0 1)0000100
+	Eochonetes_celticus              1(0 1)?1???0101100???01??????????0
+	Thaerodonta_clarksvillensis      (1 2)(0 1)(0 1 2)(0 1)(0 1)(0 1)(0 1)100111101010(0 1)1(0 1)(0 1)?0(0 1)0110
+	Eochonetes_minerva               (1 2)(0 1)(0 1 2)0(0 1)?(0 1)11(0 1)1111(0 1)201?111(0 1)?111100
+	Thaerodonta_dignata              00(0 1)(0 1)111110000(0 1)0210???0??1110?0
+	Thaerodonta_johnsonella          (0 1)(0 1)0001?10(0 1)00001(0 1)(0 1)0?11111101110
+	Thaerodonta_magna                2(0 1 2)(1 2)(0 1)(0 1)?(1 2)10(0 1)(0 1)(0 1)(0 1)(0 1)(0 1)(0 1 2)(0 1)(0 1)?111(0 1)11(0 1)11(0 1)0
+	Thaerodonta_mucronata            20(0 1 2)11?110101(0 1)11210?(0 1)010?101100
+	Thaerodonta_recedens             (1 2)(0 1 2)(0 1 2)(0 1)(1 2)1(0 1)(0 1)1(0 1)11100(0 2)1(0 1)0(1 2)(0 1 2)(1 2)(0 1)(1 2)(1 2)(0 2)1100
+	Eochonetes_maearum               00010?01???????????0010?11?0?0
+	Eochonetes_voldemortus           (0 1)101(0 1)?10?????????????????????0
+	Eochonetes_vaurelenesis          (0 1)(0 1)(0 1)0(0 1)?11111111(0 1)201011101?11110
+	Eochonetes_glabra                (0 1 2)(0 1)20(0 1)111100000020?011101011101
+	Thaerodonta_saunjaensis          (0 1)(1 2)(1 2)0(1 2)?10???????????1(0 1)110000100
+	Thaerodonta_minnesotensis        (0 1)(1 2)(1 2)??0?1???????????11(0 1)1?00?110
+	Sowerbyella_socialis             (0 1)1(0 1)0(0 1)021(0 1)010(0 1)(0 1)1000?1001??00111
+	Sowerbyella_rugosa               10(0 1)000(0 1)1???????????(0 1)(0 1)0(0 1)0000111
+
+;
+
+END;
+
+BEGIN TAXA;
+	TITLE Ingroup;
+	DIMENSIONS NTAX=3;
+	TAXLABELS
+		taxon_1 taxon_2 taxon_3 
+	;
+
+END;
+
+
+BEGIN MacCladeStart;
+	Extended;
+
+END;
+BEGIN MacClade;
+	Version 4.0 87;
+	LastModified -977155869;
+	FileSettings treewindow '1' '1' '19' '1';
+	Singles 010;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '126' '1' all;
+	EditorPosition '44' '824' '444' '823';
+	TreeWindowPosition '67' '517' '843' '1390';
+	ListWindow Characters closed Gadget '12' '50' '25' '253' '460' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '257' '303' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '276' '490';
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ChartWindowPosition '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '14' '67' '735' '271' '427';
+	WindowOrder Tree States;
+	OtherSymbols & / 00 ? -;
+	Correlation '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile '2';
+	ExportHTML _ MOSS '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition '781' '1806' '110' '85';
+	TreeLegendPosition '803' '1708' '88' '93';
+	EditorToolsPosition '595' '48' '115' '165';
+	TreeToolsPosition '716' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode '0' '0' 0;
+	Charts Gadget '12' ( normal ) 0010;
+	NexusOptions '0' '0' '50' 001011001;
+	TipLabel '1';
+	TreeFont Gadget '12' ( normal );
+	TreeShape 1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax '0';
+	TraceAllChangesDisplay '1' 1;
+	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation '3' 0;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools '1';
+
+END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  (TAXA = Taxa) =  Ingroup :  1- 17, Outgroup :  18- 19;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 30;
+
+END;
+
+BEGIN NOTES;
+
+	TEXT  TAXA = Taxa TAXON = 3 TEXT = 'Eochonetes maearum^n';
+	TEXT  TAXA = Taxa TAXON = 6 TEXT = 'Thaerodonta cf recedens^n';
+	TEXT  TAXA = Taxa TAXON = 12 TEXT = 'Thaerodonta sp  ID^n';
+	TEXT  TAXA = Taxa TAXON = 13 TEXT = 'Thaerodonta sp WY^n';
+
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 30;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1550197873541;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 7906777809976092620;
+			tell It;
+				setSelected  16 -  17;
+				attachments ;
+			endTell;
+			setID 1 4334319822003284107;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 5181298407243666114;
+			mqVersion 360;
+			checksumv 0 3 1086904564 null  getNumChars 30 numChars 30 getNumTaxa 19 numTaxa 19   short true   bits 7   states 7   sumSquaresStatesOnly 2927.0 sumSquares 2927.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1601 690;
+			setLocation 79 111;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #7906777809976092620 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #7906777809976092620;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1501 618;
+					setLocation 79 111;
+					setFont Gadget;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+						setTool mesquite.lists.TaxonList.TaxonListWindow.arrow;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #5181298407243666114 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 195;
+					endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1501 618;
+					setLocation 79 111;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesEditor.StateNamesEditor;
+				tell It;
+					makeWindow;
+					tell It;
+						setExplanationSize 30;
+						setAnnotationSize 20;
+						setFontIncAnnot 0;
+						setFontIncExp 0;
+						setSize 1501 618;
+						setLocation 79 111;
+						setFont SanSerif;
+						setFontSize 10;
+						getToolPalette;
+						tell It;
+							setTool mesquite.categ.StateNamesEditor.StateNamesWindow.ibeam;
+						endTell;
+						rowsAreCharacters on;
+						toggleConstrainChar on;
+						toggleConstrainCharNum 3;
+						togglePanel off;
+						toggleSummaryPanel off;
+					endTell;
+					showWindow;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			showCharacters #5181298407243666114 #mesquite.lists.CharacterList.CharacterList;
+			tell It;
+				setData 0;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.DefaultCharOrder.DefaultCharOrder;
+					newAssistant  #mesquite.lists.CharListInclusion.CharListInclusion;
+					newAssistant  #mesquite.lists.CharListPartition.CharListPartition;
+					newAssistant  #mesquite.parsimony.CharListParsModels.CharListParsModels;
+					newAssistant  #mesquite.lists.CharacterStats.CharacterStats;
+				tell It;
+					toggleSelectedOnly off;
+				endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1501 618;
+					setLocation 79 111;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.CharListAnnotPanel.CharListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

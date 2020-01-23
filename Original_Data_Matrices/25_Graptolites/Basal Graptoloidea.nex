@@ -1,0 +1,154 @@
+#NEXUS 
+[MacClade 4.05 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+    DIMENSIONS  NTAX=24 NCHAR=28;
+
+[!Bates, D. E. B., A. Kozlowska, and A. C. Lenz.  2005.  Silurian retiolitid graptolites: Morphology and evolution.  Acta Palaeontologica Polonica 50:705–720.]
+    FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C" MISSING=? GAP=- ;
+Matrix
+Pseudorthograptus       0000000(0,2)000001010000(0,2)20100??
+Hercograptus            11010?10?00000110?0?2201?0??
+Baculograptus           4246143?22100073110401222157
+Cometograptus           527612102(0,2)22(0,1)123(1,2)11211112155
+Dabashanograptus        ?22204?210000010000??2?1?122
+Doliograptus            5245143?22001023010222212166
+Eisenackograptus        427325402(0,2)10(0,1)0730104201(1,2)1145
+Gothograptus            42741431221010733104002(1,2)(2,3)158
+Holoretiolites          5271143022101062110400224199
+Neogothograptus         5271143?22101063310400224199
+Papiliograptus          5245143?22001023310200214188
+Paraplectograptus       5252301(1,2)1(0,2)000054020211112125
+Plectodinemagraptus     6265143?220010821101112241AA
+Plectograptus           627114302200102311030(0,1)21418A
+Pseudoplectograptus     525230111(0,2)000124020211112145
+Pseudoplegmatograptus   7222022210010010000122102113
+Pseudoretiolites        1212012210010010000122111103
+Retiolites              3252001210000010000202101125
+Rotaretiolites          2232310211000001020002120122
+Sagenograptus           527?33512200101(3,4)010201122155
+Semiplectograptus       6265143?220010421103112241AA
+Sokolovograptus         525130302200003401021(1,2)212125
+Spinograptus            5256143022101023410201212178
+Stomatograptus          3222001210010010000202101125
+;
+END;
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-16 18 20-24 26-27 29-36 38-46 48, ord: 17 19 25 28 37, strat: 47;
+	WTSET * UNTITLED  = 1: 1-46, 0: 47-48;
+	EXSET * UNTITLED  =  48;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Tetragraptus,
+		2	Pendeograptus,
+		3	Didymograptellus,
+		4	Expansograptus,
+		5	Holmograptus,
+		6	Isograptus,
+		7	Arienigraptus,
+		8	Pseudisograptus,
+		9	Maeandrograptus,
+		10	Perissograptus,
+		11	Cardiograptus,
+		12	Bergstroemograptus,
+		13	Exigraptus,
+		14	U._sinodentatus,
+		15	U._austrodentatus,
+		16	U._formosus,
+		17	U._sinicus,
+		18	Oelandograptus,
+		19	Hustedograptus,
+		20	Eoglyptograptus,
+		21	Pseudoclimacograptus,
+		22	Archiclimacograptus,
+		23	Phyllograptus,
+		24	Glossograptus,
+		25	Cryptograptus
+	;
+	TREE  * UNTITLED =  [&R] (1,(2,(((((23,3),5),10),4),((6,(7,((((8,(13,(14,((15,16),(17,(((18,(19,20)),21),22)))))),(24,25)),12),11))),9))));
+
+END;
+
+
+BEGIN NOTES;
+
+	TEXT  TAXON=1 TEXT= 'Aren-l_—_Llvi-l';
+	TEXT  TAXON=2 TEXT= 'Aren-l';
+	TEXT  TAXON=3 TEXT= 'Aren-l';
+	TEXT  TAXON=4 TEXT= 'Aren-l_—_Llvi-u';
+	TEXT  TAXON=5 TEXT= 'Aren-u_—_Llvi-l';
+	TEXT  TAXON=6 TEXT= 'Aren-u_—_Llvi-u';
+	TEXT  TAXON=7 TEXT= 'Aren-u_—_Llvi-u';
+	TEXT  TAXON=8 TEXT= 'Aren-u_—_Aren-u';
+	TEXT  TAXON=9 TEXT= 'Aren-u_—_Aren-u';
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  84;
+	LastModified -1049985170;
+	FileSettings editor  '1' '1' '47' '1';
+	Singles 010;
+	Editor 0001101111111110010001001 '0' '72' Gadget '12' '152' '1' all;
+	EditorPosition  '44' '6' '495' '777';
+	TreeWindowPosition  '46' '6' '677' '752';
+	ListWindow Characters closed Gadget '12' '50' '25' '321' '374' 000;
+	ListWindow Taxa closed Gadget '12' '70' '45' '253' '318' 100000;
+	ListWindow Trees closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '10' '559' '1407' '203' '235';
+	WindowOrder  Data States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '578' '1268' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

@@ -1,0 +1,326 @@
+#NEXUS
+[written Sat May 25 19:52:41 CDT 2019 by Mesquite  version 3.6 (build 917) at EAS-6BCEC7.local/10.0.1.7]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=53;
+	TAXLABELS
+		Atactocrinus Cotylacrinna Deocrinus Neoarchaeocrinus Ptychocrinus Trichinocrinus Gaurocrinus Proexenocrinus Eodimerocrinites Visocrinus Balacrinus Ortsaecrinus Anthracocrinus Bromidocrinus Crinerocrinus Paradiabolocrinus Pararchaeocrinus Simplococrinus Hercocrinus Wilsonicrinus Rhaphanocrinus Quechuacrinus Rosfacrinus Ursucrinus Fombuenacrinus Goyacrinus Ambonacrinus Cefnocrinus Cleiocrinus Archaeocrinus Gustabilicrinus Reteocrinus Euptychocrinus Diabolocrinus Maquoketocrinus Rheocrinus Dalicrinus Xenocrinus Macrostylocrinus Glyptocrinus Astakocrinus Periglyptocrinus Pycnocrinus Compsocrinus Abludoglyptocrinus Eopatelliocrinus Celtocrinus Alisocrinus Canistrocrinus Priscillacrinus Adelphicrinus Cnemecrinus Eknomocrinus 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=112;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8 9";
+	MATRIX
+	Atactocrinus        01101?11601000011-111-10101020100110-10?00??11020????102000?00-??????????????????????????????????????????????000
+	Cotylacrinna        022011110021100111012000001020100010-10100111112021(0 1)01031110100000210400(0 1)(0 1)2001100041010111-2120111000011?000(1 3)000
+	Deocrinus           02201011342000001101010010102010001111320011110202111014100000-??????4000?2??01000?0?1?0??????????0???0?0????000
+	Neoarchaeocrinus    01201011000000001-210-10101020100010-1021011111211010103110000-??????400?02??????020011111-2140?1000001?0???2000
+	Ptychocrinus        01101011(0 6)02100001011?000100110101010-10210111112010111031110110100110410?120001000200111101-020011000011??0??000
+	Trichinocrinus      01001011(0 2)32100001101?010201020000010-100101111100100-1031110111??????????????????0210101101-210011220022??00?000
+	Gaurocrinus         011010(0 1)1(1 6)31100001-111-101011201010110032101111102111010111101100111104101120011000200111101-2200112200000100?000
+	Proexenocrinus      0010101111200001110101001010200000112101101111121100-102000000-???????????????11?020010-101-010???0??????????000
+	Eodimerocrinites    021010112??000001??1????000?10001010-11?00?11101010??103??1?00-??????????????????04001101???1200110000????0??000
+	Visocrinus          02101011??20000?11010100011120000110-1(0 1)10011111(0 1 2)02011103110000-???????????????????4??1?0?????????????????????000
+	Balacrinus          01101001030000001-210-10101020100010-1120011111201110103101000-?????????0????????0200101101-0100110000(0 2)(0 2)000??000
+	Ortsaecrinus        01101111501000001-111-10201020000010-112001111100100-103000000-??????????????????0210(1 2)01101-210011000000?1???000
+	Anthracocrinus      022010(0 1)1442100011101210020102000011111010101111002112102111000-0001104100(0 1)20011000300100101-020011000000??00?000
+	Bromidocrinus       01201011512000001101010000102020011121320011111(2 3)(1 2)100-014110000-0001?041003??0111002101?111-20?1111220011?0???000
+	Crinerocrinus       021010116420000011010100001020000010-1110011111222011103111000-?????????0???????0040?1?0?????????????????????000
+	Paradiabolocrinus   02101011242110001101?10000102020001121320011111211010111111001(0 1)00011041011210110002101????????0???0??????????000
+	Pararchaeocrinus    02201011642000001101?100001020100010-112001111120101011111101111110103100(0 1)2001100020011111-0140011(0 1)(0 1)00000?00?000
+	Simplococrinus      03201011(1 6)01000011-01?-0000102110101(0 1)11020011111202111103111000-11111041001200????040010011-2120011000011??00?000
+	Hercocrinus         02201011332000001101?1000010200010111131000111120110-014110000-???????????2??010002101?111-10?0?1?0?0?2??????000
+	Wilsonicrinus       0210101150200001110?0000201020000010-120001011100110-101001000-??????????????????02??1????????????2??????????000
+	Rhaphanocrinus      01101011642100001101?100101020000010-10110111112010101031?10110??????????????????0200101100-0100110000????00?000
+	Quechuacrinus       01100111000100001-110-101011201000110032101(3 4)1110(1 2)?0??10?1110110??????????????????0410311000-0301111100????00?000
+	Rosfacrinus         01001111401000011-110-1010(0 1)11000001(0 1)2101100111020201010111011001110104100120001100400100100-0200110000000100?000
+	Ursucrinus          0210101163200000110??100001?20001010-1020011111202111103101000-??????????????????0400110101-220?1?0?0?????0??000
+	Fombuenacrinus      0220101064200000110??110201020000010-1110011111002011003000000-00011041001200????04(0 1)010011-21200110000????0??000
+	Goyacrinus          02101111(5 6)3200000110??110001020001010-10111111110020101031110110??????????????????041010011-11200110000????0??000
+	Ambonacrinus        0100111064200000110??010201020000010-1?110111112010100031110111??????????????????0200111100-020?1?0?0????????000
+	Cefnocrinus         01201011232000011101?100001020101010-11200111112111100131000111???????????????1??020013-101-03001100002201001000
+	Cleiocrinus         00000001002000011101001010012100000--------111120400-1011111110?????????0????????0500111101-050011220011??003010
+	Archaeocrinus       012010116421000011011100101020100010-1021011111211010103111000-000110410022100100020011111-2040011000011??00?000
+	Gustabilicrinus     012010110020000011012100201020000010-1010101111202111102000100-??????????????????0410100101-02001100000000004000
+	Reteocrinus         00100111(0 6)20100001-111-101010201000110032101(2 3 4)1110(1 2)20111011110110????????0?(1 4)2??010004103(1 3)1000-0501111100????005000
+	Euptychocrinus      0110101100?1000010111010110110001010-1(0 1)2101111120111110311101100001?0410?0200????0200101101-010011000022??00?000
+	Diabolocrinus       02201011(5 6)4211000110111001010201000111101011(0 1)11120100-102111000-111000410112101100021010111-2310?1?0?0?1?010??000
+	Maquoketocrinus     01101011601000001-111-00201020200010-101001111022100-102000000-?????????0????????021??????????????0???2??????000
+	Rheocrinus          02101011012000011101?010201021100010-1010101111002111101100100-??????3000????0???040011011-212021122001101001000
+	Dalicrinus          02101011(5 6)?20000(0 1)11010100001?2000001(0 1)11120011111002111??????0????????????0????????041010011-212?????????????????0
+	Xenocrinus          00101011(0 1)00100000--0--01020110100011003210111110210111011110110???????????????????20010-100-0100113300021100?000
+	Macrostylocrinus    01101011600100000--0--02010000101010-1011011111211010103111011011121040010200????021010111-00100110000????11?000
+	Glyptocrinus        00101011630000000--0--10000000101010-102001111121201110311101101110103100021011000400100101-2200110000110?00?000
+	Astakocrinus        01101011230100000--0--10000000001010-10100111102010101031110110??????????????????021010111-011??1?0?0????????000
+	Periglyptocrinus    01101011630000000--0--10100000101010-10101111112120111031110110??????????????????040010011-2120011000011??00?000
+	Pycnocrinus         01201011630000000--0--10000000101010-10210111112011101031110110??????????????????0200111101-220011000000?000?000
+	Compsocrinus        01101011630100000--0--11010110101010-13210111112021101031110110???????????????????400100101-2200110000??0?00?000
+	Abludoglyptocrinus  012010(0 1)1(0 2)32100000--0-100000000001010-102(0 1)0111112011101031110110??????????????????021010-101-0100110000??0?00?000
+	Eopatelliocrinus    01101011630000000--0--12020000001010-10100111112010101031110110???????????200?1000210101102-2100110000110100?0-0
+	Celtocrinus         01101011620100000--0--101000?0101010-10110111112120??????????????????????????????0?00120101-0400110000????00?000
+	Alisocrinus         01001111(0 1)00100000--0--1112001010101111(0 1)210111112020111031110110??????????????????0400100101-2200110000??0?00?00-
+	Canistrocrinus      01101011000100000--0--11000010101011013210111110210101011110110??????????????????0200111101-0300110000110100?000
+	Priscillacrinus     ?3101111(5 6)02100011?0??100001?20000010-10200111112021111???????????????????????????041010011-21200110000????00?000
+	Adelphicrinus       01101011030100000--0--1010000010101101(1 4)2101(2 3 4)1102000--?????????????????????????1000100311000-021?0?0?0?0??????010
+	Cnemecrinus         01101111630100001-111-10101020100010-10?1?1111120000-1031?1000-??????????????????0110211000-0311111100112?00?000
+	Eknomocrinus        02201011000100100--0--100101100010111101101(2 3 4)1102(0 1)00--103111000-??????410?????11000100311000-031?1?1?0?2???0??000
+
+;
+
+END;
+#NEXUS
+
+ Begin trees;
+	Translate
+		1 Wilsonicrinus ,
+		2 Trichinocrinus ,
+		3 Atactocrinus ,
+		4 Maquoketocrinus ,
+		5 Ortsaecrinus ,
+		6 Proexenocrinus ,
+		7 Balacrinus ,
+		8 Pararchaeocrinus ,
+		9 Cefnocrinus ,
+		10 Anthracocrinus ,
+		11 Gustabilicrinus ,
+		12 Rheocrinus ,
+		13 Cotylacrinna ,
+		14 Simplococrinus ,
+		15 Fombuenacrinus ,
+		16 Visocrinus ,
+		17 Dalicrinus ,
+		18 Crinerocrinus ,
+		19 Goyacrinus ,
+		20 Eodimerocrinites ,
+		21 Ursucrinus ,
+		22 Hercocrinus ,
+		23 Bromidocrinus ,
+		24 Paradiabolocrinus ,
+		25 Deocrinus ,
+		26 Archaeocrinus ,
+		27 Neoarchaeocrinus ,
+		28 Diabolocrinus ,
+		29 Rhaphanocrinus ,
+		30 Ambonacrinus ,
+		31 Cleiocrinus ,
+		32 Rosfacrinus ,
+		33 Ptychocrinus ,
+		34 Euptychocrinus ,
+		35 Gaurocrinus ,
+		36 Canistrocrinus ,
+		37 Xenocrinus ,
+		38 Periglyptocrinus ,
+		39 Glyptocrinus ,
+		40 Celtocrinus ,
+		41 Pycnocrinus ,
+		42 Abludoglyptocrinus ,
+		43 Astakocrinus ,
+		44 Eopatelliocrinus ,
+		45 Macrostylocrinus ,
+		46 Compsocrinus ,
+		47 Alisocrinus ,
+		48 Reteocrinus ,
+		49 Quechuacrinus ,
+		50 Eknomocrinus ,
+		51 Adelphicrinus ,
+		52 Cnemecrinus
+;
+tree 'ConstraintTree' = ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( 1 , 6 ) , ( ( ( ( ( ( ( 10 , 11 ) , 12 ) , ( 13 , 19 ) ) , ( ( ( 15 , 16 ) , 18 ) , 17 ) ) , 14 ) , 21 ) , 20 ) ) , ( ( ( 2 , 31 ) , ( 33 , 34 ) ) , ( 29 , 30 ) ) ) , ( 7 , 27 ) ) , ( ( 22 , ( 23 , 24 ) ) , 25 ) ) , 26 ) , 28 ) , ( 8 , 9 ) ) , ( ( 3 , 4 ) , 5 ) ) , ( 35 , ( ( ( ( 36 , 37 ) , ( ( ( 42 , 43 ) , 44 ) , 45 ) ) , ( ( ( ( 38 , 39 ) , 40 ) , 47 ) , 46 ) ) , 41 ) ) ) , 32 ) , ( 48 , 49 ) ) , 52 ) , 51 ) , 50 );
+
+END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 50, Outgroup :  51- 53;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 112;
+
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 112;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1558831961444;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 2069740992150943223;
+			tell It;
+				setDefaultOrder  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 52 51 37 50;
+				attachments ;
+			endTell;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 8147187421774197266;
+			mqVersion 360;
+			checksumv 0 3 3986412304 null  getNumChars 112 numChars 112 getNumTaxa 53 numTaxa 53   short true   bits 127   states 127   sumSquaresStatesOnly 169384.0 sumSquares 169384.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1166 694;
+			setLocation 8 23;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #2069740992150943223 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #2069740992150943223;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1066 622;
+					setLocation 8 23;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #8147187421774197266 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1066 622;
+					setLocation 8 23;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

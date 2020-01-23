@@ -1,0 +1,177 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=25 NCHAR=17;
+[!Ebach, M. C., and S. T. Ahyong.  2001.  Phylogeny of the Trilobite Subgenus Acanthopyge (Lobopyge).  Cladistics 17:1 - 10.]
+
+  FORMAT SYMBOLS= " 0 1 2 3 4 5 6" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		1  Cephalon,  2  Cephalon,  3  Cephalon,  4  Cephalon,  5  Cephalon,  6  Cephalon,
+  7  Cephalon,  8  Cephalon,  9  Pygidium,  10  Pygidium,  11  Pygidium,
+  12  Pygidium,  13  Pygidium,  14  Pygidium,  15  Pygidium,
+  16  FA / Ashgill Llandovery Wenlock Ludlow Lockhovian Pragian Emsian,
+  17  LA / Ashgill Llandovery Wenlock Ludlow Lockhovian Pragian Emsian
+		;
+
+MATRIX
+[                                                   10      ]
+[                                                   .       ]
+
+'Acanthopyge (Lobopyge) australiformis'    11201101100111245
+'Acanthopyge (Lobopyge) australis'         102010??100?11266
+'Acanthopyge (Lobopyge) balliviani'        11211110100112144
+'Acanthopyge (Lobopyge) brankiensis'       10201011100022145
+'Acanthopyge (Lobopyge) brevis'            0?0100??110????55
+'Acanthopyge (Lobopyge) campbelli'         11201100111113256
+'Acanthopyge (Lobopyge) consanguinea'      11211002100122166
+'Acanthopyge (Lobopyge) decheni'           ??????0210?022055
+'Acanthopyge (Lobopyge) docekali'          10211111000102066
+'Acanthopyge (Lobopyge) edgecombei'        11211100001122244
+'Acanthopyge (Lobopyge) erinacea'          11211100000?03256
+'Acanthopyge (Lobopyge) hirsuta'           10210001000002022
+'Acanthopyge (Lobopyge) limbata'           112100??112012055
+'Acanthopyge (Lobopyge) orientalis'        111101??000002035
+'Acanthopyge (Lobopyge) paraplerua'        111101??000002?11
+'Acanthopyge (Lobopyge) parva'             112110??001012245
+'Acanthopyge (Lobopyge) pragensis'         112010??101012233
+'Acanthopyge (Lobopyge) pustulosa'         112010??002122266
+'Acanthopyge (Lobopyge) rictheri'          11210110101122133
+'Acanthopyge (Lobopyge) rohri'             100010??000102222
+'Acanthopyge (Lobopyge) sinuata'           11211010100121245
+'Acanthopyge (Lobopyge) trinodis'          102201???03012055
+'Acanthopyge (Lobopyge) uralensis'         112201??10??22145
+'Acanthopyge (Lobopyge) sp. Victoria'      1120011?100002044
+Hemiarges_wesenbergensis                   0?0010??000001?00
+;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MAXSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-15 17, strat: 16;
+	WTSET * UNTITLED  = 1: 1-15, 0: 16-17;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	'Acanthopyge (Lobopyge) australiformis',
+		2	'Acanthopyge (Lobopyge) australis',
+		3	'Acanthopyge (Lobopyge) balliviani',
+		4	'Acanthopyge (Lobopyge) brankiensis',
+		5	'Acanthopyge (Lobopyge) brevis',
+		6	'Acanthopyge (Lobopyge) campbelli',
+		7	'Acanthopyge (Lobopyge) consanguinea',
+		8	'Acanthopyge (Lobopyge) decheni',
+		9	'Acanthopyge (Lobopyge) docekali',
+		10	'Acanthopyge (Lobopyge) edgecombei',
+		11	'Acanthopyge (Lobopyge) erinacea',
+		12	'Acanthopyge (Lobopyge) hirsuta',
+		13	'Acanthopyge (Lobopyge) limbata',
+		14	'Acanthopyge (Lobopyge) orientalis',
+		15	'Acanthopyge (Lobopyge) paraplerua',
+		16	'Acanthopyge (Lobopyge) parva',
+		17	'Acanthopyge (Lobopyge) pragensis',
+		18	'Acanthopyge (Lobopyge) pustulosa',
+		19	'Acanthopyge (Lobopyge) rictheri',
+		20	'Acanthopyge (Lobopyge) rohri',
+		21	'Acanthopyge (Lobopyge) sinuata',
+		22	'Acanthopyge (Lobopyge) trinodis',
+		23	'Acanthopyge (Lobopyge) uralensis',
+		24	'Acanthopyge (Lobopyge) sp. Victoria',
+		25	Hemiarges_wesenbergensis
+	;
+	TREE PAUP_1 =  [&R] (25,((((1,6),(((((3,(19,23)),(4,(((5,13),((((9,12),(14,15)),24),22)),(16,17)))),(7,8)),((10,11),18)),21)),2),20));
+	TREE PAUP_2 =  [&R] (25,(((((((1,6),2),21),(((3,(19,23)),(4,(((5,13),((((9,12),(14,15)),24),22)),(16,17)))),(7,8))),(10,11)),18),20));
+	TREE PAUP_3 =  [&R] (25,((((1,6),((((3,(19,23)),(((4,(((5,13),((((9,12),(14,15)),24),22)),(16,17))),8),7)),((10,11),18)),21)),2),20));
+	TREE PAUP_4 =  [&R] (25,((((1,6),(((((3,(19,23)),(4,(((5,13),(((9,12,22),(14,15)),24)),(16,17)))),(7,8)),((10,11),18)),21)),2),20));
+	TREE PAUP_5 =  [&R] (25,((((1,6),(((((3,(19,23)),(4,(((5,13),(((9,(12,22)),(14,15)),24)),(16,17)))),(7,8)),((10,11),18)),21)),2),20));
+	TREE PAUP_6 =  [&R] (25,((((1,6),(((((3,(19,23)),(4,((((5,13),((((9,12),(14,15)),24),22)),(16,17)),8))),7),((10,11),18)),21)),2),20));
+	TREE PAUP_7 =  [&R] (25,(((((((1,6),2),21),((3,(19,23)),(((4,(((5,13),((((9,12),(14,15)),24),22)),(16,17))),8),7))),(10,11)),18),20));
+	TREE PAUP_8 =  [&R] (25,(((((((1,6),2),21),(((3,(19,23)),(4,(((5,13),(((9,12,22),(14,15)),24)),(16,17)))),(7,8))),(10,11)),18),20));
+	TREE Best_SC_1_Tree =  [&R] (25,(((((((1,6),2),21),(((3,(19,23)),(4,(((5,13),(((9,(12,22)),(14,15)),24)),(16,17)))),(7,8))),(10,11)),18),20));
+	TREE PAUP_10 =  [&R] (25,(((((((1,6),2),21),(((3,(19,23)),(4,((((5,13),((((9,12),(14,15)),24),22)),(16,17)),8))),7)),(10,11)),18),20));
+	TREE PAUP_11 =  [&R] (25,((((1,6),((((3,(19,23)),(((4,(((5,13),(((9,12,22),(14,15)),24)),(16,17))),8),7)),((10,11),18)),21)),2),20));
+	TREE PAUP_12 =  [&R] (25,((((1,6),((((3,(19,23)),(((4,(((5,13),(((9,(12,22)),(14,15)),24)),(16,17))),8),7)),((10,11),18)),21)),2),20));
+	TREE PAUP_13 =  [&R] (25,((((1,6),(((((3,(19,23)),(4,((((5,13),(((9,(12,22)),(14,15)),24)),(16,17)),8))),7),((10,11),18)),21)),2),20));
+	TREE PAUP_14 =  [&R] (25,((((1,6),(((((3,(19,23)),(4,((((5,13),(((9,12,22),(14,15)),24)),(16,17)),8))),7),((10,11),18)),21)),2),20));
+	TREE PAUP_15 =  [&R] (25,(((((((1,6),2),21),((3,(19,23)),(((4,(((5,13),(((9,12,22),(14,15)),24)),(16,17))),8),7))),(10,11)),18),20));
+	TREE PAUP_16 =  [&R] (25,(((((((1,6),2),21),((3,(19,23)),(((4,(((5,13),(((9,(12,22)),(14,15)),24)),(16,17))),8),7))),(10,11)),18),20));
+	TREE PAUP_17 =  [&R] (25,(((((((1,6),2),21),(((3,(19,23)),(4,((((5,13),(((9,12,22),(14,15)),24)),(16,17)),8))),7)),(10,11)),18),20));
+	TREE PAUP_18 =  [&R] (25,(((((((1,6),2),21),(((3,(19,23)),(4,((((5,13),(((9,(12,22)),(14,15)),24)),(16,17)),8))),7)),(10,11)),18),20));
+	TREE  * Ingroup_Only_Strat_Rooted =  [&R] (15,(14,((9,(12,22)),(24,((5,13),((16,17),(8,(4,((3,(19,23)),(7,(((20,18),(10,11)),(21,(2,(1,6))))))))))))));
+
+END;
+
+
+BEGIN NOTES;
+
+	TEXT  TAXON=6 CHARACTER=16 TEXT= Zlickhovian;
+	TEXT  TAXON=6 CHARACTER=17 TEXT= Zlickhovian;
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -845383533;
+	FileSettings  '1' '1' '16' '1';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '162' '1' all;
+	EditorPosition  '80' '845' '580' '595';
+	TreeWindowPosition  '46' '6' '989' '1630';
+	ListWindow Characters open Gadget '12' '50' '10' '236' '321' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '273' '355' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '25' '304' '451' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '50' '30' '944' '1220';
+	StateNamesSymbols closed Gadget '12' '10' '493' '83' '203' '220';
+	WindowOrder  List Characters;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '907' '68' '115' '165';
+	TreeToolsPosition  '863' '5' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1100111;
+	SummaryMode  '0' '0' 0;
+	Charts  Arial '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011011;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '93' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 0;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '1' '1' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

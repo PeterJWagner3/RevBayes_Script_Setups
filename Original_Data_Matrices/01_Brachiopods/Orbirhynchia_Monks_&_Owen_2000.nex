@@ -1,0 +1,143 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN MacCladeStart;
+	Extended;
+END;
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=17 NCHAR=25;
+
+[!Monks, N & E. Owens.  2000.  Phylogeny of Orbirhynchia Pettitt, 1954 (Brachiopoda: Rhynchonellida).  Palaeontology 43:871 - 880.
+
+Strat data from Table 1 and Figure 4.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B" MISSING=? GAP=- ;
+	CHARSTATELABELS
+		23  FA / Late_Jurassic Late_Albian Early_Cenomanian Middle_Cenomanian Late_Cenomanian Early_Turonian Middle_Turonian Late_Turonian Coniacian Santonian Early_Campanian Middle_Campanian,
+  24  LA / Late_Jurassic Late_Albian Early_Cenomanian Middle_Cenomanian Late_Cenomanian Early_Turonian Middle_Turonian Late_Turonian Coniacian Santonian Early_Campanian Middle_Campanian,
+  25  FA.2 / Late_Jurassic Late_Albian 'Early_Cenomanian-Middle_Cenomanian-Late_Cenomanian' 'Early_Turonian-Middle_Turonian-Late_Turonian' Coniacian Santonian
+		;
+
+MATRIX
+[                              10        20    ]
+[                              .         .     ]
+
+Lacunosella           0001(01)00000000000000000000
+Orbirhynchia_parkinsoni         1001000102000000000000111
+Orbirhynchia_mantelliana        1001000101000000002000232
+Orbirhynchia_obscura            1001000101000(01)00002000232
+Orbirhynchia_wilmingtonensis    3121(01)00100000000002000222
+Orbirhynchia_boussensis         2001(01)00102100000002100442
+Orbirhynchia_multicostata       2010111113201001002101342
+Orbirhynchia_wiesti             2120111122201001102121452
+Orbirhynchia_cuvieri            3120101123201001102121563
+Orbirhynchia_compta             3120101123201001111102563
+Orbirhynchia_orbignyi           1020111123201001112022663
+Orbirhynchia_praedispansa       3100101123201(01)11102012563
+Orbirhynchia_dispansa           3110111122201(01)11102012773
+Orbirhynchia_reedensis          10101011222010111(01)2012763
+Orbirhynchia_pisiformis         31001012222011111(12)(01)012894
+Orbirhynchia_bella              3100111221211(01)111(12)20129B5
+Orbirhynchia_granum             3100101221211(01)111100129B5
+;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MAXSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-22 24, strat: 23 25;
+	WTSET * UNTITLED  = 1: 1-22 24, 0: 23 25;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Lacunosella,
+		2	Orbirhynchia_parkinsoni,
+		3	Orbirhynchia_mantelliana,
+		4	Orbirhynchia_obscura,
+		5	Orbirhynchia_wilmingtonensis,
+		6	Orbirhynchia_boussensis,
+		7	Orbirhynchia_multicostata,
+		8	Orbirhynchia_wiesti,
+		9	Orbirhynchia_cuvieri,
+		10	Orbirhynchia_compta,
+		11	Orbirhynchia_orbignyi,
+		12	Orbirhynchia_praedispansa,
+		13	Orbirhynchia_dispansa,
+		14	Orbirhynchia_reedensis,
+		15	Orbirhynchia_pisiformis,
+		16	Orbirhynchia_bella,
+		17	Orbirhynchia_granum
+	;
+	TREE  * UNTITLED =  [&R] (1,(2,(3,(4,(5,(6,((7,8),((9,10),(11,(12,(13,(14,(15,(16,17))))))))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -977155869;
+	FileSettings treewindow  '1' '1' '19' '1';
+	Singles 010;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '126' '1' all;
+	EditorPosition  '44' '824' '444' '823';
+	TreeWindowPosition  '67' '517' '843' '1390';
+	ListWindow Characters closed Gadget '12' '50' '25' '253' '460' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '257' '303' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '14' '67' '735' '271' '427';
+	WindowOrder  Tree States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '781' '1806' '110' '85';
+	TreeLegendPosition  '803' '1708' '88' '93';
+	EditorToolsPosition  '595' '48' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 0;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Geneva '9' (normal) Geneva '10' (normal) Geneva '9' (normal) Geneva '9' (normal) Geneva '9' (bold ) Geneva '9' (normal) Geneva '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

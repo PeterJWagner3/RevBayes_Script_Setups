@@ -1,0 +1,134 @@
+#NEXUS 
+[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+	DIMENSIONS  NTAX=13 NCHAR=25;
+
+[!Sumrall, C. D. & J. Sprinkle. 1995. Plating and pectinirhombs of the Ordovician rhombiferan Plethoschisma. Journal of Paleontology, 69:772?778.
+
+Parsley, R. L. & C. D. Sumrall. 2007. New recumbent echinoderm genera from the Bois d'Arc Formation: Lower Devonian (Lochkovian) of Coal County, Oklahoma. Journal of Paleontology 81:1486?1493.]
+	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9" MISSING=? GAP=- ;
+	CHARSTATELABELS  
+		24  FA / 'O_(Trem)' 'O_(Aren)' 'O_(Llv-Lld)' 'O_(Cara)' 'O_(Ashg)' 'S_(Ldov)' 'S_(Wenl)' 'S_(Prid)' 'D_(Loch)' 'D_(Eife)',
+  25  LA / 'O_(Trem)' 'O_(Aren)' 'O_(Llv-Lld)' 'O_(Cara)' 'O_(Ashg)' 'S_(Ldov)' 'S_(Wenl)' 'S_(Prid)' 'D_(Loch)' 'D_(Eife)'
+		;
+
+MATRIX
+[                                     10        20    ]
+[                                     .         .     ]
+
+Macrocystella                0000001??000000010000??02
+Cheirocystella               0001001??100000110?00?001
+New_Genus_B_Sprinkle_1989    0100000??00000?0310?0??11
+Deltacystis                  1110000001000110211011?22
+Plethoschisma                111100000101011121?010022
+Pleurocystites               110(01)112111(01)11010211101134
+Pygecystis                   110(01)113111111010211101144
+Amecystis                    1100003111011010211101?33
+Regulaecystis                110010211101001021?100199
+Coopericystis                110010?111?100?0?1???0133
+Praepleurocystis             1101113111011010211100133
+Turgidacystis                1100102111010110211100188
+Cuniculocystis               0000000??000?00000000??11
+;
+END;
+
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+	TYPESET * UNTITLED  = unord: 1-23 25, strat: 24;
+	WTSET * UNTITLED  = 1: 1-23, 0: 24-25;
+END;
+
+BEGIN SETS;
+	TAXSET  Outgroup  =  1-2;
+END;
+
+
+BEGIN TREES; 
+
+	TRANSLATE
+		1	Macrocystella,
+		2	Cheirocystella,
+		3	New_Genus_B_Sprinkle_1989,
+		4	Deltacystis,
+		5	Plethoschisma,
+		6	Pleurocystites,
+		7	Pygecystis,
+		8	Amecystis,
+		9	Regulaecystis,
+		10	Coopericystis,
+		11	Praepleurocystis,
+		12	Turgidacystis,
+		13	Cuniculocystis
+	;
+	TREE  * UNTITLED =  [&R] (1,(2,(3,((4,5),(9,(10,(12,(11,(8,(7,6))))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0  87;
+	LastModified -845290560;
+	FileSettings treewindow  '1' '1' '24' '1';
+	Singles 010;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '178' '1' all;
+	EditorPosition  '56' '739' '376' '683';
+	TreeWindowPosition  '91' '435' '723' '974';
+	ListWindow Characters open Gadget '12' '50' '25' '253' '517' 000;
+	ListWindow Taxa closed Gadget '12' '50' '25' '241' '327' 100000000;
+	ListWindow Trees closed Gadget '12' '90' '65' '134' '387' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	TextWindow AboutFile  '190' '165' '280' '445' Gadget '12' (normal) 1 ;
+	ChartWindowPosition  '52' '30' '686' '964';
+	StateNamesSymbols open Gadget '12' '10' '447' '1424' '203' '219';
+	WindowOrder  Tree List Characters Text AboutFile States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition  '641' '1308' '154' '85';
+	TreeLegendPosition  '707' '1210' '88' '93';
+	EditorToolsPosition  '563' '46' '115' '165';
+	TreeToolsPosition  '290' '42' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

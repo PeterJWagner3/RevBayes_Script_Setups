@@ -1,0 +1,8 @@
+"Data_group"	"Study"	"OTUs"	"Characters"	"Binary"	"Multistate"	"Total_States"	"Autapomorphic_Binary"	"Autapomoprhic_Multistate"	"Autapomoprhic_Multistate_States"	"Prop_Missing"	"Identicals"	"Reducibles"
+"Wagner_Gastropods"	"Bucaniidae_Wagner_2001.nex"	"42"	"89"	"33"	"32"	"220"	"8"	"15"	"18"	"0.0339753879079722"	"0"	"0"
+"Wagner_Gastropods"	"Cyrtonellidae_Wagner_2001.nex"	"22"	"89"	"31"	"23"	"192"	"8"	"15"	"21"	"0.0536261491317671"	"0"	"0"
+"Wagner_Gastropods"	"Eotomarioidea_Wagner_1999.nex"	"178"	"220"	"84"	"108"	"681"	"28"	"54"	"77"	"0.0468335035750766"	"0"	"0"
+"Wagner_Gastropods"	"Hormotomidae_Wagner_1999.nex"	"43"	"187"	"54"	"47"	"385"	"15"	"20"	"24"	"0.0129337147121005"	"0"	"0"
+"Wagner_Gastropods"	"Macluritidae_Wagner_1999.nex"	"18"	"151"	"36"	"33"	"281"	"14"	"19"	"33"	"0.0187637969094923"	"0"	"0"
+"Wagner_Gastropods"	"Sinuitidae_Wagner_2001.nex"	"13"	"79"	"27"	"14"	"141"	"13"	"11"	"16"	"0.0506329113924051"	"0"	"0"
+"Wagner_Gastropods"	"Tropidodiscidae_Wagner_2001.nex"	"22"	"84"	"20"	"22"	"172"	"9"	"12"	"13"	"0.0811688311688312"	"0"	"0"

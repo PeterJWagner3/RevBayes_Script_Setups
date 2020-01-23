@@ -1,0 +1,9 @@
+Acanthopyge_Ebach_&_Ahyong_2001.nex
+Bohemoharpes_Ebach_&_McNamara_2002.nex
+Borealarges_Adrain_2003.nex
+Edgecombeaspis_Adrain_&_Ramskold_1997.nex
+Encrinurinae_Adrain_&_Edgecombe_1997.nex
+Encrinurus_Edgecombe_&_Ramsköld_1996.nex
+Odontopleuridae_Ramskold_&_Chatterton_1991.nex
+Phacopidae_Ramsköld_&_Werdelin_1991.nex
+Trochurineae_Campbell_&_Chatterton_2007.nex

@@ -1,0 +1,8 @@
+"Data_group"	"Study"	"OTUs"	"Characters"	"Binary"	"Multistate"	"Apomorphic_Characters"	"Apomorphic_Binaries"	"Apomorphic_Multistates"	"Prop_Missing"	"Identicals"
+"Crustaceans"	"Adelophthalmoidea_Tetlie_&_Poschmann_2008.nex"	"13"	"30"	"28"	"2"	"7"	"5"	"2"	"0.315384615384615"	"4"
+"Crustaceans"	"Cambrian_Arachnomorpha_Cotton_&_Brady_2004.nex"	"37"	"54"	"45"	"9"	"2"	"0"	"2"	"0.11011011011011"	"3"
+"Crustaceans"	"Cambrian_Arachnomorpha_Hendricks_&_Lieberman_2008.nex"	"26"	"35"	"27"	"8"	"2"	"0"	"2"	"0.101098901098901"	"4"
+"Crustaceans"	"Eurypetriidae_Tetlie_&_Cuggy_2007.nex"	"24"	"37"	"22"	"15"	"11"	"4"	"7"	"0.227477477477477"	"4"
+"Crustaceans"	"Eurypterus_Tetlie_2006.nex"	"14"	"21"	"14"	"7"	"7"	"3"	"4"	"0.295918367346939"	"10"
+"Crustaceans"	"Stylonurina_Lamsdell_et_al_2010.nex"	"30"	"60"	"57"	"3"	"4"	"2"	"2"	"0.259444444444444"	"0"
+"Crustaceans"	"Xiphosura_Lamsdell_2013.nex"	"37"	"114"	"70"	"44"	"21"	"0"	"21"	"0.279516358463727"	"1"

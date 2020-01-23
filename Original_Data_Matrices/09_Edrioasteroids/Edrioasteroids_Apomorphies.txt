@@ -1,0 +1,4 @@
+"Data_group"	"Study"	"OTUs"	"Characters"	"Binary"	"Multistate"	"Total_States"	"Autapomorphic_Binary"	"Autapomoprhic_Multistate"	"Autapomoprhic_Multistate_States"	"Prop_Missing"	"Identicals"	"Reducibles"
+"Edrioasteroids"	"Agelacrinitinae_Smith_&_Arbizu_1987.nex"	"13"	"12"	"9"	"3"	"28"	"1"	"1"	"1"	"0.0448717948717949"	"0"	"0"
+"Edrioasteroids"	"Basal_Edrioasteroidea_Zamora_2013.nex"	"13"	"20"	"18"	"2"	"42"	"3"	"2"	"2"	"0.107692307692308"	"0"	"0"
+"Edrioasteroids"	"Isorophida_Sumrall_&_Zamora_2011.nex"	"14"	"32"	"30"	"2"	"66"	"2"	"2"	"3"	"0.178571428571429"	"0"	"0"

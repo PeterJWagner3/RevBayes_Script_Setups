@@ -1,0 +1,108 @@
+#NEXUS 
+[MacClade 4.05 registered to Peter Wagner, Field Museum of Natural History]
+
+
+BEGIN DATA;
+    DIMENSIONS  NTAX=33 NCHAR=24;
+
+[!Vento, B. A., B. A. Toro, and J. Maletz.  2015.  Testing Phylogenetic Relationships of Floian (Ordovician) Graptolite Records from Argentina Through Cladistic Analysis.  Ameghiniana 52:517-534.]
+FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9 A B C" MISSING=? GAP=- ;
+
+Matrix
+Rhabdinopora_flabelliformis			00000001100?000000000101
+Clonograptus_multiplex				11000100121?001000001310
+Expansograptus_suecicus				110001002211001102001310
+Expansograptus_holmi				110001002110001102001310
+Expansograptus_constrictus			110001002210001102001310
+Expansograptus_latus				110001002110001102001310
+Cymatograptus_bidextro				110111001000001102001110
+Cymatograptus_demissus				110001002211001102101110
+Cymatograptus_rigoletto				110001002201000102101110
+Cymatograptus_protobalticus			110001002321001102101110
+Cymatograptus_balticus				110001003312001102101100
+Baltograptus_geometricus			111001002100001102001110
+Baltograptus_vacillans				111011002120001102001100
+Baltograptus_turgidus				111001002210001102101210
+Baltograptus_cf._deflexus			111001001010001102001210
+Baltograptus_deflexus				111101002110001102001210
+Baltograptus_minutus				111101001010001102001010
+Baltograptus_bolivianus				111001002101001102001210
+Baltograptus_kunmingensis			111001002100001102001210
+Baltograptus_wudingensis			111001002100001102001210
+Corymbograptus_vfractus_tullbergi	110001002312011102011110
+Tetragraptus_phyllograptoides		11000100221?011101011410
+Tetragraptus_approximatus			110001002211011101011310
+Tetragraptus_amii					110001003100011101011410
+Tetragraptus_akzharensis			11000100330?011101011310
+Acrograptus_gracilis				110001111000000102101110
+Acrograptus_filiformis				110001111000000102101110
+Paradelograptus_sp.					110001110000010010011100
+Trichograptus_dilaceratus			110001?01120000100001110
+Pendeograptus_fruticosus			110001002312011101011010
+Phyllograptus_anna					11000100200?111101111510
+Didymograptellus_bifidus			110001011000101102101010
+Hunnegraptus_copiosus				010011102000000000001300
+;
+end;
+
+BEGIN MacClade;
+	Version 4.0  84;
+	LastModified -1049985170;
+	FileSettings editor  '1' '1' '47' '1';
+	Singles 010;
+	Editor 0001101111111110010001001 '0' '72' Gadget '12' '152' '1' all;
+	EditorPosition  '44' '6' '495' '777';
+	TreeWindowPosition  '46' '6' '677' '752';
+	ListWindow Characters closed Gadget '12' '50' '25' '321' '374' 000;
+	ListWindow Taxa closed Gadget '12' '70' '45' '253' '318' 100000;
+	ListWindow Trees closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
+	ChartWindowPosition  '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '10' '559' '1407' '203' '235';
+	WindowOrder  Data States;
+	OtherSymbols &/ 00 ?-;
+	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile  '2';
+	ExportHTML _ MOSS  '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition  '578' '1268' '115' '165';
+	TreeToolsPosition  '716' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous  '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode  '0' '0' 0;
+	Charts  Gadget '12' (normal) 0010;
+	NexusOptions  '0' '0' '50' 001011001;
+	TipLabel  '1';
+	TreeFont  Gadget '12' (normal);
+	TreeShape  1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth  '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax  '0';
+	TraceAllChangesDisplay  '1' 1;
+	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation  '3' 1;
+	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools  '1';
+END;

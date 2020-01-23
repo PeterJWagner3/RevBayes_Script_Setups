@@ -1,0 +1,4 @@
+"Data_group"	"Study"	"OTUs"	"Characters"	"Binary"	"Multistate"	"Total_States"	"Autapomorphic"	"Autapomorphic_Binary"	"Autapomorphic_Multistate"	"Autapomorphic_Multistate_States"	"Prop_Missing"	"Polymorphics"	"Polymorphic_Characters"	"Identicals"	"Reducibles"
+"Carboniferous_Trilobites"	"Kaskia_Brezinski_2008.nex"	"19"	"31"	"24"	"7"	"74"	"3"	"1"	"2"	"3"	"0.0203735144312394"	"0"	"0"	"0"	"0"
+"Carboniferous_Trilobites"	"Paladin_Brezinski_2003.nex"	"20"	"25"	"20"	"5"	"55"	"0"	"0"	"0"	"0"	"0.02"	"0"	"0"	"2"	"2"
+"Carboniferous_Trilobites"	"Phillipsidae_Brezinski_2005.nex"	"19"	"25"	"20"	"5"	"55"	"1"	"0"	"1"	"1"	"0.00210526315789474"	"0"	"0"	"2"	"2"
