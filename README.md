@@ -102,6 +102,6 @@ The final important variable assignment here is pruned_tau; this separates out f
 | Mk + partitioned feeding + gamma | -467.0526 |
 | Time homogeneous FBD, unpartitioned, strict | -748.5214 |
 | Time homogeneous FBD, partitioned, strict | -582.874 |
-| Time homogeneous, relaxed clock PW | |  
+| Time homogeneous, relaxed clock PW | -555.0821 |  
 | Time homogeneous, relaxed clock, autocorrelated PW | |
 | Early burst, relaxed clock PW | |
