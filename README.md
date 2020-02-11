@@ -105,3 +105,4 @@ The final important variable assignment here is pruned_tau; this separates out f
 | Time homogeneous, relaxed clock PW | |  
 | Time homogeneous, relaxed clock, autocorrelated PW | |
 | Early burst, relaxed clock PW | |
+| Time-Strat, 3 cats, partitioned | | 
