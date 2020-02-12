@@ -2,6 +2,14 @@
 # Set up appropriate parameters for speciation, extinction & sampling  #
 #   "Seed" numbers based on analyses of Paleobiology Database data.    #
 ########################################################################
+# clock
+
+mean_ra <- 7.0
+stdv_ra <- 0.25
+mu_ra <- ln(mean_ra) - ((stdv_ra*stdv_ra) * 0.5)
+
+root_time ~ dnLognormal(mu_ra, stdv_ra, offset=7.3)
+
 # Diversification Rates based on Echinodermata
 speciation_rate ~ dnExponential(1.471);
 # NOTE: If it gets stuck in this script, then set origination & extinction to 1.0
@@ -56,26 +64,43 @@ outgroup = clade("Ctenocystis");
 ingroup = clade("Gyrocystis_platessa","Gyrocystis_testudiformis","Gyrocystis_cruzae","Gyrocystis_badulesiensis","Gyrocystis_erecta","Progyrocystis_disjuncta","Protocinctus_mansillaensis","Elliptocinctus_barrandei","Elliptocinctus_vizcainoi","Sucocystis_theronensis","Sucocystis_bretoni","Lignanicystis_barriosensis","Undatacinctus_undata","Sucocystis_acrofera","Undatacinctus_quadricornuta","Undatacinctus_melendezi","Asturicystis_jaekeli","Sotocinctus_ubaghsi","Trochocystites_bohemicus","Trochocystoides_parvus","Ludwigicinctus_truncatus","Graciacystis_ambigua","Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis");
 unscored_taxa <- v(24,25,26,27);
 constraints = v(ingroup);
-tau ~ dnConstrainedTopology(fbd_dist,constraints=constraints);
+fbd_tree ~ dnConstrainedTopology(fbd_dist,constraints=constraints);
 
-moves.append(mvFNPR(tau, weight=num_branches/2));                              # time-tree pruning & grafting
-moves.append(mvNNI(tau, weight=num_branches/2));                               # nearest-neighbor interchanges
-moves.append(mvCollapseExpandFossilBranch(tau,origin_time,weight=num_taxa/4)); # consider ancestor-descendant rather than sister species
-moves.append(mvNodeTimeSlideUniform(tau, weight=num_branches/2));              # adjust divergence times
-moves.append(mvRootTimeSlideUniform(tau, origin_time, weight=5));            # adjust basal divergence time.
+moves.append(mvFNPR(fbd_tree , weight=num_branches/2));                              # time-tree pruning & grafting
+moves.append(mvNNI(fbd_tree , weight=num_branches/2));                               # nearest-neighbor interchanges
+moves.append(mvCollapseExpandFossilBranch(fbd_tree ,origin_time,weight=num_taxa/4)); # consider ancestor-descendant rather than sister species
+moves.append(mvNodeTimeSlideUniform(fbd_tree , weight=num_branches/2));              # adjust divergence times
+moves.append(mvRootTimeSlideUniform(fbd_tree , origin_time, weight=5));            # adjust basal divergence time.
 
-num_samp_anc := tau.numSampledAncestors();
+num_samp_anc := fbd_tree.numSampledAncestors();
 for (bn in 1:num_branches)	{
-	divergence_dates[bn]:=tau.nodeAge(bn)                   # this is when a hypothesized ancestor diverges or an OTU is first seen;
-	branch_lengths[bn]:=tau.branchLength(bn);               # this is branch *duration* not expected change!
-	origin_dates[bn]:=tau.branchLength(bn)+tau.nodeAge(bn); # this is when a lineage diverged from its ancestor
+	divergence_dates[bn]:=fbd_tree.nodeAge(bn)                   # this is when a hypothesized ancestor diverges or an OTU is first seen;
+	branch_lengths[bn]:=fbd_tree.branchLength(bn);               # this is branch *duration* not expected change!
+	origin_dates[bn]:=fbd_tree.branchLength(bn)+fbd_tree.nodeAge(bn); # this is when a lineage diverged from its ancestor
 	}
 summed_gaps := sum(branch_lengths);
 
-clade_extant = clade("Sucocystis_acrofera");
-#age_extant := tmrca(tau, clade_extant);	# There is no particularly good reason to keep this!
 
-pruned_tau := fnPruneTree(tau, prune=v("Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis"))
+intervals = readDataDelimitedFile(file="data/cincta_fossil_intervals_FA.tsv", header=true)
+# Setup the fossil tip sampling #
+# Use a for loop to create a uniform distribution on the occurence time for each fossil #
+# The boundaries of the uniform distribution are specified in the tsv file #
+for(i in 1:intervals.size())
+{
+    taxon  = intervals[i][1]
+    a_i = intervals[i][2]
+    b_i = intervals[i][3]
+    t[i] := tmrca(fbd_tree, clade(taxon))
+
+    fossil[i] <- a_i
+#    fossil[i] ~ dnSoftBoundUniformNormal(t[i] - b_i, t[i] - a_i, sd = 2, p = 0.025)
+#    fossil[i].clamp(0)
+}
+
+clade_extant = clade("Sucocystis_acrofera");
+#age_extant := tmrca(fbd_tree, clade_extant);	# There is no particularly good reason to keep this!
+
+pruned_fbd_tree := fnPruneTree(fbd_tree, prune=v("Asturicystis_havliceki","Nelegerocystis_ivantzovi","Rozanovicystis_triangularis","Davidocinctus_pembrokensis"))
 #### for easy printing on screen ####
 fbd_p := speciation_rate;
 fbd_q := extinction_rate;

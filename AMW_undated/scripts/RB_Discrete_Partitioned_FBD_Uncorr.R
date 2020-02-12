@@ -19,13 +19,16 @@ name = "uncorr"
     rates_morpho := fnDiscretizeGamma( alpha_morpho, alpha_morpho, 4 )
     #Moves on the parameters to the Gamma distribution.
     moves.append(mvScale(alpha_morpho, lambda=1, weight=2.0))
-    clock_morpho ~ dnExponential(1.0)
-
-    moves.append( mvScale(clock_morpho, lambda=0.01, weight=4.0) )
-    moves.append( mvScale(clock_morpho, lambda=0.1,  weight=4.0) )
-    moves.append( mvScale(clock_morpho, lambda=1,    weight=4.0) )
-
-
+    ucln_mean ~ dnExponential(2.0)
+    ucln_sigma ~ dnExponential(3.0)
+    ucln_var := ucln_sigma * ucln_sigma
+    ucln_mu := ln(ucln_mean) - (ucln_var * 0.5)
+    moves.append( mvScale(ucln_mean, lambda=1.0, tune=true, weight=4.0))
+    moves.append( mvScale(ucln_sigma, lambda=0.5, tune=true, weight=4.0))
+    for(i in 1:num_branches){
+       branch_rates[i] ~ dnLnorm(ucln_mu, ucln_sigma)
+       moves.append( mvScale(branch_rates[i], lambda=1, tune=true, weight=2.))
+    }
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
 n_max_states <- 3
@@ -42,7 +45,7 @@ for (i in 1:n_max_states) {
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
-                                    branchRates=clock_morpho,
+                                    branchRates=branch_rates,
                                     type="Standard")
 
         # attach the data
@@ -67,7 +70,7 @@ for (i in 1:n_max_states) {
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
-                                    branchRates=clock_morpho,
+                                    branchRates=branch_rates,
                                     type="Standard")
 
         # attach the data
@@ -91,7 +94,7 @@ idx
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
-    monitors.append(mnFile(filename="output/" + name + ".trees", printgen=10, fbd_tree))
+    monitors.append(mnFile(filename="output/" + name + ".trees", printgen=10, fbd_tree, branch_rates))
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
