@@ -3,12 +3,7 @@
 #   "Seed" numbers based on analyses of Paleobiology Database data.    #
 ########################################################################
 # clock
-timeline <- v(509, 500.5) - 500
-mean_ra <- 7.0
-stdv_ra <- 0.25
-mu_ra <- ln(mean_ra) - ((stdv_ra*stdv_ra) * 0.5)
-
-root_time ~ dnLognormal(mu_ra, stdv_ra, offset=7.3)
+timeline <- v(9, 7, .5)
 
 for(i in 1:(timeline.size()+1))
 {
@@ -23,8 +18,8 @@ for(i in 1:(timeline.size()+1))
 	moves.append(mvSlide(turnover[i], delta=0.10, weight=3));
 	moves.append(mvSlide(turnover[i], delta=1.00, weight=1));
 
-	extinction_rate := turnover*speciation_rate;
-	diversification := speciation_rate - extinction_rate;
+	extinction_rate[i] := turnover[i]*speciation_rate[i]
+	diversification[i] := speciation_rate[i] - extinction_rate[i]
 
 	psi[i] ~ dnExponential(3.892);
 	moves.append( mvScale(psi[i], lambda = 0.01) )
