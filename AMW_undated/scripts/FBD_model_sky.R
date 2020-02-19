@@ -3,58 +3,40 @@
 #   "Seed" numbers based on analyses of Paleobiology Database data.    #
 ########################################################################
 # clock
+timeline <- v(9, 7, .5)
 
-mean_ra <- 7.0
-stdv_ra <- 0.25
-mu_ra <- ln(mean_ra) - ((stdv_ra*stdv_ra) * 0.5)
+for(i in 1:(timeline.size()+1))
+{
 
-root_time ~ dnLognormal(mu_ra, stdv_ra, offset=7.3)
+	speciation_rate[i] ~ dnExponential(1.471);
+	moves.append(mvScale(speciation_rate[i], lambda=0.01, weight=5));
+	moves.append(mvScale(speciation_rate[i], lambda=0.10, weight=3));
+	moves.append(mvScale(speciation_rate[i], lambda=1.00, weight=1));
 
-# Diversification Rates based on Echinodermata
-speciation_rate ~ dnExponential(1.471);
-# NOTE: If it gets stuck in this script, then set origination & extinction to 1.0
-moves.append(mvScale(speciation_rate, lambda=0.01, weight=5));
-moves.append(mvScale(speciation_rate, lambda=0.10, weight=3));
-moves.append(mvScale(speciation_rate, lambda=1.00, weight=1));
+	turnover[i] ~ dnUnif(0.9, 1.05);
+	moves.append(mvSlide(turnover[i], delta=0.01, weight=5));
+	moves.append(mvSlide(turnover[i], delta=0.10, weight=3));
+	moves.append(mvSlide(turnover[i], delta=1.00, weight=1));
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# NOTE: FBD scripts often allow extinction to vary independently of speciation;     #
-# However, empirical studies show that these two rates usually are close to equal   #
-#               and they definitely are not independent.                            #
-# So, here we'll make turnover (ext/orig) an independent variable and use it        #
-#               to scale extinction relative to origination                         #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-turnover ~ dnUnif(0.9, 1.05);
-moves.append(mvSlide(turnover, delta=0.01, weight=5));
-moves.append(mvSlide(turnover, delta=0.10, weight=3));
-moves.append(mvSlide(turnover, delta=1.00, weight=1));
-extinction_rate := turnover*speciation_rate;
-diversification := speciation_rate - extinction_rate;
+	extinction_rate[i] := turnover[i]*speciation_rate[i]
+	diversification[i] := speciation_rate[i] - extinction_rate[i]
 
-# old extinction stuff. We should not use this, as extinction should not be independent of origination!
-#extinction_rate ~ dnExponential(1.471);
-#moves.append(mvScale(extinction_rate, lambda=0.01, weight=5));
-#moves.append(mvScale(extinction_rate, lambda=0.10, weight=3));
-#moves.append(mvScale(extinction_rate, lambda=1.00, weight=1));
-#turnover := extinction_rate/speciation_rate;
-
-# Fossil Sampling Rates based on collection occupied by Echinodermata
-psi ~ dnExponential(3.892);
-completeness := psi/(extinction_rate+psi);
-moves.append(mvScale(psi, lambda=0.01, weight=5));
-moves.append(mvScale(psi, lambda=0.10, weight=3));
-moves.append(mvScale(psi, lambda=1.00, weight=1));
+	psi[i] ~ dnExponential(3.892);
+	moves.append( mvScale(psi[i], lambda = 0.01) )
+	moves.append( mvScale(psi[i], lambda = 0.1) )
+	moves.append( mvScale(psi[i], lambda = 1) )
+}
 
 # Proportional Taxon Sampling of Youngest Time Slice
 rho <- 0.506;	# 'extant' sampling.
 
 # Establish Basal Divergence Time
-origin_time ~ dnUnif(7.3, 12.11);
+origin_time ~ dnUnif(507.3, 512.11);
 moves.append(mvSlide(origin_time, delta=0.01, weight=5));
 moves.append(mvSlide(origin_time, delta=0.10, weight=3));
 moves.append(mvSlide(origin_time, delta=1.00, weight=1));
 
-fbd_dist = dnFBDRP(origin=origin_time, lambda=speciation_rate, mu=extinction_rate, psi=psi, rho=rho, taxa=taxa);
+fbd_dist = dnFBDRP(origin=origin_time, lambda=speciation_rate, mu=extinction_rate, psi=psi, rho=rho, taxa=taxa, timeline=timeline);
 
 ############################################################################
 #                               Set up tree                                #
