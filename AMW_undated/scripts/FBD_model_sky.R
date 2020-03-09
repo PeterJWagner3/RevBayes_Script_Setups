@@ -3,7 +3,7 @@
 #   "Seed" numbers based on analyses of Paleobiology Database data.    #
 ########################################################################
 # clock
-timeline <- v(9, 7, .5)
+timeline <- v(9,4.5, .5)
 
 for(i in 1:(timeline.size()+1))
 {
@@ -13,7 +13,7 @@ for(i in 1:(timeline.size()+1))
 	moves.append(mvScale(speciation_rate[i], lambda=0.10, weight=3));
 	moves.append(mvScale(speciation_rate[i], lambda=1.00, weight=1));
 
-	turnover[i] ~ dnUnif(0.9, 1.05);
+	turnover[i] ~ dnLognormal(0.945, 1.926745);
 	moves.append(mvSlide(turnover[i], delta=0.01, weight=5));
 	moves.append(mvSlide(turnover[i], delta=0.10, weight=3));
 	moves.append(mvSlide(turnover[i], delta=1.00, weight=1));

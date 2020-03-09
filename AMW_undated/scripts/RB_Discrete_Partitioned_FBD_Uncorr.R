@@ -1,10 +1,10 @@
 ## ----global_options, eval = TRUE, include=TRUE---------------------------
-name = "uncorr"
+name = "NoRogue"
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
-    morpho_f <- readDiscreteCharacterData("data/f_names")
-    morpho_nf <- readDiscreteCharacterData("data/nf_block_names")
+    morpho_f <- readDiscreteCharacterData("data/f_namesNoRogue")
+    morpho_nf <- readDiscreteCharacterData("data/nf_block_namesNoRogue")
     moves = VectorMoves()
     monitors = VectorMonitors()
 
@@ -13,7 +13,7 @@ name = "uncorr"
     num_taxa <- morpho_f.size()
     num_branches <- 2 * num_taxa - 2
 
-    source("scripts/Basic_FBD_model.R")
+    source("scripts/Basic_FBD_modelNorogue.R")
 
     alpha_morpho ~ dnUniform( 0, 1E6 )
     rates_morpho := fnDiscretizeGamma( alpha_morpho, alpha_morpho, 4 )
