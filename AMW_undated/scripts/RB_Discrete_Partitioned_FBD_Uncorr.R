@@ -13,22 +13,12 @@ name = "NoRogue"
     num_taxa <- morpho_f.size()
     num_branches <- 2 * num_taxa - 2
 
-    source("scripts/Basic_FBD_modelNorogue.R")
+    source("scripts/Uncorr_FBD.R")
 
     alpha_morpho ~ dnUniform( 0, 1E6 )
     rates_morpho := fnDiscretizeGamma( alpha_morpho, alpha_morpho, 4 )
     #Moves on the parameters to the Gamma distribution.
     moves.append(mvScale(alpha_morpho, lambda=1, weight=2.0))
-    ucln_mean ~ dnExponential(2.0)
-    ucln_sigma ~ dnExponential(3.0)
-    ucln_var := ucln_sigma * ucln_sigma
-    ucln_mu := ln(ucln_mean) - (ucln_var * 0.5)
-    moves.append( mvScale(ucln_mean, lambda=1.0, tune=true, weight=4.0))
-    moves.append( mvScale(ucln_sigma, lambda=0.5, tune=true, weight=4.0))
-    for(i in 1:num_branches){
-       branch_rates[i] ~ dnLnorm(ucln_mu, ucln_sigma)
-       moves.append( mvScale(branch_rates[i], lambda=1, tune=true, weight=2.))
-    }
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
 n_max_states <- 3
@@ -45,7 +35,7 @@ for (i in 1:n_max_states) {
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
-                                    branchRates=branch_rates,
+                                    branchRates=ucln_geomean,
                                     type="Standard")
 
         # attach the data
@@ -70,7 +60,7 @@ for (i in 1:n_max_states) {
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
-                                    branchRates=branch_rates,
+                                    branchRates=ucln_geomean,
                                     type="Standard")
 
         # attach the data
@@ -94,7 +84,7 @@ idx
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
-    monitors.append(mnFile(filename="output/" + name + ".trees", printgen=10, fbd_tree, branch_rates))
+    monitors.append(mnFile(filename="output/" + name + ".trees", printgen=10, fbd_tree))
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
@@ -106,8 +96,8 @@ idx
 #    mymcmc.run(generations=100000, tuningInterval=200)
 
 ss_analysis = powerPosterior(mymodel, monitors, moves, "output/" + name + "/ss", cats=20, alpha=0.3)
-ss_analysis.burnin(generations=1000,tuningInterval=200)
-ss_analysis.run(generations=100000)
+ss_analysis.burnin(generations=10000,tuningInterval=200)
+ss_analysis.run(generations=500000)
 
 ss = steppingStoneSampler("output/" + name + "/ss", "power", "likelihood", TAB)
 ss.marginal()

@@ -28,15 +28,15 @@ for(i in 1:(timeline.size()+1))
 }
 
 # Proportional Taxon Sampling of Youngest Time Slice
-rho <- 0.506;	# 'extant' sampling.
+rho <- 0.0;	# 'extant' sampling.
 
 # Establish Basal Divergence Time
-origin_time ~ dnUnif(507.3, 512.11);
+origin_time ~ dnUnif(7.3, 12.11);
 moves.append(mvSlide(origin_time, delta=0.01, weight=5));
 moves.append(mvSlide(origin_time, delta=0.10, weight=3));
 moves.append(mvSlide(origin_time, delta=1.00, weight=1));
 
-fbd_dist = dnFBDRP(origin=origin_time, lambda=speciation_rate, mu=extinction_rate, psi=psi, rho=rho, taxa=taxa, timeline=timeline);
+fbd_dist = dnBirthDeathSamplingTreatment(originAge=origin_time, lambda=speciation_rate, mu=extinction_rate, phi=psi, r=rho, timeline=timeline, taxa=taxa)
 
 ############################################################################
 #                               Set up tree                                #

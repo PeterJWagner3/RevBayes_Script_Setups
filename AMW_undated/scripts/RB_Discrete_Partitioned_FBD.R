@@ -1,5 +1,5 @@
 ## ----global_options, eval = TRUE, include=TRUE---------------------------
-name = "f_nf_FBD"
+name = "f_nf_autocorr"
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
@@ -13,21 +13,13 @@ name = "f_nf_FBD"
     num_taxa <- morpho_f.size()
     num_branches <- 2 * num_taxa - 2
 
-    source("scripts/Basic_FBD_model.R")
+    source("scripts/RB_Discrete_Partitioned_FBD_Autocorr.R")
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
     alpha_morpho ~ dnUniform( 0, 1E6 )
     rates_morpho := fnDiscretizeGamma( alpha_morpho, alpha_morpho, 4 )
     #Moves on the parameters to the Gamma distribution.
     moves.append(mvScale(alpha_morpho, lambda=1, weight=2.0))
-
-
-    clock_morpho ~ dnExponential(1.0)
-
-    moves.append( mvScale(clock_morpho, lambda=0.01, weight=4.0) )
-    moves.append( mvScale(clock_morpho, lambda=0.1,  weight=4.0) )
-    moves.append( mvScale(clock_morpho, lambda=1,    weight=4.0) )
-
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
 n_max_states <- 3
@@ -44,7 +36,7 @@ for (i in 1:n_max_states) {
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
-                                    branchRates=clock_morpho,
+                                    branchRates=init_branch_rate,
                                     type="Standard")
 
         # attach the data
@@ -69,7 +61,7 @@ for (i in 1:n_max_states) {
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
-                                    branchRates=clock_morpho,
+                                    branchRates=init_branch_rate,
                                     type="Standard")
 
         # attach the data
