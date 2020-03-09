@@ -40,7 +40,7 @@ for (i in 1:n_max_states) {
         # make i-by-i rate matrix
         q[idx] <- fnJC(i)
 # create model of evolution for the character block
-        m_morph[idx] ~ dnPhyloCTMC( tree=tau,
+        m_morph[idx] ~ dnPhyloCTMC( tree=fbd_tree,
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
@@ -65,7 +65,7 @@ for (i in 1:n_max_states) {
         # make i-by-i rate matrix
         q[idx] <- fnJC(i)
 # create model of evolution for the character block
-        m_morph[idx] ~ dnPhyloCTMC( tree=tau,
+        m_morph[idx] ~ dnPhyloCTMC( tree=fbd_tree,
                                     Q=q[idx],
                                     nSites=nc,
                                     siteRates=rates_morpho,
@@ -85,7 +85,7 @@ idx
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
-    mymodel = model(tau)
+    mymodel = model(fbd_tree)
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
@@ -93,7 +93,7 @@ idx
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
-    monitors.append(mnFile(filename="output/" + name + ".trees", printgen=10, tau))
+    monitors.append(mnFile(filename="output/" + name + ".trees", printgen=10, fbd_tree))
 
 
 ## ---- include=TRUE, eval = TRUE------------------------------------------
