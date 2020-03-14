@@ -95,21 +95,17 @@ The final important variable assignment here is pruned_tau; this separates out f
 
 
 #Results
+Winning model indicated with *
 
 | Model | Score | K |
 |-------|-------|---|
-| Mk + Gamma | -503.524 | NA |
-| Mk + partitioned feeding + gamma | -467.0526 | 1.078 |
-| Time homogeneous FBD, unpartitioned, strict | -748.5214 |
-<<<<<<< HEAD
-| Time homogeneous FBD, partitioned, strict | -555.3404 |
+| Mk + Gamma | -503.524 | |
+| Mk + partitioned feeding + gamma | -467.0526 | -1.078 * |
+| Time homogeneous FBD, unpartitioned, strict | -748.5214 | |
+| Time homogeneous FBD, partitioned, strict | -555.3404 | -1.35 * |
 | Time homogeneous, relaxed clock uncorrelated | -550.3108 |  
 | Time homogeneous, relaxed clock uncorrelated No Rogue | -472.85 |  
-| Time homogeneous FBD, partitioned, strict | -582.874 |
 | Time homogeneous, relaxed clock PW | -555.0821 |  
-| Time homogeneous, relaxed clock, autocorrelated PW | |
-| Early burst, relaxed clock PW | |
-| Time homogeneous, relaxed clock uncorrelated | -550.3108 |  
-| Time homogeneous, relaxed clock uncorrelated No Rogue | -553.8369 |  
 | Time homogeneous, relaxed clock, autocorrelated PW | -680.7967 |
 | Early burst, relaxed clock PW |-671.7186 |
+| Skyline: D/G, W/D, W | -490.9737 | 
