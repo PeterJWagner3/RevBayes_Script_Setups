@@ -108,4 +108,5 @@ Winning model indicated with *
 | Time homogeneous, relaxed clock PW | -555.0821 |  
 | Time homogeneous, relaxed clock, autocorrelated PW | -680.7967 |
 | Early burst, relaxed clock PW |-671.7186 |
+| Skyline, W/D/G | -490.9737 | 
 | Skyline: D/G, W/D, W | -490.9737 | 
