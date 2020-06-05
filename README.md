@@ -110,3 +110,4 @@ Winning model indicated with *
 | Early burst, relaxed clock PW |-671.7186 |
 | Skyline, W/D/G | -490.9737 | 
 | Skyline: D/G, W/D, W | -490.9737 | 
+| Skyline: 2 intervals | -863.8532 |
