@@ -99,6 +99,9 @@ Winning model indicated with *
 
 | Model | Score | K |
 |-------|-------|---|
+| Mk | -677.4213 | |
+| Mk + Gamma (PJW Redone) | -672.4922 | |
+| Mk + Lognormal | -669.8288 | |
 | Mk + Gamma | -503.524 | |
 | Mk + partitioned feeding + gamma | -467.0526 | -1.078 * |
 | Time homogeneous FBD, unpartitioned, strict | -748.5214 | |
@@ -111,3 +114,4 @@ Winning model indicated with *
 | Skyline, W/D/G | -490.9737 | 
 | Skyline: D/G, W/D, W | -490.9737 | 
 | Skyline: 2 intervals | -863.8532 |
+| 7 Interval Skyline + Gamma + Strict Clock | -761.7888 | 
