@@ -99,8 +99,8 @@ Winning model indicated with *
 
 | Model | Score | K |
 |-------|-------|---|
-| Mk | -677.4213 | |
-| Mk + Gamma (PJW Redone) | -672.4922 | |
+| Mk | -522.8261 | |
+| Mk + Gamma (PJW Redone) | -475.0234 | |
 | Mk + Lognormal | -669.8288 | |
 | Mk + Gamma | -503.524 | |
 | Mk + partitioned feeding + gamma | -467.0526 | -1.078 * |
