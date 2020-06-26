@@ -101,7 +101,7 @@ Winning model indicated with *
 |-------|-------|---|
 | Mk | -522.8261 | |
 | Mk + Gamma (PJW Redone) | -475.0234 | |
-| Mk + Lognormal | -669.8288 | |
+| Mk + Lognormal | -476.6942 | |
 | Mk + Gamma | -503.524 | |
 | Mk + partitioned feeding + gamma | -467.0526 | -1.078 * |
 | Time homogeneous FBD, unpartitioned, strict | -748.5214 | |
