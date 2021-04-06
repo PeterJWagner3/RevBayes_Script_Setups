@@ -1,0 +1,476 @@
+#NEXUS
+[written Thu Dec 03 00:00:48 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=51;
+	TAXLABELS
+		Sowerbyites_hami Strophomena_planumbona 'Strophomena (Keilmena) occidens' 'Strophomena (Tetraphalerella) cooperi' Actinomena_orta Holtedahlina_sulcata Longvillia_grandis Leigerina_hiiuensis Pseudostrophomena_reclinis Furcitella_plicata Bekkerina_dorsata Bellimurina_charlottae 'Bellimurina (Cyphomenoidea) wisgoriensis' Biparetis_paucirigosus Dactylogonia_geniculata Geniculina_pseudoalternata Katastrophomena_antiquata Chunanomena_triporcata Luhaia_vardi Molongcola_variabilis Murinella_partita Pentlandina_loveni Oepikina_septata Quondongia_alitis Crassoseptaria_virve Haljalanites_assatkini Colaptomena_leptostrophoidea Kjerulfina_trigonalis Rafinesquina_alternata Megamyonia_nitens Rhipidomena_tennesseensis Kjaerina_poljiensis Leptaena_richmondensis 'Leptaena (Septomena) juvenilis' Leptaena_rugosa Hollardina_plana Kiaeromena_estonensis 'Kiaeromena (Bekkeromena) vormsina' Leptaenopyxis_kerfornei Leptagonia_analoga Notoleptaena_linguifera Glyptomena_sculpturata Paromalomena_polonica Platymena_plana Leptaenoidea_rugata Qianomena_unicosta Resupinsculpta_cuprafodina Leptaenisca_concava Mesodouvillina_subinterstrialis Brachyprion_semiglobosa Brachyprion_philomela 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  'Matrix in file "Strophomenoid_Matrix.nex"';
+	DIMENSIONS  NCHAR=65;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3";
+	CHARSTATELABELS 
+		1 Shape_of_the_lateral_process_lobes /  triangular curved_ridge blade_like subrectangular,
+		2 Convergence_of_the_distal_ends_of_the_lateral_lobes /  remain_divergent Lobes_converge_towards_each_other,
+		3 Direction_the_lateral_Lobes_of_the_cardinal_process_point /  Ventral Posterior Anterior,
+		4 Interaction_Between_Cardinalia_and_the_Socket_Ridge /  Separated_by_a_gently_incised_furrow Fused_together_where_the_two_structures_are_difficult_to_distinguish,
+		5 Bilobed_tooth_like_structure_on_the_edge_of_the_cardianl_process_lobes /  absent present,
+		6 Dorsal_Subperipheral_Rim /  absent present,
+		7 'Muscle Bounding Pustles/Tubercles' /  absent present,
+		8 Texture_of_the_dorsal_muscle_fiedl /  Muscle_scars_mostly_smooth_shell_or_secondary_shell_material 'Muscle scars regularly interrupted by small diaphragms/microseptae',
+		9 Transmuscle_Ridges /  absent present,
+		10 Angle_of_departure_of_the_transmuscle_ridge_from_the_cardinalia_region /  'narrow  (roughly 25-30 degree)' 'wide (roughly 35-40 degrees)' 'nearly horizontal (70-80 degrees)',
+		11 Relief_of_Transmuscle_Ridge /  weakly_defined strongly_defined nearly_effaced,
+		12 Dorsal_anterior_Muscle_Bounding_Ridges /  absent present,
+		13 Extent_of_Dorsal_anterior_Muscle_Bounding_Ridge /  Effaced_distally_so_bounding_ridge_does_not_completely_enclose_the_scar Prominent_throughout_and_fused_onto_another_median_attachment_structure,
+		14 'Dorsal posterior muscle bounding ridges originating from the distal end of the socket ridge, curving inwards towards the center of the shell' /  absent present,
+		15 Relief_of_dorsal_posterior_muscle_bounding_ridges /  weakly_raised_above_surrounding_shell highly_vaulated,
+		16 Continuity_of_the_posterior_muscle_bounding_ridges /  connect_to_the_median_ridge_or_transmuslce_ridge_forming_enclosed_pits do_not_completely_connect_and_instead_only_form_a_partial_boundary,
+		17 Mediolateral_Dorsal_Muscle_Field_Ridge /  absent_or_effaced present,
+		18 Relief_of_the_Mediolateral_Dorsal_Muscle_Field_Ridge /  gently_raised_ridges highly_vaulted_structures_with_distal_flanges effaced_or_weakly_vaulted,
+		19 Fusion_of_Muscle_Field_Bounding_Ridge_to_transmuscle_ridge /  'MFBR originates from crurae and extends out as a semi-independent ridge' 'Base of MFBR obscurred, fused to the transmuscle ridge',
+		20 Divergence_of_the_Mediolateral_Dorsal_Muscle_Field_Ridges /  'Straight, ridges diverge from each other as straight lines' 'Kinked, ridges kinked medially and continue on roughly paralell to the saggital line',
+		21 Size_of_socket_ridge /  'short (extends to roughly 1/4 the distance to the lateral edge of the shell)' reduced_to_a_small_nub 'long  (extends to roughly 1/2 the distance to the lateral edge of the shell)',
+		22 Medial_Curvature_of_the_socket_ridge /  straight curved,
+		23 Distal_Edges_of_the_Socket_Ridge /  Ridge_is_straight_and_lowers_in_relief Ridge_curves_strongly_towards_the_hinge_forming_a_small_bounding_ridge_around_the_tooth_socket,
+		24 Brachial_ridge /  absent present,
+		25 Crural_Median_Ridge /  'Crurae doesn"t extend anteriorly' Crurae_extends_anteriorly_forming_a_small_ridge,
+		26 Relief_of_the_Crural_Median_Ridge /  Faintly_raised_forming_an_effaced_division_between_the_muscle_fields Highly_vaulted_forming_a_prominent_structure,
+		27 Bifurcation_of_the_median_ridge_at_the_center_of_the_valve_into_two_septae /  absent present,
+		28 Septae_from_bifurcated_median_ridge /  remain_distinct_septae 'Fuse into another septae (either transmuscle ridge or MBR)',
+		29 Extent_of_the_median_ridge /  reduced_to_a_small_nub_restricted_to_the_posterior 'extends prominantly to approximately 1/4 the length of the valve',
+		30 Dorsal_Median_Septum /  absent_or_strongly_effaced present,
+		31 Fusion_of_the_dorsal_median_septum_and_the_crural_median_ridge /  expressed_as_separate_structures partially_fused_to_give_appearance_of_a_single_ridge_gently_effaced_medially,
+		32 Ventral_muscle_field_scar_shape /  'suboval (longer than wide, forming rounded often subrectangular shapes)' 'wedge shapes (subtriangular fan expands outwards from the anterior)',
+		33 Ventral_muslce_scar_extent /  'restricted to the posterior-posteriomedial section of the valve' 'extend across the valve, approaching the edges of the valve' extend_to_nearly_the_middle_of_the_valve,
+		34 Prominent_radiating_ridges_through_the_ventral_muscle_field /  absent present,
+		35 Ventral_separation_of_the_adductor_and_diductor_muscles /  muscle_scars_poorly_distinguished_or_fused_together_in_the_muscle_field separated_by_a_strong_ridge,
+		36 Ventral_Muscel_Field_Bounding_Ridges /  absent present,
+		37 Relief_of_the_ventral_muscle_bounding_ridge /  thin_ridge 'a thick, elevated structure ',
+		38 Extent_of_the_Ventral_Muscle_Bounding_Ridge /  'Restricted to the postero-lateral of the muscle attachment sites' Completely_surrounds_the_ventral_muscle_field,
+		39 Separation_between_left_and_right_ventral_muscle_fields /  unified 'bilobed/divergent',
+		40 Extent_of_ventral_muscle_field_divergence /  muscle_scars_diverge_at_the_posterior_most_position muscle_scars_remain_partially_united_until_diverging_at_the_distal_tip muscle_scars_diverge_at_the_median_sagittal_position_of_the_muscle_field,
+		41 Ventral_muscle_field_dividing_ridge /  weakly_defined_or_effaced strongly_defined,
+		42 Ventral_Subperipheral_Rim /  absent present,
+		43 Structure_of_ventral_valve_teeth /  'rounded to subtriangular tab-like protrusions' elongate_and_partially_or_completely_fused_with_the_hinge_line,
+		44 Dental_Plates /  Present Absent,
+		45 Denticles_on_hinge_line /  absent present,
+		46 Denticles_on_teeth /  absent present,
+		47 Structure_of_denticles_on_teeth /  irregular regular,
+		48 Crenulations_on_posterior_surface_of_teeth /  'absent, posterior surface of tooth is smooth' 'present, posterior surface of tooth undulates forming a craggy appearance',
+		49 Coverage_of_the_nothorydial_plates /  'Plates connect closely, only forming a small separation at middle position' Plates_dramatically_separated_from_each_other_forming_a_large_gap,
+		50 Shape_of_the_nothorydium /  'narrow, expressed as a ridge structure' 'wide, usually expressed as a prominent triangular sheild shaped protrusion',
+		51 Dorsal_Chilidial_plates /  Separated_out_into_chilidial_plates Fused_together_in_a_chilidium,
+		52 Composition_of_nothorydial_plates /  Ventral_plates_dramatically_larger_than_dorsal dorsal_dramatically_larger_than_ventral Plates_roughly_equal_in_size,
+		53 Vavle_profile /  biconvex 'concavo-convex to plano-convex' 'convexo-concave to convexo-plane' resupinate,
+		54 Geniculation_of_the_valves /  absent present,
+		55 Valve_expressing_geniculation /  dorsal ventral both,
+		56 Rugation_of_the_external_shell /  absent present,
+		57 Extent_of_rugation_of_the_external_shell /  the_entire_valve restricted_to_the_posterior_portion_of_the_valve,
+		58 Consistency_of_rugation_of_the_external_shell /  'weak (rugae occur variably throughout the extent of the ornamentation)' 'strong (rugae occur consistently across the extent of the ornamentation)',
+		59 Sulcus_on_external_shell /  absent Ventral Dorsal,
+		60 Fold_on_external_shell /  absent Dorsal Ventral,
+		61 Inflated_and_widened_single_median_costae_on_external_shell /  absent present,
+		62 'Extention of the shell hinge line outwards, forming dogeared protrusions' /  absent present,
+		63 Radial_Ornamentation /  'Costae and costellae roughly similar in size (equal)' 'Costae large and bound sectors of fine costellae (unequal)',
+		64 'Shell outline (length and width)' /  width_1.2X_length length_roughly_equal_to_width length_roughly_1.2X_width,
+		65 'Shell outline (triangular vs rhomboidal)' /  'Triangular (angle of shell edge with sagitaal 20 degrees or greater)' 'Subrectangular (angle of shell edge with sagitaal up to 10 degrees)' ; 
+	MATRIX
+	Sowerbyites_hami                          011100101010?0??0???0000110?01111?10??12000100?0111210?0??0001101
+	Strophomena_planumbona                    300000001100?0--12010000110?11012101110-01000101011030-0--0000001
+	'Strophomena (Keilmena) occidens'         300010000??0?0??0???0000100?10?12101110?0100011??11?30?0??0000101
+	'Strophomena (Tetraphalerella) cooperi'   300010000??0?0??0???0100100?10?12111110?10000???011030?0??0000001
+	Actinomena_orta                           30000(0 1)001100?101100100001?0?10-00001111101000100011230-1100000100
+	Holtedahlina_sulcata                      300010001100?0??0???0010111001012001000?0?000???010000?0??1100001
+	Longvillia_grandis                        3000100?0??0?0??0???00101????0?02??1000?11000???011?30?0??0000101
+	Leigerina_hiiuensis                       300010000??0?0??0???0010100?00?100?1010?00000???011030?0??0000101
+	Pseudostrophomena_reclinis                301000000??0?0??0???01001?0?00?100?1000??0000???011130?0??0001100
+	Furcitella_plicata                        3?1?01??1110?0--1?0100001?101??100011?0-0?00???0??1????0--??00001
+	Bekkerina_dorsata                         301001101110?111110100001?0?11111100-?0-1000011?01111100--0000101
+	Bellimurina_charlottae                    3010?101100100??0???00001110110?????????????????01101101010000101
+	'Bellimurina (Cyphomenoidea) wisgoriensis'301001001100?10111?100001?1?110100011?0?1000011101103101010001?01
+	Biparetis_paucirigosus                    3(0 1)1101001110?11011110000100?10?1201100110000010100101101000000101
+	Dactylogonia_geniculata                   3?0??11?1110?0??11010000110?10?12101000?000000?001101100??000?001
+	Geniculina_pseudoalternata                30000101101101010???2100111011010001000?0000011101101100??000?101
+	Katastrophomena_antiquata                 301010001100?0??110100001?1111010001110?100001010110311100000?000
+	Chunanomena_triporcata                    3010??1?100100??0???0010100?01110111000?000000?0??1?00?0??0000101
+	Luhaia_vardi                              ?0?0?0??100100??0???0000100?111120?11112100000?001102111000000100
+	Molongcola_variabilis                     300000101110?11011110010100?01110001000?000000?0011200?0??0000001
+	Murinella_partita                         3??0?1001100?0??10012000100?11110?01010?000000?0010010?0??0000001
+	Pentlandina_loveni                        3000111010(0 1)111010???0000111111010001110?1?000???01101101011101101
+	Oepikina_septata                          300001001110?0--110100001?0?11111000-?0-0000010100101100--0000100
+	Quondongia_alitis                         01?000001110?0??111100?0100?011100010011000000?00?1?00?0??0000001
+	Crassoseptaria_virve                      011000010??0?0??0???0000111010?10?01110?100000?000113110??0101100
+	Haljalanites_assatkini                    30?0?1111110?11011012000110?11112100??0?100000?0??1?10?0??0000111
+	Colaptomena_leptostrophoidea              20200?0?1000?1000-?-00001?0?10-12?00-?0-0??00???011110-0--000?111
+	Kjerulfina_trigonalis                     20200?000--0?10?0-?-00?01?0?10-100010(0 1)0-0?0000-?????1121000001100
+	Rafinesquina_alternata                    202001001010?1000-??00001?0?10-12000-?0-000000-?011110-0--0000101
+	Megamyonia_nitens                         30001110110111100???0?001?0?11011111000?011100?0011111?1100010001
+	Rhipidomena_tennesseensis                 300000011110?0??11000000100?11?12110??0?1100011?010030?0??0000111
+	Kjaerina_poljiensis                       20200?111000?0--0-??00001?0?10-12001000-0?0000-???1?1101000011011
+	Leptaena_richmondensis                    2020010?0?-0?1000-??0000100?110010011111100000-0011?1101010001001
+	'Leptaena (Septomena) juvenilis'          301000101110?0??10010000100?11112?11010?100000?0?11?1101010001101
+	Leptaena_rugosa                           2020001?1110?1000???0000100?111?????????????0???01111101010001001
+	Hollardina_plana                          301?0??00??111100???0000110?11112?01110?100?????111111?110000?001
+	Kiaeromena_estonensis                     ?0?(0 1)??100?-0?0--0-??00001?0?10-12001?00-00000?????1?1101010001100
+	'Kiaeromena (Bekkeromena) vormsina'       30?01?100??0?1010??????0100?10?0?00110??0?000?????1?110101000?1??
+	Leptaenopyxis_kerfornei                   2020?0??100111100????0?0110?11112?01010?10000???011211?1012001000
+	Leptagonia_analoga                        20200?100??111100???0000111001112001110?100000?0??1?1101010001101
+	Notoleptaena_linguifera                   202000?01110?1?00???0000110?11112001110?11(0 1)000?0??1?2101012?00001
+	Glyptomena_sculpturata                    3111000?1100?0--0-??01000?-?-1010000-?0-00000???0?1?10-0--0000101
+	Paromalomena_polonica                     31?100???????0??0???01000????0?10?00????000000????1?10????120?0??
+	Platymena_plana                           3111010?1100?1000-??0100100?00-1000110110000011?011?10-0--0000111
+	Leptaenoidea_rugata                       301001100?-0?1100-??00?10?-?-1010001001110000110011010-1010000001
+	Qianomena_unicosta                        011100000??0?0??0???01000????0?12??1100?10010???????10?0??001??01
+	Resupinsculpta_cuprafodina                311100?00??0?0??0???21000????0?10000??0?000000?1011230?1000001101
+	Leptaenisca_concava                       2020011?0?-0?1000-??00?10?-?-10000011?1110000110011?10-0--0000101
+	Mesodouvillina_subinterstrialis           3010110?0?-0?1000-??00?01?0?1100200100111011111?001010-0--0000101
+	Brachyprion_semiglobosa                   301010101000?1000???2100100?01102010??1100111110111210?0??0000101
+	Brachyprion_philomela                     301000101000?0??0???0100100?11112000????00011110??1?10?0??000?10?
+
+;
+
+END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 49, Outgroup :  50- 51;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 65;
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 65;
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1606975248647;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 8747155381974659045;
+			tell It;
+				setSelected  50 -  51;
+				attachments ;
+			endTell;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 3514672490367839435;
+			mqVersion 361;
+			checksumv 0 3 1990393099 null  getNumChars 65 numChars 65 getNumTaxa 51 numTaxa 51   short true   bits 15   states 15   sumSquaresStatesOnly 9288.0 sumSquares 9288.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1916 940;
+			setLocation 0 23;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #8747155381974659045 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #8747155381974659045;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1816 868;
+					setLocation 0 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #8747155381974659045  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.DefaultTrees.DefaultTrees;
+				setAssignedID 5761.1606975095529.9001228893102875781;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1816 868;
+					setLocation 0 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+						setTool mesquite.trees.SearchTreeToolAssistant.SearchTreeToolExtra.randomlyRotate;
+					endTell;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setTree '((50,51),(1,(((44,(42,(46,(43,47)))),((5,(2,31)),((3,4),(8,(6,(7,(49,(45,48)))))))),((18,(9,(21,(10,((20,24),((14,23),(15,(30,(11,26))))))))),((37,38),(34,((33,35),(41,((32,(28,(27,29))),(36,(19,(39,(40,(22,((12,16),(13,(17,25)))))))))))))))))<> <> <  setBetweenBits = selected >;';
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.trees.SearchTreeToolAssistant.SearchTreeToolAssistant;
+				tell It;
+					getEmployee #mesquite.trees.TreeValueUsingMatrix.TreeValueUsingMatrix;
+					tell It;
+						getEmployee #mesquite.parsimony.TreelengthForMatrix.TreelengthForMatrix;
+						tell It;
+							getEmployee #mesquite.parsimony.ParsCharSteps.ParsCharSteps;
+							tell It;
+								setModelSource  #mesquite.parsimony.CurrentParsModels.CurrentParsModels;
+							endTell;
+						endTell;
+						getEmployee #mesquite.charMatrices.CharMatrixCoordIndep.CharMatrixCoordIndep;
+						tell It;
+							setCharacterSource #mesquite.charMatrices.StoredMatrices.StoredMatrices;
+							tell It;
+								setDataSet #3514672490367839435;
+							endTell;
+						endTell;
+					endTell;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #3514672490367839435 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 254;
+					endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1816 868;
+					setLocation 0 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					endTell;
+					setActive;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleReduceCellBorders off;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

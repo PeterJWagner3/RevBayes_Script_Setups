@@ -1,1 +1,447 @@
-#NEXUS [MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]BEGIN MacCladeStart;	Extended;END;BEGIN DATA;	DIMENSIONS  NTAX=14 NCHAR=25;[!Mukherjee, D.  2007.  A taxonomic and phylogenetic study of Kutchithyris Ð a Jurassic terebratulide from Kutch, India.  Journal of Asian Earth Sciences 30:213-237.Strat data from Figure 17.]	FORMAT SYMBOLS= " 0 1 2 3 4 5" MISSING=? GAP=- ;	CHARSTATELABELS  		24  FA / M._Bathonian U._Bathonian E._Callovian M._Callovian U._Callovian Oxfordian,  25  LA / M._Bathonian U._Bathonian E._Callovian M._Callovian U._Callovian Oxfordian		;MATRIX[                                     10        20    ][                                     .         .     ]Kutchithyris_acutiplicata    1100011000002110200000101Kutchithyris_katametopa      1100111001002110200101111Kutchithyris_planiconvexa    1100022001001110100000211Kutchithyris_propinqua       1100001101101110200000213Kutchithyris_breviplicata    1121111001101210301001233Kutchithyris_mitra           1120101101101221201000233Kutchithyris_hypsogonia      1120111101101221202001134Kutchithyris_euryptycha      1101100111111130111010125Kutchithyris_ingluviosa      1121101112112230301001135Kutchithyris_dhosaensis      1121111112112230302001245Kutchithyris_pyroidea        1110111111112230311001255Kutchithyris_jooraensis      1130101111112230310001255Lobothyris                   01000000000000000000000??Holcothyris                  10210010000000000000000??;END;BEGIN ASSUMPTIONS;	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;	TYPESET * UNTITLED  = unord: 1-23 25, strat: 24;	WTSET * UNTITLED  = 1: 1-23, 0: 24-25;END;BEGIN TREES; 	TRANSLATE		1	Kutchithyris_acutiplicata,		2	Kutchithyris_katametopa,		3	Kutchithyris_planiconvexa,		4	Kutchithyris_propinqua,		5	Kutchithyris_breviplicata,		6	Kutchithyris_mitra,		7	Kutchithyris_hypsogonia,		8	Kutchithyris_euryptycha,		9	Kutchithyris_ingluviosa,		10	Kutchithyris_dhosaensis,		11	Kutchithyris_pyroidea,		12	Kutchithyris_jooraensis,		13	Lobothyris,		14	Holcothyris	;	TREE  * UNTITLED =  [&R] (13,(14,(1,(2,(3,(4,((6,7),(5,((8,9),(10,(11,12)))))))))));END;BEGIN MacClade;	Version 4.0  87;	LastModified -845463628;	FileSettings editor  '1' '1' '24' '1';	Singles 010;	Editor 00011001111111100100010010 '0' '72' Gadget '12' '190' '1' all;	EditorPosition  '46' '6' '393' '959';	TreeWindowPosition  '46' '6' '989' '1630';	ListWindow Characters open Gadget '12' '50' '25' '457' '374' 000;	ListWindow Taxa open Gadget '12' '50' '10' '304' '334' 100000000;	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow TaxSets open Gadget '12' '50' '10' '134' '185' ;	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;	ChartWindowPosition  '52' '30' '818' '1380';	StateNamesSymbols open Gadget '12' '17' '694' '156' '322' '264';	WindowOrder  Data List Characters States List Taxa List TaxSets;	OtherSymbols &/ 00 ?-;	Correlation  '0' '0' '1000' '0' '0' 10011010;	Salmo 00000001;	EditorFile  '2';	ExportHTML _ MOSS  '100' 110000;	PrettyPrint 10;	EditorToolsPosition  '746' '13' '115' '165';	TreeToolsPosition  '614' '6' '126' '138';	TreeWindowProgram 10;	TreeWindow 0000;	Continuous  '0' '3' 1;	Calculations 1000101;	SummaryMode  '0' '0' 0;	Charts  Gadget '12' (normal) 0010;	NexusOptions  '0' '0' '50' 001011001;	TipLabel  '1';	TreeFont  Gadget '12' (normal);	TreeShape  1.0 1.0 0100;	TraceLabels 0101;	ChartColors  '0' '0' '65535' '9' '0' 1;	ChartBiggestSpot 1;	ChartPercent 10;	ChartBarWidth  '10' 1;	ChartVerticalAxis 10101;	ChartMinMax  '0';	TraceAllChangesDisplay  '1' 1;	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;	ContinuousBranchLabels 0;	AllStatesBranchLabels 1;	IndexNotation  '3' 0;	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;	MatchChar 00 .;	EntryInterpretation 01;	ColorOptions 10;	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;	BothTools  '1';END;
+#NEXUS
+[written Wed Dec 02 23:07:18 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=14;
+	TAXLABELS
+		Kutchithyris_acutiplicata Kutchithyris_katametopa Kutchithyris_planiconvexa Kutchithyris_propinqua Kutchithyris_breviplicata Kutchithyris_mitra Kutchithyris_hypsogonia Kutchithyris_euryptycha Kutchithyris_ingluviosa Kutchithyris_dhosaensis Kutchithyris_pyroidea Kutchithyris_jooraensis Lobothyris Holcothyris 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=25;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5";
+	CHARSTATELABELS 
+24 FA /  M._Bathonian U._Bathonian E._Callovian M._Callovian U._Callovian Oxfordian,
+		25 LA /  M._Bathonian U._Bathonian E._Callovian M._Callovian U._Callovian Oxfordian ; 
+	MATRIX
+	Kutchithyris_acutiplicata  1100011000002110200000101
+	Kutchithyris_katametopa    1100111001002110200101111
+	Kutchithyris_planiconvexa  1100022001001110100000211
+	Kutchithyris_propinqua     1100001101101110200000213
+	Kutchithyris_breviplicata  1121111001101210301001233
+	Kutchithyris_mitra         1120101101101221201000233
+	Kutchithyris_hypsogonia    1120111101101221202001134
+	Kutchithyris_euryptycha    1101100111111130111010125
+	Kutchithyris_ingluviosa    1121101112112230301001135
+	Kutchithyris_dhosaensis    1121111112112230302001245
+	Kutchithyris_pyroidea      1110111111112230311001255
+	Kutchithyris_jooraensis    1130101111112230310001255
+	Lobothyris                 01000000000000000000000??
+	Holcothyris                10210010000000000000000??
+
+;
+
+END;
+BEGIN MacCladeStart;
+	Extended;
+
+END;
+BEGIN ASSUMPTIONS;
+	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
+	TYPESET * UNTITLED   =  unord:  1- 25;
+
+	WTSET * UNTITLED  =  1: 1 -  23, 0: 24 -  25 ;
+
+END;
+
+BEGIN TREES;
+	Title 'Trees from "Kutchithyris_Mukherjee_2007.nex"';
+	ID 017626feb6d821;
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		1 Kutchithyris_acutiplicata,
+[1] 		2 Kutchithyris_katametopa,
+[2] 		3 Kutchithyris_planiconvexa,
+[3] 		4 Kutchithyris_propinqua,
+[4] 		5 Kutchithyris_breviplicata,
+[5] 		6 Kutchithyris_mitra,
+[6] 		7 Kutchithyris_hypsogonia,
+[7] 		8 Kutchithyris_euryptycha,
+[8] 		9 Kutchithyris_ingluviosa,
+[9] 		10 Kutchithyris_dhosaensis,
+[10] 		11 Kutchithyris_pyroidea,
+[11] 		12 Kutchithyris_jooraensis,
+[12] 		13 Lobothyris,
+[13] 		14 Holcothyris;
+	TREE UNTITLED = (13,(14,(1,(2,(3,(4,((6,7),(5,((8,9),(10,(11,12)))))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0 87;
+	LastModified -845463628;
+	FileSettings editor '1' '1' '24' '1';
+	Singles 010;
+	Editor 00011001111111100100010010 '0' '72' Gadget '12' '190' '1' all;
+	EditorPosition '46' '6' '393' '959';
+	TreeWindowPosition '46' '6' '989' '1630';
+	ListWindow Characters open Gadget '12' '50' '25' '457' '374' 000;
+	ListWindow Taxa open Gadget '12' '50' '10' '304' '334' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387';
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow TaxSets open Gadget '12' '50' '10' '134' '185';
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ChartWindowPosition '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '17' '694' '156' '322' '264';
+	WindowOrder Data List Characters States List Taxa List TaxSets;
+	OtherSymbols & / 00 ? -;
+	Correlation '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile '2';
+	ExportHTML _ MOSS '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition '746' '13' '115' '165';
+	TreeToolsPosition '614' '6' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode '0' '0' 0;
+	Charts Gadget '12' ( normal ) 0010;
+	NexusOptions '0' '0' '50' 001011001;
+	TipLabel '1';
+	TreeFont Gadget '12' ( normal );
+	TreeShape 1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax '0';
+	TraceAllChangesDisplay '1' 1;
+	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation '3' 0;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools '1';
+
+END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 12, Outgroup :  13- 14;
+
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 25;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1606972038774;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 4392263181984734274;
+			tell It;
+				setSelected  1 -  12;
+				attachments ;
+			endTell;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 5404381895035397337;
+			mqVersion 361;
+			checksumv 0 3 3976980302 null  getNumChars 25 numChars 25 getNumTaxa 14 numTaxa 14   short true   bits 63   states 63   sumSquaresStatesOnly 10177.0 sumSquares 10177.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1148 497;
+			setLocation 8 23;
+			setFont Gadget;
+			setFontSize 12;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #4392263181984734274 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #4392263181984734274;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1048 425;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #4392263181984734274  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					setTreeBlockID 017626feb6d821;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 3155.1606972032659.1838752390370429934;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1048 425;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #5404381895035397337 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1048 425;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleReduceCellBorders off;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

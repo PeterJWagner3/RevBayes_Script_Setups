@@ -1,11 +1,11 @@
 #NEXUS
-[written Mon Jul 15 10:20:58 PDT 2019 by Mesquite  version 3.6 (build 917) at eas-6bcec7.wdynp.ucr.edu/10.28.91.62]
+[written Thu Dec 03 00:14:14 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
 
 BEGIN TAXA;
 	TITLE Taxa;
 	DIMENSIONS NTAX=25;
 	TAXLABELS
-		Oligorhyncha_subplana Ancistrorhyncha_modesta Cyclospira_bisulcata Rozmanospira_mica Pectenospira_pectenata Manespira_nicoletti Protozyga_definitiva Protozyga_exigua Anazyga_recurvirostra Zygospira_modesta Sulcatospira?_praecursor Sulcatospira_asiatica Sulcatospira_prima Schachriomonia_parva Schachriomonia_dichotoma Qilianotryma_suspectum Eospirigerina_pennata Eospirigerina_porkuniana Webbyspira_principalis Australospira_districha Antizygospira_liquanensis Kellerella_ditissima Kellerella_misiusi Nikolaespira_rasilis Eospirifer_praecursor 
+		Cyclospira_bisulcata Rozmanospira_mica Pectenospira_pectenata Manespira_nicoletti Protozyga_definitiva Protozyga_exigua Anazyga_recurvirostra Zygospira_modesta Sulcatospira?_praecursor Sulcatospira_asiatica Sulcatospira_prima Schachriomonia_parva Schachriomonia_dichotoma Qilianotryma_suspectum Eospirigerina_pennata Eospirigerina_porkuniana Webbyspira_principalis Australospira_districha Antizygospira_liquanensis Kellerella_ditissima Kellerella_misiusi Nikolaespira_rasilis Eospirifer_praecursor Oligorhyncha_subplana Ancistrorhyncha_modesta 
 	;
 
 END;
@@ -13,38 +13,34 @@ END;
 
 BEGIN CHARACTERS;
 	TITLE  Character_Matrix;
-	DIMENSIONS  NCHAR=30;
+	DIMENSIONS  NCHAR=27;
 	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8 9";
-	CHARSTATELABELS 
-28 Geog /  _ Kazakhstan South_China Australia North_America Baltica,
-		29 FA /  e._teretiusculus l._teretiusculus e._gracilis l._gracilis multidens clingani linearis e._complanatus l._complanatus anceps extraordinarius,
-		30 LA /  e._teretiusculus l._teretiusculus e._gracilis l._gracilis multidens clingani linearis e._complanatus l._complanatus anceps extraordinarius ; 
 	MATRIX
-	Oligorhyncha_subplana      233000102022232000000000000244
-	Ancistrorhyncha_modesta    241101101012120010000000000103
-	Cyclospira_bisulcata       120002202012232211112111100266
-	Rozmanospira_mica          130001202112232000111111100412
-	Pectenospira_pectenata     130500202012232100112245100244
-	Manespira_nicoletti        131601231022132100111245100444
-	Protozyga_definitiva       110001010020002100111????00334
-	Protozyga_exigua           111601010030001100112353200444
-	Anazyga_recurvirostra      110101020120001010143352300444
-	Zygospira_modesta          110101010020001010132354300477
-	Sulcatospira?_praecursor   1302?12022122100101??????00144
-	Sulcatospira_asiatica      141211202212220020134235200156
-	Sulcatospira_prima         141111202212220020133225300156
-	Schachriomonia_parva       141111201212120020134225300157
-	Schachriomonia_dichotoma   1411112012121202201?????300289
-	Qilianotryma_suspectum     042411102212110030134235300156
-	Eospirigerina_pennata      042211202013120020134235300156
-	Eospirigerina_porkuniana   042312102013120130134235300599
-	Webbyspira_principalis     0423?2102101210030134235300356
-	Australospira_districha    2313?1101103120131134235300356
-	Antizygospira_liquanensis  1303102020122302101?????200289
-	Kellerella_ditissima       130001201001120020123235100135
-	Kellerella_misiusi         130001201001120010122235100156
-	Nikolaespira_rasilis       130001202101220011123235100156
-	Eospirifer_praecursor      140702102003220100122235111289
+	Cyclospira_bisulcata       120002202012232211112111100
+	Rozmanospira_mica          130001202112232000111111100
+	Pectenospira_pectenata     130500202012232100112245100
+	Manespira_nicoletti        131601231022132100111245100
+	Protozyga_definitiva       110001010020002100111????00
+	Protozyga_exigua           111601010030001100112353200
+	Anazyga_recurvirostra      110101020120001010143352300
+	Zygospira_modesta          110101010020001010132354300
+	Sulcatospira?_praecursor   1302?12022122100101??????00
+	Sulcatospira_asiatica      141211202212220020134235200
+	Sulcatospira_prima         141111202212220020133225300
+	Schachriomonia_parva       141111201212120020134225300
+	Schachriomonia_dichotoma   1411112012121202201?????300
+	Qilianotryma_suspectum     042411102212110030134235300
+	Eospirigerina_pennata      042211202013120020134235300
+	Eospirigerina_porkuniana   042312102013120130134235300
+	Webbyspira_principalis     0423?2102101210030134235300
+	Australospira_districha    2313?1101103120131134235300
+	Antizygospira_liquanensis  1303102020122302101?????200
+	Kellerella_ditissima       130001201001120020123235100
+	Kellerella_misiusi         130001201001120010122235100
+	Nikolaespira_rasilis       130001202101220011123235100
+	Eospirifer_praecursor      140702102003220100122235111
+	Oligorhyncha_subplana      233000102022232000000000000
+	Ancistrorhyncha_modesta    241101101012120010000000000
 
 ;
 
@@ -55,7 +51,7 @@ BEGIN MacCladeStart;
 END;
 BEGIN ASSUMPTIONS;
 	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
-	TYPESET * UNTITLED   =  unord:  1- 30;
+	TYPESET * UNTITLED   =  unord:  1- 27;
 
 END;
 
@@ -64,33 +60,33 @@ BEGIN TREES;
 	ID 016bf6a6732310;
 	LINK Taxa = Taxa;
 	TRANSLATE
-[0] 		1 Oligorhyncha_subplana,
-[1] 		2 Ancistrorhyncha_modesta,
-[2] 		3 Cyclospira_bisulcata,
-[3] 		4 Rozmanospira_mica,
-[4] 		5 Pectenospira_pectenata,
-[5] 		6 Manespira_nicoletti,
-[6] 		7 Protozyga_definitiva,
-[7] 		8 Protozyga_exigua,
-[8] 		9 Anazyga_recurvirostra,
-[9] 		10 Zygospira_modesta,
-[10] 		11 Sulcatospira?_praecursor,
-[11] 		12 Sulcatospira_asiatica,
-[12] 		13 Sulcatospira_prima,
-[13] 		14 Schachriomonia_parva,
-[14] 		15 Schachriomonia_dichotoma,
-[15] 		16 Qilianotryma_suspectum,
-[16] 		17 Eospirigerina_pennata,
-[17] 		18 Eospirigerina_porkuniana,
-[18] 		19 Webbyspira_principalis,
-[19] 		20 Australospira_districha,
-[20] 		21 Antizygospira_liquanensis,
-[21] 		22 Kellerella_ditissima,
-[22] 		23 Kellerella_misiusi,
-[23] 		24 Nikolaespira_rasilis,
-[24] 		25 Eospirifer_praecursor;
-	TREE Fig._3 = (1,(2,((((3,4),(5,(6,(7,(8,(9,10)))))),((11,(12,(13,(14,15)))),(16,(17,(18,(19,(20,21))))))),(((22,23),24),25))));
-	TREE Ingroup = ((((3,4),(5,(6,(7,(8,(9,10)))))),((11,(12,(13,(14,15)))),(16,(17,(18,(19,(20,21))))))),(((22,23),24),25));
+[0] 		1 Cyclospira_bisulcata,
+[1] 		2 Rozmanospira_mica,
+[2] 		3 Pectenospira_pectenata,
+[3] 		4 Manespira_nicoletti,
+[4] 		5 Protozyga_definitiva,
+[5] 		6 Protozyga_exigua,
+[6] 		7 Anazyga_recurvirostra,
+[7] 		8 Zygospira_modesta,
+[8] 		9 Sulcatospira?_praecursor,
+[9] 		10 Sulcatospira_asiatica,
+[10] 		11 Sulcatospira_prima,
+[11] 		12 Schachriomonia_parva,
+[12] 		13 Schachriomonia_dichotoma,
+[13] 		14 Qilianotryma_suspectum,
+[14] 		15 Eospirigerina_pennata,
+[15] 		16 Eospirigerina_porkuniana,
+[16] 		17 Webbyspira_principalis,
+[17] 		18 Australospira_districha,
+[18] 		19 Antizygospira_liquanensis,
+[19] 		20 Kellerella_ditissima,
+[20] 		21 Kellerella_misiusi,
+[21] 		22 Nikolaespira_rasilis,
+[22] 		23 Eospirifer_praecursor,
+[23] 		24 Oligorhyncha_subplana,
+[24] 		25 Ancistrorhyncha_modesta;
+	TREE Fig._3 = (24,(25,((((1,2),(3,(4,(5,(6,(7,8)))))),((9,(10,(11,(12,13)))),(14,(15,(16,(17,(18,19))))))),(((20,21),22),23))));
+	TREE Ingroup = ((((1,2),(3,(4,(5,(6,(7,8)))))),((9,(10,(11,(12,13)))),(14,(15,(16,(17,(18,19))))))),(((20,21),22),23));
 
 END;
 
@@ -160,24 +156,40 @@ BEGIN MacClade;
 	BothTools '1';
 
 END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 23, Outgroup :  24- 25;
+
+END;
+
 BEGIN MESQUITECHARMODELS;
-	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 30;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 27;
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 0.2 0.67843137 1) ;
+
+
 END;
 
 Begin MESQUITE;
 		MESQUITESCRIPTVERSION 2;
 		TITLE AUTO;
 		tell ProjectCoordinator;
-		timeSaved 1563211258622;
+		timeSaved 1606976054437;
 		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
 		tell It;
 			setID 0 8325948257199065188;
+			tell It;
+				setDefaultOrder  2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 0 1;
+				attachments ;
+			endTell;
 		endTell;
 		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
 		tell It;
 			setID 0 515061949623011380;
-			mqVersion 360;
-			checksumv 0 3 2560029150 null  getNumChars 30 numChars 30 getNumTaxa 25 numTaxa 25   short true   bits 1023   states 1023   sumSquaresStatesOnly 1669975.0 sumSquares 1669975.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion 361;
+			checksumv 0 3 1234405655 null  getNumChars 27 numChars 27 getNumTaxa 25 numTaxa 25   short true   bits 255   states 255   sumSquaresStatesOnly 56122.0 sumSquares 56122.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
 			mqVersion;
 		endTell;
 		getWindow;
@@ -189,8 +201,8 @@ Begin MESQUITE;
 			setAnnotationSize 0;
 			setFontIncAnnot 0;
 			setFontIncExp 0;
-			setSize 1105 611;
-			setLocation 8 23;
+			setSize 1444 705;
+			setLocation 13 23;
 			setFont SanSerif;
 			setFontSize 10;
 			getToolPalette;
@@ -198,24 +210,187 @@ Begin MESQUITE;
 			endTell;
 			desuppress;
 		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #8325948257199065188 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #8325948257199065188;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1344 633;
+					setLocation 13 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #8325948257199065188  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					setTreeBlockID 016bf6a6732310;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 6516.1606975895897.447944364430326102;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1344 633;
+					setLocation 13 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setTree '(24,(25,((((1,2),(3,(4,(5,(6,(7,8)))))),((9,(10,(11,(12,13)))),(14,(15,(16,(17,(18,19))))))),(((20,21),22),23))));';
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
 		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
 		tell It;
 			showDataWindow #515061949623011380 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
 			tell It;
 				getWindow;
 				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 208;
+					endTell;
 					setExplanationSize 30;
 					setAnnotationSize 20;
 					setFontIncAnnot 0;
 					setFontIncExp 0;
-					setSize 1005 539;
-					setLocation 8 23;
-					setFont SanSerif;
-					setFontSize 10;
+					setSize 1344 633;
+					setLocation 13 23;
+					setFont Gadget;
+					setFontSize 12;
 					getToolPalette;
 					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
 					endTell;
-					setActive;
 					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
 					colorCells  #mesquite.charMatrices.NoColor.NoColor;
 					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
@@ -229,6 +404,7 @@ Begin MESQUITE;
 					toggleShowChanges on;
 					toggleSeparateLines off;
 					toggleShowStates on;
+					toggleReduceCellBorders off;
 					toggleAutoWCharNames on;
 					toggleAutoTaxonNames off;
 					toggleShowDefaultCharNames off;

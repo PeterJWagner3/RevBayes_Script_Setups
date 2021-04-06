@@ -1,1 +1,513 @@
-#NEXUS [MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]BEGIN MacCladeStart;	Extended;END;BEGIN DATA;	DIMENSIONS  NTAX=36 NCHAR=53;[!Jin, J., and L. E. Popov.  2008.  A New Genus of Late Ordovician—Early Silurian Pentameride Brachiopods and Its Phylogenetic Relationships.  Acta Palaeontologica Polonica 53:221-236.Strat data from Figure 6.]	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7 8 9" MISSING=? GAP=- ;	CHARSTATELABELS  		49  FA / _ Floian Dapingian Darriwilian Sandbian Katian Hirnantian Llandovery Wenlock Lockhovian,  50  LA / _ Floian Dapingian Darriwilian Sandbian Katian Hirnantian Llandovery Wenlock Lockhovian,  51  FA_PBDB,  52  LA_PBDB,  53  Geography / Other Kazakhstan Central_Asia Australia Laurentia East_Siberia_&_Altai Baltoscandia		;MATRIX[                                       10        20        30        40        50  ][                                       .         .         .         .         .   ]Anastrophia?_kurdaica          022122001232013130300054332121211215000212?00??044??1Plectocamara?_extenuata        122110301131011240300054332121312204110102?30??044??1Ilistrophina_tesikensis        022112001232011240300000000121201314211312?30??044??1Liostrophia_pravula            022112001212011240300000000121201314211312?30??045??1Parastrophinella_reversa       122122001132013130100035132121311313221212?30??066??4Parastrophina_bilobata         122110001333011340300045131121211313211212?30??033??4Parastrophina_hemiplicata      122112001333011240300045131121311313211212?30??055??4Parastrophina_dura             022112031232011240300045132121322313211212?30??055??6Parastrophina_iliana           022112102233011240300015220121311313221212?30??044??1Parastrophina_plena            022112113232011240300015132121311313211212?30??044??1Parastrophina_portentosa       122112001232011240300025132121211313211212?00??055??1Parastrophina_unicostata       222022304121013130300054231121400313211212?00??044??1Schizostrophina_margarita      5230?200113101??40302045131121211114000202?00??044??1Protanastrophia_repanda        122120312333013130300045131121212113000212?00??077??4Protanastrophia_asimmetrica    122120312323013130300045231121212113000?12?00??055??5Protanastrophia_distorta       122120012121013130300035332121311113000?12?00??055??5Protanastrophia_indistincta    0221?003133301???0300045131121312113000212?00??077??6Protanastrophia_salairica      1221?012133301???0300045232121311113000312?00??055??5Eoanastrophia_antiquata        022120?021210?3230300054332121200313311212?301?045??2Maydenella_asymmetrica         122122031333013130300054332121211313112212?3011033??3Liricamera_nevadensis          0222200013130111403000544321212113053?1202?300?033??4Camerella_mica                 022010000000011240300045203121202303321102?30??035??1Idiostrophia_prima             523010000000011240300045103121211304211202?30??013??6Jolkinia_turjensis             1221100012320?12403000151301213??313211212?30??088??6Anastrophia_verneuili          122122001232013130300044332121212113000212?0021099??4Bleshidium_patellinum          1220?230100021??40300035130121311113000202?00??078??6Chile_mirabilis                102202200000000111000206303030033020000020000100?????Palaeostrophia_fibrillosa      302102101121000120310000010221113002000102210110?????Tetralobula_peregrina          322102001323000120311051443221103002000102211210?????Huenella_biplicata             4101011031320001203200241222?1100002002102210110?????Billingsella_aliena            411202200000100002021152403212033521001121112121?????Psiloria_dayi                  310102001222000210320000010201503521001120020110?????Glyptoria_gulchensis           301200101121000110322053232201503521000120020110?????Leioria_bentori                301202001000000120320000010221603002000102?10120?????Bohemiella_romingeri           301202100000100110121053403213033422000121112122?????Wimanella_seges                301202200000100110121000003213033422001121111212?????;END;BEGIN SETS;	TAXSET  Outgroup  =  27-36;END;BEGIN ASSUMPTIONS;	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;	TYPESET * UNTITLED  = unord: 1-48 50-53, strat: 49;	WTSET * UNTITLED  = 1: 1-48 51-52, 0: 49-50 53;END;BEGIN TREES; 	TRANSLATE		1	Anastrophia?_kurdaica,		2	Plectocamara?_extenuata,		3	Ilistrophina_tesikensis,		4	Liostrophia_pravula,		5	Parastrophinella_reversa,		6	Parastrophina_bilobata,		7	Parastrophina_hemiplicata,		8	Parastrophina_dura,		9	Parastrophina_iliana,		10	Parastrophina_plena,		11	Parastrophina_portentosa,		12	Parastrophina_unicostata,		13	Schizostrophina_margarita,		14	Protanastrophia_repanda,		15	Protanastrophia_asimmetrica,		16	Protanastrophia_distorta,		17	Protanastrophia_indistincta,		18	Protanastrophia_salairica,		19	Eoanastrophia_antiquata,		20	Maydenella_asymmetrica,		21	Liricamera_nevadensis,		22	Camerella_mica,		23	Idiostrophia_prima,		24	Jolkinia_turjensis,		25	Anastrophia_verneuili,		26	Bleshidium_patellinum,		27	Chile_mirabilis,		28	Palaeostrophia_fibrillosa,		29	Tetralobula_peregrina,		30	Huenella_biplicata,		31	Billingsella_aliena,		32	Psiloria_dayi,		33	Glyptoria_gulchensis,		34	Leioria_bentori,		35	Bohemiella_romingeri,		36	Wimanella_seges	;	TREE Ingroup =  [&R] ((13,26),((16,(18,(17,(14,15)))),((25,1),(20,((2,21),((19,12),(5,(((22,23),(3,4)),(11,(24,((7,6),(8,(9,10)))))))))))));	TREE  * UNTITLED =  [&R] (23,(22,((3,4),((11,(24,((7,6),(8,(9,10))))),(5,((19,12),((2,21),(20,((25,1),((13,26),(16,(18,(17,(14,15))))))))))))));END;BEGIN MacClade;	Version 4.0  87;	LastModified -845462937;	FileSettings editor  '1' '1' '49' '1';	Singles 010;	Editor 00011001111111100100010010 '0' '72' Gadget '12' '190' '1' all;	EditorPosition  '67' '557' '699' '527';	TreeWindowPosition  '46' '6' '985' '1630';	ListWindow Characters closed Gadget '12' '50' '25' '576' '374' 000;	ListWindow Taxa closed Gadget '12' '50' '10' '678' '356' 100000000;	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow TaxSets open Gadget '12' '50' '10' '134' '185' ;	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;	ChartWindowPosition  '52' '30' '818' '1380';	StateNamesSymbols open Gadget '12' '14' '710' '189' '271' '220';	WindowOrder  Data States List TaxSets;	OtherSymbols &/ 00 ?-;	Correlation  '0' '0' '1000' '0' '0' 10011010;	Salmo 00000001;	EditorFile  '2';	ExportHTML _ MOSS  '100' 110000;	PrettyPrint 10;	EditorToolsPosition  '746' '13' '115' '165';	TreeToolsPosition  '716' '9' '126' '138';	TreeWindowProgram 10;	TreeWindow 0000;	Continuous  '0' '3' 1;	Calculations 1000101;	SummaryMode  '0' '0' 0;	Charts  Gadget '12' (normal) 0010;	NexusOptions  '0' '0' '50' 001011001;	TipLabel  '1';	TreeFont  Gadget '12' (normal);	TreeShape  1.0 1.0 0100;	TraceLabels 0101;	ChartColors  '0' '0' '65535' '9' '0' 1;	ChartBiggestSpot 1;	ChartPercent 10;	ChartBarWidth  '10' 1;	ChartVerticalAxis 10101;	ChartMinMax  '0';	TraceAllChangesDisplay  '1' 1;	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;	ContinuousBranchLabels 0;	AllStatesBranchLabels 1;	IndexNotation  '3' 0;	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;	MatchChar 00 .;	EntryInterpretation 01;	ColorOptions 10;	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;	BothTools  '1';END;
+#NEXUS
+[written Wed Dec 02 23:21:09 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=36;
+	TAXLABELS
+		?_Anastrophia_kurdaica ?_Plectocamara_extenuata Ilistrophina_tesikensis Liostrophia_pravula Parastrophinella_reversa Parastrophina_bilobata Parastrophina_hemiplicata Parastrophina_dura Parastrophina_iliana Parastrophina_plena Parastrophina_portentosa Parastrophina_unicostata Schizostrophina_margarita Protanastrophia_repanda Protanastrophia_asimmetrica Protanastrophia_distorta Protanastrophia_indistincta Protanastrophia_salairica Eoanastrophia_antiquata Maydenella_asymmetrica Liricamera_nevadensis Camerella_mica Idiostrophia_prima Jolkinia_turjensis Anastrophia_verneuili Bleshidium_patellinum Chile_mirabilis Palaeostrophia_fibrillosa Tetralobula_peregrina Huenella_biplicata Billingsella_aliena Psiloria_dayi Glyptoria_gulchensis Leioria_bentori Bohemiella_romingeri Wimanella_seges 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=53;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8 9";
+	CHARSTATELABELS 
+49 FA /  _ Floian Dapingian Darriwilian Sandbian Katian Hirnantian Llandovery Wenlock Lockhovian,
+		50 LA /  _ Floian Dapingian Darriwilian Sandbian Katian Hirnantian Llandovery Wenlock Lockhovian,
+		51 FA_PBDB,
+		52 LA_PBDB,
+		53 Geography /  Other Kazakhstan Central_Asia Australia Laurentia East_Siberia_&_Altai Baltoscandia ; 
+	MATRIX
+	?_Anastrophia_kurdaica       022122001232013130300054332121211215000212?00??044??1
+	?_Plectocamara_extenuata     122110301131011240300054332121312204110102?30??044??1
+	Ilistrophina_tesikensis      022112001232011240300000000121201314211312?30??044??1
+	Liostrophia_pravula          022112001212011240300000000121201314211312?30??045??1
+	Parastrophinella_reversa     122122001132013130100035132121311313221212?30??066??4
+	Parastrophina_bilobata       122110001333011340300045131121211313211212?30??033??4
+	Parastrophina_hemiplicata    122112001333011240300045131121311313211212?30??055??4
+	Parastrophina_dura           022112031232011240300045132121322313211212?30??055??6
+	Parastrophina_iliana         022112102233011240300015220121311313221212?30??044??1
+	Parastrophina_plena          022112113232011240300015132121311313211212?30??044??1
+	Parastrophina_portentosa     122112001232011240300025132121211313211212?00??055??1
+	Parastrophina_unicostata     222022304121013130300054231121400313211212?00??044??1
+	Schizostrophina_margarita    5230?200113101??40302045131121211114000202?00??044??1
+	Protanastrophia_repanda      122120312333013130300045131121212113000212?00??077??4
+	Protanastrophia_asimmetrica  122120312323013130300045231121212113000?12?00??055??5
+	Protanastrophia_distorta     122120012121013130300035332121311113000?12?00??055??5
+	Protanastrophia_indistincta  0221?003133301???0300045131121312113000212?00??077??6
+	Protanastrophia_salairica    1221?012133301???0300045232121311113000312?00??055??5
+	Eoanastrophia_antiquata      022120?021210?3230300054332121200313311212?301?045??2
+	Maydenella_asymmetrica       122122031333013130300054332121211313112212?3011033??3
+	Liricamera_nevadensis        0222200013130111403000544321212113053?1202?300?033??4
+	Camerella_mica               022010000000011240300045203121202303321102?30??035??1
+	Idiostrophia_prima           523010000000011240300045103121211304211202?30??013??6
+	Jolkinia_turjensis           1221100012320?12403000151301213??313211212?30??088??6
+	Anastrophia_verneuili        122122001232013130300044332121212113000212?0021099??4
+	Bleshidium_patellinum        1220?230100021??40300035130121311113000202?00??078??6
+	Chile_mirabilis              102202200000000111000206303030033020000020000100?????
+	Palaeostrophia_fibrillosa    302102101121000120310000010221113002000102210110?????
+	Tetralobula_peregrina        322102001323000120311051443221103002000102211210?????
+	Huenella_biplicata           4101011031320001203200241222?1100002002102210110?????
+	Billingsella_aliena          411202200000100002021152403212033521001121112121?????
+	Psiloria_dayi                310102001222000210320000010201503521001120020110?????
+	Glyptoria_gulchensis         301200101121000110322053232201503521000120020110?????
+	Leioria_bentori              301202001000000120320000010221603002000102?10120?????
+	Bohemiella_romingeri         301202100000100110121053403213033422000121112122?????
+	Wimanella_seges              301202200000100110121000003213033422001121111212?????
+
+;
+
+END;
+BEGIN MacCladeStart;
+	Extended;
+
+END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 26, Outgroup :  27- 36;
+
+	TAXSET Outgroup  =  27 -  36;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
+	TYPESET * UNTITLED   =  unord:  1- 53;
+
+	WTSET * UNTITLED  =  1: 1 -  48 51 -  52, 0: 49 -  50 53;
+
+END;
+
+BEGIN TREES;
+	Title 'Trees from "Parastrophinidae_Jin_&_Popov_2008.nex"';
+	ID 01762704296527;
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		1 ?_Anastrophia_kurdaica,
+[1] 		2 ?_Plectocamara_extenuata,
+[2] 		3 Ilistrophina_tesikensis,
+[3] 		4 Liostrophia_pravula,
+[4] 		5 Parastrophinella_reversa,
+[5] 		6 Parastrophina_bilobata,
+[6] 		7 Parastrophina_hemiplicata,
+[7] 		8 Parastrophina_dura,
+[8] 		9 Parastrophina_iliana,
+[9] 		10 Parastrophina_plena,
+[10] 		11 Parastrophina_portentosa,
+[11] 		12 Parastrophina_unicostata,
+[12] 		13 Schizostrophina_margarita,
+[13] 		14 Protanastrophia_repanda,
+[14] 		15 Protanastrophia_asimmetrica,
+[15] 		16 Protanastrophia_distorta,
+[16] 		17 Protanastrophia_indistincta,
+[17] 		18 Protanastrophia_salairica,
+[18] 		19 Eoanastrophia_antiquata,
+[19] 		20 Maydenella_asymmetrica,
+[20] 		21 Liricamera_nevadensis,
+[21] 		22 Camerella_mica,
+[22] 		23 Idiostrophia_prima,
+[23] 		24 Jolkinia_turjensis,
+[24] 		25 Anastrophia_verneuili,
+[25] 		26 Bleshidium_patellinum,
+[26] 		27 Chile_mirabilis,
+[27] 		28 Palaeostrophia_fibrillosa,
+[28] 		29 Tetralobula_peregrina,
+[29] 		30 Huenella_biplicata,
+[30] 		31 Billingsella_aliena,
+[31] 		32 Psiloria_dayi,
+[32] 		33 Glyptoria_gulchensis,
+[33] 		34 Leioria_bentori,
+[34] 		35 Bohemiella_romingeri,
+[35] 		36 Wimanella_seges;
+	TREE Ingroup = ((13,26),((16,(18,(17,(14,15)))),((25,1),(20,((2,21),((19,12),(5,(((22,23),(3,4)),(11,(24,((7,6),(8,(9,10)))))))))))));
+	TREE UNTITLED = (23,(22,((3,4),((11,(24,((7,6),(8,(9,10))))),(5,((19,12),((2,21),(20,((25,1),((13,26),(16,(18,(17,(14,15))))))))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0 87;
+	LastModified -845462937;
+	FileSettings editor '1' '1' '49' '1';
+	Singles 010;
+	Editor 00011001111111100100010010 '0' '72' Gadget '12' '190' '1' all;
+	EditorPosition '67' '557' '699' '527';
+	TreeWindowPosition '46' '6' '985' '1630';
+	ListWindow Characters closed Gadget '12' '50' '25' '576' '374' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '678' '356' 100000000;
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387';
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow TaxSets open Gadget '12' '50' '10' '134' '185';
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ChartWindowPosition '52' '30' '818' '1380';
+	StateNamesSymbols open Gadget '12' '14' '710' '189' '271' '220';
+	WindowOrder Data States List TaxSets;
+	OtherSymbols & / 00 ? -;
+	Correlation '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile '2';
+	ExportHTML _ MOSS '100' 110000;
+	PrettyPrint 10;
+	EditorToolsPosition '746' '13' '115' '165';
+	TreeToolsPosition '716' '9' '126' '138';
+	TreeWindowProgram 10;
+	TreeWindow 0000;
+	Continuous '0' '3' 1;
+	Calculations 1000101;
+	SummaryMode '0' '0' 0;
+	Charts Gadget '12' ( normal ) 0010;
+	NexusOptions '0' '0' '50' 001011001;
+	TipLabel '1';
+	TreeFont Gadget '12' ( normal );
+	TreeShape 1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax '0';
+	TraceAllChangesDisplay '1' 1;
+	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation '3' 0;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 10;
+	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools '1';
+
+END;
+BEGIN NOTES;
+
+	SU  C = 49 N = selected B = TRUE;
+	SU  C = 50 N = selected B = TRUE;
+	SU  C = 51 N = selected B = TRUE;
+	SU  C = 52 N = selected B = TRUE;
+	SU  C = 53 N = selected B = TRUE;
+
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 53;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1606972869442;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 7284684345945089577;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 3711691831059798319;
+			tell It;
+				setSelected  49 -  53;
+				attachments ;
+			endTell;
+			mqVersion 361;
+			checksumv 0 3 1379429423 null  getNumChars 53 numChars 53 getNumTaxa 36 numTaxa 36   short true   bits 1023   states 1023   sumSquaresStatesOnly 936621.0 sumSquares 936621.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1207 782;
+			setLocation 8 23;
+			setFont Gadget;
+			setFontSize 12;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #7284684345945089577 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #7284684345945089577;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1107 710;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #7284684345945089577  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					setTreeBlockID 01762704296527;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 3678.1606972419369.7700901143924589959;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1107 710;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setTree '((((((((13,26),((16,(18,(17,(14,15)))),((25,1),(20,((2,21),((19,12),(5,(((22,23),(3,4)),(11,(24,((7,6),(8,(9,10))))))))))))),29),30),(28,34)),(32,33)),((31,35),36)),27);';
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #3711691831059798319 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 161;
+					endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1107 710;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleReduceCellBorders off;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

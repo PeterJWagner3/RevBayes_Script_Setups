@@ -1,11 +1,11 @@
 #NEXUS
-[written Mon Jul 15 10:22:55 PDT 2019 by Mesquite  version 3.6 (build 917) at eas-6bcec7.wdynp.ucr.edu/10.28.91.62]
+[written Thu Dec 03 00:16:55 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
 
 BEGIN TAXA;
 	TITLE Taxa;
 	DIMENSIONS NTAX=31;
 	TAXLABELS
-		Billingsella Saccogonum Kozhuchinella Clitambonites Apomatella Atelelasma Clinambon Estlandia Protambonites Korinevskia Martellia Tritoechia Chaniella Bohemiella Jivinella Polytoechia Nisusia Pomatotrema Arctohedra Eremotoechia Antigonambonites Glyptoria Eoorthis Protorthisina Kvania Pompeckium Astraborthis Medessia Radkeina Finkelnburgia Plectotrophia 
+		Billingsella Saccogonum Kozhuchinella Clitambonites Apomatella Atelelasma Clinambon Estlandia Protambonites Korinevskia Martellia Tritoechia Chaniella Bohemiella Jivinella Polytoechia Nisusia Pomatotrema Arctohedra Eremotoechia Antigonambonites Eoorthis Protorthisina Kvania Pompeckium Astraborthis Medessia Radkeina Finkelnburgia Plectotrophia Glyptoria 
 	;
 
 END;
@@ -13,45 +13,40 @@ END;
 
 BEGIN CHARACTERS;
 	TITLE  Character_Matrix;
-	DIMENSIONS  NCHAR=31;
+	DIMENSIONS  NCHAR=27;
 	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8 9";
-	CHARSTATELABELS 
-28 FA /  E._Cambrian M._Cambrian 'M-U._Cambrian' U._Cambrian E._Tremadoc U._Tremadoc Floian Dapingian,
-		29 LA /  E._Cambrian M._Cambrian 'M-U._Cambrian' U._Cambrian E._Tremadoc U._Tremadoc Floian Dapingian,
-		30 FA_PBDB /  E._Cambrian M._Cambrian 'M-U._Cambrian' U._Cambrian E._Tremadoc U._Tremadoc Floian Dapingian Darriwillian Sandbian,
-		31 LA_PBDB /  E._Cambrian M._Cambrian 'M-U._Cambrian' U._Cambrian E._Tremadoc U._Tremadoc Floian Dapingian Darriwillian Sandbian ; 
 	MATRIX
-	Billingsella      1020110012001000021220111203323
-	Saccogonum        1011110002001000121?20111103333
-	Kozhuchinella     3010110022001000011220111113334
-	Clitambonites     4022101021111010322120111117779
-	Apomatella        4022100111011010311?20111006667
-	Atelelasma        0011100112011010311120111107778
-	Clinambon         402210102211101032?120112117777
-	Estlandia         1011101022111020311120112117779
-	Protambonites     1020110024001100122120121104445
-	Korinevskia       1020110024001100121120122105555
-	Martellia         4020110022001201111120124217778
-	Tritoechia        4021110012001201111120124205556
-	Chaniella         101110011300110112(1 2)120121114444
-	Bohemiella        (0 3)011000002001000011110110101111
-	Jivinella         0011000001001101121?20110102223
-	Polytoechia       402111001200120131??20124206667
-	Nisusia           4022110001000000002100000000002
-	Pomatotrema       4021110022011201211120124217777
-	Arctohedra        4022000001001030001?20111101111
-	Eremotoechia      201111002200120101??20220207778
-	Antigonambonites  4021110012001201012120124217777
-	Glyptoria         0001000000001030002?000000000??
-	Eoorthis          0001000001001100011?101110022??
-	Protorthisina     000100000000110001??410130022??
-	Kvania            000100000100120001??300111044??
-	Pompeckium        0011000001001100013?001000011??
-	Astraborthis      010100000100120111??201111055??
-	Medessia          0101000002001201013?201111055??
-	Radkeina          010100000100120111??201112022??
-	Finkelnburgia     0001000002001201113330(0 1)102022??
-	Plectotrophia     010100000200110111??201112022??
+	Billingsella      102011001200100002122011120
+	Saccogonum        1011110002001000121?2011110
+	Kozhuchinella     301011002200100001122011111
+	Clitambonites     402210102111101032212011111
+	Apomatella        4022100111011010311?2011100
+	Atelelasma        001110011201101031112011110
+	Clinambon         402210102211101032?12011211
+	Estlandia         101110102211102031112011211
+	Protambonites     102011002400110012212012110
+	Korinevskia       102011002400110012112012210
+	Martellia         402011002200120111112012421
+	Tritoechia        402111001200120111112012420
+	Chaniella         101110011300110112(1 2)12012111
+	Bohemiella        (0 3)01100000200100001111011010
+	Jivinella         0011000001001101121?2011010
+	Polytoechia       402111001200120131??2012420
+	Nisusia           402211000100000000210000000
+	Pomatotrema       402111002201120121112012421
+	Arctohedra        4022000001001030001?2011110
+	Eremotoechia      201111002200120101??2022020
+	Antigonambonites  402111001200120101212012421
+	Eoorthis          0001000001001100011?1011100
+	Protorthisina     000100000000110001??4101300
+	Kvania            000100000100120001??3001110
+	Pompeckium        0011000001001100013?0010000
+	Astraborthis      010100000100120111??2011110
+	Medessia          0101000002001201013?2011110
+	Radkeina          010100000100120111??2011120
+	Finkelnburgia     0001000002001201113330(0 1)1020
+	Plectotrophia     010100000200110111??2011120
+	Glyptoria         0001000000001030002?0000000
 
 ;
 
@@ -62,15 +57,15 @@ BEGIN MacCladeStart;
 END;
 BEGIN ASSUMPTIONS;
 	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
-	TYPESET * UNTITLED   =  unord:  1- 31;
+	TYPESET * UNTITLED   =  unord:  1- 27;
 
-	WTSET * UNTITLED  =  1: 1 -  27 30 -  31 , 0: 28 -  29;
+	WTSET * UNTITLED  =  1: 1 -  26, 0: 27;
 
 END;
 
 BEGIN TREES;
 	Title 'Trees from "Billingsellida_Benedetto_2009.nex"';
-	ID 016bf6a8955911;
+	ID 0176273cdd5a53;
 	LINK Taxa = Taxa;
 	TRANSLATE
 [0] 		1 Billingsella,
@@ -94,69 +89,21 @@ BEGIN TREES;
 [18] 		19 Arctohedra,
 [19] 		20 Eremotoechia,
 [20] 		21 Antigonambonites,
-[21] 		22 Glyptoria,
-[22] 		23 Eoorthis,
-[23] 		24 Protorthisina,
-[24] 		25 Kvania,
-[25] 		26 Pompeckium,
-[26] 		27 Astraborthis,
-[27] 		28 Medessia,
-[28] 		29 Radkeina,
-[29] 		30 Finkelnburgia,
-[30] 		31 Plectotrophia;
-	TREE Figure_7 = (22,(17,(26,(24,(25,(((27,(29,(30,31))),28),(23,(14,(15,(19,(((5,6),(4,(8,7))),((1,3),(2,((10,9),(13,(16,(12,(11,(20,(18,21))))))))))))))))))));
+[21] 		22 Eoorthis,
+[22] 		23 Protorthisina,
+[23] 		24 Kvania,
+[24] 		25 Pompeckium,
+[25] 		26 Astraborthis,
+[26] 		27 Medessia,
+[27] 		28 Radkeina,
+[28] 		29 Finkelnburgia,
+[29] 		30 Plectotrophia,
+[30] 		31 Glyptoria;
+	TREE Figure_7 = (31,(17,(25,(23,(24,(((26,(28,(29,30))),27),(22,(14,(15,(19,(((5,6),(4,(8,7))),((1,3),(2,((10,9),(13,(16,(12,(11,(20,(18,21))))))))))))))))))));
 	TREE Ingroup_Only = (14,(15,(19,(((5,6),(4,(8,7))),((1,3),(2,((10,9),(13,(16,(12,(11,(20,(18,21)))))))))))));
 
 END;
 
-
-BEGIN NOTES;
-
-	TEXT   TAXON = 1 CHARACTER = 30 TEXT = 'Cm_Boto;_Franconian';
-	TEXT   TAXON = 2 CHARACTER = 30 TEXT = U._Cambrian;
-	TEXT   TAXON = 3 CHARACTER = 30 TEXT = U._Cambrian;
-	TEXT   TAXON = 4 CHARACTER = 30 TEXT = 'O_Llvi-l';
-	TEXT   TAXON = 5 CHARACTER = 30 TEXT = U._Arenig;
-	TEXT   TAXON = 6 CHARACTER = 30 TEXT = 'O_Llvi-l';
-	TEXT   TAXON = 7 CHARACTER = 30 TEXT = Keila;
-	TEXT   TAXON = 8 CHARACTER = 30 TEXT = 'O_Aren;_Aseri_&_Lasnagmi';
-	TEXT   TAXON = 9 CHARACTER = 30 TEXT = 'O_Trem-l';
-	TEXT   TAXON = 10 CHARACTER = 30 TEXT = U._Tremadoc;
-	TEXT   TAXON = 11 CHARACTER = 30 TEXT = Arenig;
-	TEXT   TAXON = 12 CHARACTER = 30 TEXT = 'O_Trem-u';
-	TEXT   TAXON = 13 CHARACTER = 30 TEXT = E._Tremadoc;
-	TEXT   TAXON = 14 CHARACTER = 30 TEXT = Amgan;
-	TEXT   TAXON = 15 CHARACTER = 30 TEXT = 'M-U._Cambrian';
-	TEXT   TAXON = 16 CHARACTER = 30 TEXT = 'O_Aren-u';
-	TEXT   TAXON = 17 CHARACTER = 30 TEXT = 'Cm_Atda-u';
-	TEXT   TAXON = 18 CHARACTER = 30 TEXT = 'O_Aren-u';
-	TEXT   TAXON = 19 CHARACTER = 30 TEXT = Solvan;
-	TEXT   TAXON = 20 CHARACTER = 30 TEXT = 'O_Cara-l';
-	TEXT   TAXON = 21 CHARACTER = 30 TEXT = 'O_Aren-u';
-
-	TEXT   TAXON = 1 CHARACTER = 31 TEXT = 'O_Aren;_Furongian';
-	TEXT   TAXON = 2 CHARACTER = 31 TEXT = U._Cambrian;
-	TEXT   TAXON = 3 CHARACTER = 31 TEXT = E._Tremadoc;
-	TEXT   TAXON = 4 CHARACTER = 31 TEXT = O_Cara;
-	TEXT   TAXON = 5 CHARACTER = 31 TEXT = U._Arenig;
-	TEXT   TAXON = 6 CHARACTER = 31 TEXT = 'O_Cara-l';
-	TEXT   TAXON = 7 CHARACTER = 31 TEXT = Keila;
-	TEXT   TAXON = 8 CHARACTER = 31 TEXT = 'O_Cara-m';
-	TEXT   TAXON = 9 CHARACTER = 31 TEXT = 'O_Trem-u';
-	TEXT   TAXON = 10 CHARACTER = 31 TEXT = U._Tremadoc;
-	TEXT   TAXON = 11 CHARACTER = 31 TEXT = Llanvirn;
-	TEXT   TAXON = 12 CHARACTER = 31 TEXT = 'O_Aren-u';
-	TEXT   TAXON = 13 CHARACTER = 31 TEXT = E._Tremadoc;
-	TEXT   TAXON = 14 CHARACTER = 31 TEXT = Amgan;
-	TEXT   TAXON = 15 CHARACTER = 31 TEXT = U._Tremadoc;
-	TEXT   TAXON = 16 CHARACTER = 31 TEXT = 'O_Aren-u';
-	TEXT   TAXON = 17 CHARACTER = 31 TEXT = Cm_uMid;
-	TEXT   TAXON = 18 CHARACTER = 31 TEXT = 'O_Aren-u';
-	TEXT   TAXON = 19 CHARACTER = 31 TEXT = Solvan;
-	TEXT   TAXON = 20 CHARACTER = 31 TEXT = 'O_Cara-l';
-	TEXT   TAXON = 21 CHARACTER = 31 TEXT = 'O_Aren-u';
-
-END;
 
 BEGIN MacClade;
 	Version 4.0 87;
@@ -223,24 +170,40 @@ BEGIN MacClade;
 	BothTools '1';
 
 END;
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 30, Outgroup :  31;
+
+END;
+
 BEGIN MESQUITECHARMODELS;
-	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 31;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 27;
 END;
 
 Begin MESQUITE;
 		MESQUITESCRIPTVERSION 2;
 		TITLE AUTO;
 		tell ProjectCoordinator;
-		timeSaved 1563211375955;
+		timeSaved 1606976215608;
 		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
 		tell It;
-			setID 0 2962663286443208439;
+			setID 0 6280604806187853651;
+			tell It;
+				setDefaultOrder  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 22 23 24 25 26 27 28 29 30 21;
+				attachments ;
+			endTell;
 		endTell;
 		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
 		tell It;
-			setID 0 7382290610254119085;
-			mqVersion 360;
-			checksumv 0 3 2124830533 null  getNumChars 31 numChars 31 getNumTaxa 31 numTaxa 31   short true   bits 1023   states 1023   sumSquaresStatesOnly 1249809.0 sumSquares 1249809.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			setID 0 5971819925424289581;
+			mqVersion 361;
+			checksumv 0 3 874648756 null  getNumChars 27 numChars 27 getNumTaxa 31 numTaxa 31   short true   bits 31   states 31   sumSquaresStatesOnly 9268.0 sumSquares 9268.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
 			mqVersion;
 		endTell;
 		getWindow;
@@ -252,18 +215,176 @@ Begin MESQUITE;
 			setAnnotationSize 0;
 			setFontIncAnnot 0;
 			setFontIncExp 0;
-			setSize 921 549;
+			setSize 1020 826;
 			setLocation 8 23;
-			setFont SanSerif;
-			setFontSize 10;
+			setFont Gadget;
+			setFontSize 12;
 			getToolPalette;
 			tell It;
 			endTell;
 			desuppress;
 		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #6280604806187853651 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #6280604806187853651;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 920 754;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #6280604806187853651  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					setTreeBlockID 0176273cdd5a53;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 6698.1606976205846.6515210019343524446;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 920 754;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
 		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
 		tell It;
-			showDataWindow #7382290610254119085 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			showDataWindow #5971819925424289581 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
 			tell It;
 				getWindow;
 				tell It;
@@ -271,14 +392,13 @@ Begin MESQUITE;
 					setAnnotationSize 20;
 					setFontIncAnnot 0;
 					setFontIncExp 0;
-					setSize 821 477;
+					setSize 920 754;
 					setLocation 8 23;
-					setFont SanSerif;
-					setFontSize 10;
+					setFont Gadget;
+					setFontSize 12;
 					getToolPalette;
 					tell It;
 					endTell;
-					setActive;
 					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
 					colorCells  #mesquite.charMatrices.NoColor.NoColor;
 					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
@@ -292,6 +412,7 @@ Begin MESQUITE;
 					toggleShowChanges on;
 					toggleSeparateLines off;
 					toggleShowStates on;
+					toggleReduceCellBorders off;
 					toggleAutoWCharNames on;
 					toggleAutoTaxonNames off;
 					toggleShowDefaultCharNames off;

@@ -1,11 +1,11 @@
 #NEXUS
-[written Thu Dec 03 00:44:46 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/10.0.1.51]
+[written Wed Dec 02 23:37:31 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
 
 BEGIN TAXA;
 	TITLE Taxa;
-	DIMENSIONS NTAX=11;
+	DIMENSIONS NTAX=25;
 	TAXLABELS
-		Hebertella_alveata Hebertella_bursa Hebertella_frankfortensis Hebertella_maria Hebertella_montoyensis Hebertella_occidentalis Hebertella_parksensis Hebertella_prestonensis Hebertella_richmondensis Hebertella_subjugata Doleroides_tennesseensis 
+		'Schizophoria (Eoschizophoria) oriskania' 'Schizophoria (Eoschizophoria) parafragilis' 'Schizophoria (Eoschizophoria) paraprima' 'Schizophoria (Schizophoria) amanaensis' 'Schizophoria (Schizophoria) australis' 'Schizophoria (Schizophoria) choteueauensis' 'Schizophoria (Schizophoria) ferronensis' 'Schizophoria (Schizophoria) impressa' 'Schizophoria (Schizophoria) iowensis' 'Schizophoria (Schizophoria) macfarlanii' 'Schizophoria (Schizophoria) magna' 'Schizophoria (Schizophoria) marylandica' 'Schizophoria (Schizophoria) meeki' 'Schizophoria (Schizophoria) mesacarina' 'Schizophoria (Schizophoria) multistriata' 'Schizophoria (Schizophoria) resupinata' 'Schizophoria (Schizophoria) subelliptica' 'Schizophoria (Schizophoria) sulcata' 'Schizophoria (Schizophoria) swallovi' 'Schizophoria (Schizophoria) traversensis' 'Schizophoria (Schizophoria) tulliensis' 'Schizophoria (Schizophoria) aff. iowensis' 'Schizophoria (Schizophoria) cf. macfarlanii' 'Schizophoria (Schizophoria) cf. magna' 'Schizophoria (Rhenoschizophoria) provulvaria' 
 	;
 
 END;
@@ -13,20 +13,37 @@ END;
 
 BEGIN CHARACTERS;
 	TITLE  Character_Matrix;
-	DIMENSIONS  NCHAR=18;
-	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1";
+	DIMENSIONS  NCHAR=38;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7 8";
+	CHARSTATELABELS 
+37 FA /  _ Lockhovian Pragian Emsian Eifelian Givetian Frasnian Fammenian Tournaissian,
+		38 LA /  _ Lockhovian Pragian Emsian Eifelian Givetian Frasnian Fammenian Tournaissian ; 
 	MATRIX
-	Hebertella_alveata         1(0 1)001011(0 1)1(0 1)0000(0 1)(0 1)1
-	Hebertella_bursa           1010001?0001100101
-	Hebertella_frankfortensis  0111(0 1)0(0 1)10001010000
-	Hebertella_maria           0(0 1)0(0 1)1(0 1)110000111110
-	Hebertella_montoyensis     1?1?010011100(0 1)(0 1)???
-	Hebertella_occidentalis    (0 1)(0 1)(0 1)(0 1)(0 1)(0 1)1(0 1)11(0 1)(0 1)0(0 1)(0 1)(0 1)0(0 1)
-	Hebertella_parksensis      0(0 1)(0 1)(0 1)(0 1)1100001001011
-	Hebertella_prestonensis    11110100111010100(0 1)
-	Hebertella_richmondensis   110000000(0 1)11101101
-	Hebertella_subjugata       011111?00001010001
-	Doleroides_tennesseensis   10000000000000(0 1)0(0 1)0
+	'Schizophoria (Eoschizophoria) oriskania'     1(0 1)(0 1)10(0 1)01000100000100001101010110010?33
+	'Schizophoria (Eoschizophoria) parafragilis'  202100?11000100011011(0 1)1101011000000?22
+	'Schizophoria (Eoschizophoria) paraprima'     22(0 1)00001100(0 1)000001?1001111110000010?22
+	'Schizophoria (Schizophoria) amanaensis'      1(0 1)002110111110(0 1)01100000000010011100166
+	'Schizophoria (Schizophoria) australis'       0101(1 2)0101100011000010110(0 1)0111111??0?66
+	'Schizophoria (Schizophoria) choteueauensis'  11210000010001000111101010(0 1)10011010088
+	'Schizophoria (Schizophoria) ferronensis'     1101211000111001010010?010110???????55
+	'Schizophoria (Schizophoria) impressa'        (0 1)001(0 1)0(0 1)11110011?1101001(0 1)0(0 1)(0 1)(0 1)0111010047
+	'Schizophoria (Schizophoria) iowensis'        110(1 2)(1 2)(0 1)10011(0 1)100(0 1)1101001000110010100056
+	'Schizophoria (Schizophoria) macfarlanii'     1211211101101101011000????????11001056
+	'Schizophoria (Schizophoria) magna'           1201(1 2)1111111010011010010000(0 1)00??????56
+	'Schizophoria (Schizophoria) marylandica'     2001101011100?10?001000000110000000055
+	'Schizophoria (Schizophoria) meeki'           1(1 2)(0 1)1(0 1)111011(0 1)10010101(0 1)0????????????1?66
+	'Schizophoria (Schizophoria) mesacarina'      12011010000100000101100010110101110?56
+	'Schizophoria (Schizophoria) multistriata'    1101(0 1)(0 1)(0 1)(0 1)(0 1)(0 1)(0 1)(0 1)000001010000000100(0 1)1110134
+	'Schizophoria (Schizophoria) resupinata'      1101(0 1)0(0 1)0011(0 1)00100100001100111010110?88
+	'Schizophoria (Schizophoria) subelliptica'    20010020000100(0 1)01001101000111010110?88
+	'Schizophoria (Schizophoria) sulcata'         121121111(0 1)100?100100000000011011100044
+	'Schizophoria (Schizophoria) swallovi'        00000000010101101001000001110010110?88
+	'Schizophoria (Schizophoria) traversensis'    0001(1 2)01(0 1)0111000111000000011100??????55
+	'Schizophoria (Schizophoria) tulliensis'      1(1 2)00(0 1)(0 1)(0 1)(0 1)0(0 1)(0 1)1100(0 1)01(0 1)00010001101(0 1)(0 1)(0 1)00045
+	'Schizophoria (Schizophoria) aff. iowensis'   10011011?11101101101001000(0 1)100??????56
+	'Schizophoria (Schizophoria) cf. macfarlanii' 1(1 2)(0 1)1(0 1 2)111011(0 1)1(0 1)0101(0 1)(0 1)(0 1)0????????11001056
+	'Schizophoria (Schizophoria) cf. magna'       1(0 2)01(1 2)(0 1)11111101(0 1)01101001000(0 1)(0 1)00??????56
+	'Schizophoria (Rhenoschizophoria) provulvaria'00000000000000000000?(0 1)00000000(0 1)0000011
 
 ;
 
@@ -37,65 +54,94 @@ BEGIN MacCladeStart;
 END;
 BEGIN ASSUMPTIONS;
 	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
-	TYPESET * UNTITLED   =  unord:  1- 18;
+	TYPESET * UNTITLED   =  unord:  1- 38;
+
+	WTSET * UNTITLED  =  1: 1 -  36, 0: 37 -  38 ;
 
 END;
 
 BEGIN TREES;
-	Title 'Trees from "Hebertella_Wright_&_Stigall_2013.nex"';
-	ID 01762757f45369;
+	Title 'Trees from "Schizophoria_Stigall-Rode_2005.nex"';
+	ID 01762719e85238;
 	LINK Taxa = Taxa;
 	TRANSLATE
-[0] 		1 Hebertella_alveata,
-[1] 		2 Hebertella_bursa,
-[2] 		3 Hebertella_frankfortensis,
-[3] 		4 Hebertella_maria,
-[4] 		5 Hebertella_montoyensis,
-[5] 		6 Hebertella_occidentalis,
-[6] 		7 Hebertella_parksensis,
-[7] 		8 Hebertella_prestonensis,
-[8] 		9 Hebertella_richmondensis,
-[9] 		10 Hebertella_subjugata,
-[10] 		11 Doleroides_tennesseensis;
-	TREE UNTITLED = (11,(1,((2,9),((10,(3,4)),(7,(6,(5,8)))))));
+[0] 		1 'Schizophoria (Eoschizophoria) oriskania',
+[1] 		2 'Schizophoria (Eoschizophoria) parafragilis',
+[2] 		3 'Schizophoria (Eoschizophoria) paraprima',
+[3] 		4 'Schizophoria (Schizophoria) amanaensis',
+[4] 		5 'Schizophoria (Schizophoria) australis',
+[5] 		6 'Schizophoria (Schizophoria) choteueauensis',
+[6] 		7 'Schizophoria (Schizophoria) ferronensis',
+[7] 		8 'Schizophoria (Schizophoria) impressa',
+[8] 		9 'Schizophoria (Schizophoria) iowensis',
+[9] 		10 'Schizophoria (Schizophoria) macfarlanii',
+[10] 		11 'Schizophoria (Schizophoria) magna',
+[11] 		12 'Schizophoria (Schizophoria) marylandica',
+[12] 		13 'Schizophoria (Schizophoria) meeki',
+[13] 		14 'Schizophoria (Schizophoria) mesacarina',
+[14] 		15 'Schizophoria (Schizophoria) multistriata',
+[15] 		16 'Schizophoria (Schizophoria) resupinata',
+[16] 		17 'Schizophoria (Schizophoria) subelliptica',
+[17] 		18 'Schizophoria (Schizophoria) sulcata',
+[18] 		19 'Schizophoria (Schizophoria) swallovi',
+[19] 		20 'Schizophoria (Schizophoria) traversensis',
+[20] 		21 'Schizophoria (Schizophoria) tulliensis',
+[21] 		22 'Schizophoria (Schizophoria) aff. iowensis',
+[22] 		23 'Schizophoria (Schizophoria) cf. macfarlanii',
+[23] 		24 'Schizophoria (Schizophoria) cf. magna',
+[24] 		25 'Schizophoria (Rhenoschizophoria) provulvaria';
+	TREE Parsimony = (25,((1,(2,3)),(17,(19,(20,((16,((9,21),(7,(4,(18,(13,(23,10))))))),((15,14),(6,(5,(12,(8,(22,(11,24)))))))))))));
+	TREE UNTITLED = (25,((1,(2,3)),(17,(19,(20,((16,((9,21),(7,(4,(18,(13,10)))))),((15,14),(6,(5,(12,(8,11)))))))))));
 
 END;
 
 
+BEGIN NOTES;
+
+	TEXT  TAXON = 9 TEXT = 'Schizophoria_(Schizophoria)_iowensis_ÔAÕ';
+	TEXT  TAXON = 22 TEXT = 'Schizophoria_(Schizophoria)_iowensis_ÔBÕ';
+	TEXT  TAXON = 23 TEXT = 'Schizophoria_(Schizophoria)_macfarlanii_[rev.]';
+	TEXT  TAXON = 24 TEXT = 'Schizophoria_(Schizophoria)_magna_[rev.]';
+
+END;
+
 BEGIN MacClade;
 	Version 4.0 87;
-	LastModified -848841632;
-	FileSettings '1' '1' '1' '1';
+	LastModified -818789171;
+	FileSettings treewindow '1' '1' '37' '1';
 	Singles 010;
-	Editor 00011001111111100100010010 '0' '72' Gadget '12' '190' '1' all;
-	EditorPosition '46' '6' '1112' '1870';
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '298' '1' all;
+	EditorPosition '227' '362' '699' '527';
 	TreeWindowPosition '46' '6' '997' '1630';
-	ListWindow Characters open Gadget '12' '50' '25' '372' '321' 000;
-	ListWindow Taxa closed Gadget '12' '50' '10' '253' '281' 100000000;
+	ListWindow Characters open Gadget '12' '50' '10' '270' '481' 000;
+	ListWindow Taxa open Gadget '12' '50' '10' '270' '480' 100000000;
 	ListWindow Trees closed Gadget '12' '50' '10' '134' '387';
 	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490';
 	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
 	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490';
 	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490';
-	ListWindow TaxSets closed Gadget '12' '50' '10' '134' '185';
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490';
 	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490';
 	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490';
 	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
-	ChartWindowPosition '52' '30' '818' '1380';
-	StateNamesSymbols closed Gadget '12' '17' '694' '156' '322' '264';
-	WindowOrder List Characters;
+	TextWindow AboutFile '90' '65' '280' '445' Gadget '12' ( normal ) 1;
+	ChartWindowPosition '52' '30' '968' '1620';
+	StateNamesSymbols open Gadget '12' '9' '653' '1260' '186' '220';
+	WindowOrder Tree List Taxa List Characters Text AboutFile States;
 	OtherSymbols & / 00 ? -;
 	Correlation '0' '0' '1000' '0' '0' 10011010;
 	Salmo 00000001;
 	EditorFile '2';
 	ExportHTML _ MOSS '100' 110000;
 	PrettyPrint 10;
-	EditorToolsPosition '746' '13' '115' '165';
-	TreeToolsPosition '614' '6' '126' '138';
+	CharLegendPosition '881' '1535' '143' '85';
+	TreeLegendPosition '948' '1437' '76' '93';
+	EditorToolsPosition '771' '46' '115' '165';
+	TreeToolsPosition '716' '9' '126' '138';
 	TreeWindowProgram 10;
 	TreeWindow 0000;
 	Continuous '0' '3' 1;
-	Calculations 1100111;
+	Calculations 1000001;
 	SummaryMode '0' '0' 0;
 	Charts Arial '12' ( normal ) 0010;
 	NexusOptions '0' '0' '50' 001011001;
@@ -113,22 +159,17 @@ BEGIN MacClade;
 	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
 	ContinuousBranchLabels 0;
 	AllStatesBranchLabels 1;
-	IndexNotation '3' 0;
-	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	IndexNotation '3' 1;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
 	MatchChar 00 .;
 	EntryInterpretation 01;
-	ColorOptions 10;
+	ColorOptions 00;
 	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
 	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
 	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
 	BothTools '1';
 
 END;
-BEGIN SETS;
-	TAXPARTITION * UNTITLED  =  Ingroup :  1- 10, Outgroup :  11;
-
-END;
-
 BEGIN LABELS;
 	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
 	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
@@ -136,29 +177,33 @@ BEGIN LABELS;
 
 END;
 
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 24, Outgroup :  25;
+
+END;
+
 BEGIN MESQUITECHARMODELS;
-	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 18;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 38;
 END;
 
 Begin MESQUITE;
 		MESQUITESCRIPTVERSION 2;
 		TITLE AUTO;
 		tell ProjectCoordinator;
-		timeSaved 1606977886700;
+		timeSaved 1606973851772;
 		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
 		tell It;
-			setID 0 8969657180801902407;
+			setID 0 7119200132623341549;
 			tell It;
-				setSelected  11;
-				setDefaultOrder  1 2 3 4 5 6 7 8 9 10 0;
+				setDefaultOrder  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 0;
 				attachments ;
 			endTell;
 		endTell;
 		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
 		tell It;
-			setID 0 6377213210951699121;
+			setID 0 2114681200070524101;
 			mqVersion 361;
-			checksumv 0 3 3432503825 null  getNumChars 18 numChars 18 getNumTaxa 11 numTaxa 11   short true   bits 3   states 3   sumSquaresStatesOnly 662.0 sumSquares 662.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			checksumv 0 3 659104130 null  getNumChars 38 numChars 38 getNumTaxa 25 numTaxa 25   short true   bits 511   states 511   sumSquaresStatesOnly 612708.0 sumSquares 612708.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
 			mqVersion;
 		endTell;
 		getWindow;
@@ -170,7 +215,7 @@ Begin MESQUITE;
 			setAnnotationSize 0;
 			setFontIncAnnot 0;
 			setFontIncExp 0;
-			setSize 1128 452;
+			setSize 1229 746;
 			setLocation 8 23;
 			setFont Gadget;
 			setFontSize 12;
@@ -181,9 +226,9 @@ Begin MESQUITE;
 		endTell;
 		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
 		tell It;
-			showTaxa #8969657180801902407 #mesquite.lists.TaxonList.TaxonList;
+			showTaxa #7119200132623341549 #mesquite.lists.TaxonList.TaxonList;
 			tell It;
-				setTaxa #8969657180801902407;
+				setTaxa #7119200132623341549;
 				getWindow;
 				tell It;
 					useTargetValue off;
@@ -193,13 +238,14 @@ Begin MESQUITE;
 					setAnnotationSize 20;
 					setFontIncAnnot 0;
 					setFontIncExp 0;
-					setSize 1028 380;
+					setSize 1129 674;
 					setLocation 8 23;
 					setFont Gadget;
 					setFontSize 12;
 					getToolPalette;
 					tell It;
 					endTell;
+					setActive;
 				endTell;
 				showWindow;
 				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
@@ -215,30 +261,29 @@ Begin MESQUITE;
 		endTell;
 		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
 		tell It;
-			makeTreeWindow #8969657180801902407  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			makeTreeWindow #7119200132623341549  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
 			tell It;
 				suppressEPCResponse;
 				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
 				tell It;
 					setTreeBlock 1;
-					setTreeBlockID 01762757f45369;
+					setTreeBlockID 01762719e85238;
 					toggleUseWeights off;
 				endTell;
-				setAssignedID 8677.1606977882625.8381048092060783103;
+				setAssignedID 4892.1606973790321.7266222866267845809;
 				getTreeWindow;
 				tell It;
 					setExplanationSize 30;
 					setAnnotationSize 20;
 					setFontIncAnnot 0;
 					setFontIncExp 0;
-					setSize 1028 380;
+					setSize 1129 674;
 					setLocation 8 23;
 					setFont Gadget;
 					setFontSize 12;
 					getToolPalette;
 					tell It;
 					endTell;
-					setActive;
 					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
 				tell It;
 					suppress;
@@ -282,6 +327,7 @@ Begin MESQUITE;
 					endTell;
 				endTell;
 					setTreeNumber 1;
+					setTree '(25,((1,(2,3)),(17,(19,(20,((16,((9,21),(7,(4,(18,(13,(23,10))))))),((15,14),(6,(5,(12,(8,(22,(11,24)))))))))))));';
 					setDrawingSizeMode 0;
 					toggleLegendFloat on;
 					scale 0;
@@ -339,15 +385,19 @@ Begin MESQUITE;
 		endTell;
 		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
 		tell It;
-			showDataWindow #6377213210951699121 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			showDataWindow #2114681200070524101 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
 			tell It;
 				getWindow;
 				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 171;
+					endTell;
 					setExplanationSize 30;
 					setAnnotationSize 20;
 					setFontIncAnnot 0;
 					setFontIncExp 0;
-					setSize 1028 380;
+					setSize 1129 674;
 					setLocation 8 23;
 					setFont Gadget;
 					setFontSize 12;

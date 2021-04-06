@@ -1,1 +1,445 @@
-#NEXUS [MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]BEGIN DATA;	DIMENSIONS  NTAX=14 NCHAR=26;[!Leighton, L. R. & C. G. Maples.  2002. Evaluating internal versus external characters: phylogenetic analyses of the Echinoconchidae, Buxtoniinae, and Juresaniinae (phylum Brachiopoda).  Journal of Paleontology 76(4):659-671.  10.1666/?0022-3360(2002)?076<0659:EIVECP>?2.0.CO;2]	FORMAT SYMBOLS= " 0 1 2 3 4 5 6" MISSING=? GAP=- ;	CHARSTATELABELS  		25  FA,  26  LA		;MATRIX[                             10        20     ][                             .         .      ]Productella          00(01)00000100110000000000101Praewaagenoconcha    20000001000000000000000112Leioproductus        01101010(01)001100000001?1122Sentosia             200000010000(01)00000000?0123Spinocarinifera      01111010100011001210110033Diaphragmus          01011100100011001210110055Antiquatonia         01111110100111001110110156Flexaria             010100110002110202111?1135Buxtonia             011100110002110201111?1056Pustula              110100110101100102111?0133Echinoconchus        11010011011000020221000035Echinaria            11010011011000020221100066Pulchratia           01010011011000110111101166Parajuresania        01010011011000110211101066;END;BEGIN ASSUMPTIONS;	OPTIONS  DEFTYPE=unord PolyTcount=MAXSTEPS ;	TYPESET * UNTITLED  = unord: 1-24, strat: 25-26;	WTSET * UNTITLED  = 1: 1-24, 0: 25-26;END;BEGIN TREES; 	TRANSLATE		1	Productella,		2	Praewaagenoconcha,		3	Leioproductus,		4	Sentosia,		5	Spinocarinifera,		6	Diaphragmus,		7	Antiquatonia,		8	Flexaria,		9	Buxtonia,		10	Pustula,		11	Echinoconchus,		12	Echinaria,		13	Pulchratia,		14	Parajuresania	;	TREE  * 'Fig. 7,1' =  [&R] (1,((2,4),(3,((7,(5,6)),((9,8),(10,((11,12),(13,14))))))));END;BEGIN MacClade;	Version 4.0  87;	LastModified -851768382;	FileSettings treewindow  '1' '25' '1' '0';	Singles 000;	Editor 00011001111111100100010010 '0' '24' Gadget '12' '162' '1' all;	EditorPosition  '40' '4' '920' '1195';	TreeWindowPosition  '46' '6' '985' '1630';	ListWindow Characters open Gadget '12' '50' '25' '270' '586' 000;	ListWindow Taxa closed Gadget '12' '50' '10' '287' '333' 100000000;	ListWindow Trees closed Gadget '12' '79' '311' '121' '379' ;	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;	TextWindow AboutFile  '50' '25' '280' '445' Gadget '12' (normal) 1 ;	ChartWindowPosition  '50' '30' '880' '1220';	StateNamesSymbols closed Gadget '12' '10' '50' '30' '148' '220';	WindowOrder  Text AboutFile Tree List Characters;	OtherSymbols &/ 00 ?-;	Correlation  '0' '0' '1000' '0' '0' 10011010;	Salmo 00000001;	EditorFile  '2';	ExportHTML _ MOSS  '100' 110000;	PrettyPrint 10;	CharLegendPosition  '887' '1535' '99' '90';	TreeLegendPosition  '920' '1437' '112' '93';	EditorToolsPosition  '801' '46' '115' '165';	TreeToolsPosition  '799' '5' '126' '138';	TreeWindowProgram 00;	TreeWindow 0000;	Continuous  '0' '3' 1;	Calculations 1100111;	SummaryMode  '0' '0' 0;	Charts  Gadget '12' (normal) 0010;	NexusOptions  '0' '0' '50' 001011001;	TipLabel  '1';	TreeFont  Gadget '12' (normal);	TreeShape  1.0 1.0 0100;	TraceLabels 0101;	ChartColors  '0' '0' '65535' '9' '0' 1;	ChartBiggestSpot 1;	ChartPercent 10;	ChartBarWidth  '10' 1;	ChartVerticalAxis 10101;	ChartMinMax  '0';	TraceAllChangesDisplay  '1' 1;	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;	ContinuousBranchLabels 0;	AllStatesBranchLabels 1;	IndexNotation  '3' 0;	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' (normal) Gadget '10' (normal) Gadget '12' (normal) Gadget '12' (normal) Gadget '12' (bold ) Gadget '12' (normal) Gadget '12' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;	MatchChar 00 .;	EntryInterpretation 01;	ColorOptions 00;	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;	BothTools  '1';END;
+#NEXUS
+[written Wed Dec 02 23:04:47 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=14;
+	TAXLABELS
+		Praewaagenoconcha Leioproductus Sentosia Spinocarinifera Diaphragmus Antiquatonia Flexaria Buxtonia Pustula Echinoconchus Echinaria Pulchratia Parajuresania Productella 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=24;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6";
+	MATRIX
+	Praewaagenoconcha  200000010000000000000001
+	Leioproductus      01101010(0 1)001100000001?11
+	Sentosia           200000010000(0 1)00000000?01
+	Spinocarinifera    011110101000110012101100
+	Diaphragmus        010111001000110012101100
+	Antiquatonia       011111101001110011101101
+	Flexaria           010100110002110202111?11
+	Buxtonia           011100110002110201111?10
+	Pustula            110100110101100102111?01
+	Echinoconchus      110100110110000202210000
+	Echinaria          110100110110000202211000
+	Pulchratia         010100110110001101111011
+	Parajuresania      010100110110001102111010
+	Productella        00(0 1)000001001100000000001
+
+;
+
+END;
+BEGIN ASSUMPTIONS;
+	OPTIONS DEFTYPE = unord PolyTcount = MAXSTEPS;
+	TYPESET * UNTITLED   =  unord:  1- 24;
+
+	WTSET * UNTITLED  =  1: 1 -  24 ;
+
+END;
+
+BEGIN TREES;
+	Title 'Trees from "Echinoconchidae_Leighton_&_Maples_2002.nex"';
+	ID 017626fc3c0017;
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		1 Praewaagenoconcha,
+[1] 		2 Leioproductus,
+[2] 		3 Sentosia,
+[3] 		4 Spinocarinifera,
+[4] 		5 Diaphragmus,
+[5] 		6 Antiquatonia,
+[6] 		7 Flexaria,
+[7] 		8 Buxtonia,
+[8] 		9 Pustula,
+[9] 		10 Echinoconchus,
+[10] 		11 Echinaria,
+[11] 		12 Pulchratia,
+[12] 		13 Parajuresania,
+[13] 		14 Productella;
+	TREE 'Fig. 7,1' = (14,((1,3),(2,((6,(4,5)),((8,7),(9,((10,11),(12,13))))))));
+
+END;
+
+
+BEGIN MacClade;
+	Version 4.0 87;
+	LastModified -851768382;
+	FileSettings treewindow '1' '25' '1' '0';
+	Singles 000;
+	Editor 00011001111111100100010010 '0' '24' Gadget '12' '162' '1' all;
+	EditorPosition '40' '4' '920' '1195';
+	TreeWindowPosition '46' '6' '985' '1630';
+	ListWindow Characters open Gadget '12' '50' '25' '270' '586' 000;
+	ListWindow Taxa closed Gadget '12' '50' '10' '287' '333' 100000000;
+	ListWindow Trees closed Gadget '12' '79' '311' '121' '379';
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow TaxSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	TextWindow AboutFile '50' '25' '280' '445' Gadget '12' ( normal ) 1;
+	ChartWindowPosition '50' '30' '880' '1220';
+	StateNamesSymbols closed Gadget '12' '10' '50' '30' '148' '220';
+	WindowOrder Text AboutFile Tree List Characters;
+	OtherSymbols & / 00 ? -;
+	Correlation '0' '0' '1000' '0' '0' 10011010;
+	Salmo 00000001;
+	EditorFile '2';
+	ExportHTML _ MOSS '100' 110000;
+	PrettyPrint 10;
+	CharLegendPosition '887' '1535' '99' '90';
+	TreeLegendPosition '920' '1437' '112' '93';
+	EditorToolsPosition '801' '46' '115' '165';
+	TreeToolsPosition '799' '5' '126' '138';
+	TreeWindowProgram 00;
+	TreeWindow 0000;
+	Continuous '0' '3' 1;
+	Calculations 1100111;
+	SummaryMode '0' '0' 0;
+	Charts Gadget '12' ( normal ) 0010;
+	NexusOptions '0' '0' '50' 001011001;
+	TipLabel '1';
+	TreeFont Gadget '12' ( normal );
+	TreeShape 1.0 1.0 0100;
+	TraceLabels 0101;
+	ChartColors '0' '0' '65535' '9' '0' 1;
+	ChartBiggestSpot 1;
+	ChartPercent 10;
+	ChartBarWidth '10' 1;
+	ChartVerticalAxis 10101;
+	ChartMinMax '0';
+	TraceAllChangesDisplay '1' 1;
+	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ContinuousBranchLabels 0;
+	AllStatesBranchLabels 1;
+	IndexNotation '3' 0;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '12' ( normal ) Gadget '10' ( normal ) Gadget '12' ( normal ) Gadget '12' ( normal ) Gadget '12' ( bold ) Gadget '12' ( normal ) Gadget '12' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '0' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	MatchChar 00 .;
+	EntryInterpretation 01;
+	ColorOptions 00;
+	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools '1';
+
+END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 13, Outgroup :  14;
+
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 24;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1606971887692;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 3780980939281657975;
+			tell It;
+				setSelected  1 -  13;
+				setDefaultOrder  1 2 3 4 5 6 7 8 9 10 11 12 13 0;
+				attachments ;
+			endTell;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 89196146115607334;
+			mqVersion 361;
+			checksumv 0 3 581216669 null  getNumChars 24 numChars 24 getNumTaxa 14 numTaxa 14   short true   bits 7   states 7   sumSquaresStatesOnly 1015.0 sumSquares 1015.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1231 503;
+			setLocation 8 23;
+			setFont Gadget;
+			setFontSize 12;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #3780980939281657975 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #3780980939281657975;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1131 431;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #3780980939281657975  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					setTreeBlockID 017626fc3c0017;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 2797.1606971857296.410915119565751324;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1131 431;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setTree '(14,((1,3),(2,((6,(4,5)),((8,7),(9,((10,11),(12,13))))))));';
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #89196146115607334 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1131 431;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleReduceCellBorders off;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

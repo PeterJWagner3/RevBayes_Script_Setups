@@ -1,11 +1,11 @@
 #NEXUS
-[written Thu Dec 03 00:44:46 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/10.0.1.51]
+[written Wed Dec 02 23:26:52 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
 
 BEGIN TAXA;
 	TITLE Taxa;
-	DIMENSIONS NTAX=11;
+	DIMENSIONS NTAX=19;
 	TAXLABELS
-		Hebertella_alveata Hebertella_bursa Hebertella_frankfortensis Hebertella_maria Hebertella_montoyensis Hebertella_occidentalis Hebertella_parksensis Hebertella_prestonensis Hebertella_richmondensis Hebertella_subjugata Doleroides_tennesseensis 
+		Cacemia Harknessella Haymina Horderleyella Isabelella Kampella Reuschella Smeathenella Heterorthis Arenorthis Cilinella Heterorthella Heterorthina Incorthis Marionites Svobodaina Tafilaltia Tissintia Paurorthis 
 	;
 
 END;
@@ -13,65 +13,90 @@ END;
 
 BEGIN CHARACTERS;
 	TITLE  Character_Matrix;
-	DIMENSIONS  NCHAR=18;
-	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1";
+	DIMENSIONS  NCHAR=22;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6";
 	MATRIX
-	Hebertella_alveata         1(0 1)001011(0 1)1(0 1)0000(0 1)(0 1)1
-	Hebertella_bursa           1010001?0001100101
-	Hebertella_frankfortensis  0111(0 1)0(0 1)10001010000
-	Hebertella_maria           0(0 1)0(0 1)1(0 1)110000111110
-	Hebertella_montoyensis     1?1?010011100(0 1)(0 1)???
-	Hebertella_occidentalis    (0 1)(0 1)(0 1)(0 1)(0 1)(0 1)1(0 1)11(0 1)(0 1)0(0 1)(0 1)(0 1)0(0 1)
-	Hebertella_parksensis      0(0 1)(0 1)(0 1)(0 1)1100001001011
-	Hebertella_prestonensis    11110100111010100(0 1)
-	Hebertella_richmondensis   110000000(0 1)11101101
-	Hebertella_subjugata       011111?00001010001
-	Doleroides_tennesseensis   10000000000000(0 1)0(0 1)0
+	Cacemia        1341(4 5)10445350512202100
+	Harknessella   1(2 3)01400445341210002101
+	Haymina        11125004451??21?0000??
+	Horderleyella  111140044534111?002101
+	Isabelella     1151400445341511002111
+	Kampella       0101400?45451213002010
+	Reuschella     1(2 3)11200445351211002101
+	Smeathenella   1211500445340110000001
+	Heterorthis    1130413442330513212210
+	Arenorthis     2121402442030514212210
+	Cilinella      2110400442?50512002?10
+	Heterorthella  013050044235051?012110
+	Heterorthina   2131310242330513202110
+	Incorthis      01013004?5?5020?200010
+	Marionites     21(5 6)130044233051?201110
+	Svobodaina     2111410442350513202310
+	Tafilaltia     01214104423305132?1210
+	Tissintia      012141044235051?202110
+	Paurorthis     0121400221330163200011
 
 ;
 
 END;
-BEGIN MacCladeStart;
-	Extended;
-
-END;
 BEGIN ASSUMPTIONS;
 	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
-	TYPESET * UNTITLED   =  unord:  1- 18;
+	TYPESET * UNTITLED   =  unord:  1- 22;
 
 END;
 
 BEGIN TREES;
-	Title 'Trees from "Hebertella_Wright_&_Stigall_2013.nex"';
-	ID 01762757f45369;
+	Title 'Trees from "Harknessellidae_Reyes-Abril_et_al_2013.nex"';
+	ID 0176270f134433;
 	LINK Taxa = Taxa;
 	TRANSLATE
-[0] 		1 Hebertella_alveata,
-[1] 		2 Hebertella_bursa,
-[2] 		3 Hebertella_frankfortensis,
-[3] 		4 Hebertella_maria,
-[4] 		5 Hebertella_montoyensis,
-[5] 		6 Hebertella_occidentalis,
-[6] 		7 Hebertella_parksensis,
-[7] 		8 Hebertella_prestonensis,
-[8] 		9 Hebertella_richmondensis,
-[9] 		10 Hebertella_subjugata,
-[10] 		11 Doleroides_tennesseensis;
-	TREE UNTITLED = (11,(1,((2,9),((10,(3,4)),(7,(6,(5,8)))))));
+[0] 		1 Cacemia,
+[1] 		2 Harknessella,
+[2] 		3 Haymina,
+[3] 		4 Horderleyella,
+[4] 		5 Isabelella,
+[5] 		6 Kampella,
+[6] 		7 Reuschella,
+[7] 		8 Smeathenella,
+[8] 		9 Heterorthis,
+[9] 		10 Arenorthis,
+[10] 		11 Cilinella,
+[11] 		12 Heterorthella,
+[12] 		13 Heterorthina,
+[13] 		14 Incorthis,
+[14] 		15 Marionites,
+[15] 		16 Svobodaina,
+[16] 		17 Tafilaltia,
+[17] 		18 Tissintia,
+[18] 		19 Paurorthis;
+	TREE Fig._7 = (19,(((((((((3,8),4),2),7),1),5),(((((9,(10,17)),(15,13)),16),18),(12,11))),6),14));
 
 END;
 
 
+BEGIN NOTES;
+
+	TEXT  TAXON = 11 TEXT = 'O_Llde-u_O_Cara-m';
+	TEXT  TAXON = 12 TEXT = 'S_Ldov-l_S_Ludl';
+	TEXT  TAXON = 13 TEXT = '_O_Llde-l_O_Ashg';
+	TEXT  TAXON = 14 TEXT = O_Aren;
+	TEXT  TAXON = 15 TEXT = '_O_Cara-m';
+	TEXT  TAXON = 16 TEXT = 'O_Llde_O_Cara-u';
+	TEXT  TAXON = 17 TEXT = 'O_Llde-l_O_Cara-u';
+	TEXT  TAXON = 18 TEXT = 'O_Llvi-u_O_Cara-m';
+
+END;
+
 BEGIN MacClade;
 	Version 4.0 87;
-	LastModified -848841632;
-	FileSettings '1' '1' '1' '1';
-	Singles 010;
-	Editor 00011001111111100100010010 '0' '72' Gadget '12' '190' '1' all;
-	EditorPosition '46' '6' '1112' '1870';
-	TreeWindowPosition '46' '6' '997' '1630';
-	ListWindow Characters open Gadget '12' '50' '25' '372' '321' 000;
-	ListWindow Taxa closed Gadget '12' '50' '10' '253' '281' 100000000;
+	LastModified -823096581;
+	FileSettings editor '1' '1' '21' '1';
+	Singles 100;
+	Editor 00011011111111100100010010 '0' '100' Gadget '12' '162' '1' all;
+	EditorPosition '46' '6' '1107' '1811';
+	TreeWindowPosition '46' '6' '1005' '1630';
+	ListWindow Characters open Gadget '12' '50' '10' '440' '374' 000;
+	ListWindow Taxa open Gadget '12' '50' '10' '253' '281' 100000000;
 	ListWindow Trees closed Gadget '12' '50' '10' '134' '387';
 	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490';
 	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
@@ -81,23 +106,24 @@ BEGIN MacClade;
 	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490';
 	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490';
 	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	TextWindow AboutFile '50' '25' '280' '445' Gadget '12' ( normal ) 1;
 	ChartWindowPosition '52' '30' '818' '1380';
-	StateNamesSymbols closed Gadget '12' '17' '694' '156' '322' '264';
-	WindowOrder List Characters;
+	StateNamesSymbols open Gadget '12' '10' '103' '1193' '203' '248';
+	WindowOrder Data Text AboutFile List Characters List Taxa States;
 	OtherSymbols & / 00 ? -;
 	Correlation '0' '0' '1000' '0' '0' 10011010;
 	Salmo 00000001;
 	EditorFile '2';
 	ExportHTML _ MOSS '100' 110000;
 	PrettyPrint 10;
-	EditorToolsPosition '746' '13' '115' '165';
-	TreeToolsPosition '614' '6' '126' '138';
+	EditorToolsPosition '771' '46' '115' '165';
+	TreeToolsPosition '866' '9' '126' '138';
 	TreeWindowProgram 10;
 	TreeWindow 0000;
 	Continuous '0' '3' 1;
-	Calculations 1100111;
+	Calculations 1000101;
 	SummaryMode '0' '0' 0;
-	Charts Arial '12' ( normal ) 0010;
+	Charts Arial '9' ( normal ) 0010;
 	NexusOptions '0' '0' '50' 001011001;
 	TipLabel '1';
 	TreeFont Gadget '12' ( normal );
@@ -113,22 +139,17 @@ BEGIN MacClade;
 	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
 	ContinuousBranchLabels 0;
 	AllStatesBranchLabels 1;
-	IndexNotation '3' 0;
-	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	IndexNotation '3' 1;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '255' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
 	MatchChar 00 .;
 	EntryInterpretation 01;
-	ColorOptions 10;
+	ColorOptions 00;
 	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
 	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
 	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
 	BothTools '1';
 
 END;
-BEGIN SETS;
-	TAXPARTITION * UNTITLED  =  Ingroup :  1- 10, Outgroup :  11;
-
-END;
-
 BEGIN LABELS;
 	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
 	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
@@ -136,29 +157,34 @@ BEGIN LABELS;
 
 END;
 
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 18, Outgroup :  19;
+
+END;
+
 BEGIN MESQUITECHARMODELS;
-	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 18;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 22;
 END;
 
 Begin MESQUITE;
 		MESQUITESCRIPTVERSION 2;
 		TITLE AUTO;
 		tell ProjectCoordinator;
-		timeSaved 1606977886700;
+		timeSaved 1606973212441;
 		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
 		tell It;
-			setID 0 8969657180801902407;
+			setID 0 3108750794668787911;
 			tell It;
-				setSelected  11;
-				setDefaultOrder  1 2 3 4 5 6 7 8 9 10 0;
+				setSelected  19;
+				setDefaultOrder  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 0;
 				attachments ;
 			endTell;
 		endTell;
 		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
 		tell It;
-			setID 0 6377213210951699121;
+			setID 0 6038474883626182237;
 			mqVersion 361;
-			checksumv 0 3 3432503825 null  getNumChars 18 numChars 18 getNumTaxa 11 numTaxa 11   short true   bits 3   states 3   sumSquaresStatesOnly 662.0 sumSquares 662.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			checksumv 0 3 390811261 null  getNumChars 22 numChars 22 getNumTaxa 19 numTaxa 19   short true   bits 127   states 127   sumSquaresStatesOnly 65453.0 sumSquares 65453.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
 			mqVersion;
 		endTell;
 		getWindow;
@@ -170,7 +196,7 @@ Begin MESQUITE;
 			setAnnotationSize 0;
 			setFontIncAnnot 0;
 			setFontIncExp 0;
-			setSize 1128 452;
+			setSize 1006 641;
 			setLocation 8 23;
 			setFont Gadget;
 			setFontSize 12;
@@ -181,9 +207,9 @@ Begin MESQUITE;
 		endTell;
 		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
 		tell It;
-			showTaxa #8969657180801902407 #mesquite.lists.TaxonList.TaxonList;
+			showTaxa #3108750794668787911 #mesquite.lists.TaxonList.TaxonList;
 			tell It;
-				setTaxa #8969657180801902407;
+				setTaxa #3108750794668787911;
 				getWindow;
 				tell It;
 					useTargetValue off;
@@ -193,13 +219,14 @@ Begin MESQUITE;
 					setAnnotationSize 20;
 					setFontIncAnnot 0;
 					setFontIncExp 0;
-					setSize 1028 380;
+					setSize 906 569;
 					setLocation 8 23;
 					setFont Gadget;
 					setFontSize 12;
 					getToolPalette;
 					tell It;
 					endTell;
+					setActive;
 				endTell;
 				showWindow;
 				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
@@ -215,30 +242,29 @@ Begin MESQUITE;
 		endTell;
 		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
 		tell It;
-			makeTreeWindow #8969657180801902407  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			makeTreeWindow #3108750794668787911  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
 			tell It;
 				suppressEPCResponse;
 				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
 				tell It;
 					setTreeBlock 1;
-					setTreeBlockID 01762757f45369;
+					setTreeBlockID 0176270f134433;
 					toggleUseWeights off;
 				endTell;
-				setAssignedID 8677.1606977882625.8381048092060783103;
+				setAssignedID 4209.1606973110171.5978479412537149310;
 				getTreeWindow;
 				tell It;
 					setExplanationSize 30;
 					setAnnotationSize 20;
 					setFontIncAnnot 0;
 					setFontIncExp 0;
-					setSize 1028 380;
+					setSize 906 569;
 					setLocation 8 23;
 					setFont Gadget;
 					setFontSize 12;
 					getToolPalette;
 					tell It;
 					endTell;
-					setActive;
 					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
 				tell It;
 					suppress;
@@ -282,6 +308,7 @@ Begin MESQUITE;
 					endTell;
 				endTell;
 					setTreeNumber 1;
+					setTree '(19,(((((((((3,8),4),2),7),1),5),(((((9,(10,17)),(15,13)),16),18),(12,11))),6),14));';
 					setDrawingSizeMode 0;
 					toggleLegendFloat on;
 					scale 0;
@@ -339,7 +366,7 @@ Begin MESQUITE;
 		endTell;
 		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
 		tell It;
-			showDataWindow #6377213210951699121 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			showDataWindow #6038474883626182237 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
 			tell It;
 				getWindow;
 				tell It;
@@ -347,7 +374,7 @@ Begin MESQUITE;
 					setAnnotationSize 20;
 					setFontIncAnnot 0;
 					setFontIncExp 0;
-					setSize 1028 380;
+					setSize 906 569;
 					setLocation 8 23;
 					setFont Gadget;
 					setFontSize 12;

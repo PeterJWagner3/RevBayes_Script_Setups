@@ -1,11 +1,11 @@
 #NEXUS
-[written Sun Jul 14 19:30:23 PDT 2019 by Mesquite  version 3.6 (build 917) at EAS-6BCEC7.local/10.0.0.33]
+[written Thu Dec 03 00:29:13 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/10.0.1.51]
 
 BEGIN TAXA;
 	TITLE Taxa;
 	DIMENSIONS NTAX=24;
 	TAXLABELS
-		Agyrekia_obtusa Kutorgina_cingulata Bellistrophia_aitenensis Bellistrophia_deissei Bellistrophia_montanensis Eoconcha_austini Narynella_ferganensis Nisusia_alaica Nisusia_alberta Nisusia_ancauchensis Nisusia_borealis Nisusia_festinata Nisusia_grandis Nisusia_granosa Nisusia_kotujensis Nisusia_lickensis Nisusia_metula Nisusia_minussensis Nisusia_multicostata Nisusia_nasuta Nisusia_pospelovi Nisusia_sulcata Nisusia_vaticina Nisusia_guizhouensis 
+		Bellistrophia_aitenensis Bellistrophia_deissei Bellistrophia_montanensis Eoconcha_austini Narynella_ferganensis Nisusia_alaica Nisusia_alberta Nisusia_ancauchensis Nisusia_borealis Nisusia_festinata Nisusia_grandis Nisusia_granosa Nisusia_kotujensis Nisusia_lickensis Nisusia_metula Nisusia_minussensis Nisusia_multicostata Nisusia_nasuta Nisusia_pospelovi Nisusia_sulcata Nisusia_vaticina Nisusia_guizhouensis Agyrekia_obtusa Kutorgina_cingulata 
 	;
 
 END;
@@ -16,8 +16,6 @@ BEGIN CHARACTERS;
 	DIMENSIONS  NCHAR=28;
 	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6";
 	MATRIX
-	Agyrekia_obtusa            010200002?010300101100001000
-	Kutorgina_cingulata        1103000211020020101010001001
 	Bellistrophia_aitenensis   1100230200100120012112110100
 	Bellistrophia_deissei      110132020011012001112211010?
 	Bellistrophia_montanensis  110033020011112010112111010?
@@ -40,6 +38,8 @@ BEGIN CHARACTERS;
 	Nisusia_sulcata            1100121000110110101120110111
 	Nisusia_vaticina           00121110101101011101121101??
 	Nisusia_guizhouensis       1012020200110200120111110101
+	Agyrekia_obtusa            010200002?010300101100001000
+	Kutorgina_cingulata        1103000211020020101010001001
 
 ;
 
@@ -107,6 +107,11 @@ BEGIN MacClade;
 	BothTools '1';
 
 END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 22, Outgroup :  23- 24;
+
+END;
+
 BEGIN ASSUMPTIONS;
 	TYPESET * UNTITLED   =  unord:  1- 28;
 
@@ -116,20 +121,31 @@ BEGIN MESQUITECHARMODELS;
 	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 28;
 END;
 
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
 Begin MESQUITE;
 		MESQUITESCRIPTVERSION 2;
 		TITLE AUTO;
 		tell ProjectCoordinator;
-		timeSaved 1563157823777;
+		timeSaved 1606976953737;
 		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
 		tell It;
 			setID 0 6793803943664271080;
+			tell It;
+				setDefaultOrder  2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 0 1;
+				attachments ;
+			endTell;
 		endTell;
 		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
 		tell It;
 			setID 0 5467818353120385696;
-			mqVersion 360;
-			checksumv 0 3 3170034177 null  getNumChars 28 numChars 28 getNumTaxa 24 numTaxa 24   short true   bits 31   states 31   sumSquaresStatesOnly 4237.0 sumSquares 4237.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion 361;
+			checksumv 0 3 75637047 null  getNumChars 28 numChars 28 getNumTaxa 24 numTaxa 24   short true   bits 31   states 31   sumSquaresStatesOnly 4237.0 sumSquares 4237.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
 			mqVersion;
 		endTell;
 		getWindow;
@@ -149,6 +165,181 @@ Begin MESQUITE;
 			tell It;
 			endTell;
 			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #6793803943664271080 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #6793803943664271080;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1056 623;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #6793803943664271080  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.DefaultTrees.DefaultTrees;
+				setAssignedID 7535.1606976911142.1286994223083233081;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1056 623;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+						setTool mesquite.trees.SearchTreeToolAssistant.SearchTreeToolExtra.randomlyRotate;
+					endTell;
+					setActive;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setTree '(23,(24,((6,15),(17,((12,(22,(16,(13,(11,19))))),((18,(7,10)),(8,(9,(21,(20,(14,(5,(1,(2,(3,4)))))))))))))))<> <> <  setBetweenBits = selected >;';
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.trees.SearchTreeToolAssistant.SearchTreeToolAssistant;
+				tell It;
+					getEmployee #mesquite.trees.TreeValueUsingMatrix.TreeValueUsingMatrix;
+					tell It;
+						getEmployee #mesquite.parsimony.TreelengthForMatrix.TreelengthForMatrix;
+						tell It;
+							getEmployee #mesquite.parsimony.ParsCharSteps.ParsCharSteps;
+							tell It;
+								setModelSource  #mesquite.parsimony.CurrentParsModels.CurrentParsModels;
+							endTell;
+						endTell;
+						getEmployee #mesquite.charMatrices.CharMatrixCoordIndep.CharMatrixCoordIndep;
+						tell It;
+							setCharacterSource #mesquite.charMatrices.StoredMatrices.StoredMatrices;
+							tell It;
+								setDataSet #5467818353120385696;
+							endTell;
+						endTell;
+					endTell;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
 		endTell;
 		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
 		tell It;
@@ -170,8 +361,8 @@ Begin MESQUITE;
 					setFontSize 10;
 					getToolPalette;
 					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
 					endTell;
-					setActive;
 					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
 					colorCells  #mesquite.charMatrices.NoColor.NoColor;
 					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
@@ -185,6 +376,7 @@ Begin MESQUITE;
 					toggleShowChanges on;
 					toggleSeparateLines off;
 					toggleShowStates on;
+					toggleReduceCellBorders off;
 					toggleAutoWCharNames on;
 					toggleAutoTaxonNames off;
 					toggleShowDefaultCharNames off;

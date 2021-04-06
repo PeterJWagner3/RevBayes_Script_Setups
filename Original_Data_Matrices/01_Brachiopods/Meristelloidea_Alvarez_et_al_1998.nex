@@ -1,116 +1,490 @@
-#NEXUS 
-[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+#NEXUS
+[written Tue Sep 08 00:11:29 CDT 2020 by Mesquite  version 3.6 (build 917) at EAS-6BCEC7.local/10.0.1.16 ()]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=37;
+	TAXLABELS
+		Athyridinae Athyrisininae Camarophorellinae Clavigerinae Cleiothyridininae Comelicaniinae Didymothyridinae Diplospirellinae Helenathyridinae Hungarispirinae Hustediinae Hyattidinidae Koninckinoidea Lochengiinae Meristellinae Meristinae Misoliinae Mongolospiroidea Neoretziinae Nucleospiroidea Ochotathyridinae Parazygidae Plectospirinae Plicathyridinae Pradoiinae Retzielloidea Retziidae Rhynchospirinidae Rowleyellinae Septathyridinae Spirigerellinae Tetractinellinae Triathyridinae Whitfieldellinae Xenosariinae Ancistrorhynchidae Trigonirhynchiidae 
+	;
+
+END;
 
 
-BEGIN DATA;
-	DIMENSIONS  NTAX=37 NCHAR=37;
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=37;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6";
+	MATRIX
+	Athyridinae         2000211001201002000023110000111112140
+	Athyrisininae       2020222002211002000023??0000111212110
+	Camarophorellinae   10001001032010031012?00044011112?2130
+	Clavigerinae        30101141230220020001042100001112?2110
+	Cleiothyridininae   2002221002201001000013110000111112140
+	Comelicaniinae      3010111012120001000023200000111????40
+	Didymothyridinae    100010100220???1000023010000111?12140
+	Diplospirellinae    0000100103202001000024210000111202150
+	Helenathyridinae    000411010220??010000230000001112?2150
+	Hungarispirinae     0010104123122200000026204000111002151
+	Hustediinae         1010101013111210000026201000111202001
+	Hyattidinidae       10001?200220?001000022?00000111?00000
+	Koninckinoidea      110000100202??02000020?0000022150?150
+	Lochengiinae        3000210103211000000023110000111112140
+	Meristellinae       2000101002201105000000003400111302120
+	Meristinae          20001010022010041100?0004400111302130
+	Misoliinae          2020100103202?0100002421000011120??40
+	Mongolospiroidea    10000001032012010000???04000111200001
+	Neoretziinae        201010??13112210000026204000111202161
+	Nucleospiroidea     1001101001110220000320210000111102000
+	Ochotathyridinae    3000101002202025000024210000111212140
+	Parazygidae         1023211001211212000025110000111220001
+	Plectospirinae      0010101012111200000026?03000111102001
+	Plicathyridinae     2010222213111002000023110000111212140
+	Pradoiinae          20411?4113201002000023110000111212110
+	Retzielloidea       10201010122010010000200032001111?0000
+	Retziidae           2020101012202210000026200000111202101
+	Rhynchospirinidae   10202010012112??000025101000111120001
+	Rowleyellinae       00001001032010031012?0004511????????0
+	Septathyridinae     2030102002211203000020003400111302120
+	Spirigerellinae     2000111002201002000023200000111112140
+	Tetractinellinae    1010211113112022000024210000111112140
+	Triathyridinae      2030103102203101000020003400111302120
+	Whitfieldellinae    2000100102201001000020002100111101000
+	Xenosariinae        1000104102100000000023000000111?????0
+	Ancistrorhynchidae  1020001002200002000021000000000000000
+	Trigonirhynchiidae  1020001002200102000020003100000000000
 
-[!Alvarez, F., R. Jia-Yu, and A. J. Boucot.  1998.  The classification of athyridid brachiopods.  Journal of Paleontology 72:827 - 855.]
-	FORMAT SYMBOLS= " 0 1 2 3 4 5 6" MISSING=? GAP=- ;
-
-MATRIX
-[                           10        20        30    ]
-[                            .         .         .    ]
-
-Ancistrorhynchidae	1020001002200002000021000000000000000
-Athyridinae			2000211001201002000023110000111112140
-Athyrisininae		2020222002211002000023??0000111212110
-Camarophorellinae	10001001032010031012?00044011112?2130
-Clavigerinae		30101141230220020001042100001112?2110
-Cleiothyridininae	2002221002201001000013110000111112140
-Comelicaniinae		3010111012120001000023200000111????40
-Didymothyridinae	100010100220???1000023010000111?12140
-Diplospirellinae	0000100103202001000024210000111202150
-Helenathyridinae	000411010220??010000230000001112?2150
-Hungarispirinae		0010104123122200000026204000111002151
-Hustediinae			1010101013111210000026201000111202001
-Hyattidinidae		10001?200220?001000022?00000111?00000
-Koninckinoidea		110000100202??02000020?0000022150?150
-Lochengiinae		3000210103211000000023110000111112140
-Meristellinae		2000101002201105000000003400111302120
-Meristinae			20001010022010041100?0004400111302130
-Misoliinae			2020100103202?0100002421000011120??40
-Mongolospiroidea	10000001032012010000???04000111200001
-Neoretziinae		201010??13112210000026204000111202161
-Nucleospiroidea		1001101001110220000320210000111102000
-Ochotathyridinae	3000101002202025000024210000111212140
-Parazygidae			1023211001211212000025110000111220001
-Plectospirinae		0010101012111200000026?03000111102001
-Plicathyridinae		2010222213111002000023110000111212140
-Pradoiinae			20411?4113201002000023110000111212110
-Retzielloidea		10201010122010010000200032001111?0000
-Retziidae			2020101012202210000026200000111202101
-Rhynchospirinidae	10202010012112??000025101000111120001
-Rowleyellinae		00001001032010031012?0004511????????0
-Septathyridinae		2030102002211203000020003400111302120
-Spirigerellinae		2000111002201002000023200000111112140
-Tetractinellinae	1010211113112022000024210000111112140
-Triathyridinae		2030103102203101000020003400111302120
-Trigonirhynchiidae	1020001002200102000020003100000000000
-Whitfieldellinae	2000100102201001000020002100111101000
-Xenosariinae		1000104102100000000023000000111?????0
 ;
-end;
 
+END;
 BEGIN MacClade;
-	Version 4.0  87;
+	Version 4.0 87;
 	LastModified -823096581;
-	FileSettings editor  '1' '1' '21' '1';
+	FileSettings editor '1' '1' '21' '1';
 	Singles 100;
 	Editor 00011011111111100100010010 '0' '100' Gadget '12' '162' '1' all;
-	EditorPosition  '46' '6' '1107' '1811';
-	TreeWindowPosition  '46' '6' '1005' '1630';
+	EditorPosition '46' '6' '1107' '1811';
+	TreeWindowPosition '46' '6' '1005' '1630';
 	ListWindow Characters open Gadget '12' '50' '10' '440' '374' 000;
 	ListWindow Taxa open Gadget '12' '50' '10' '253' '281' 100000000;
-	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;
-	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow TaxSets closed Gadget '12' '50' '10' '134' '185' ;
-	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
-	TextWindow AboutFile  '50' '25' '280' '445' Gadget '12' (normal) 1 ;
-	ChartWindowPosition  '52' '30' '818' '1380';
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387';
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow TaxSets closed Gadget '12' '50' '10' '134' '185';
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	TextWindow AboutFile '50' '25' '280' '445' Gadget '12' ( normal ) 1;
+	ChartWindowPosition '52' '30' '818' '1380';
 	StateNamesSymbols open Gadget '12' '10' '103' '1193' '203' '248';
-	WindowOrder  Data Text AboutFile List Characters List Taxa States;
-	OtherSymbols &/ 00 ?-;
-	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	WindowOrder Data Text AboutFile List Characters List Taxa States;
+	OtherSymbols & / 00 ? -;
+	Correlation '0' '0' '1000' '0' '0' 10011010;
 	Salmo 00000001;
-	EditorFile  '2';
-	ExportHTML _ MOSS  '100' 110000;
+	EditorFile '2';
+	ExportHTML _ MOSS '100' 110000;
 	PrettyPrint 10;
-	EditorToolsPosition  '771' '46' '115' '165';
-	TreeToolsPosition  '866' '9' '126' '138';
+	EditorToolsPosition '771' '46' '115' '165';
+	TreeToolsPosition '866' '9' '126' '138';
 	TreeWindowProgram 10;
 	TreeWindow 0000;
-	Continuous  '0' '3' 1;
+	Continuous '0' '3' 1;
 	Calculations 1000101;
-	SummaryMode  '0' '0' 0;
-	Charts  Arial '9' (normal) 0010;
-	NexusOptions  '0' '0' '50' 001011001;
-	TipLabel  '1';
-	TreeFont  Gadget '12' (normal);
-	TreeShape  1.0 1.0 0100;
+	SummaryMode '0' '0' 0;
+	Charts Arial '9' ( normal ) 0010;
+	NexusOptions '0' '0' '50' 001011001;
+	TipLabel '1';
+	TreeFont Gadget '12' ( normal );
+	TreeShape 1.0 1.0 0100;
 	TraceLabels 0101;
-	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartColors '0' '0' '65535' '9' '0' 1;
 	ChartBiggestSpot 1;
 	ChartPercent 10;
-	ChartBarWidth  '10' 1;
+	ChartBarWidth '10' 1;
 	ChartVerticalAxis 10101;
-	ChartMinMax  '0';
-	TraceAllChangesDisplay  '1' 1;
-	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ChartMinMax '0';
+	TraceAllChangesDisplay '1' 1;
+	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
 	ContinuousBranchLabels 0;
 	AllStatesBranchLabels 1;
-	IndexNotation  '3' 1;
-	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '255' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	IndexNotation '3' 1;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '255' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
 	MatchChar 00 .;
 	EntryInterpretation 01;
 	ColorOptions 00;
-	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
-	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
-	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
-	BothTools  '1';
+	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools '1';
+
 END;
+BEGIN LABELS;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 35, Outgroup :  36- 37;
+
+END;
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 37;
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 37;
+END;
+
+BEGIN TREES;
+	Title Trees;
+	ID 01744b4bbd0614;
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		n0 Athyridinae,
+[1] 		n1 Athyrisininae,
+[2] 		n2 Camarophorellinae,
+[3] 		n3 Clavigerinae,
+[4] 		n4 Cleiothyridininae,
+[5] 		n5 Comelicaniinae,
+[6] 		n6 Didymothyridinae,
+[7] 		n7 Diplospirellinae,
+[8] 		n8 Helenathyridinae,
+[9] 		n9 Hungarispirinae,
+[10] 		n10 Hustediinae,
+[11] 		n11 Hyattidinidae,
+[12] 		n12 Koninckinoidea,
+[13] 		n13 Lochengiinae,
+[14] 		n14 Meristellinae,
+[15] 		n15 Meristinae,
+[16] 		n16 Misoliinae,
+[17] 		n17 Mongolospiroidea,
+[18] 		n18 Neoretziinae,
+[19] 		n19 Nucleospiroidea,
+[20] 		n20 Ochotathyridinae,
+[21] 		n21 Parazygidae,
+[22] 		n22 Plectospirinae,
+[23] 		n23 Plicathyridinae,
+[24] 		n24 Pradoiinae,
+[25] 		n25 Retzielloidea,
+[26] 		n26 Retziidae,
+[27] 		n27 Rhynchospirinidae,
+[28] 		n28 Rowleyellinae,
+[29] 		n29 Septathyridinae,
+[30] 		n30 Spirigerellinae,
+[31] 		n31 Tetractinellinae,
+[32] 		n32 Triathyridinae,
+[33] 		n33 Whitfieldellinae,
+[34] 		n34 Xenosariinae,
+[35] 		n35 Ancistrorhynchidae,
+[36] 		n36 Trigonirhynchiidae;
+	TREE Figure_5 = (n35,(n36,(n12,(n25,(n19,((n33,((n14,(n29,n32)),(n15,(n2,n28)))),(n11,(n6,(n34,((n8,(n24,(n13,(n0,(n4,(n1,n23)))))),(n30,(n5,(n3,(n31,(n20,(n7,(n16,((n17,(n21,n27)),(n26,(n18,(n9,(n10,n22))))))))))))))))))))));
+
+END;
+
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1599541890048;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 3929998960534429556;
+			tell It;
+				setSelected  36;
+				setDefaultOrder  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 35 36 0 34;
+				attachments ;
+			endTell;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 3288955213563736671;
+			mqVersion 360;
+			checksumv 0 3 472494093 null  getNumChars 37 numChars 37 getNumTaxa 37 numTaxa 37   short true   bits 127   states 127   sumSquaresStatesOnly 51897.0 sumSquares 51897.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 202;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1258 740;
+			setLocation 8 23;
+			setFont Gadget;
+			setFontSize 16;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #3929998960534429556 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #3929998960534429556;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					getTable;
+					tell It;
+						rowNamesWidth 167;
+					endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1056 668;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 16;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #3929998960534429556  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.DefaultTrees.DefaultTrees;
+				setAssignedID 2458.1598990523478.6109647122898767325;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1056 668;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 16;
+					getToolPalette;
+					tell It;
+						setTool mesquite.trees.BasicTreeWindowMaker.BasicTreeWindow.arrow;
+					endTell;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientUp;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setTree '(36,(37,(13,(26,(20,((34,((15,(30,33)),(16,(3,29)))),(12,(7,(35,((9,(25,(14,(1,(5,(2,24)))))),(31,(6,(4,(32,(21,(8,(17,((18,(22,28)),(27,(19,(10,(11,23))))))))))))))))))))));';
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #3288955213563736671 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 176;
+					endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1056 668;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 16;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

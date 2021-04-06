@@ -1,159 +1,466 @@
-#NEXUS 
-[MacClade 4.08 registered to Peter Wagner, Field Museum of Natural History]
+#NEXUS
+[written Thu Dec 03 00:07:06 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=22;
+	TAXLABELS
+		Korinevskia_akbulakensis Protambonites_lermontovae Tritoechia_typica Tritoechia_tokmakensis Tritoechia_crassa Tritoechia_kendyktasica Pomatotrema_fecunda Martellia_ichangensis Martellia_reliqua Eremotoechia_spissa Eremotoechia_inchoata Antigonambonites_planus Polytoechia_subcircularis Obolella_chromatica Bohemiella_romingeri Kutorgina_catenata Narynella_sulcata Glyptoria_gulchensis Arctohedra_pyramidalis Billingsella_aliena Apomatella_ingrica Clitambonites_schmidti 
+	;
+
+END;
 
 
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=42;
+	FORMAT DATATYPE = STANDARD RESPECTCASE GAP = - MISSING = ? SYMBOLS = "  0 1 2 3 4 5 6 7";
+	MATRIX
+	Korinevskia_akbulakensis   2414011010002222400102122001300112211200??
+	Protambonites_lermontovae  241401101000222240??02122001301102211100??
+	Tritoechia_typica          123401101002121221??02132001201002211101??
+	Tritoechia_tokmakensis     122400101000121230??02122001200012211102??
+	Tritoechia_crassa          125311101001122230??02132001101012211101??
+	Tritoechia_kendyktasica    12441110100112122???02122001201001211102??
+	Pomatotrema_fecunda        202201101110122231??02122001111012221211??
+	Martellia_ichangensis      32322110111012221???02122001111013221211??
+	Martellia_reliqua          32322110111012221???02122001110013221211??
+	Eremotoechia_spissa        113431101220122220??02132001?0?0?122111110
+	Eremotoechia_inchoata      113321101220122220??02132001?0?0?12?111?10
+	Antigonambonites_planus    151400101000221220110212200132200221111111
+	Polytoechia_subcircularis  11440110100012122010021?2001322002201101??
+	Obolella_chromatica        020001000100000060010000000000003001000000
+	Bohemiella_romingeri       103101000002020220200210300120001111110210
+	Kutorgina_catenata         1232011010001101001110000000?000?100100???
+	Narynella_sulcata          123401101001110230111100000020000101100010
+	Glyptoria_gulchensis       133421000220020250110211112023000300?00???
+	Arctohedra_pyramidalis     1251100000010202402102113120230011112102??
+	Billingsella_aliena        242400101000221220010212200030011121110020
+	Apomatella_ingrica         1253100000010202402?02112210?33011212100??
+	Clitambonites_schmidti     1231010120020222411?021122?0333011212100??
+
+;
+
+END;
 BEGIN MacCladeStart;
 	Extended;
+
 END;
-
-
-BEGIN DATA;
-	DIMENSIONS  NTAX=22 NCHAR=45;
-
-[!Popov, L. E., O. Vinn, and O. I. Nikitina.  2001.  Brachiopods of the redefined family Tritoechiidae from the Ordovician of Kazakhstan and South Urals.  Geobios 34:131-155.
-
-Strat data from Figure 12.]
-	FORMAT SYMBOLS= " 0 1 2 3 4 5 6 7" MISSING=? GAP=- ;
-	CHARSTATELABELS  
-		43  FA / _ Early_Arenig Middle_Arenig Late_Arenig Early_Llanvirn Late_Llanvirn Early_Llandeilo Late_Llandeilo,
-  44  LA / _ Early_Arenig Middle_Arenig Late_Arenig Early_Llanvirn Late_Llanvirn Early_Llandeilo Late_Llandeilo,
-  45  Geography / _ Kazakhstan South_Urals Baltoscandia South_China
-		;
-
-MATRIX
-[                                     10        20        30        40    ]
-[                                     .         .         .         .     ]
-
-Korinevskia_akbulakensis     2414011010002222400102122001300112211200??112
-Protambonites_lermontovae    241401101000222240??02122001301102211100??112
-Tritoechia_typica            123401101002121221??02132001201002211101??111
-Tritoechia_tokmakensis       122400101000121230??02122001200012211102??221
-Tritoechia_crassa            125311101001122230??02132001101012211101??551
-Tritoechia_kendyktasica      12441110100112122???02122001201001211102??111
-Pomatotrema_fecunda          202201101110122231??02122001111012221211??451
-Martellia_ichangensis        32322110111012221???02122001111013221211??334
-Martellia_reliqua            32322110111012221???02122001110013221211??441
-Eremotoechia_spissa          113431101220122220??02132001?0?0?122111110771
-Eremotoechia_inchoata        113321101220122220??02132001?0?0?12?111?10661
-Antigonambonites_planus      151400101000221220110212200132200221111111333
-Polytoechia_subcircularis    11440110100012122010021?2001322002201101??112
-Obolella_chromatica          020001000100000060010000000000003001000000???
-Bohemiella_romingeri         103101000002020220200210300120001111110210???
-Kutorgina_catenata           1232011010001101001110000000?000?100100??????
-Narynella_sulcata            123401101001110230111100000020000101100010???
-Glyptoria_gulchensis         133421000220020250110211112023000300?00??????
-Arctohedra_pyramidalis       1251100000010202402102113120230011112102?????
-Billingsella_aliena          242400101000221220010212200030011121110020???
-Apomatella_ingrica           1253100000010202402?02112210?33011212100?????
-Clitambonites_schmidti       1231010120020222411?021122?0333011212100?????
-;
-END;
-
-
 BEGIN SETS;
-	TAXSET  Ingroup  =  1-13 20;
-	TAXSET  Outgroup  =  14-19 21-22;
-END;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 13, Outgroup :  14- 22;
 
+	TAXSET Ingroup  =  1 -  13 20;
+	TAXSET Outgroup  =  14 -  19 21 -  22;
+
+END;
 
 BEGIN ASSUMPTIONS;
-	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
-	TYPESET * UNTITLED  = unord: 1-42 44-45, strat: 43;
-	WTSET * UNTITLED  = 1: 1-42, 0: 43-45;
+	OPTIONS DEFTYPE = unord PolyTcount = MINSTEPS;
+	TYPESET * UNTITLED   =  unord:  1- 42;
+
+	WTSET * UNTITLED  =  1: 1 -  42 ;
+
 END;
 
-
-BEGIN TREES; 
-
+BEGIN TREES;
+	Title 'Trees from "Tritoechiidae_Popov_et_al_2001.nex"';
+	ID 01762731af7745;
+	LINK Taxa = Taxa;
 	TRANSLATE
-		1	Korinevskia_akbulakensis,
-		2	Protambonites_lermontovae,
-		3	Tritoechia_typica,
-		4	Tritoechia_tokmakensis,
-		5	Tritoechia_crassa,
-		6	Tritoechia_kendyktasica,
-		7	Pomatotrema_fecunda,
-		8	Martellia_ichangensis,
-		9	Martellia_reliqua,
-		10	Eremotoechia_spissa,
-		11	Eremotoechia_inchoata,
-		12	Antigonambonites_planus,
-		13	Polytoechia_subcircularis,
-		14	Obolella_chromatica,
-		15	Bohemiella_romingeri,
-		16	Kutorgina_catenata,
-		17	Narynella_sulcata,
-		18	Glyptoria_gulchensis,
-		19	Arctohedra_pyramidalis,
-		20	Billingsella_aliena,
-		21	Apomatella_ingrica,
-		22	Clitambonites_schmidti
-	;
-	TREE Figure_12 =  [&R] (14,((17,16),(((((20,(1,2)),4),((6,(3,(5,((7,(8,9)),(10,11))))),(12,13))),(15,(22,(21,19)))),18)));
-	TREE Ingroup_Only =  [&R] (((1,2),4),((6,(3,(5,((7,(8,9)),(10,11))))),(12,13)));
-	TREE  * Ingroup__Only_2 =  [&R] (6,(4,(((1,2),(12,13)),(3,(5,((10,11),(7,(8,9))))))));
+[0] 		1 Korinevskia_akbulakensis,
+[1] 		2 Protambonites_lermontovae,
+[2] 		3 Tritoechia_typica,
+[3] 		4 Tritoechia_tokmakensis,
+[4] 		5 Tritoechia_crassa,
+[5] 		6 Tritoechia_kendyktasica,
+[6] 		7 Pomatotrema_fecunda,
+[7] 		8 Martellia_ichangensis,
+[8] 		9 Martellia_reliqua,
+[9] 		10 Eremotoechia_spissa,
+[10] 		11 Eremotoechia_inchoata,
+[11] 		12 Antigonambonites_planus,
+[12] 		13 Polytoechia_subcircularis,
+[13] 		14 Obolella_chromatica,
+[14] 		15 Bohemiella_romingeri,
+[15] 		16 Kutorgina_catenata,
+[16] 		17 Narynella_sulcata,
+[17] 		18 Glyptoria_gulchensis,
+[18] 		19 Arctohedra_pyramidalis,
+[19] 		20 Billingsella_aliena,
+[20] 		21 Apomatella_ingrica,
+[21] 		22 Clitambonites_schmidti;
+	TREE Figure_12 = (14,((17,16),(((((20,(1,2)),4),((6,(3,(5,((7,(8,9)),(10,11))))),(12,13))),(15,(22,(21,19)))),18)));
+	TREE Ingroup_Only = (((1,2),4),((6,(3,(5,((7,(8,9)),(10,11))))),(12,13)));
+	TREE Ingroup__Only_2 = (6,(4,(((1,2),(12,13)),(3,(5,((10,11),(7,(8,9))))))));
 
 END;
 
 
 BEGIN MacClade;
-	Version 4.0  87;
+	Version 4.0 87;
 	LastModified -845462172;
-	FileSettings  '1' '1' '43' '1';
+	FileSettings '1' '1' '43' '1';
 	Singles 000;
 	Editor 00011001111111100100010010 '0' '72' Gadget '12' '190' '1' all;
-	EditorPosition  '116' '768' '563' '527';
-	TreeWindowPosition  '46' '6' '985' '1630';
+	EditorPosition '116' '768' '563' '527';
+	TreeWindowPosition '46' '6' '985' '1630';
 	ListWindow Characters closed Gadget '12' '50' '25' '253' '321' 000;
 	ListWindow Taxa closed Gadget '12' '50' '10' '440' '352' 100000000;
-	ListWindow Trees closed Gadget '12' '50' '10' '134' '387' ;
-	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow TaxSets open Gadget '12' '50' '10' '134' '185' ;
-	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490' ;
-	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490' ;
-	ChartWindowPosition  '52' '30' '818' '1380';
+	ListWindow Trees closed Gadget '12' '50' '10' '134' '387';
+	ListWindow TypeSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow ExSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharSets closed Gadget '12' '50' '10' '276' '490';
+	ListWindow TaxSets open Gadget '12' '50' '10' '134' '185';
+	ListWindow CharPartitions closed Gadget '12' '50' '10' '276' '490';
+	ListWindow CharPartNames closed Gadget '12' '50' '10' '276' '490';
+	ListWindow WtSets closed Gadget '12' '50' '10' '276' '490';
+	ChartWindowPosition '52' '30' '818' '1380';
 	StateNamesSymbols closed Gadget '12' '14' '50' '30' '271' '325';
-	WindowOrder  List TaxSets;
-	OtherSymbols &/ 00 ?-;
-	Correlation  '0' '0' '1000' '0' '0' 10011010;
+	WindowOrder List TaxSets;
+	OtherSymbols & / 00 ? -;
+	Correlation '0' '0' '1000' '0' '0' 10011010;
 	Salmo 00000001;
-	EditorFile  '2';
-	ExportHTML _ MOSS  '100' 110000;
+	EditorFile '2';
+	ExportHTML _ MOSS '100' 110000;
 	PrettyPrint 10;
-	EditorToolsPosition  '746' '13' '115' '165';
-	TreeToolsPosition  '716' '9' '126' '138';
+	EditorToolsPosition '746' '13' '115' '165';
+	TreeToolsPosition '716' '9' '126' '138';
 	TreeWindowProgram 10;
 	TreeWindow 0000;
-	Continuous  '0' '3' 1;
+	Continuous '0' '3' 1;
 	Calculations 1000101;
-	SummaryMode  '0' '0' 0;
-	Charts  Gadget '12' (normal) 0010;
-	NexusOptions  '0' '0' '50' 001011001;
-	TipLabel  '1';
-	TreeFont  Gadget '12' (normal);
-	TreeShape  1.0 1.0 0100;
+	SummaryMode '0' '0' 0;
+	Charts Gadget '12' ( normal ) 0010;
+	NexusOptions '0' '0' '50' 001011001;
+	TipLabel '1';
+	TreeFont Gadget '12' ( normal );
+	TreeShape 1.0 1.0 0100;
 	TraceLabels 0101;
-	ChartColors  '0' '0' '65535' '9' '0' 1;
+	ChartColors '0' '0' '65535' '9' '0' 1;
 	ChartBiggestSpot 1;
 	ChartPercent 10;
-	ChartBarWidth  '10' 1;
+	ChartBarWidth '10' 1;
 	ChartVerticalAxis 10101;
-	ChartMinMax  '0';
-	TraceAllChangesDisplay  '1' 1;
-	BarsOnBranchesDisplay  '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
+	ChartMinMax '0';
+	TraceAllChangesDisplay '1' 1;
+	BarsOnBranchesDisplay '0' '0' '60000' '10000' '10000' '10000' '10000' '60000' '65000' '65000' '65000' '6' '1' 0000101;
 	ContinuousBranchLabels 0;
 	AllStatesBranchLabels 1;
-	IndexNotation  '3' 0;
-	PrintTree  10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' (normal) Gadget '10' (normal) Gadget '9' (normal) Gadget '9' (normal) Gadget '9' (bold ) Gadget '9' (normal) Gadget '9' (normal) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
+	IndexNotation '3' 0;
+	PrintTree 10.00 '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' '2' Gadget '9' ( normal ) Gadget '10' ( normal ) Gadget '9' ( normal ) Gadget '9' ( normal ) Gadget '9' ( bold ) Gadget '9' ( normal ) Gadget '9' ( normal ) '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '0' '1' '1' '1' '1' '12' '0' '-39' '4' '-40' '0' '1' '2' '1' '8' '0' '0' '0' '2' 1000111000000000000100000111000;
 	MatchChar 00 .;
 	EntryInterpretation 01;
 	ColorOptions 10;
-	TreeTools  '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
-	EditorTools  '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
-	PairAlign  '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
-	BothTools  '1';
+	TreeTools '0' '5' '4' '0' '10' '4' '0' 00100111111101110;
+	EditorTools '0' '0' '0' '1000' '0' '0' '6' '3' '0' 100000101110001;
+	PairAlign '2' '2' '3' '2' '1' '1' '2' '1' '3' 1010;
+	BothTools '1';
+
 END;
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 42;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1606975626536;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 6793701997948133142;
+			tell It;
+				setSelected  15 -  22;
+				attachments ;
+			endTell;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 4443807944401402659;
+			mqVersion 361;
+			checksumv 0 3 4093469582 null  getNumChars 42 numChars 42 getNumTaxa 22 numTaxa 22   short true   bits 127   states 127   sumSquaresStatesOnly 21946.0 sumSquares 21946.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1144 653;
+			setLocation 8 23;
+			setFont Gadget;
+			setFontSize 12;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #6793701997948133142 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #6793701997948133142;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1044 581;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #6793701997948133142  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					setTreeBlockID 01762731af7745;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 5944.1606975354095.2377141530066020360;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1044 581;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setTree '(14,((17,16),(((((20,(1,2)),4),((6,(3,(5,((7,(8,9)),(10,11))))),(12,13))),(15,(22,(21,19)))),18)));';
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #4443807944401402659 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1044 581;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleReduceCellBorders off;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

@@ -1,11 +1,11 @@
 #NEXUS
-[written Sun Jul 14 19:31:33 PDT 2019 by Mesquite  version 3.6 (build 917) at EAS-6BCEC7.local/10.0.0.33]
+[written Thu Dec 03 00:24:44 CST 2020 by Mesquite  version 3.61 (build 927) at EAS-392515.local/127.0.0.1]
 
 BEGIN TAXA;
 	TITLE Taxa;
 	DIMENSIONS NTAX=27;
 	TAXLABELS
-		Apollonorthis Archaeorthis Arenorthis Crozonorthis Euorthisina Famatinorthis Gondwanorthis Heterorthis Incorthis Irhirea Kvania Lampazarorthis Laticrura Lesserorthis Linoporella Lipanorthis Nanorthis Nothorthis Nothorthisina Paterorthis Protorthisina Ranorthis Salopia Scaphorthis Tarfaya Tissintia Xinanorthis 
+		Apollonorthis Archaeorthis Arenorthis Crozonorthis Euorthisina Famatinorthis Gondwanorthis Heterorthis Incorthis Irhirea Kvania Lampazarorthis Laticrura Lesserorthis Linoporella Lipanorthis Nanorthis Nothorthis Nothorthisina Paterorthis Ranorthis Salopia Scaphorthis Tarfaya Tissintia Xinanorthis Protorthisina 
 	;
 
 END;
@@ -36,13 +36,13 @@ BEGIN CHARACTERS;
 	Nothorthis      01204000(0 4)32(0 1)000
 	Nothorthisina   0000(3 4)(0 1)21(0 2)012(1 2)00
 	Paterorthis     001121212112200
-	Protorthisina   00(0 2)000200012000
 	Ranorthis       01204(0 1)010310000
 	Salopia         102121311212100
 	Scaphorthis     002021111111200
 	Tarfaya         00204100021(0 1)011
 	Tissintia       10(2 3)0(2 4)(2 3 4)001120011
 	Xinanorthis     012021000210011
+	Protorthisina   00(0 2)000200012000
 
 ;
 
@@ -52,43 +52,6 @@ BEGIN ASSUMPTIONS;
 	TYPESET * UNTITLED   =  unord:  1- 15;
 
 END;
-
-BEGIN TREES;
-	Title 'Trees from "Heterorthidae_Benedetto_&_Munoz_2016.nex"';
-	ID 016bf3784c581;
-	LINK Taxa = Taxa;
-	TRANSLATE
-[0] 		1 Apollonorthis,
-[1] 		2 Archaeorthis,
-[2] 		11 Arenorthis,
-[3] 		4 Crozonorthis,
-[4] 		5 Euorthisina,
-[5] 		6 Famatinorthis,
-[6] 		7 Gondwanorthis,
-[7] 		10 Heterorthis,
-[8] 		15 Incorthis,
-[9] 		t10t Irhirea,
-[10] 		t11t Kvania,
-[11] 		12 Lampazarorthis,
-[12] 		13 Laticrura,
-[13] 		14 Lesserorthis,
-[14] 		t15t Linoporella,
-[15] 		16 Lipanorthis,
-[16] 		17 Nanorthis,
-[17] 		18 Nothorthis,
-[18] 		t19t Nothorthisina,
-[19] 		20 Paterorthis,
-[20] 		21 Protorthisina,
-[21] 		22 Ranorthis,
-[22] 		23 Salopia,
-[23] 		24 Scaphorthis,
-[24] 		25 Tarfaya,
-[25] 		19 Tissintia,
-[26] 		27 Xinanorthis;
-	TREE Fig._7 = (1,(((((((((4,15),5),11),10),2),6),((((((18)),(16,14)),17),19),(13,12))),7),0));
-
-END;
-
 
 BEGIN MacClade;
 	Version 4.0 87;
@@ -153,24 +116,41 @@ BEGIN MacClade;
 	BothTools '1';
 
 END;
+BEGIN SETS;
+	TAXPARTITION * UNTITLED  =  Ingroup :  1- 26, Outgroup :  27;
+
+END;
+
 BEGIN MESQUITECHARMODELS;
 	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 15;
+END;
+
+BEGIN LABELS;
+	TAXAGROUPLABEL Ingroup COLOR = (RGB 1 1 1) ;
+	TAXAGROUPLABEL Outgroup COLOR = (RGB 1 1 1) ;
+
+
 END;
 
 Begin MESQUITE;
 		MESQUITESCRIPTVERSION 2;
 		TITLE AUTO;
 		tell ProjectCoordinator;
-		timeSaved 1563157893050;
+		timeSaved 1606976684836;
 		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
 		tell It;
 			setID 0 8631404242639601314;
+			tell It;
+				setSelected  27;
+				setDefaultOrder  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 22 23 24 25 26 20;
+				attachments ;
+			endTell;
 		endTell;
 		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
 		tell It;
 			setID 0 8725777492800573084;
-			mqVersion 360;
-			checksumv 0 3 1254529063 null  getNumChars 15 numChars 15 getNumTaxa 27 numTaxa 27   short true   bits 63   states 63   sumSquaresStatesOnly 9516.0 sumSquares 9516.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
+			mqVersion 361;
+			checksumv 0 3 3064341792 null  getNumChars 15 numChars 15 getNumTaxa 27 numTaxa 27   short true   bits 63   states 63   sumSquaresStatesOnly 9516.0 sumSquares 9516.0 longCompressibleToShort false usingShortMatrix true   NumFiles 1 NumMatrices 1;
 			mqVersion;
 		endTell;
 		getWindow;
@@ -191,6 +171,186 @@ Begin MESQUITE;
 			endTell;
 			desuppress;
 		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #8631404242639601314 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #8631404242639601314;
+				getWindow;
+				tell It;
+					useTargetValue off;
+					setTargetValue ;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 954 611;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #8631404242639601314  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					setTreeBlockID 016bf3784c581;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 7026.1606976639176.1416359032372300215;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 954 611;
+					setLocation 8 23;
+					setFont Gadget;
+					setFontSize 12;
+					getToolPalette;
+					tell It;
+						setTool mesquite.trees.SearchTreeToolAssistant.SearchTreeToolExtra.randomlyRotate;
+					endTell;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareLineTree.SquareLineTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle off;
+							toggleScale on;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven on;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 4;
+						showEdgeLines on;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					setSelectedTaxonHighlightMode 1;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						setTaxonNameStyler  #mesquite.trees.NoColorForTaxon.NoColorForTaxon;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setTree '(27,((11,(19,(5,14))),(2,((17,(18,21)),(((7,12),(24,26)),((9,(8,(4,(3,25)))),(23,(1,(13,(6,(16,(15,(22,(10,20))))))))))))))<> <> <  setBetweenBits = selected >;';
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					togglePrintName off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.trees.SearchTreeToolAssistant.SearchTreeToolAssistant;
+				tell It;
+					getEmployee #mesquite.trees.TreeValueUsingMatrix.TreeValueUsingMatrix;
+					tell It;
+						getEmployee #mesquite.parsimony.TreelengthForMatrix.TreelengthForMatrix;
+						tell It;
+							getEmployee #mesquite.parsimony.ParsCharSteps.ParsCharSteps;
+							tell It;
+								setModelSource  #mesquite.parsimony.CurrentParsModels.CurrentParsModels;
+							endTell;
+						endTell;
+						getEmployee #mesquite.charMatrices.CharMatrixCoordIndep.CharMatrixCoordIndep;
+						tell It;
+							setCharacterSource #mesquite.charMatrices.StoredMatrices.StoredMatrices;
+							tell It;
+								setDataSet #8725777492800573084;
+							endTell;
+						endTell;
+					endTell;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					toggleShow bootstrapFrequency;
+					toggleShow posteriorProbability;
+					toggleShow consensusFrequency;
+					toggleShow posteriorProbability;
+					toggleShow bootstrapFrequency;
+					setDigits 4;
+					setThreshold ?;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					toggleShowOnTerminals on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+					toggleShowOnTerminals on;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
 		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
 		tell It;
 			showDataWindow #8725777492800573084 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
@@ -203,12 +363,12 @@ Begin MESQUITE;
 					setFontIncExp 0;
 					setSize 954 611;
 					setLocation 8 23;
-					setFont SanSerif;
-					setFontSize 10;
+					setFont Gadget;
+					setFontSize 12;
 					getToolPalette;
 					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
 					endTell;
-					setActive;
 					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.arrow;
 					colorCells  #mesquite.charMatrices.NoColor.NoColor;
 					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
@@ -222,6 +382,7 @@ Begin MESQUITE;
 					toggleShowChanges on;
 					toggleSeparateLines off;
 					toggleShowStates on;
+					toggleReduceCellBorders off;
 					toggleAutoWCharNames on;
 					toggleAutoTaxonNames off;
 					toggleShowDefaultCharNames off;
