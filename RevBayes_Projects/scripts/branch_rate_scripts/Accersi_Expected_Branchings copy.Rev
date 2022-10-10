@@ -1,0 +1,39 @@
+# setup Rosetta Stone between rates at fine timeslices & overall bins
+# get precision of time scale
+nbins2 <- ceil((max_max_age*2)/timeline_precision);
+timeline2 <- timeline_precision*(1:nbins2);
+bin_durations <- rep(timeline_precision,nbins2);
+j <- 1;
+for (i in 1:nbins2)  {
+  speciation_rate2[i]:=speciation_rate[j];
+  if (j<nbins && (i*timeline_precision)==timeline[j]) j <- j+1;
+  }
+
+for (br in 1:n_branches) {
+  branch_lengths[br]:=fbd_tree.branchLength(br);               # this is branch *duration* not expected change!
+
+  # upper bound of branch linking species or clade to rest of the tree
+  branch_end[br]:=fbd_tree.nodeAge(br)
+  # get the bin ("stage", etc.) in which lineage diverges/gives rise to OTU
+  termination_bin[br]:=round(0.5+(fbd_tree.nodeAge(br)/timeline_precision));
+  # get the time between ghost lineage/taxon & end of bin/stage/etc.
+  termination_offset[br]:=abs((timeline2[termination_bin[br]]-bin_durations[termination_bin[br]])-branch_end[br]);
+
+  branch_start[br]:=fbd_tree.branchLength(br)+fbd_tree.nodeAge(br); # this is when a lineage diverged from its ancestor
+  # get the bin ("stage", etc.) in which lineage diverged from rest of clade
+  initiation_bin[br]:=ceil(branch_start[br]/timeline_precision);
+  # get the time between onset of origin bin & divergence of lineage from rest of tree
+  initiation_offset[br]:=timeline2[initiation_bin[br]]-branch_start[br];
+
+  # "synoptic" range of ghost taxon/lineage within tree
+  bin_span[br]:=initiation_bin[br]:termination_bin[br];
+  ttl_bins[br]:=abs(bin_span[br].size());
+  a[br]:=rep(0,termination_bin[br]-1);
+  rn[br]:=rep(1,ttl_bins[br]);
+  z[br]:=rep(0,(nbins2-initiation_bin[br]));
+  nazgul[br]:=append(append(a[br],rn[br]),z[br]);
+  # This would have λt IF we could get RevBayes to read vector[i:j]
+  exp_branchings[br]:= pr_pe + sum(nazgul[br]*(speciation_rate2*bin_durations))-(initiation_offset[br]*speciation_rate2[initiation_bin[br]]+termination_offset[br]*speciation_rate2[termination_bin[br]]);
+
+  # next task: put in conditional values for pr_pe if we have both phyletic gradualism & punk eq
+  }
